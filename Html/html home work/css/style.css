@@ -1,0 +1,118 @@
+.headNav {
+  background-color: rgba(118, 133, 228, 0.658);
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#contact {
+  display: inline-block;
+}
+
+#contact a {
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+#contact div {
+  float: left;
+  text-align: left;
+}
+
+#center {
+  text-align: center;
+}
+
+#contact h3 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+#contact .foto {
+  margin-right: 40px;
+  margin-left: 40px;
+  float: left;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-left: 80px;
+  padding-top: 15px;
+  position: relative;
+}
+
+li #selected {
+  color: rgb(3, 1, 1);
+  text-decoration: underline;
+}
+
+.headNav a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+body {
+  width: 1400px;
+  margin: 0 auto;
+  background-color: lightgray;
+}
+
+#footer {
+  width: 1400px;
+  margin: 0px auto;
+  background-color: rgba(118, 133, 228, 0.658);
+}
+
+#footer .copyright {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  width: 600px;
+  text-align: center;
+}
+
+#footer .social {
+  margin-left: 100px;
+  padding: 15px 0;
+  width: 50px;
+}
+
+#footer a img {
+  height: 45px;
+}
+
+#gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(160, 173, 173);
+}
+
+#gallery li {
+  float: left;
+  width: 28.333%;
+  margin: 2.5%;
+  background-color: #dfd9d9;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+#gallery li a p {
+  margin: 0 auto;
+  padding: 5%;
+  font-size: 0.85em;
+  color: #000000;
+}
+
+#gallery img {
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+}

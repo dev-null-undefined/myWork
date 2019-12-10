@@ -1,0 +1,70 @@
+/*vyuziti float css*/
+/*general*/
+/*ul ma defaultne kaydou polozku <li> na novem radku tzn je defaultne pouzito <br> */
+/* pokud pouyijeme na <li> float .. inline zobrazeni; <ul> se zhrouti .. pak je potrba pouzit overflow:hidden v <ul>*/
+nav ul{
+	border: solid red;
+	list-style: none;
+	/*margin: 0 10px;*/
+	padding:0;
+	overflow:hidden;
+	background-color:#0333;
+}
+
+
+li {
+	padding: 12px 16px;
+}
+li a{
+	padding: 12px 16px ;
+}
+li a:hover{
+	background-color:red;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*header*/
+header{
+	text-align: center;
+}
+
+.group{
+	width: 100%;
+	float: left;
+	/* border: 2px solid red; */
+}
+
+.group::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  
+
+
+/*navigace*/
+
+footer{
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+main{
+	float:none;
+}
+/*aplikace float na <li> v <nav> */
+
+
+/*float 'img-center', obsah bude plavat okolo jeho leve strany*/
+
+/*img-article*/
+.img-article{
+	float: left;
+	width: 100%;
+	/* margin: 20px; */
+}
+
+

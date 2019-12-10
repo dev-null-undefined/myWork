@@ -1,0 +1,1 @@
+For array with 100 items it to sort using boble sort it took about: 0

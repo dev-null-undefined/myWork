@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class jedna {
+	public static boolean isInteger(String string) {
+	    try { 
+	        Integer.parseInt(string); 
+	    } catch(NumberFormatException e) {
+	        return false; 
+	    } catch(NullPointerException e) {
+	        return false; 
+	    }
+	    return true;
+	}	
+	public static boolean isDouble(String string) {
+	    try { 
+	        Double.parseDouble(string); 
+	    } catch(NumberFormatException e) { 
+	        return false; 
+	    } catch(NullPointerException e) {
+	        return false; 
+	    }
+	    return true;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.format("You can: %n  1)sum%n  2)deduct%n  3)multiply%n  4)devide%nYour option: ");
+    	Scanner in = new Scanner (System.in);
+    	String option=in.nextLine();
+    	Boolean isoption=isInteger(option);
+    	if (isoption==true) {
+    		int optionint=Integer.valueOf(option);
+    		if(optionint<=4 && optionint>=1) {
+    			
+    		}
+    		else {
+    			System.out.println("Please input number 1-4");
+    		}
+    	}
+    	else {
+    		System.out.println("Please input integer(number)");
+    	}
+    	
+    
+    
+    
+	}
+
+}

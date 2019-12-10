@@ -1,0 +1,90 @@
+.selected {
+  background-color: rgb(8, 4, 3);
+}
+
+.navBox {
+  border-radius: 25px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 635px;
+  overflow: auto;
+  background-color: gray;
+}
+
+.navBox nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navBox nav ul a:not(.selected) {
+  background-color: rgb(168, 47, 47);
+}
+
+.navBox nav ul a {
+  border-radius: 5px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  display: block;
+  text-decoration: none;
+  color: whitesmoke;
+  width: 125px;
+  display: block;
+  text-align: center;
+  border: 1px solid #555;
+}
+
+.navBox nav ul a:hover:not(.selected) {
+  color: whitesmoke;
+  background-color: rgb(114, 31, 31);
+  border: 1px solid black;
+}
+
+.navBox nav li {
+  float: left;
+}
+
+@media screen and (max-width: 650px) {
+  .navBox {
+    position: relative;
+  }
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  filter: blur(5px);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay .image {
+  filter: blur(0px);
+}
+
+.overlay {
+  filter: blur(0px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Mian {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		System.out.print("Zadejte stranu nádoby(dm): ");
+		int strana = in.nextInt();
+		System.out.print("Zadejte stav nádoby(l): ");
+		int l=in.nextInt();
+		KrychlovaNadoba jedna = new KrychlovaNadoba(strana,l,in);
+		in.nextInt();
+		
+		
+	}
+
+}

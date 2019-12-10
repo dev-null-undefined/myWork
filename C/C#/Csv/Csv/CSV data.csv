@@ -1,0 +1,1001 @@
+﻿id;sbj_class_id;sbj_category_id;sbj_type_id;sbj_legal_form_id;code;name;name_1;legal_entity;legal_entity_1;first_name;surname;degree_before_name;degree_after_name;short_name;ico;dic;rc;vat_payer;origin_sys_country_id;alt_name;suspend;external_name;external_name_id;pst_sbj_subject_id
+211;2;1;1;92;44992785;Statutární město Brno;Statutární město Brno;Statutární město Brno;Statutární město Brno;;;;;;44992785;;;True;1;;False;MSSF;100;0
+212;2;1;1;92;845451;Statutární město Ostrava;Statutární město Ostrava;Statutární město Ostrava;Statutární město Ostrava;;;;;;845451;38800845451;;True;1;;False;MSSF;101;0
+213;2;1;1;38;65993390;Ředitelství silnic a dálnic;Ředitelství silnic a dálnic;Ředitelství silnic a dálnic;Ředitelství silnic a dálnic;;;;;;65993390;;;True;1;;False;MSSF;102;0
+214;2;1;1;31;70994234;Správa železniční dopravní cesty;Správa železniční dopravní cesty;Správa železniční dopravní cesty;Správa železniční dopravní cesty;;;;;;70994234;;;True;1;;False;MSSF;103;0
+215;2;1;1;16;49099469;Severočeská vodárenská společnost;Severočeská vodárenská společnost;Severočeská vodárenská společnost;Severočeská vodárenská společnost;;;;;;49099469;;;True;1;;False;MSSF;104;0
+216;2;1;1;92;48460915;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;;;;;;48460915;;;True;1;;False;MSSF;105;0
+217;2;1;1;92;299308;Statutární město Olomouc;Statutární město Olomouc;Statutární město Olomouc;Statutární město Olomouc;;;;;;299308;;;True;1;;False;MSSF;106;0
+218;2;1;1;16;65138066;VaK Jesenická;VaK Jesenická;VaK Jesenická;VaK Jesenická;;;;;;65138066;;;True;1;;False;MSSF;107;0
+252;2;1;1;16;44848943;Českomoravská záruční a rozvojová banka, a.s.;Českomoravská záruční a rozvojová banka, a.s.;Českomoravská záruční a rozvojová banka, a.s.;Českomoravská záruční a rozvojová banka, a.s.;;;;;;44848943;CZ44848943;;False;1;;False;MSSF;131;0
+253;2;1;1;16;44848943;Českomoravská záruční a rozvojová banka, a.s.;Českomoravská záruční a rozvojová banka, a.s.;Českomoravská záruční a rozvojová banka, a.s.;Českomoravská záruční a rozvojová banka, a.s.;;;;;;44848943;CZ44848943;;False;1;;False;MSSF;132;0
+254;2;1;1;31;70994234;Správa železniční dopravní cesty;Správa železniční dopravní cesty;Správa železniční dopravní cesty;Správa železniční dopravní cesty;;;;;SŽDC;70994234;CZ70994234;;True;1;;False;MSSF;122;0
+255;2;1;1;38;65993390;Ředitelství silnic a dálnic ČR;Ředitelství silnic a dálnic ČR;Ředitelství silnic a dálnic ČR;Ředitelství silnic a dálnic ČR;;;;;ŘSD;65993390;CZ65993390;;False;1;;False;MSSF;120;0
+256;2;1;1;37;66003008;Ministerstvo dopravy ČR;Ministerstvo dopravy ČR;Ministerstvo dopravy ČR;Ministerstvo dopravy ČR;;;;;;66003008;;;False;1;;False;MSSF;123;0
+257;2;1;1;16;49099469;Severočeská vodárenská společnost a. s.;Severočeská vodárenská společnost a. s.;Severočeská vodárenská společnost a. s.;Severočeská vodárenská společnost a. s.;;;;;Podkr;49099469;CZ49099469;;True;1;;False;MSSF;124;0
+258;2;1;1;92;299308;Statutární město Olomouc;Statutární město Olomouc;Statutární město Olomouc;Statutární město Olomouc;;;;;;299308;CZ00299308;;False;1;;False;MSSF;128;0
+259;2;1;1;79;48460915;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;;;;;SVAKJ;48460915;CZ48460915;;True;1;;False;MSSF;135;0
+262;2;1;1;92;845451;Statutární město Ostrava;Statutární město Ostrava;Statutární město Ostrava;Statutární město Ostrava;;;;;;845451;;;False;1;;False;MSSF;109;0
+263;2;1;1;92;44992785;Statutární město Brno;Statutární město Brno;Statutární město Brno;Statutární město Brno;;;;;;44992785;CZ44992785;;True;1;;False;MSSF;110;0
+264;2;1;1;37;6947;Ministerstvo financí ČR  ;Ministerstvo financí ČR  ;Ministerstvo financí ČR  ;Ministerstvo financí ČR  ;;;;;MF;6947;CZ         ;;False;1;;False;MSSF;111;0
+265;2;1;1;37;66002222;Ministerstvo pro místní rozvoj ČR;Ministerstvo pro místní rozvoj ČR;Ministerstvo pro místní rozvoj ČR;Ministerstvo pro místní rozvoj ČR;;;;;MMR;66002222;;;False;1;;False;MSSF;112;0
+266;2;1;1;16;70994226;Skanska ŽS;Skanska ŽS;Skanska ŽS;Skanska ŽS;;;;;;70994226;;;False;1;;False;MSSF;113;0
+267;2;1;1;16;45274924;Stavby silnic a železnic a.s. - odštěpný závod 4;Stavby silnic a železnic a.s. - odštěpný závod 4;Stavby silnic a železnic a.s. - odštěpný závod 4;Stavby silnic a železnic a.s. - odštěpný závod 4;;;;;;45274924;CZ45274924;;True;1;;False;MSSF;114;0
+268;2;1;1;79;268;Consortium R48 Bělotín;Consortium R48 Bělotín;Consortium R48 Bělotín;Consortium R48 Bělotín;;;;;;;Z;;False;1;;False;MSSF;115;0
+269;2;1;1;9;64939511;Babtie spol. s r.o.;Babtie spol. s r.o.;Babtie spol. s r.o.;Babtie spol. s r.o.;;;;;;64939511;CZ64939511;;False;1;;False;MSSF;116;0
+270;2;1;1;9;40763439;Pontex s.r.o.;Pontex s.r.o.;Pontex s.r.o.;Pontex s.r.o.;;;;;;40763439;CZ40763439;;True;1;;False;MSSF;117;0
+271;2;1;1;1;271;SAFEGE;SAFEGE;SAFEGE;SAFEGE;;;;;;;;;False;3;;False;MSSF;118;0
+272;2;1;1;1;272;Halcrow Global Infrastructure Consortium;Halcrow Global Infrastructure Consortium;Halcrow Global Infrastructure Consortium;Halcrow Global Infrastructure Consortium;;;;;;;;;False;8;;False;MSSF;119;0
+273;2;1;1;79;48460915;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;Svaz vodovodů a kanalizací Jihlavsko;;;;;;48460915;;;True;1;;False;MSSF;121;0
+274;2;1;1;46;20729;Státní fond životního prostředí České republiky;Státní fond životního prostředí České republiky;Státní fond životního prostředí České republiky;Státní fond životního prostředí České republiky;;;;;SFŽP;20729;;;False;1;;False;MSSF;125;0
+275;2;1;1;37;164801;Ministerstvo životního prostředí;Ministerstvo životního prostředí;Ministerstvo životního prostředí;Ministerstvo životního prostředí;;;;;MŽP;164801;;;False;1;;False;MSSF;126;0
+276;2;1;1;16;60713470;Spalovna a komunální odpady Brno, akciová společnost;Spalovna a komunální odpady Brno, akciová společnost;Spalovna a komunální odpady Brno, akciová společnost;Spalovna a komunální odpady Brno, akciová společnost;;;;;SAKO ;60713470;CZ60713470;;True;1;;False;MSSF;127;0
+277;2;1;1;9;155144;MVV/dplus;MVV/dplus;MVV/dplus;MVV/dplus;;;;;;155144;CZ00155144;;False;1;;False;MSSF;129;0
+278;2;1;1;12;299308;VCES-Skanska;VCES-Skanska;VCES-Skanska;VCES-Skanska;;;;;;299308;CZ00299308;;False;1;;False;MSSF;130;0
+279;2;1;1;9;25572245;SVKMO s.r.o.;SVKMO s.r.o.;SVKMO s.r.o.;SVKMO s.r.o.;;;;;;25572245;;;True;1;;False;MSSF;133;0
+280;2;1;1;91;43383513;Svaz vodovodů a kanalizací Žďársko;Svaz vodovodů a kanalizací Žďársko;Svaz vodovodů a kanalizací Žďársko;Svaz vodovodů a kanalizací Žďársko;;;;;;43383513;CZ43383513;;True;1;;False;MSSF;134;0
+281;2;1;1;16;65138066;Vodovody a kanalizace Jesenicka a.s.;Vodovody a kanalizace Jesenicka a.s.;Vodovody a kanalizace Jesenicka a.s.;Vodovody a kanalizace Jesenicka a.s.;;;;;;65138066;CZ65138066;;False;1;;False;MSSF;136;0
+282;2;1;1;89;49021117;Jihočeský vodárenský svaz České Budějovice;Jihočeský vodárenský svaz České Budějovice;Jihočeský vodárenský svaz České Budějovice;Jihočeský vodárenský svaz České Budějovice;;;;;;49021117;CZ49021117;;False;1;;False;MSSF;137;0
+283;2;1;1;89;70238880;Sdružení obcí Mikroregionu Vsetínsko;Sdružení obcí Mikroregionu Vsetínsko;Sdružení obcí Mikroregionu Vsetínsko;Sdružení obcí Mikroregionu Vsetínsko;;;;;;70238880;CZ70238880;;False;1;;False;MSSF;138;0
+284;2;1;1;37;164801;Ministerstvo životního prostředí ČR;Ministerstvo životního prostředí ČR;Ministerstvo životního prostředí ČR;Ministerstvo životního prostředí ČR;;;;;MŽP;164801;;;False;1;;False;MSSF;139;0
+285;2;1;1;38;20699;Český hydrometeorologický ústav;Český hydrometeorologický ústav;Český hydrometeorologický ústav;Český hydrometeorologický ústav;;;;;ČHMÚ;20699;CZ00020699;;False;1;;False;MSSF;140;0
+286;2;1;1;79;45671745;Zájm..sdružení obcí Vodovody a kanalizace Znojemsko;Zájm..sdružení obcí Vodovody a kanalizace Znojemsko;Zájm..sdružení obcí Vodovody a kanalizace Znojemsko;Zájm..sdružení obcí Vodovody a kanalizace Znojemsko;;;;;;45671745;CZ45671745;;True;1;;False;MSSF;141;0
+287;2;1;1;37;66003008;Ministerstvo dopravy ČR- odbor mezinárodních vztahů a EU;Ministerstvo dopravy ČR- odbor mezinárodních vztahů a EU;Ministerstvo dopravy ČR- odbor mezinárodních vztahů a EU;Ministerstvo dopravy ČR- odbor mezinárodních vztahů a EU;;;;;MD;66003008;;;False;1;;False;MSSF;142;0
+300;2;1;1;28;49021117;Jihočeský vodárenský svaz;Jihočeský vodárenský svaz;Jihočeský vodárenský svaz;Jihočeský vodárenský svaz;;;;;;49021117;;;False;1;;False;MSSF;143;0
+306;1;1;1;0;20478;Ministerstvo zemědělství;Ministerstvo zemědělství;Ministerstvo zemědělství;Ministerstvo zemědělství;;;;;MZe;20478;;;False;1;;False;;;0
+308;2;1;1;79;1;SWECO INTERNATIONAL AB/HYDROCOOP spol. s r.o.;SWECO INTERNATIONAL AB/HYDROCOOP spol. s r.o.;SWECO INTERNATIONAL AB/HYDROCOOP spol. s r.o.;SWECO INTERNATIONAL AB/HYDROCOOP spol. s r.o.;;;;;;1;CZ556079131;;True;18;;False;MSSF;144;0
+309;2;1;1;79;14915;Sdružení firem ČOV - Jihlava;Sdružení firem ČOV - Jihlava;Sdružení firem ČOV - Jihlava;Sdružení firem ČOV - Jihlava;;;;;;14915;CZ00014915;;True;1;;False;MSSF;145;0
+310;2;1;1;37;551023;Oddělení řízení a implementace Iniciativy Společenství EQUAL - MPSV - řídící orgán CIP EQUAL;Oddělení řízení a implementace Iniciativy Společenství EQUAL - MPSV - řídící orgán CIP EQUAL;Oddělení řízení a implementace Iniciativy Společenství EQUAL - MPSV - řídící orgán CIP EQUAL;Oddělení řízení a implementace Iniciativy Společenství EQUAL - MPSV - řídící orgán CIP EQUAL;;;;;ŘOCIP;551023;CZ00551023;;False;1;;False;MSSF;146;0
+311;2;1;1;37;6947;Ministerstvo financí ČR, Odbor Národního fondu;Ministerstvo financí ČR, Odbor Národního fondu;Ministerstvo financí ČR, Odbor Národního fondu;Ministerstvo financí ČR, Odbor Národního fondu;;;;;MF;6947;;;False;1;;False;MSSF;147;0
+312;2;1;1;37;66002222;Ministerstvo pro místní rozvoj - ŘO SROP;Ministerstvo pro místní rozvoj - ŘO SROP;Ministerstvo pro místní rozvoj - ŘO SROP;Ministerstvo pro místní rozvoj - ŘO SROP;;;;;;66002222;;;False;1;;False;MSSF;148;0
+313;2;1;1;38;71377999;CzechInvest;CzechInvest;CzechInvest;CzechInvest;;;;;;71377999;-;;False;1;;False;MSSF;149;0
+314;2;1;1;37;47609109;MPO;MPO;MPO;MPO;;;;;;47609109;-;;False;1;;False;MSSF;150;0
+315;2;1;1;38;1171;CzechTrade;CzechTrade;CzechTrade;CzechTrade;;;;;;1171;-;;False;1;;False;MSSF;151;0
+316;2;1;1;16;136760;LUKA, a. s.;LUKA, a. s.;LUKA, a. s.;LUKA, a. s.;;;;;;136760;CZ00136760;;True;1;;False;MSSF;152;0
+317;2;1;1;21;47904968;Zemědělské družstvo Brtnice;Zemědělské družstvo Brtnice;Zemědělské družstvo Brtnice;Zemědělské družstvo Brtnice;;;;;;47904968;CZ47904968;;True;1;;False;MSSF;153;0
+318;2;1;1;16;25165551;CIZ - AGRO,a.s.;CIZ - AGRO,a.s.;CIZ - AGRO,a.s.;CIZ - AGRO,a.s.;;;;;;25165551;CZ25165551;;True;1;;False;MSSF;154;0
+319;2;1;1;3;6707131871;Luboš Pohorský;6707131871;Luboš Pohorský;6707131871;;;;;;70920591;CZ70920591;6707131871;True;1;;False;MSSF;155;0
+320;2;1;1;1;137031;Zemědělské družstvo Sedlejov;Zemědělské družstvo Sedlejov;Zemědělské družstvo Sedlejov;Zemědělské družstvo Sedlejov;;;;;;137031;CZ00137031;;True;1;;False;MSSF;156;0
+321;2;1;1;9;49968882;DOUBRAVA, spol. s r. o.;DOUBRAVA, spol. s r. o.;DOUBRAVA, spol. s r. o.;DOUBRAVA, spol. s r. o.;;;;;;49968882;CZ49968882;;True;1;;False;MSSF;157;0
+322;2;1;1;16;25328328;AGRO SÁZAVA, a.s.;AGRO SÁZAVA, a.s.;AGRO SÁZAVA, a.s.;AGRO SÁZAVA, a.s.;;;;;;25328328;CZ25328328;;True;1;;False;MSSF;158;0
+323;2;1;1;3;7508315793;Boris Zapletal;7508315793;Boris Zapletal;7508315793;;;;;;49595016;CZ 7508315793;7508315793;True;1;;False;MSSF;159;0
+324;2;1;1;21;25664531;Agrodružstvo Vyšetice se sídlem v Pravoníně;Agrodružstvo Vyšetice se sídlem v Pravoníně;Agrodružstvo Vyšetice se sídlem v Pravoníně;Agrodružstvo Vyšetice se sídlem v Pravoníně;;;;;;25664531;CZ25664531;;True;1;;False;MSSF;160;0
+325;2;1;1;16;46357254;ZAS Bečváry a.s.;ZAS Bečváry a.s.;ZAS Bečváry a.s.;ZAS Bečváry a.s.;;;;;;46357254;CZ46357254;;True;1;;False;MSSF;161;0
+326;2;1;1;21;47048522;Družstvo pro zemědělskou výrobu NOVA;Družstvo pro zemědělskou výrobu NOVA;Družstvo pro zemědělskou výrobu NOVA;Družstvo pro zemědělskou výrobu NOVA;;;;;;47048522;CZ47048522;;True;1;;False;MSSF;162;0
+327;2;1;1;21;112968;Zemědělsko - obchodní družstvo se sídlem v Němčicích;Zemědělsko - obchodní družstvo se sídlem v Němčicích;Zemědělsko - obchodní družstvo se sídlem v Němčicích;Zemědělsko - obchodní družstvo se sídlem v Němčicích;;;;;;112968;CZ00112968;;True;1;;False;MSSF;163;0
+328;2;1;1;16;47905891;Zemědělská akciová společnost Nivnice;Zemědělská akciová společnost Nivnice;Zemědělská akciová společnost Nivnice;Zemědělská akciová společnost Nivnice;;;;;;47905891;CZ47905891;;True;1;;False;MSSF;164;0
+329;2;1;1;16;49434179;AGRO - Měřín, a.s.;AGRO - Měřín, a.s.;AGRO - Měřín, a.s.;AGRO - Měřín, a.s.;;;;;;49434179;CZ49434179;;True;1;;False;MSSF;165;0
+330;2;1;1;3;7704034822;František Němec;7704034822;František Němec;7704034822;;;;;;69650306;CZ7704034822;7704034822;True;1;;False;MSSF;166;0
+331;2;1;1;16;63493837;Dobrosev, a.s.;Dobrosev, a.s.;Dobrosev, a.s.;Dobrosev, a.s.;;;;;;63493837;CZ63493837;;True;1;;False;MSSF;167;0
+332;2;1;1;16;46356657;AGRO Jesenice u Prahy a.s.;AGRO Jesenice u Prahy a.s.;AGRO Jesenice u Prahy a.s.;AGRO Jesenice u Prahy a.s.;;;;;;46356657;CZ46356657;;True;1;;False;MSSF;168;0
+333;2;1;1;1;60731991;AGRIS JEDOVNICE spol. s r.o.;AGRIS JEDOVNICE spol. s r.o.;AGRIS JEDOVNICE spol. s r.o.;AGRIS JEDOVNICE spol. s r.o.;;;;;;60731991;CZ60731991;;True;1;;False;MSSF;169;0
+334;2;1;1;3;6557050214;Bc. Monika Nátrová;6557050214;Bc. Monika Nátrová;6557050214;;;;;;64986900;CZ - 65570502;6557050214;True;1;;False;MSSF;170;0
+335;2;1;1;21;139718;Zemědělské družstvo Kožichovice,družstvo;Zemědělské družstvo Kožichovice,družstvo;Zemědělské družstvo Kožichovice,družstvo;Zemědělské družstvo Kožichovice,družstvo;;;;;;139718;CZ00139718;;True;1;;False;MSSF;171;0
+336;2;1;1;9;47535156;Zemědělská společnost Dobříš, spol. s r.o.;Zemědělská společnost Dobříš, spol. s r.o.;Zemědělská společnost Dobříš, spol. s r.o.;Zemědělská společnost Dobříš, spol. s r.o.;;;;;;47535156;CZ47535156;;True;1;;False;MSSF;172;0
+337;2;1;1;6;530826/193;Ing. Jindřich Janovský;Ing. Jindřich Janovský;Ing. Jindřich Janovský;Ing. Jindřich Janovský;Jindřich;Janovský;Ing.;;;18389970;CZ530826193;530826/193;True;1;;False;MSSF;173;0
+338;2;1;1;21;13644009;Družstvo vlastníků Polanka nad Odrou;Družstvo vlastníků Polanka nad Odrou;Družstvo vlastníků Polanka nad Odrou;Družstvo vlastníků Polanka nad Odrou;;;;;;13644009;CZ 13644009;;True;1;;False;MSSF;174;0
+339;2;1;1;3;7104273319;Jiří Trojan;7104273319;Jiří Trojan;7104273319;;;;;;42939259;CZ7104273319;7104273319;True;1;;False;MSSF;175;0
+340;2;1;1;3;7002071516;Bořek Med;7002071516;Bořek Med;7002071516;;;;;;48196592;CZ7002071516;7002071516;True;1;;False;MSSF;176;0
+341;2;1;1;1;111295;VOD Jetřichovec, družstvo;VOD Jetřichovec, družstvo;VOD Jetřichovec, družstvo;VOD Jetřichovec, družstvo;;;;;;111295;CZ00111295;;True;1;;False;MSSF;177;0
+342;2;1;1;3;7106212971;Vít Němec;7106212971;Vít Němec;7106212971;;;;;;65224507;CZ7106212971;7106212971;True;1;;False;MSSF;178;0
+343;2;1;1;1;49453050;ZD Klenovice na Hané, družstvo;ZD Klenovice na Hané, družstvo;ZD Klenovice na Hané, družstvo;ZD Klenovice na Hané, družstvo;;;;;;49453050;CZ49453050;;True;1;;False;MSSF;179;0
+344;2;1;1;1;47676507;Zemědělské družstvo Hněvošice;Zemědělské družstvo Hněvošice;Zemědělské družstvo Hněvošice;Zemědělské družstvo Hněvošice;;;;;;47676507;;;True;1;;False;MSSF;180;0
+345;2;1;1;1;63495465;Žerotín , a.s.;Žerotín , a.s.;Žerotín , a.s.;Žerotín , a.s.;;;;;;63495465;CZ63495465;;True;1;;False;MSSF;181;0
+346;2;1;1;1;45474991;STATEK Prostějov s.r.o.;STATEK Prostějov s.r.o.;STATEK Prostějov s.r.o.;STATEK Prostějov s.r.o.;;;;;;45474991;CZ45474991;;True;1;;False;MSSF;182;0
+347;2;1;1;21;25571095;AGRODRUŽSTVO MORKOVICE, družstvo;AGRODRUŽSTVO MORKOVICE, družstvo;AGRODRUŽSTVO MORKOVICE, družstvo;AGRODRUŽSTVO MORKOVICE, družstvo;;;;;;25571095;CZ25571095;;True;1;;False;MSSF;183;0
+348;2;1;1;1;48204820;Zemědělské obchodní družstvo Číčenice;Zemědělské obchodní družstvo Číčenice;Zemědělské obchodní družstvo Číčenice;Zemědělské obchodní družstvo Číčenice;;;;;;48204820;CZ48204820;;True;1;;False;MSSF;184;0
+349;2;1;1;3;510221090;Jaromír Jaroš;510221090;Jaromír Jaroš;510221090;;;;;;10466690;CZ510221090;510221090;True;1;;False;MSSF;185;0
+350;2;1;1;3;471202036;Evžen IFKOVICH;471202036;Evžen IFKOVICH;471202036;;;;;;18248403;CZ471202036;471202036;True;1;;False;MSSF;186;0
+351;2;1;1;21;136492;"Zemědělské družstvo ""Roštýn""";"Zemědělské družstvo ""Roštýn""";"Zemědělské družstvo ""Roštýn""";"Zemědělské družstvo ""Roštýn""";;;;;;136492;CZ00136492;;True;1;;False;MSSF;187;0
+352;2;1;1;3;6408240762;Josef Boubín;6408240762;Josef Boubín;6408240762;;;;;;70567590;CZ6408240762;6408240762;True;1;;False;MSSF;188;0
+353;2;1;1;3;7105011507;Václav Veleta;7105011507;Václav Veleta;7105011507;;;;;;41890558;CZ7105011507;7105011507;True;1;;False;MSSF;189;0
+354;2;1;1;1;48207918;AGROPROFIT, spol. s r.o.;AGROPROFIT, spol. s r.o.;AGROPROFIT, spol. s r.o.;AGROPROFIT, spol. s r.o.;;;;;;48207918;CZ 48207918;;True;1;;False;MSSF;190;0
+355;2;1;1;16;63468026;AGRO Rozsochy, a.s.;AGRO Rozsochy, a.s.;AGRO Rozsochy, a.s.;AGRO Rozsochy, a.s.;;;;;;63468026;CZ63468026;;True;1;;False;MSSF;191;0
+356;2;1;1;16;25219502;Kralovická zemědělská a.s.;Kralovická zemědělská a.s.;Kralovická zemědělská a.s.;Kralovická zemědělská a.s.;;;;;;25219502;CZ25219502;;True;1;;False;MSSF;192;0
+357;2;1;1;9;40526330;PROBITAS spol. s r.o.;PROBITAS spol. s r.o.;PROBITAS spol. s r.o.;PROBITAS spol. s r.o.;;;;;;40526330;CZ40526330;;True;1;;False;MSSF;193;0
+358;2;1;1;16;47048034;ZDV Krchleby, a.s.;ZDV Krchleby, a.s.;ZDV Krchleby, a.s.;ZDV Krchleby, a.s.;;;;;;47048034;CZ47048034;;True;1;;False;MSSF;194;0
+359;2;1;1;1;25846698;Kateřinská zemědělská a.s.;Kateřinská zemědělská a.s.;Kateřinská zemědělská a.s.;Kateřinská zemědělská a.s.;;;;;;25846698;CZ25846698;;True;1;;False;MSSF;195;0
+360;2;1;1;16;48173169;SLAVONIA, akciová společnost;SLAVONIA, akciová společnost;SLAVONIA, akciová společnost;SLAVONIA, akciová společnost;;;;;;48173169;CZ48173169;;True;1;;False;MSSF;196;0
+361;2;1;1;16;103926;ZD Křečhoř, a. s.;ZD Křečhoř, a. s.;ZD Křečhoř, a. s.;ZD Křečhoř, a. s.;;;;;;103926;CZ00103926;;True;1;;False;MSSF;197;0
+362;2;1;1;16;120511;AGROKOMPLEX OHŘE a.s.;AGROKOMPLEX OHŘE a.s.;AGROKOMPLEX OHŘE a.s.;AGROKOMPLEX OHŘE a.s.;;;;;;120511;CZ00120511;;True;1;;False;MSSF;198;0
+363;2;1;1;21;49447564;AGROSPOL, agrární družstvo;AGROSPOL, agrární družstvo;AGROSPOL, agrární družstvo;AGROSPOL, agrární družstvo;;;;;;49447564;CZ49447564;;True;1;;False;MSSF;199;0
+364;2;1;1;3;7512174846;Dalibor Hanes;7512174846;Dalibor Hanes;7512174846;;;;;;64625206;CZ 7512174846;7512174846;True;1;;False;MSSF;200;0
+365;2;1;1;16;25252020;ZEMKO Kožlí a.s.;ZEMKO Kožlí a.s.;ZEMKO Kožlí a.s.;ZEMKO Kožlí a.s.;;;;;;25252020;CZ252520020;;True;1;;False;MSSF;201;0
+366;2;1;1;1;14615452;Zemědělské družstvo Těšetice;Zemědělské družstvo Těšetice;Zemědělské družstvo Těšetice;Zemědělské družstvo Těšetice;;;;;;14615452;CZ14615452;;True;1;;False;MSSF;202;0
+367;2;1;1;3;6755251393;Renata Stefková;Renata Stefková;Renata Stefková;Renata Stefková;Renata;Stefková;;;;44789289;CZ44789289;6755251393;True;1;;False;MSSF;203;0
+368;2;1;1;3;8111064940;Martin Pyszko;8111064940;Martin Pyszko;8111064940;;;;;;68155727;CZ 8111064940;8111064940;True;1;;False;MSSF;204;0
+369;2;1;1;1;139319;Zemědělské družstvo Budkov - družstvo;Zemědělské družstvo Budkov - družstvo;Zemědělské družstvo Budkov - družstvo;Zemědělské družstvo Budkov - družstvo;;;;;;139319;CZ00139319;;True;1;;False;MSSF;205;0
+370;2;1;1;3;6802280320;Jiří Jurek;6802280320;Jiří Jurek;6802280320;;;;;;12704733;CZ-6802280320;6802280320;True;1;;False;MSSF;206;0
+371;2;1;1;21;49060686;AGRIA Obrataň, zemědělské obchodní družstvo se sídlem v Obratani;AGRIA Obrataň, zemědělské obchodní družstvo se sídlem v Obratani;AGRIA Obrataň, zemědělské obchodní družstvo se sídlem v Obratani;AGRIA Obrataň, zemědělské obchodní družstvo se sídlem v Obratani;;;;;;49060686;CZ49060686;;True;1;;False;MSSF;207;0
+372;2;1;1;20;117862;Zemědělské družstvo Merklín u Přeštic;Zemědělské družstvo Merklín u Přeštic;Zemědělské družstvo Merklín u Přeštic;Zemědělské družstvo Merklín u Přeštic;;;;;;117862;CZ00117862;;True;1;;False;MSSF;208;0
+373;2;1;1;3;5403291311;Pavel Smrček;5403291311;Pavel Smrček;5403291311;;;;;;47337613;CZ5403291311;5403291311;True;1;;False;MSSF;209;0
+374;2;1;1;3;8201095716;Pavel Zakopal;8201095716;Pavel Zakopal;8201095716;;;;;;60609869;CZ 8201095716;8201095716;True;1;;False;MSSF;210;0
+375;2;1;1;16;25308254;ZEAS Nedakonice,a.s.;ZEAS Nedakonice,a.s.;ZEAS Nedakonice,a.s.;ZEAS Nedakonice,a.s.;;;;;;25308254;CZ25308254;;True;1;;False;MSSF;211;0
+376;2;1;1;1;26133571;Zemědělská společnost Petrovice u Sedlčan, a.s.;Zemědělská společnost Petrovice u Sedlčan, a.s.;Zemědělská společnost Petrovice u Sedlčan, a.s.;Zemědělská společnost Petrovice u Sedlčan, a.s.;;;;;;26133571;CZ 26133571;;True;1;;False;MSSF;212;0
+377;2;1;1;4;7405154867;Jiří Beránek;Jiří Beránek;Jiří Beránek;Jiří Beránek;Jiří;Beránek;;;;49568469;CZ 7405154867;7405154867;True;1;;False;MSSF;213;0
+378;2;1;1;16;25227131;Druhá Poběžovická, a.s.;Druhá Poběžovická, a.s.;Druhá Poběžovická, a.s.;Druhá Poběžovická, a.s.;;;;;;25227131;CZ25227131;;True;1;;False;MSSF;214;0
+379;2;1;1;1;147346;Zemědělské družstvo Haňovice;Zemědělské družstvo Haňovice;Zemědělské družstvo Haňovice;Zemědělské družstvo Haňovice;;;;;;147346;CZ 00147346;;True;1;;False;MSSF;215;0
+380;2;1;1;3;7308310625;Jiří Wimmer;7308310625;Jiří Wimmer;7308310625;;;;;;47559144;CZ 7308310625;7308310625;True;1;;False;MSSF;216;0
+381;2;1;1;1;60850949;Agrospol Mladá Vožice a.s.;Agrospol Mladá Vožice a.s.;Agrospol Mladá Vožice a.s.;Agrospol Mladá Vožice a.s.;;;;;;60850949;CZ-60850949;;True;1;;False;MSSF;217;0
+382;2;1;1;16;107956;Zemědělská společnost Kosova Hora, a.s.;Zemědělská společnost Kosova Hora, a.s.;Zemědělská společnost Kosova Hora, a.s.;Zemědělská společnost Kosova Hora, a.s.;;;;;;107956;CZ00107956;;True;1;;False;MSSF;218;0
+383;2;1;1;16;46356142;Mydlářka a.s.;Mydlářka a.s.;Mydlářka a.s.;Mydlářka a.s.;;;;;;46356142;CZ46356142;;True;1;;False;MSSF;219;0
+384;2;1;1;3;6105230373;Ing. František Holub;6105230373;Ing. František Holub;6105230373;;;;;;41546121;CZ6105230373;6105230373;True;1;;False;MSSF;220;0
+385;2;1;1;3;6602091991;Jaroslav Mach;6602091991;Jaroslav Mach;6602091991;;;;;;42320186;CZ 660209/199;6602091991;True;1;;False;MSSF;221;0
+386;2;1;1;16;47672846;VEPASPOL Olomouc,a.s.;VEPASPOL Olomouc,a.s.;VEPASPOL Olomouc,a.s.;VEPASPOL Olomouc,a.s.;;;;;;47672846;CZ47672846;;True;1;;False;MSSF;222;0
+387;2;1;1;3;7701230702;Pavel Franc;7701230702;Pavel Franc;7701230702;;;;;;70902143;CZ7701230702;7701230702;True;1;;False;MSSF;223;0
+388;2;1;1;21;108146;Zemědělské družstvo Nečín;Zemědělské družstvo Nečín;Zemědělské družstvo Nečín;Zemědělské družstvo Nečín;;;;;;108146;CZ00108146;;True;1;;False;MSSF;224;0
+389;2;1;1;16;25212931;Agrochov Kasejovice-Smolivec, a.s.;Agrochov Kasejovice-Smolivec, a.s.;Agrochov Kasejovice-Smolivec, a.s.;Agrochov Kasejovice-Smolivec, a.s.;;;;;;25212931;CZ25212931;;True;1;;False;MSSF;225;0
+390;2;1;1;16;61673340;PIAS Suchdol, a.s.;PIAS Suchdol, a.s.;PIAS Suchdol, a.s.;PIAS Suchdol, a.s.;;;;;;61673340;CZ61673340;;True;1;;False;MSSF;226;0
+391;2;1;1;9;48529249;STATEK BŘEŽANY, spol. s r.o.;STATEK BŘEŽANY, spol. s r.o.;STATEK BŘEŽANY, spol. s r.o.;STATEK BŘEŽANY, spol. s r.o.;;;;;;48529249;CZ48529249;;True;1;;False;MSSF;227;0
+392;2;1;1;1;25236601;Zemědělská společnost Čerchov, a.s.;Zemědělská společnost Čerchov, a.s.;Zemědělská společnost Čerchov, a.s.;Zemědělská společnost Čerchov, a.s.;;;;;;25236601;CZ25236601;;True;1;;False;MSSF;228;0
+393;2;1;1;3;6408212239;Libor Zeman;6408212239;Libor Zeman;6408212239;;;;;;65470290;CZ6408212239;6408212239;True;1;;False;MSSF;229;0
+394;2;1;1;1;48292486;AGRO RUBÍN a.s.;AGRO RUBÍN a.s.;AGRO RUBÍN a.s.;AGRO RUBÍN a.s.;;;;;;48292486;CZ48292486;;True;1;;False;MSSF;230;0
+395;2;1;1;2;7607051210;Petr Endrle;Petr Endrle;Petr Endrle;Petr Endrle;Petr;Endrle;;;;48197459;CZ7607051210;7607051210;True;1;;False;MSSF;231;0
+396;2;1;1;3;8105234973;Tomáš Pustka;8105234973;Tomáš Pustka;8105234973;;;;;;68336489;CZ 810523497;8105234973;True;1;;False;MSSF;232;0
+397;2;1;1;20;147630;Zemědělské družstvo Unčovice;Zemědělské družstvo Unčovice;Zemědělské družstvo Unčovice;Zemědělské družstvo Unčovice;;;;;;147630;CZ00147630;;True;1;;False;MSSF;233;0
+398;2;1;1;3;7006141736;Ing. Jaroslav Pouzar;7006141736;Ing. Jaroslav Pouzar;7006141736;;;;;;46633782;CZ 7006141736;7006141736;True;1;;False;MSSF;234;0
+399;2;1;1;16;25719068;ZAS Úžice, a.s.;ZAS Úžice, a.s.;ZAS Úžice, a.s.;ZAS Úžice, a.s.;;;;;;25719068;CZ25719068;;True;1;;False;MSSF;235;0
+400;2;1;1;16;580384;MAVE Jičín, a.s.;MAVE Jičín, a.s.;MAVE Jičín, a.s.;MAVE Jičín, a.s.;;;;;;580384;CZ00580384;;True;1;;False;MSSF;236;0
+401;2;1;1;21;47048603;AGROSPOL, výrobní obchodní družstvo Bubovice;AGROSPOL, výrobní obchodní družstvo Bubovice;AGROSPOL, výrobní obchodní družstvo Bubovice;AGROSPOL, výrobní obchodní družstvo Bubovice;;;;;;47048603;CZ47048603;;True;1;;False;MSSF;237;0
+402;2;1;1;1;47673656;Agrodružstvo Zábřeh;Agrodružstvo Zábřeh;Agrodružstvo Zábřeh;Agrodružstvo Zábřeh;;;;;;47673656;CZ47673656;;True;1;;False;MSSF;238;0
+403;2;1;1;4;7160052207;Hana Nováková;Hana Nováková;Hana Nováková;Hana Nováková;Hana;Nováková;;;;49185497;CZ7160052207;7160052207;True;1;;False;MSSF;239;0
+404;2;1;1;3;6312091082;Vladimír Skácel;6312091082;Vladimír Skácel;6312091082;;;;;;46889922;CZ 6312091082;6312091082;True;1;;False;MSSF;240;0
+405;2;1;1;6;7503292192;Pavel Moulis;Pavel Moulis;Pavel Moulis;Pavel Moulis;Pavel;Moulis;;;;49185055;CZ7503292192;7503292192;True;1;;False;MSSF;241;0
+406;2;1;1;20;47468424;Agro družstvo Sebranice;Agro družstvo Sebranice;Agro družstvo Sebranice;Agro družstvo Sebranice;;;;;;47468424;CZ47468424;;True;1;;False;MSSF;242;0
+407;2;1;1;4;380530460;Alois Vincenec;Alois Vincenec;Alois Vincenec;Alois Vincenec;Alois;Vincenec;;;;47665441;CZ380530460;380530460;True;1;;False;MSSF;243;0
+408;2;1;1;3;7311260198;Petr Semerád;7311260198;Petr Semerád;7311260198;;;;;;49517643;CZ7311260198;7311260198;True;1;;False;MSSF;244;0
+409;2;1;1;3;8012073124;Ing. Lubor Slezák;8012073124;Ing. Lubor Slezák;8012073124;;;;;;70962995;CZ8012073124;8012073124;True;1;;False;MSSF;245;0
+410;2;1;1;1;63474964;AGRA Ždánice, a.s.;AGRA Ždánice, a.s.;AGRA Ždánice, a.s.;AGRA Ždánice, a.s.;;;;;;63474964;CZ63474964;;True;1;;False;MSSF;246;0
+411;2;1;1;9;46679740;SPV spol. s r.o. Pelhřimov;SPV spol. s r.o. Pelhřimov;SPV spol. s r.o. Pelhřimov;SPV spol. s r.o. Pelhřimov;;;;;;46679740;CZ46679740;;True;1;;False;MSSF;247;0
+412;2;1;1;16;47048191;AGD Senice a.s.;AGD Senice a.s.;AGD Senice a.s.;AGD Senice a.s.;;;;;;47048191;CZ47048191;;True;1;;False;MSSF;248;0
+413;2;1;1;16;25166271;ZEMPO - VOS a.s. Strunkovice nad Blanicí;ZEMPO - VOS a.s. Strunkovice nad Blanicí;ZEMPO - VOS a.s. Strunkovice nad Blanicí;ZEMPO - VOS a.s. Strunkovice nad Blanicí;;;;;;25166271;CZ25166271;;True;1;;False;MSSF;249;0
+414;2;1;1;16;25313045;Zámoraví, a. s.;Zámoraví, a. s.;Zámoraví, a. s.;Zámoraví, a. s.;;;;;;25313045;CZ25313045;;True;1;;False;MSSF;250;0
+415;2;1;1;3;6401301522;Bc. Arnošt Juda;6401301522;Bc. Arnošt Juda;6401301522;;;;;;46232281;CZ6401301522;6401301522;True;1;;False;MSSF;251;0
+416;2;1;1;20;109207;Zemědělské obchodní družstvo Borovany;Zemědělské obchodní družstvo Borovany;Zemědělské obchodní družstvo Borovany;Zemědělské obchodní družstvo Borovany;;;;;;109207;CZ00109207;;True;1;;False;MSSF;252;0
+417;2;1;1;1;14614499;"Zemědělské družstvo ""SLEZAN"" Klimkovice";"Zemědělské družstvo ""SLEZAN"" Klimkovice";"Zemědělské družstvo ""SLEZAN"" Klimkovice";"Zemědělské družstvo ""SLEZAN"" Klimkovice";;;;;;14614499;CZ14614499;;True;1;;False;MSSF;253;0
+418;2;1;1;21;13693484;Zemědělské družstvo Olbramkostel;Zemědělské družstvo Olbramkostel;Zemědělské družstvo Olbramkostel;Zemědělské družstvo Olbramkostel;;;;;;13693484;CZ13693484;;True;1;;False;MSSF;254;0
+419;2;1;1;16;25509985;ZEMASPOL Uherský Brod a.s.;ZEMASPOL Uherský Brod a.s.;ZEMASPOL Uherský Brod a.s.;ZEMASPOL Uherský Brod a.s.;;;;;;25509985;CZ25509985;;True;1;;False;MSSF;255;0
+420;2;1;1;4;8207054669;Pavel Obdržálek;8207054669;Pavel Obdržálek;8207054669;;;;;;71004335;CZ8207054669;8207054669;True;1;;False;MSSF;256;0
+421;2;1;1;3;7709123235;Jiří Hilscher;7709123235;Jiří Hilscher;7709123235;;;;;;70811768;CZ7709123235;7709123235;True;1;;False;MSSF;257;0
+422;2;1;1;1;112658;Zemědělské obchodní družstvo Sepekov;Zemědělské obchodní družstvo Sepekov;Zemědělské obchodní družstvo Sepekov;Zemědělské obchodní družstvo Sepekov;;;;;;112658;CZ00112658;;True;1;;False;MSSF;258;0
+423;2;1;1;9;48365254;SPO-ZEM Nový Kostel s.r.o.;SPO-ZEM Nový Kostel s.r.o.;SPO-ZEM Nový Kostel s.r.o.;SPO-ZEM Nový Kostel s.r.o.;;;;;;48365254;CZ48365254;;True;1;;False;MSSF;259;0
+424;2;1;1;21;113824;Zemědělské družstvo Novosedly;Zemědělské družstvo Novosedly;Zemědělské družstvo Novosedly;Zemědělské družstvo Novosedly;;;;;;113824;CZ00113824;;True;1;;False;MSSF;260;0
+425;2;1;1;9;49607812;Agrospol Velká Bystřice s.r.o.;Agrospol Velká Bystřice s.r.o.;Agrospol Velká Bystřice s.r.o.;Agrospol Velká Bystřice s.r.o.;;;;;;49607812;CZ49607812;;True;1;;False;MSSF;261;0
+426;2;1;1;1;48168297;ORLICKO společnost s r. o.;ORLICKO společnost s r. o.;ORLICKO společnost s r. o.;ORLICKO společnost s r. o.;;;;;;48168297;CZ48168297;;True;1;;False;MSSF;262;0
+427;2;1;1;3;6751300138;Ivana Konopková;6751300138;Ivana Konopková;6751300138;;;;;;16638999;;6751300138;True;1;;False;MSSF;263;0
+428;2;1;1;4;7208163050;David Smetana;David Smetana;David Smetana;David Smetana;David;Smetana;;;;15063879;CZ7208163050;7208163050;True;1;;False;MSSF;264;0
+429;2;1;1;4;7407064346;František Novák;7407064346;František Novák;7407064346;;;;;;48456578;CZ7407064346;7407064346;True;1;;False;MSSF;265;0
+430;2;1;1;16;60112450;AG Skořenice, akciová společnost;AG Skořenice, akciová společnost;AG Skořenice, akciová společnost;AG Skořenice, akciová společnost;;;;;;60112450;CZ60112450;;True;1;;False;MSSF;266;0
+431;2;1;1;21;144932;Zemědělské družstvo Sněžné;Zemědělské družstvo Sněžné;Zemědělské družstvo Sněžné;Zemědělské družstvo Sněžné;;;;;;144932;CZ00144932;;True;1;;False;MSSF;267;0
+432;2;1;1;16;25271555;Solmilk a. s.;Solmilk a. s.;Solmilk a. s.;Solmilk a. s.;;;;;;25271555;CZ25271555;;True;1;;False;MSSF;268;0
+433;2;1;1;16;116262;AGRO - Otročín a.s.;AGRO - Otročín a.s.;AGRO - Otročín a.s.;AGRO - Otročín a.s.;;;;;;116262;CZ 00116262;;True;1;;False;MSSF;269;0
+434;2;1;1;3;6604050321;Roman Selinger;6604050321;Roman Selinger;6604050321;;;;;;48912786;CZ6604050321;6604050321;True;1;;False;MSSF;270;0
+435;2;1;1;4;5810170740;Jaroslav Kovanda;5810170740;Jaroslav Kovanda;5810170740;;;;;;15033619;CZ5810170740;5810170740;True;1;;False;MSSF;271;0
+436;2;1;1;21;49448986;AGRODRUŽSTVO BLÍŽKOVICE, družstvo;AGRODRUŽSTVO BLÍŽKOVICE, družstvo;AGRODRUŽSTVO BLÍŽKOVICE, družstvo;AGRODRUŽSTVO BLÍŽKOVICE, družstvo;;;;;;49448986;CZ49448986;;True;1;;False;MSSF;272;0
+437;2;1;1;3;7106292479;Hynek Bošina;7106292479;Hynek Bošina;7106292479;;;;;;47793406;CZ7106292479;7106292479;True;1;;False;MSSF;273;0
+438;2;1;1;1;25819712;Zemědělské a obchodní družstvo Hlavnice;Zemědělské a obchodní družstvo Hlavnice;Zemědělské a obchodní družstvo Hlavnice;Zemědělské a obchodní družstvo Hlavnice;;;;;;25819712;CZ25819712;;True;1;;False;MSSF;274;0
+439;2;1;1;1;48530883;Uherčice AGRO, spol. s r.o.;Uherčice AGRO, spol. s r.o.;Uherčice AGRO, spol. s r.o.;Uherčice AGRO, spol. s r.o.;;;;;;48530883;CZ48530883;;True;1;;False;MSSF;275;0
+440;2;1;1;3;5510220573;Rudolf Slanina;5510220573;Rudolf Slanina;5510220573;;;;;;15523357;CZ 5510220573;5510220573;True;1;;False;MSSF;276;0
+441;2;1;1;21;108341;Zemědělské družstvo se sídlem v Rosovicích;Zemědělské družstvo se sídlem v Rosovicích;Zemědělské družstvo se sídlem v Rosovicích;Zemědělské družstvo se sídlem v Rosovicích;;;;;;108341;CZ00108341;;True;1;;False;MSSF;277;0
+442;2;1;1;3;7604053116;Ing. Jan Sochor;7604053116;Ing. Jan Sochor;7604053116;;;;;;70147973;CZ7604053116;7604053116;True;1;;False;MSSF;278;0
+443;2;1;1;9;25247905;Naturland s.r.o.;Naturland s.r.o.;Naturland s.r.o.;Naturland s.r.o.;;;;;;25247905;CZ25247905;;True;1;;False;MSSF;279;0
+444;2;1;1;9;48266451;ZEMSPOL s.r.o.;ZEMSPOL s.r.o.;ZEMSPOL s.r.o.;ZEMSPOL s.r.o.;;;;;;48266451;CZ48266451;;True;1;;False;MSSF;280;0
+445;2;1;1;3;8001172993;Petr Miksa;8001172993;Petr Miksa;8001172993;;;;;;68213620;CZ8001172993;8001172993;True;1;;False;MSSF;281;0
+446;2;1;1;16;64511901;Statek Kostelec na Hané, a.s.;Statek Kostelec na Hané, a.s.;Statek Kostelec na Hané, a.s.;Statek Kostelec na Hané, a.s.;;;;;;64511901;CZ64511901;;True;1;;False;MSSF;282;0
+447;2;1;1;4;5808160490;Zdeněk Mrlina;5808160490;Zdeněk Mrlina;5808160490;;;;;;64070557;CZ5808160490;5808160490;True;1;;False;MSSF;283;0
+448;2;1;1;1;47238399;Selekta Pacov, a.s.;Selekta Pacov, a.s.;Selekta Pacov, a.s.;Selekta Pacov, a.s.;;;;;;47238399;;;True;1;;False;MSSF;284;0
+449;2;1;1;3;8007175847;Miroslav Horut;8007175847;Miroslav Horut;8007175847;;;;;;70641170;CZ8007175847;8007175847;True;1;;False;MSSF;285;0
+450;2;1;1;3;460315438;Ing. Jan Štěrba;460315438;Ing. Jan Štěrba;460315438;;;;;;42312426;CZ460315438;460315438;True;1;;False;MSSF;286;0
+451;2;1;1;4;7203065771;Ing. Přemysl Čech;7203065771;Ing. Přemysl Čech;7203065771;;;;;;65168682;CZ7203065771;7203065771;True;1;;False;MSSF;287;0
+452;2;1;1;1;26153700;ZP Keblov, a.s.;ZP Keblov, a.s.;ZP Keblov, a.s.;ZP Keblov, a.s.;;;;;;26153700;CZ26153700;;True;1;;False;MSSF;288;0
+453;2;1;1;16;25751573;AGRONOVA Loket a.s.;AGRONOVA Loket a.s.;AGRONOVA Loket a.s.;AGRONOVA Loket a.s.;;;;;;25751573;CZ25751573;;True;1;;False;MSSF;289;0
+454;2;1;1;16;64609910;ZP Otice, a.s.;ZP Otice, a.s.;ZP Otice, a.s.;ZP Otice, a.s.;;;;;;64609910;CZ64609910;;True;1;;False;MSSF;290;0
+455;2;1;1;4;7710114456;Milan Indrák;7710114456;Milan Indrák;7710114456;;;;;;49143441;CZ7710114456;7710114456;True;1;;False;MSSF;291;0
+456;2;1;1;3;516223181;Marie Šteflová;516223181;Marie Šteflová;516223181;;;;;;41379055;359-516223181;516223181;True;1;;False;MSSF;292;0
+457;2;1;1;92;64581;Hlavní město Praha, Magistrát hl. m. Prahy;Hlavní město Praha, Magistrát hl. m. Prahy;Hlavní město Praha, Magistrát hl. m. Prahy;Hlavní město Praha, Magistrát hl. m. Prahy;;;;;OZF M;64581;;;False;1;;False;MSSF;293;0
+458;2;1;1;37;164801;Ministerstvo životního prostředí;Ministerstvo životního prostředí;Ministerstvo životního prostředí;Ministerstvo životního prostředí;;;;;MŽP;164801;;;False;1;;False;MSSF;294;0
+459;2;1;1;3;6908121682;František Čížek;6908121682;František Čížek;6908121682;;;;;;47257091;CZ6908121682;6908121682;True;1;;False;MSSF;295;0
+460;2;1;1;16;63481821;ROSTĚNICE, a.s.;ROSTĚNICE, a.s.;ROSTĚNICE, a.s.;ROSTĚNICE, a.s.;;;;;;63481821;CZ63481821;;True;1;;False;MSSF;296;0
+461;2;1;1;9;60279567;SLOVÁCKÝ STATEK, spol. s r.o.;SLOVÁCKÝ STATEK, spol. s r.o.;SLOVÁCKÝ STATEK, spol. s r.o.;SLOVÁCKÝ STATEK, spol. s r.o.;;;;;;60279567;CZ60279567;;True;1;;False;MSSF;297;0
+462;2;1;1;3;6962134839;Zdenka Poláková;6962134839;Zdenka Poláková;6962134839;;;;;;68727429;CZ6962134839;6962134839;True;1;;False;MSSF;298;0
+463;2;1;1;16;25546040;ZERAS a.s.;ZERAS a.s.;ZERAS a.s.;ZERAS a.s.;;;;;;25546040;CZ25546040;;True;1;;False;MSSF;299;0
+464;2;1;1;1;60838442;Zemědělské družstvo Třebonín;Zemědělské družstvo Třebonín;Zemědělské družstvo Třebonín;Zemědělské družstvo Třebonín;;;;;;60838442;CZ60838442;;True;1;;False;MSSF;300;0
+465;2;1;1;3;7703241260;Bc. Vít Janás;7703241260;Bc. Vít Janás;7703241260;;;;;;69550182;CZ7703241260;7703241260;True;1;;False;MSSF;301;0
+466;2;1;1;20;112381;Zemědělské družstvo Chyšky;Zemědělské družstvo Chyšky;Zemědělské družstvo Chyšky;Zemědělské družstvo Chyšky;;;;;;112381;CZ00112381;;True;1;;False;MSSF;302;0
+467;2;1;1;16;25205773;Zemědělská společnost Komorno, a.s.;Zemědělská společnost Komorno, a.s.;Zemědělská společnost Komorno, a.s.;Zemědělská společnost Komorno, a.s.;;;;;;25205773;CZ25205773;;True;1;;False;MSSF;303;0
+468;2;1;1;3;7710111442;Miloš Stejskal;7710111442;Miloš Stejskal;7710111442;;;;;;60821761;CZ7710111442;7710111442;True;1;;False;MSSF;304;0
+469;2;1;1;3;7507015439;David Grim;7507015439;David Grim;7507015439;;;;;;70625697;CZ7507015439;7507015439;True;1;;False;MSSF;305;0
+470;2;1;1;2;7005104755;Václav Žďárský;7005104755;Václav Žďárský;7005104755;;;;;;42359511;CZ7005104755;7005104755;True;1;;False;MSSF;306;0
+471;2;1;1;1;149489;Zemědělské družstvo Partutovice;Zemědělské družstvo Partutovice;Zemědělské družstvo Partutovice;Zemědělské družstvo Partutovice;;;;;;149489;CZ 00149489;;True;1;;False;MSSF;307;0
+472;2;1;1;3;7301151902;Ing. Pavel Voráček;7301151902;Ing. Pavel Voráček;7301151902;;;;;;67133002;CZ7301151902;7301151902;True;1;;False;MSSF;308;0
+473;2;1;1;21;46353917;Agrodružstvo Brázdim;Agrodružstvo Brázdim;Agrodružstvo Brázdim;Agrodružstvo Brázdim;;;;;;46353917;CZ46353917;;True;1;;False;MSSF;309;0
+474;2;1;1;16;25745042;AGRO PERTOLTICE, a.s.;AGRO PERTOLTICE, a.s.;AGRO PERTOLTICE, a.s.;AGRO PERTOLTICE, a.s.;;;;;;25745042;CZ25745042;;True;1;;False;MSSF;310;0
+475;2;1;1;4;6412161591;Karel Skupieň;Karel Skupieň;Karel Skupieň;Karel Skupieň;Karel;Skupieň;;;;15525287;CZ6412161591;6412161591;True;1;;False;MSSF;311;0
+476;2;1;1;16;49788744;Žihelský statek, a.s.;Žihelský statek, a.s.;Žihelský statek, a.s.;Žihelský statek, a.s.;;;;;;49788744;CZ49788744;;True;1;;False;MSSF;312;0
+491;1;1;1;1;6947;Ministerstvo financí - Národní fond;Ministry of Finance - National Fund;Ministerstvo financí - Národní fond;Ministry of Finance - National Fund;;;;;MF;6947;;;False;1;;False;;;0
+499;2;1;1;92;243582;Obec Vysoký Chlumec;Obec Vysoký Chlumec;Obec Vysoký Chlumec;Obec Vysoký Chlumec;;;;;OcÚ;243582;CZ00243582;;False;1;;False;MSSF;313;0
+500;2;1;1;79;13693620;Základní organizace Českého svazu ochránců přírody Veronica;Základní organizace Českého svazu ochránců přírody Veronica;Základní organizace Českého svazu ochránců přírody Veronica;Základní organizace Českého svazu ochránců přírody Veronica;;;;;vero;13693620;CZ13693620;;True;1;;False;MSSF;314;0
+501;2;1;1;38;410829;Zoologická zahrada Ohrada Hluboká nad Vltavou;Zoologická zahrada Ohrada Hluboká nad Vltavou;Zoologická zahrada Ohrada Hluboká nad Vltavou;Zoologická zahrada Ohrada Hluboká nad Vltavou;;;;;ZOO O;410829;CZ00410829;;False;1;;False;MSSF;315;0
+502;2;1;1;79;70566984;Svazek obcí - Region Dolní Berounka;Svazek obcí - Region Dolní Berounka;Svazek obcí - Region Dolní Berounka;Svazek obcí - Region Dolní Berounka;;;;;K2;70566984;CZ70566984;;False;1;;False;MSSF;316;0
+503;2;1;1;79;46749934;Občanské sdružení Rozvoj-Development;Občanské sdružení Rozvoj-Development;Občanské sdružení Rozvoj-Development;Občanské sdružení Rozvoj-Development;;;;;OS-RD;46749934;CZ46749934;;False;1;;False;MSSF;317;0
+504;2;1;1;38;70946078;Krajská správa silnic Libereckého kraje, příspěvková organizace;Krajská správa silnic Libereckého kraje, příspěvková organizace;Krajská správa silnic Libereckého kraje, příspěvková organizace;Krajská správa silnic Libereckého kraje, příspěvková organizace;;;;;KSSLK;70946078;;;False;1;;False;MSSF;318;0
+505;2;1;1;38;70947023;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;;;;;KSÚS;70947023;CZ70947023;;False;1;;False;MSSF;319;0
+506;2;1;1;38;70947023;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;;;;;KSÚS;70947023;CZ70947023;;True;1;;False;MSSF;320;0
+507;2;1;1;95;70890650;Jihočeský kraj;Jihočeský kraj;Jihočeský kraj;Jihočeský kraj;;;;;JčK;70890650;CZ70890650;;False;1;;False;MSSF;321;0
+508;2;1;1;95;70890650;Jihočeský kraj;Jihočeský kraj;Jihočeský kraj;Jihočeský kraj;;;;;JČK;70890650;CZ70890650;;False;1;;False;MSSF;322;0
+509;2;1;1;92;244309;Město Rakovník;Město Rakovník;Město Rakovník;Město Rakovník;;;;;RK;244309;CZ00244309;;True;1;;False;MSSF;323;0
+510;2;1;1;92;234516;Statutární město Kladno;Statutární město Kladno;Statutární město Kladno;Statutární město Kladno;;;;;SMK;234516;CZ00234516;;False;1;;False;MSSF;324;0
+511;2;1;1;79;71223495;Svazek obcí mikroregionu Táborsko;Svazek obcí mikroregionu Táborsko;Svazek obcí mikroregionu Táborsko;Svazek obcí mikroregionu Táborsko;;;;;SoMT;71223495;CZ71223495;;False;1;;False;MSSF;325;0
+512;2;1;1;79;70803889;Blaník - Svazek obcí;Blaník - Svazek obcí;Blaník - Svazek obcí;Blaník - Svazek obcí;;;;;Svaz;70803889;CZ70803889;;False;1;;False;MSSF;326;0
+513;2;1;1;38;70947023;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;Krajská správa a údržba silnic Karlovarského kraje, příspěvková organizace;;;;;KSÚS;70947023;CZ70947023;;False;1;;False;MSSF;327;0
+514;2;1;1;92;247545;Obec Studená;Obec Studená;Obec Studená;Obec Studená;;;;;OS;247545;CZ00247545;;False;1;;False;MSSF;328;0
+515;2;1;1;92;274828;Obec Čestice;Obec Čestice;Obec Čestice;Obec Čestice;;;;;OU;274828;;;False;1;;False;MSSF;329;0
+516;2;1;1;79;70936323;Dobrovolný svazek obcí mikroregionu Brodec;Dobrovolný svazek obcí mikroregionu Brodec;Dobrovolný svazek obcí mikroregionu Brodec;Dobrovolný svazek obcí mikroregionu Brodec;;;;;DSO B;70936323;;;False;1;;False;MSSF;330;0
+517;2;1;1;16;62242504;DOPRAVNÍ PODNIK měst Mostu a Litvínova, a.s.;DOPRAVNÍ PODNIK měst Mostu a Litvínova, a.s.;DOPRAVNÍ PODNIK měst Mostu a Litvínova, a.s.;DOPRAVNÍ PODNIK měst Mostu a Litvínova, a.s.;;;;;DPmML;62242504;CZ62242504;;True;1;;False;MSSF;331;0
+518;2;1;1;92;237442;Město Benátky nad  Jizerou;Město Benátky nad  Jizerou;Město Benátky nad  Jizerou;Město Benátky nad  Jizerou;;;;;BNJ;237442;CZ00237442;;False;1;;False;MSSF;332;0
+519;2;1;1;95;70892156;Ústecký kraj se sídlem v Ústí nad Labem;Ústecký kraj se sídlem v Ústí nad Labem;Ústecký kraj se sídlem v Ústí nad Labem;Ústecký kraj se sídlem v Ústí nad Labem;;;;;ÚK;70892156;CZ70892156;;False;1;;False;MSSF;333;0
+520;2;1;1;95;70892156;Ústecký kraj se sídlem v Ústí nad Labem;Ústecký kraj se sídlem v Ústí nad Labem;Ústecký kraj se sídlem v Ústí nad Labem;Ústecký kraj se sídlem v Ústí nad Labem;;;;;ÚK;70892156;CZ70892156;;False;1;;False;MSSF;334;0
+521;2;1;1;92;299308;Statutární město Olomouc;Statutární město Olomouc;Statutární město Olomouc;Statutární město Olomouc;;;;;SmOl;299308;CZ00299308;;True;1;;False;MSSF;335;0
+522;2;1;1;92;299421;Obec Senice na Hané;Obec Senice na Hané;Obec Senice na Hané;Obec Senice na Hané;;;;;Obec;299421;CZ00299421;;False;1;;False;MSSF;336;0
+523;2;1;1;92;303003;Obec Mikulovice;Obec Mikulovice;Obec Mikulovice;Obec Mikulovice;;;;;Obec;303003;CZ00303003;;False;1;;False;MSSF;337;0
+524;2;1;1;95;60609460;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;;;;;OK;60609460;CZ60609460;;False;1;;False;MSSF;338;0
+525;2;1;1;9;26276437;Kroměřížské technické služby, s.r.o;Kroměřížské technické služby, s.r.o;Kroměřížské technické služby, s.r.o;Kroměřížské technické služby, s.r.o;;;;;KTS;26276437;CZ26276437;;True;1;;False;MSSF;339;0
+526;2;1;1;9;60730153;Dopravní společnost Zlín-Otrokovice, s.r.o.;Dopravní společnost Zlín-Otrokovice, s.r.o.;Dopravní společnost Zlín-Otrokovice, s.r.o.;Dopravní společnost Zlín-Otrokovice, s.r.o.;;;;;DSZO;60730153;CZ60730153;;True;1;;False;MSSF;340;0
+527;2;1;1;95;70889546;Královéhradecký kraj;Královéhradecký kraj;Královéhradecký kraj;Královéhradecký kraj;;;;;KHKR;70889546;;;False;1;;False;MSSF;341;0
+528;2;1;1;38;95711;Správa silnic Moravskoslezského kraje;Správa silnic Moravskoslezského kraje;Správa silnic Moravskoslezského kraje;Správa silnic Moravskoslezského kraje;;;;;SS MS;95711;CZ00095711;;False;1;;False;MSSF;342;0
+529;2;1;1;92;300063;Město Hlučín;Město Hlučín;Město Hlučín;Město Hlučín;;;;;Hlu;300063;CZ00300063;;False;1;;False;MSSF;343;0
+530;2;1;1;92;262340;Město Jablonec nad Nisou;Město Jablonec nad Nisou;Město Jablonec nad Nisou;Město Jablonec nad Nisou;;;;;-;262340;;;False;1;;False;MSSF;344;0
+531;2;1;1;92;262978;Statutární město Liberec;Statutární město Liberec;Statutární město Liberec;Statutární město Liberec;;;;;SML;262978;;;False;1;;False;MSSF;345;0
+532;2;1;1;95;70891508;Liberecký kraj;Liberecký kraj;Liberecký kraj;Liberecký kraj;;;;;LK;70891508;;;False;1;;False;MSSF;346;0
+533;2;1;1;38;46748075;Gymnázium a Střední pedagogická škola, Liberec, Jeronýmova 27, příspěvková organizace;Gymnázium a Střední pedagogická škola, Liberec, Jeronýmova 27, příspěvková organizace;Gymnázium a Střední pedagogická škola, Liberec, Jeronýmova 27, příspěvková organizace;Gymnázium a Střední pedagogická škola, Liberec, Jeronýmova 27, příspěvková organizace;;;;;GSPgŠ;46748075;CZ46748075;;False;1;;False;MSSF;347;0
+534;2;1;1;95;70891168;Karlovarský kraj;Karlovarský kraj;Karlovarský kraj;Karlovarský kraj;;;;;KK;70891168;CZ70891168;;False;1;;False;MSSF;348;0
+535;2;1;1;84;45331154;Diakonie Českobratrské církve evangelické středisko Radost v Merklíně;Diakonie Českobratrské církve evangelické středisko Radost v Merklíně;Diakonie Českobratrské církve evangelické středisko Radost v Merklíně;Diakonie Českobratrské církve evangelické středisko Radost v Merklíně;;;;;DČCE;45331154;CZ45331154;;False;1;;False;MSSF;349;0
+536;2;1;1;92;249831;Město Milevsko;Město Milevsko;Město Milevsko;Město Milevsko;;;;;MÚ;249831;CZ00249831;;True;1;;False;MSSF;350;0
+537;2;1;1;92;232947;MĚSTO VLAŠIM;MĚSTO VLAŠIM;MĚSTO VLAŠIM;MĚSTO VLAŠIM;;;;;MV;232947;CZ00232947;;False;1;;False;MSSF;351;0
+538;2;1;1;85;564613;Asociace pro mládež, vědu a techniku AMAVET;Asociace pro mládež, vědu a techniku AMAVET;Asociace pro mládež, vědu a techniku AMAVET;Asociace pro mládež, vědu a techniku AMAVET;;;;;AM;564613;CZ00564613;;False;1;;False;MSSF;352;0
+539;2;1;1;18;26377071;Carlsbader Gate o.p.s;Carlsbader Gate o.p.s;Carlsbader Gate o.p.s;Carlsbader Gate o.p.s;;;;;;26377071;;;False;1;;False;MSSF;353;0
+540;2;1;1;38;582158;Vyšší odborná škola, Střední průmyslová škola automobilní a Střední odborné učiliště dopravní a technické;Vyšší odborná škola, Střední průmyslová škola automobilní a Střední odborné učiliště dopravní a technické;Vyšší odborná škola, Střední průmyslová škola automobilní a Střední odborné učiliště dopravní a technické;Vyšší odborná škola, Střední průmyslová škola automobilní a Střední odborné učiliště dopravní a technické;;;;;VOŠ;582158;CZ00582158;;False;1;;False;MSSF;354;0
+541;2;1;1;38;12907731;Střední odborná škola a Střední odborné učiliště, Centrum odborné přípravy, Sezimovo Ústí, Budějovická 421;Střední odborná škola a Střední odborné učiliště, Centrum odborné přípravy, Sezimovo Ústí, Budějovická 421;Střední odborná škola a Střední odborné učiliště, Centrum odborné přípravy, Sezimovo Ústí, Budějovická 421;Střední odborná škola a Střední odborné učiliště, Centrum odborné přípravy, Sezimovo Ústí, Budějovická 421;;;;;COP;12907731;CZ12907731;;False;1;;False;MSSF;355;0
+542;2;1;1;92;299529;město Šternberk;město Šternberk;město Šternberk;město Šternberk;;;;;I;299529;CZ00299529;;False;1;;False;MSSF;356;0
+543;2;1;1;18;26839547;Centrum pro rozvoj a podporu regionů, o.p.s.;Centrum pro rozvoj a podporu regionů, o.p.s.;Centrum pro rozvoj a podporu regionů, o.p.s.;Centrum pro rozvoj a podporu regionů, o.p.s.;;;;;CRPR;26839547;CZ26839547;;True;1;;False;MSSF;357;0
+544;2;1;1;92;301825;Město Přerov;Město Přerov;Město Přerov;Město Přerov;;;;;MP;301825;CZ00301825;;False;1;;False;MSSF;358;0
+545;2;1;1;92;299308;Statutární město Olomouc;Statutární město Olomouc;Statutární město Olomouc;Statutární město Olomouc;;;;;SmOl;299308;CZ00299308;;True;1;;False;MSSF;359;0
+546;2;1;1;16;25488627;Krajská zdravotní, a.s. - Nemocnice Teplice, o.z.;Krajská zdravotní, a.s. - Nemocnice Teplice, o.z.;Krajská zdravotní, a.s. - Nemocnice Teplice, o.z.;Krajská zdravotní, a.s. - Nemocnice Teplice, o.z.;;;;;NTP;25488627;;;False;1;;False;MSSF;360;0
+547;2;1;1;95;70892822;Pardubický kraj;Pardubický kraj;Pardubický kraj;Pardubický kraj;;;;;PUK;70892822;CZ70892822;;False;1;;False;MSSF;361;0
+548;2;1;1;95;70892822;Pardubický kraj;Pardubický kraj;Pardubický kraj;Pardubický kraj;;;;;PUK;70892822;CZ70892822;;False;1;;False;MSSF;362;0
+549;2;1;1;92;277720;Obec Černý Důl;Obec Černý Důl;Obec Černý Důl;Obec Černý Důl;;;;;Oú;277720;;;False;1;;False;MSSF;363;0
+550;2;1;1;79;69834458;Region Moravskotřebovska a Jevíčska;Region Moravskotřebovska a Jevíčska;Region Moravskotřebovska a Jevíčska;Region Moravskotřebovska a Jevíčska;;;;;MTJ;69834458;;;False;1;;False;MSSF;364;0
+551;2;1;1;92;262404;Obec Koberovy;Obec Koberovy;Obec Koberovy;Obec Koberovy;;;;;OU;262404;;;False;1;;False;MSSF;365;0
+552;2;1;1;92;266612;Obec Světec;Obec Světec;Obec Světec;Obec Světec;;;;;OS;266612;;;False;1;;False;MSSF;366;0
+553;2;1;1;92;297194;Obec Hukvaldy;Obec Hukvaldy;Obec Hukvaldy;Obec Hukvaldy;;;;;--;297194;;;False;1;;False;MSSF;367;0
+554;2;1;1;92;845451;Statutární město Ostrava;Statutární město Ostrava;Statutární město Ostrava;Statutární město Ostrava;;;;;SMO;845451;CZ00845451;;False;1;;False;MSSF;368;0
+555;2;1;1;92;298212;Město Nový Jičín;Město Nový Jičín;Město Nový Jičín;Město Nový Jičín;;;;;Město;298212;CZ00298212;;False;1;;False;MSSF;369;0
+556;2;1;1;92;244732;Statutární město České Budějovice;Statutární město České Budějovice;Statutární město České Budějovice;Statutární město České Budějovice;;;;;ČB;244732;CZ00244732;;False;1;;False;MSSF;370;0
+557;2;1;1;92;245780;Obec Benešov nad Černou;Obec Benešov nad Černou;Obec Benešov nad Černou;Obec Benešov nad Černou;;;;;OBnČ;245780;;;False;1;;False;MSSF;371;0
+558;2;1;1;92;304450;Město Vsetín;Město Vsetín;Město Vsetín;Město Vsetín;;;;;MV;304450;CZ00304450;;False;1;;False;MSSF;399;0
+559;2;1;1;92;240478;Město Mnichovice;Město Mnichovice;Město Mnichovice;Město Mnichovice;;;;;Město;240478;CZ00240478;;False;1;;False;MSSF;400;0
+560;2;1;1;92;232947;Město Vlašim;Město Vlašim;Město Vlašim;Město Vlašim;;;;;MV;232947;CZ00232947;;False;1;;False;MSSF;401;0
+561;2;1;1;79;519600;Tělovýchovná jednota Slovan Mariánské Lázně;Tělovýchovná jednota Slovan Mariánské Lázně;Tělovýchovná jednota Slovan Mariánské Lázně;Tělovýchovná jednota Slovan Mariánské Lázně;;;;;TJ;519600;;;False;1;;False;MSSF;402;0
+562;2;1;1;92;257249;Město Spálené Poříčí;Město Spálené Poříčí;Město Spálené Poříčí;Město Spálené Poříčí;;;;;MĚSPO;257249;CZ00257249;;False;1;;False;MSSF;403;0
+563;2;1;1;92;479705;Město Boží Dar;Město Boží Dar;Město Boží Dar;Město Boží Dar;;;;;Obec;479705;CZ00479705;;False;1;;False;MSSF;404;0
+564;2;1;1;85;45018430;Junák - svaz skautů a skautek ČR, 4. středisko VAVÉHA České Budějovice;Junák - svaz skautů a skautek ČR, 4. středisko VAVÉHA České Budějovice;Junák - svaz skautů a skautek ČR, 4. středisko VAVÉHA České Budějovice;Junák - svaz skautů a skautek ČR, 4. středisko VAVÉHA České Budějovice;;;;;20104;45018430;CZ45018430;;False;1;;False;MSSF;405;0
+565;2;1;1;71;62690094;Univerzita Hradec Králové;Univerzita Hradec Králové;Univerzita Hradec Králové;Univerzita Hradec Králové;;;;;UHK;62690094;CZ62690094;;True;1;;False;MSSF;406;0
+566;2;1;1;92;274046;Statutární město Pardubice;Statutární město Pardubice;Statutární město Pardubice;Statutární město Pardubice;;;;;SMP;274046;CZ00274046;;False;1;;False;MSSF;407;0
+567;2;1;1;92;635898;Obec Vikýřovice;Obec Vikýřovice;Obec Vikýřovice;Obec Vikýřovice;;;;;obec;635898;CZ00635898;;False;1;;False;MSSF;408;0
+568;2;1;1;92;299651;Město Velká Bystřice;Město Velká Bystřice;Město Velká Bystřice;Město Velká Bystřice;;;;;VBys;299651;CZ00299651;;False;1;;False;MSSF;409;0
+569;2;1;1;38;669725;Střední odborná škola stavební Karlovy Vary;Střední odborná škola stavební Karlovy Vary;Střední odborná škola stavební Karlovy Vary;Střední odborná škola stavební Karlovy Vary;;;;;SOUS;669725;CZ00669725;;False;1;;False;MSSF;410;0
+570;2;1;1;38;14451042;SOŠT a SOU Louny;SOŠT a SOU Louny;SOŠT a SOU Louny;SOŠT a SOU Louny;;;;;SOŠT;14451042;CZ14451042;;False;1;;False;MSSF;411;0
+571;2;1;1;85;564613;Asociace pro mládež, vědu a techniku AMAVET;Asociace pro mládež, vědu a techniku AMAVET;Asociace pro mládež, vědu a techniku AMAVET;Asociace pro mládež, vědu a techniku AMAVET;;;;;AM;564613;CZ700564613;;False;1;;False;MSSF;412;0
+572;2;1;1;92;266094;Statutární město Most;Statutární město Most;Statutární město Most;Statutární město Most;;;;;Most;266094;;;False;1;;False;MSSF;413;0
+573;2;1;1;38;47274654;Střední škola zahradnická a zemědělská Antonína Emanuela Komerse, Děčín - Libverda;Střední škola zahradnická a zemědělská Antonína Emanuela Komerse, Děčín - Libverda;Střední škola zahradnická a zemědělská Antonína Emanuela Komerse, Děčín - Libverda;Střední škola zahradnická a zemědělská Antonína Emanuela Komerse, Děčín - Libverda;;;;;SZSDC;47274654;;;True;1;;False;MSSF;414;0
+574;2;1;1;38;61357481;Střední zemědělskáškola a Střední odborné učiliště;Střední zemědělskáškola a Střední odborné učiliště;Střední zemědělskáškola a Střední odborné učiliště;Střední zemědělskáškola a Střední odborné učiliště;;;;;SzemŠ;61357481;;;False;1;;False;MSSF;415;0
+575;2;1;1;84;48623814;Oblastní charita Červený Kostelec;Oblastní charita Červený Kostelec;Oblastní charita Červený Kostelec;Oblastní charita Červený Kostelec;;;;;;48623814;CZ48623814;;True;1;;False;MSSF;416;0
+576;2;1;1;85;41084624;Junák - Svaz skautů a skautek ČR, středisko Vsetín 723.01;Junák - Svaz skautů a skautek ČR, středisko Vsetín 723.01;Junák - Svaz skautů a skautek ČR, středisko Vsetín 723.01;Junák - Svaz skautů a skautek ČR, středisko Vsetín 723.01;;;;;Junák;41084624;CZ41084624;;False;1;;False;MSSF;417;0
+577;2;1;1;92;275387;Obec Skuhrov nad Bělou;Obec Skuhrov nad Bělou;Obec Skuhrov nad Bělou;Obec Skuhrov nad Bělou;;;;;SB;275387;CZ00275387;;False;1;;False;MSSF;418;0
+578;2;1;1;92;253014;Město Tábor;Město Tábor;Město Tábor;Město Tábor;;;;;Město;253014;CZ00253014;;False;1;;False;MSSF;419;0
+579;2;1;1;92;600792;Obec Mošnov;Obec Mošnov;Obec Mošnov;Obec Mošnov;;;;;;600792;CZ00600792;;False;1;;False;MSSF;420;0
+580;2;1;1;18;25353446;Vyšší odborná škola DAKOL a  střední školy DAKOL, o.p.s.;Vyšší odborná škola DAKOL a  střední školy DAKOL, o.p.s.;Vyšší odborná škola DAKOL a  střední školy DAKOL, o.p.s.;Vyšší odborná škola DAKOL a  střední školy DAKOL, o.p.s.;;;;;DAKOL;25353446;;;False;1;;False;MSSF;421;0
+581;2;1;1;95;70890692;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;;;;;MSK;70890692;CZ70890692;;False;1;;False;MSSF;422;0
+582;2;1;1;13;68333552;Reintegra;Reintegra;Reintegra;Reintegra;;;;;Reint;68333552;CZ68333552;;True;1;;False;MSSF;423;0
+583;2;1;1;84;66181127;Diecézní charita ostravsko-opavská;Diecézní charita ostravsko-opavská;Diecézní charita ostravsko-opavská;Diecézní charita ostravsko-opavská;;;;;DCHOO;66181127;CZ66181127;;False;1;;False;MSSF;424;0
+584;2;1;1;92;243221;Město Rožmitál pod Třemšínem;Město Rožmitál pod Třemšínem;Město Rožmitál pod Třemšínem;Město Rožmitál pod Třemšínem;;;;;Centr;243221;CZ00243221;;False;1;;False;MSSF;425;0
+585;2;1;1;92;259454;Město Kynšperk nad Ohří;Město Kynšperk nad Ohří;Město Kynšperk nad Ohří;Město Kynšperk nad Ohří;;;;;Kynšp;259454;CZ00259454;;False;1;;False;MSSF;426;0
+586;2;1;1;92;303585;Obec Vidnava;Obec Vidnava;Obec Vidnava;Obec Vidnava;;;;;OU;303585;CZ00303585;;False;1;;False;MSSF;427;0
+587;2;1;1;92;299260;Obec Náměšť na Hané;Obec Náměšť na Hané;Obec Náměšť na Hané;Obec Náměšť na Hané;;;;;OÚ;299260;;;False;1;;False;MSSF;428;0
+588;2;1;1;92;261939;Město Klášterec nad Ohří;Město Klášterec nad Ohří;Město Klášterec nad Ohří;Město Klášterec nad Ohří;;;;;MÚ KL;261939;CZ00261939;;False;1;;False;MSSF;429;0
+589;2;1;1;92;303780;Obec Horní Lideč;Obec Horní Lideč;Obec Horní Lideč;Obec Horní Lideč;;;;;obec;303780;CZ00303780;;True;1;;False;MSSF;430;0
+590;2;1;1;92;264474;Město Terezín;Město Terezín;Město Terezín;Město Terezín;;;;;Terez;264474;CZ00264474;;False;1;;False;MSSF;431;0
+591;2;1;1;92;266299;Město Duchcov;Město Duchcov;Město Duchcov;Město Duchcov;;;;;MD;266299;;;False;1;;False;MSSF;432;0
+592;2;1;1;92;276944;Město Litomyšl;Město Litomyšl;Město Litomyšl;Město Litomyšl;;;;;ML;276944;CZ00276944;;False;1;;False;MSSF;433;0
+593;2;1;1;38;305847;Muzeum Těšínska, příspěvková organizace;Muzeum Těšínska, příspěvková organizace;Muzeum Těšínska, příspěvková organizace;Muzeum Těšínska, příspěvková organizace;;;;;MT;305847;CZ00305847;;False;1;;False;MSSF;434;0
+594;2;1;1;92;261904;Město Jirkov;Město Jirkov;Město Jirkov;Město Jirkov;;;;;MJ;261904;CZ00261904;;False;1;;False;MSSF;435;0
+595;2;1;1;92;297569;Město Bohumín;Město Bohumín;Město Bohumín;Město Bohumín;;;;;MUBO;297569;CZ00297569;;False;1;;False;MSSF;436;0
+596;2;1;1;95;70890692;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;;;;;MSK;70890692;CZ70890692;;False;1;;False;MSSF;437;0
+597;2;1;1;92;235580;obec Nová Ves I.;obec Nová Ves I.;obec Nová Ves I.;obec Nová Ves I.;;;;;x;235580;CZ00235580;;False;1;;False;MSSF;438;0
+598;2;1;1;92;248185;Město Horní Cerekev;Město Horní Cerekev;Město Horní Cerekev;Město Horní Cerekev;;;;;MěúHC;248185;CZ00248185;;False;1;;False;MSSF;439;0
+599;2;1;1;95;70890749;Vysočina;Vysočina;Vysočina;Vysočina;;;;;Vysoc;70890749;CZ70890749;;False;1;;False;MSSF;440;0
+600;2;1;1;92;267759;Město Ledeč nad Sázavou;Město Ledeč nad Sázavou;Město Ledeč nad Sázavou;Město Ledeč nad Sázavou;;;;;Ledeč;267759;CZ00267759;;False;1;;False;MSSF;441;0
+601;2;1;1;92;247871;obec Bratřice;obec Bratřice;obec Bratřice;obec Bratřice;;;;;OBR;247871;CZ00247871;;False;1;;False;MSSF;442;0
+602;2;1;1;92;286745;Město Telč;Město Telč;Město Telč;Město Telč;;;;;Telč;286745;CZ00286745;;False;1;;False;MSSF;443;0
+603;2;1;1;92;294136;Město Bystřice nad Pernštejnem;Město Bystřice nad Pernštejnem;Město Bystřice nad Pernštejnem;Město Bystřice nad Pernštejnem;;;;;MúBnP;294136;CZ00294136;;True;1;;False;MSSF;444;0
+604;2;1;1;79;71189050;Mikroregion PORTA;Mikroregion PORTA;Mikroregion PORTA;Mikroregion PORTA;;;;;PORTA;71189050;CZ71189050;;False;1;;False;MSSF;445;0
+605;2;1;1;92;286192;Obec Luka nad Jihlavou;Obec Luka nad Jihlavou;Obec Luka nad Jihlavou;Obec Luka nad Jihlavou;;;;;LNJ;286192;CZ00286192;;False;1;;False;MSSF;446;0
+606;2;1;1;79;65761201;Unie neslyšících Brno;Unie neslyšících Brno;Unie neslyšících Brno;Unie neslyšících Brno;;;;;UNB;65761201;CZ65761201;;False;1;;False;MSSF;447;0
+607;2;1;1;92;488518;Obec Blatnička;Obec Blatnička;Obec Blatnička;Obec Blatnička;;;;;x;488518;CZ00488518;;False;1;;False;MSSF;448;0
+608;2;1;1;79;26527430;Jezdecký klub Nesyt;Jezdecký klub Nesyt;Jezdecký klub Nesyt;Jezdecký klub Nesyt;;;;;Nesyt;26527430;CZ26527430;;True;1;;False;MSSF;449;0
+609;2;1;1;92;294900;Město Nové Město na Moravě;Město Nové Město na Moravě;Město Nové Město na Moravě;Město Nové Město na Moravě;;;;;NMNM;294900;CZ00294900;;False;1;;False;MSSF;450;0
+610;2;1;1;84;44990260;Diecézní charita Brno;Diecézní charita Brno;Diecézní charita Brno;Diecézní charita Brno;;;;;DCHB;44990260;CZ44990260;;True;1;;False;MSSF;451;0
+611;2;1;1;92;294471;Obec Jimramov;Obec Jimramov;Obec Jimramov;Obec Jimramov;;;;;Jimr.;294471;CZ00294471;;False;1;;False;MSSF;452;0
+612;2;1;1;38;70932581;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;;;;;SÚS;70932581;;;True;1;;False;MSSF;453;0
+613;2;1;1;38;70932581;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;;;;;SUSJK;70932581;CZ70932581;;True;1;;False;MSSF;454;0
+614;2;1;1;79;70102961;DSO Pečecký region;DSO Pečecký region;DSO Pečecký region;DSO Pečecký region;;;;;DSO P;70102961;CZ70102961;;False;1;;False;MSSF;455;0
+615;2;1;1;92;532126;Obec Horní Smržov;Obec Horní Smržov;Obec Horní Smržov;Obec Horní Smržov;;;;;MHS;532126;CZ00532126;;False;1;;False;MSSF;456;0
+616;2;1;1;38;673544;Krajská zdravotní a.s.;Krajská zdravotní a.s.;Krajská zdravotní a.s.;Krajská zdravotní a.s.;;;;;MNUL;673544;CZ00673544;;True;1;;False;MSSF;457;0
+617;2;1;1;92;285111;Obec Milotice;Obec Milotice;Obec Milotice;Obec Milotice;;;;;Milot;285111;CZ00285111;;False;1;;False;MSSF;458;0
+618;2;1;1;38;68081731;Ústav přístrojové techniky AV ČR, v.v.i.;Ústav přístrojové techniky AV ČR, v.v.i.;Ústav přístrojové techniky AV ČR, v.v.i.;Ústav přístrojové techniky AV ČR, v.v.i.;;;;;ÚPT;68081731;CZ68081731;;True;1;;False;MSSF;459;0
+619;2;1;1;92;283193;Město  Hustopeče;Město  Hustopeče;Město  Hustopeče;Město  Hustopeče;;;;;Mě HU;283193;CZ00283193;;False;1;;False;MSSF;460;0
+620;2;1;1;38;60680334;Obchodní akademie Břeclav;Obchodní akademie Břeclav;Obchodní akademie Břeclav;Obchodní akademie Břeclav;;;;;OA;60680334;CZ60680334;;False;1;;False;MSSF;461;0
+621;2;1;1;84;65841875;Oblastní charita Vyškov;Oblastní charita Vyškov;Oblastní charita Vyškov;Oblastní charita Vyškov;;;;;OCHV;65841875;CZ65841875;;False;1;;False;MSSF;462;0
+622;2;1;1;79;69650284;Region Podluží;Region Podluží;Region Podluží;Region Podluží;;;;;RP;69650284;CZ69650284;;False;1;;False;MSSF;463;0
+623;2;1;1;38;70932581;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;Správa a údržba silnic Jihomoravského kraje;;;;;SUSJK;70932581;CZ70932581;;True;1;;False;MSSF;464;0
+624;2;1;1;84;44990260;Diecézní charita Brno;Diecézní charita Brno;Diecézní charita Brno;Diecézní charita Brno;;;;;DCHB;44990260;CZ44990260;;True;1;;False;MSSF;465;0
+625;2;1;1;92;291927;Obec Krásensko;Obec Krásensko;Obec Krásensko;Obec Krásensko;;;;;OK;291927;CZ00291927;;False;1;;False;MSSF;466;0
+626;2;1;1;92;293784;Obec Višňové;Obec Višňové;Obec Višňové;Obec Višňové;;;;;VISN;293784;CZ00293784;;False;1;;False;MSSF;467;0
+627;2;1;1;79;68684312;Občanské sdružení Krok;Občanské sdružení Krok;Občanské sdružení Krok;Občanské sdružení Krok;;;;;Krok;68684312;CZ68684312;;False;1;;False;MSSF;468;0
+628;2;1;1;1;47541768;CHMEL spol.s r.o.;CHMEL spol.s r.o.;CHMEL spol.s r.o.;CHMEL spol.s r.o.;;;;;;47541768;CZ47541768;;True;1;;False;MSSF;469;0
+629;2;1;1;1;101834;Zemědělské družstvo Čechtice, okres Benešov;Zemědělské družstvo Čechtice, okres Benešov;Zemědělské družstvo Čechtice, okres Benešov;Zemědělské družstvo Čechtice, okres Benešov;;;;;;101834;CZ 00101834;;True;1;;False;MSSF;470;0
+630;2;1;1;9;49810464;LUKA spol. s r.o.;LUKA spol. s r.o.;LUKA spol. s r.o.;LUKA spol. s r.o.;;;;;;49810464;CZ49810464;;True;1;;False;MSSF;471;0
+631;2;1;1;4;6307020038;ing. Miloslav Samec;6307020038;ing. Miloslav Samec;6307020038;;;;;;48223506;105-630702003;6307020038;True;1;;False;MSSF;472;0
+632;2;1;1;3;500306012;Miroslav Tichý;500306012;Miroslav Tichý;500306012;;;;;;60944234;CZ500306012;500306012;True;1;;False;MSSF;473;0
+633;2;1;1;20;112283;Zemědělské družstvo Čížová;Zemědělské družstvo Čížová;Zemědělské družstvo Čížová;Zemědělské družstvo Čížová;;;;;;112283;CZ00112283;;True;1;;False;MSSF;474;0
+634;2;1;1;3;7103074836;Libor Urbánek;7103074836;Libor Urbánek;7103074836;;;;;;15544672;CZ7103074836;7103074836;True;1;;False;MSSF;475;0
+635;2;1;1;1;143308;AGRODRUŽSTVO VRBOVEC, družstvo;AGRODRUŽSTVO VRBOVEC, družstvo;AGRODRUŽSTVO VRBOVEC, družstvo;AGRODRUŽSTVO VRBOVEC, družstvo;;;;;;143308;CZ00143308;;True;1;;False;MSSF;476;0
+636;2;1;1;16;64834646;Meclovská zemědělská, a.s.;Meclovská zemědělská, a.s.;Meclovská zemědělská, a.s.;Meclovská zemědělská, a.s.;;;;;;64834646;CZ64834646;;True;1;;False;MSSF;477;0
+637;2;1;1;1;47672447;Statky Potštát , a.s.;Statky Potštát , a.s.;Statky Potštát , a.s.;Statky Potštát , a.s.;;;;;;47672447;CZ47672447;;True;1;;False;MSSF;478;0
+638;2;1;1;3;7308101768;Václav Schleiss;7308101768;Václav Schleiss;7308101768;;;;;;41627270;CZ7308101768;7308101768;True;1;;False;MSSF;479;0
+639;2;1;1;1;47549319;ZEVOS s. r.o.;ZEVOS s. r.o.;ZEVOS s. r.o.;ZEVOS s. r.o.;;;;;;47549319;CZ47549319;;True;1;;False;MSSF;480;0
+640;2;1;1;3;7903152048;Jiří Říhánek;7903152048;Jiří Říhánek;7903152048;;;;;;41650778;CZ 7903152048;7903152048;True;1;;False;MSSF;481;0
+641;2;1;1;3;7909094666;Alois Obdržálek;Alois Obdržálek;Alois Obdržálek;Alois Obdržálek;Alois;Obdržálek;;;;67011241;CZ7909094666;7909094666;True;1;;False;MSSF;482;0
+642;2;1;1;3;7502054428;Ing. Milan Šebesta;7502054428;Ing. Milan Šebesta;7502054428;;;;;;60609800;CZ7502054428;7502054428;True;1;;False;MSSF;483;0
+643;2;1;1;3;7706042465;Ing. Jan Bošina;7706042465;Ing. Jan Bošina;7706042465;;;;;;70901015;CZ 7706042465;7706042465;True;1;;False;MSSF;484;0
+644;2;1;1;1;25308068;BOJA ZN a.s.;BOJA ZN a.s.;BOJA ZN a.s.;BOJA ZN a.s.;;;;;;25308068;CZ25308068;;True;1;;False;MSSF;485;0
+645;2;1;1;16;25308866;CITONICE AGRO a.s.;CITONICE AGRO a.s.;CITONICE AGRO a.s.;CITONICE AGRO a.s.;;;;;;25308866;CZ25308866;;True;1;;False;MSSF;486;0
+646;2;1;1;16;26030993;Zemědělská společnost Dubné a.s.;Zemědělská společnost Dubné a.s.;Zemědělská společnost Dubné a.s.;Zemědělská společnost Dubné a.s.;;;;;;26030993;CZ26030993;;True;1;;False;MSSF;487;0
+647;2;1;1;3;8005311226;Jan Čecháček;8005311226;Jan Čecháček;8005311226;;;;;;69551073;CZ8005311226;8005311226;True;1;;False;MSSF;488;0
+648;2;1;1;3;6510270976;Luděk Šimáček;6510270976;Luděk Šimáček;6510270976;;;;;;42133203;CZ 6510270976;6510270976;True;1;;False;MSSF;489;0
+649;2;1;1;3;6508281802;Miroslav Drs;6508281802;Miroslav Drs;6508281802;;;;;;42360552;CZ6508281802;6508281802;True;1;;False;MSSF;490;0
+650;2;1;1;2;6812291200;Ing. Eduard Kadrnka;Ing. Eduard Kadrnka;Ing. Eduard Kadrnka;Ing. Eduard Kadrnka;Eduard;Kadrnka;Ing.;;;46186689;CZ6812291200;6812291200;True;1;;False;MSSF;491;0
+651;2;1;1;4;7203304130;Roman Macek;7203304130;Roman Macek;7203304130;;;;;;68627947;CZ203304130;7203304130;True;1;;False;MSSF;492;0
+652;2;1;1;21;13502824;Zemědělské družstvo Ratiboř;Zemědělské družstvo Ratiboř;Zemědělské družstvo Ratiboř;Zemědělské družstvo Ratiboř;;;;;;13502824;CZ13502824;;True;1;;False;MSSF;493;0
+653;2;1;1;21;116734;Zemědělské obchodní družstvo se sídlem v Kolinci;Zemědělské obchodní družstvo se sídlem v Kolinci;Zemědělské obchodní družstvo se sídlem v Kolinci;Zemědělské obchodní družstvo se sídlem v Kolinci;;;;;;116734;CZ00116734;;True;1;;False;MSSF;494;0
+654;2;1;1;4;6610021396;Miloslav Drhovský;Miloslav Drhovský;Miloslav Drhovský;Miloslav Drhovský;Miloslav;Drhovský;;;;70535531;CZ6610021396;6610021396;True;1;;False;MSSF;495;0
+769;2;1;1;37;66002222;Ministerstvo pro místní rozvoj ČR - Odbor řídícího orgánu SROP a  JPD Praha Cíl 2;Ministerstvo pro místní rozvoj ČR - Odbor řídícího orgánu SROP a  JPD Praha Cíl 2;Ministerstvo pro místní rozvoj ČR - Odbor řídícího orgánu SROP a  JPD Praha Cíl 2;Ministerstvo pro místní rozvoj ČR - Odbor řídícího orgánu SROP a  JPD Praha Cíl 2;;;;;;66002222;;;False;1;;False;MSSF;496;0
+770;2;1;1;14;45251177;Nadace Bona;Nadace Bona;Nadace Bona;Nadace Bona;;;;;NB;45251177;CZ45251177;;False;1;;False;MSSF;497;0
+771;2;1;1;37;20478;Ministerstvo zemědělství ČR;Ministerstvo zemědělství ČR;Ministerstvo zemědělství ČR;Ministerstvo zemědělství ČR;;;;;;20478;;;False;1;;False;MSSF;498;0
+772;2;1;1;16;48203807;FISH MARKET a.s.;FISH MARKET a.s.;FISH MARKET a.s.;FISH MARKET a.s.;;;;;;48203807;CZ48203807;;True;1;;False;MSSF;499;0
+773;2;1;1;1;60826851;Rybářství Třeboň a.s.;Rybářství Třeboň a.s.;Rybářství Třeboň a.s.;Rybářství Třeboň a.s.;;;;;;60826851;CZ60826851;;True;1;;False;MSSF;500;0
+774;2;1;1;1;568694;Obec Poteč;Obec Poteč;Obec Poteč;Obec Poteč;;;;;;568694;;;False;1;;False;MSSF;501;0
+775;2;1;1;1;47534664;Líšno a.s.;Líšno a.s.;Líšno a.s.;Líšno a.s.;;;;;;47534664;CZ47534664;;True;1;;False;MSSF;502;0
+776;2;1;1;1;299529;Město Šternberk;Město Šternberk;Město Šternberk;Město Šternberk;;;;;;299529;381-00299529;;False;1;;False;MSSF;503;0
+777;2;1;1;1;218898;SEVEROFRUKT, akciová společnost;SEVEROFRUKT, akciová společnost;SEVEROFRUKT, akciová společnost;SEVEROFRUKT, akciová společnost;;;;;;218898;CZ00218898;;True;1;;False;MSSF;504;0
+778;2;1;1;16;25027107;Rybex CZ a.s.;Rybex CZ a.s.;Rybex CZ a.s.;Rybex CZ a.s.;;;;;;25027107;CZ25027107;;True;1;;False;MSSF;505;0
+779;2;1;1;1;60071231;Maso Planá, a.s.;Maso Planá, a.s.;Maso Planá, a.s.;Maso Planá, a.s.;;;;;;60071231;CZ60071231;;False;1;;False;MSSF;506;0
+780;2;1;1;1;60071231;Maso Planá, a.s.;Maso Planá, a.s.;Maso Planá, a.s.;Maso Planá, a.s.;;;;;;60071231;CZ60071231;;True;1;;False;MSSF;507;0
+781;2;1;1;16;60071231;Maso Planá, a.s.;Maso Planá, a.s.;Maso Planá, a.s.;Maso Planá, a.s.;;;;;;60071231;CZ60071231;;True;1;;False;MSSF;508;0
+782;2;1;1;21;64829561;Lesní  družstvo ve Štokách;Lesní  družstvo ve Štokách;Lesní  družstvo ve Štokách;Lesní  družstvo ve Štokách;;;;;;64829561;CZ64829561;;True;1;;False;MSSF;509;0
+783;2;1;1;16;48907171;SLOVÁCKÁ FRUTA, a.s.;SLOVÁCKÁ FRUTA, a.s.;SLOVÁCKÁ FRUTA, a.s.;SLOVÁCKÁ FRUTA, a.s.;;;;;;48907171;CZ48907171;;True;1;;False;MSSF;510;0
+784;2;1;1;9;46961798;OTMA - SLOKO, s.r.o.;OTMA - SLOKO, s.r.o.;OTMA - SLOKO, s.r.o.;OTMA - SLOKO, s.r.o.;;;;;;46961798;CZ46961798;;True;1;;False;MSSF;511;0
+785;2;1;1;1;300535;Statutární město Opava;Statutární město Opava;Statutární město Opava;Statutární město Opava;;;;;;300535;CZ00300535;;False;1;;False;MSSF;512;0
+786;2;1;1;1;45359989;Drůbežářský závod Klatovy a.s.;Drůbežářský závod Klatovy a.s.;Drůbežářský závod Klatovy a.s.;Drůbežářský závod Klatovy a.s.;;;;;;45359989;CZ45359989;;True;1;;False;MSSF;513;0
+787;2;1;1;1;48365769;České rybářství, s.r.o.;České rybářství, s.r.o.;České rybářství, s.r.o.;České rybářství, s.r.o.;;;;;;48365769;CZ48365769;;True;1;;False;MSSF;514;0
+788;2;1;1;92;232181;Městys Maršovice;Městys Maršovice;Městys Maršovice;Městys Maršovice;;;;;;232181;CZ00232181;;False;1;;False;MSSF;515;0
+789;2;1;1;1;49812491;Mlýn Havlíčkův Brod, spol. s r.o.;Mlýn Havlíčkův Brod, spol. s r.o.;Mlýn Havlíčkův Brod, spol. s r.o.;Mlýn Havlíčkův Brod, spol. s r.o.;;;;;;49812491;CZ49812491;;True;1;;False;MSSF;516;0
+790;2;1;1;9;44567103;L. Klíma automatické mlýny Křesín - Libochovice s.r.o.;L. Klíma automatické mlýny Křesín - Libochovice s.r.o.;L. Klíma automatické mlýny Křesín - Libochovice s.r.o.;L. Klíma automatické mlýny Křesín - Libochovice s.r.o.;;;;;;44567103;CZ44567103;;True;1;;False;MSSF;517;0
+791;2;1;1;31;42196451;Lesy České republiky, s.p.;Lesy České republiky, s.p.;Lesy České republiky, s.p.;Lesy České republiky, s.p.;;;;;;42196451;CZ42196451;;True;1;;False;MSSF;518;0
+792;2;1;1;9;25396480;Vodňanská drůbež, s.r.o.;Vodňanská drůbež, s.r.o.;Vodňanská drůbež, s.r.o.;Vodňanská drůbež, s.r.o.;;;;;;25396480;CZ25396480;;True;1;;False;MSSF;519;0
+793;2;1;1;9;46965386;Rybářství Hodonín, s.r.o.;Rybářství Hodonín, s.r.o.;Rybářství Hodonín, s.r.o.;Rybářství Hodonín, s.r.o.;;;;;;46965386;CZ46965386;;True;1;;False;MSSF;520;0
+794;2;1;1;9;45023930;ORLÍK NAD VLTAVOU,s.r.o;ORLÍK NAD VLTAVOU,s.r.o;ORLÍK NAD VLTAVOU,s.r.o;ORLÍK NAD VLTAVOU,s.r.o;;;;;;45023930;CZ45023930;;True;1;;False;MSSF;521;0
+795;2;1;1;9;18620795;DIANA - MRÁZEK - EKO spol. s r.o.;DIANA - MRÁZEK - EKO spol. s r.o.;DIANA - MRÁZEK - EKO spol. s r.o.;DIANA - MRÁZEK - EKO spol. s r.o.;;;;;;18620795;CZ18620795;;True;1;;False;MSSF;522;0
+796;2;1;1;4;335417/444;Mgr. Věra Petrová;Mgr. Věra Petrová;Mgr. Věra Petrová;Mgr. Věra Petrová;Věra;Petrová;Mgr.;;;44060777;CZ335417444;335417/444;True;1;;False;MSSF;523;0
+797;2;1;1;3;6105111958;Ing. Jan Růžička;6105111958;Ing. Jan Růžička;6105111958;;;;;;44666021;CZ6105111958;6105111958;True;1;;False;MSSF;524;0
+798;2;1;1;1;430213403;Šerý;430213403;Šerý;430213403;;;;;;;;430213403;False;1;;False;MSSF;525;0
+799;2;1;1;1;256102;Obec Strážov;Obec Strážov;Obec Strážov;Obec Strážov;;;;;;256102;CZ00256102;;True;1;;False;MSSF;526;0
+800;2;1;1;1;25139363;Dvořák Vladimír, s. r. o.;Dvořák Vladimír, s. r. o.;Dvořák Vladimír, s. r. o.;Dvořák Vladimír, s. r. o.;;;;;;25139363;CZ25139363;;True;1;;False;MSSF;527;0
+801;2;1;1;16;49791443;Klatovské rybářství a.s.;Klatovské rybářství a.s.;Klatovské rybářství a.s.;Klatovské rybářství a.s.;;;;;;49791443;CZ49791443;;True;1;;False;MSSF;528;0
+802;2;1;1;9;43541399;Mlýn Kojetín, spol.s r.o.;Mlýn Kojetín, spol.s r.o.;Mlýn Kojetín, spol.s r.o.;Mlýn Kojetín, spol.s r.o.;;;;;;43541399;CZ43541399;;True;1;;False;MSSF;529;0
+803;2;1;1;16;63275635;MADETA a.s.;MADETA a.s.;MADETA a.s.;MADETA a.s.;;;;;;63275635;CZ63275635;;True;1;;False;MSSF;530;0
+804;2;1;1;2;6507201459;Jiří Drastich;6507201459;Jiří Drastich;6507201459;;;;;;42635608;CZ6507201459;6507201459;True;1;;False;MSSF;531;0
+805;2;1;1;9;40232239;MLÝN PERNER SVIJANY, spol. s r.o.;MLÝN PERNER SVIJANY, spol. s r.o.;MLÝN PERNER SVIJANY, spol. s r.o.;MLÝN PERNER SVIJANY, spol. s r.o.;;;;;;40232239;CZ40232239;;True;1;;False;MSSF;532;0
+806;2;1;1;1;25321692;Lesy města Prostějova, s.r.o.;Lesy města Prostějova, s.r.o.;Lesy města Prostějova, s.r.o.;Lesy města Prostějova, s.r.o.;;;;;;25321692;CZ25321692;;True;1;;False;MSSF;533;0
+807;2;1;1;3;5802220237;Petr Krátký;5802220237;Petr Krátký;5802220237;;;;;;14645408;CZ5802220237;5802220237;True;1;;False;MSSF;534;0
+808;2;1;1;9;19010494;Kimbex, s.r.o.;Kimbex, s.r.o.;Kimbex, s.r.o.;Kimbex, s.r.o.;;;;;;19010494;CZ19010494;;True;1;;False;MSSF;535;0
+809;2;1;1;1;26231107;Lesní společnost L.W., s.r.o;Lesní společnost L.W., s.r.o;Lesní společnost L.W., s.r.o;Lesní společnost L.W., s.r.o;;;;;;26231107;CZ26231107;;True;1;;False;MSSF;536;0
+810;2;1;1;16;26019566;Bratři Zátkové, a.s.;Bratři Zátkové, a.s.;Bratři Zátkové, a.s.;Bratři Zátkové, a.s.;;;;;;26019566;CZ26019566;;True;1;;False;MSSF;537;0
+811;2;1;1;1;47904275;Steinhauser, s.r.o.;Steinhauser, s.r.o.;Steinhauser, s.r.o.;Steinhauser, s.r.o.;;;;;;47904275;CZ47904275;;True;1;;False;MSSF;538;0
+812;2;1;1;1;284556;Obec Štítná nad Vláří;Obec Štítná nad Vláří;Obec Štítná nad Vláří;Obec Štítná nad Vláří;;;;;;284556;CZ00284556;;False;1;;False;MSSF;539;0
+813;2;1;1;1;60745479;CE WOOD, a.s.;CE WOOD, a.s.;CE WOOD, a.s.;CE WOOD, a.s.;;;;;;60745479;CZ60745479;;True;1;;False;MSSF;540;0
+814;2;1;1;1;303968;Obec Lačnov;Obec Lačnov;Obec Lačnov;Obec Lačnov;;;;;;303968;CZ00303968;;True;1;;False;MSSF;541;0
+815;2;1;1;1;25154427;Lesy a rybníky města Českých Budějovic s.r.o.;Lesy a rybníky města Českých Budějovic s.r.o.;Lesy a rybníky města Českých Budějovic s.r.o.;Lesy a rybníky města Českých Budějovic s.r.o.;;;;;;25154427;CZ25154427;;True;1;;False;MSSF;542;0
+816;2;1;1;2;7502101640;Josef Bláhovec;Josef Bláhovec;Josef Bláhovec;Josef Bláhovec;Josef;Bláhovec;;;;67172695;CZ7502101640;7502101640;True;1;;False;MSSF;543;0
+817;2;1;1;1;5512262074;Matoušek;5512262074;Matoušek;5512262074;;;;;;;;5512262074;False;1;;False;MSSF;544;0
+818;2;1;1;1;62181874;Singulární společnost Smolina;Singulární společnost Smolina;Singulární společnost Smolina;Singulární společnost Smolina;;;;;;62181874;306-62181874;;False;1;;False;MSSF;545;0
+819;2;1;1;9;46348581;EKOFRUKT Slaný, spol. s r.o.;EKOFRUKT Slaný, spol. s r.o.;EKOFRUKT Slaný, spol. s r.o.;EKOFRUKT Slaný, spol. s r.o.;;;;;;46348581;CZ46348581;;True;1;;False;MSSF;546;0
+820;2;1;1;4;7206291994;Štěpán Bečvář;Štěpán Bečvář;Štěpán Bečvář;Štěpán Bečvář;Štěpán;Bečvář;;;;42837278;CZ7206291994;7206291994;True;1;;False;MSSF;547;0
+821;2;1;1;3;505208175;Jana Kramářová;505208175;Jana Kramářová;505208175;;;;;;40976211;;505208175;False;1;;False;MSSF;548;0
+822;2;1;1;79;47722266;Regionální sdružení obcí a měst EUREGIO EGRENSIS;Regionální sdružení obcí a měst EUREGIO EGRENSIS;Regionální sdružení obcí a měst EUREGIO EGRENSIS;Regionální sdružení obcí a měst EUREGIO EGRENSIS;;;;;EE;47722266;;;False;1;;False;MSSF;549;0
+823;2;1;1;89;70659061;Jihočeská Silva Nortica;Jihočeská Silva Nortica;Jihočeská Silva Nortica;Jihočeská Silva Nortica;;;;;JčSN;70659061;;;False;1;;False;MSSF;550;0
+824;2;1;1;89;70812853;Sdružení obcí Vysočiny;Sdružení obcí Vysočiny;Sdružení obcí Vysočiny;Sdružení obcí Vysočiny;;;;;SOV;70812853;;;False;1;;False;MSSF;551;0
+825;2;1;1;89;65338081;Sdružení obcí a měst jižní Moravy;Sdružení obcí a měst jižní Moravy;Sdružení obcí a měst jižní Moravy;Sdružení obcí a měst jižní Moravy;;;;;SOMJM;65338081;CZ65338081;;False;1;;False;MSSF;552;0
+984;2;1;1;1;25319515;Ústav pro strukturální politiku v zemědělství, a.s.;Ústav pro strukturální politiku v zemědělství, a.s.;Ústav pro strukturální politiku v zemědělství, a.s.;Ústav pro strukturální politiku v zemědělství, a.s.;;;;;;25319515;CZ25319515;;True;1;;False;MSSF;553;0
+985;2;1;1;1;44018711;TOPAGRA,spol. s.r.o.;TOPAGRA,spol. s.r.o.;TOPAGRA,spol. s.r.o.;TOPAGRA,spol. s.r.o.;;;;;;44018711;CZ44018711;;True;1;;False;MSSF;554;0
+986;2;1;1;1;25505319;ZD SKÁLY, družstvo;ZD SKÁLY, družstvo;ZD SKÁLY, družstvo;ZD SKÁLY, družstvo;;;;;;25505319;CZ25505319;;True;1;;False;MSSF;555;0
+987;2;1;1;16;46971963;AGROPODNIK Hodonín a.s.;AGROPODNIK Hodonín a.s.;AGROPODNIK Hodonín a.s.;AGROPODNIK Hodonín a.s.;;;;;;46971963;CZ46971963;;True;1;;False;MSSF;556;0
+988;2;1;1;16;63483793;Zemědělská společnost TERRIS Budětsko, a.s.;Zemědělská společnost TERRIS Budětsko, a.s.;Zemědělská společnost TERRIS Budětsko, a.s.;Zemědělská společnost TERRIS Budětsko, a.s.;;;;;;63483793;CZ63483793;;True;1;;False;MSSF;557;0
+989;2;1;1;3;530709050;Ing. Milan Šlambor;530709050;Ing. Milan Šlambor;530709050;;;;;;44510535;CZ-530709050;530709050;True;1;;False;MSSF;558;0
+990;2;1;1;16;46683526;MAVELA a.s. Dynín;MAVELA a.s. Dynín;MAVELA a.s. Dynín;MAVELA a.s. Dynín;;;;;;46683526;CZ46683526;;True;1;;False;MSSF;559;0
+991;2;1;1;20;150657;Zemědělské družstvo Jeseník;Zemědělské družstvo Jeseník;Zemědělské družstvo Jeseník;Zemědělské družstvo Jeseník;;;;;;150657;CZ00150657;;True;1;;False;MSSF;560;0
+992;2;1;1;20;47719532;Zemědělské družstvo vlastníků Štichovice;Zemědělské družstvo vlastníků Štichovice;Zemědělské družstvo vlastníků Štichovice;Zemědělské družstvo vlastníků Štichovice;;;;;;47719532;CZ47719532;;True;1;;False;MSSF;561;0
+993;2;1;1;1;25743988;ZAS Zbizuby, a.s.;ZAS Zbizuby, a.s.;ZAS Zbizuby, a.s.;ZAS Zbizuby, a.s.;;;;;;25743988;CZ25743988;;True;1;;False;MSSF;562;0
+994;2;1;1;21;13582879;Zemědělské družstvo Kochánov;Zemědělské družstvo Kochánov;Zemědělské družstvo Kochánov;Zemědělské družstvo Kochánov;;;;;;13582879;CZ 135 82 879;;True;1;;False;MSSF;563;0
+995;2;1;1;1;47468629;"Zemědělské družstvo ""Mezilesí"" Telecí";"Zemědělské družstvo ""Mezilesí"" Telecí";"Zemědělské družstvo ""Mezilesí"" Telecí";"Zemědělské družstvo ""Mezilesí"" Telecí";;;;;;47468629;CZ47468629;;True;1;;False;MSSF;564;0
+996;2;1;1;9;27786897;Horymas SK, spol. s r.o.;Horymas SK, spol. s r.o.;Horymas SK, spol. s r.o.;Horymas SK, spol. s r.o.;;;;;;27786897;CZ27786897;;True;1;;False;MSSF;565;0
+997;2;1;1;1;25513150;DÚBRAVA - AGRO, a.s.;DÚBRAVA - AGRO, a.s.;DÚBRAVA - AGRO, a.s.;DÚBRAVA - AGRO, a.s.;;;;;;25513150;CZ25513150;;True;1;;False;MSSF;566;0
+998;2;1;1;9;45022291;R.A.B. spol. s r.o.;R.A.B. spol. s r.o.;R.A.B. spol. s r.o.;R.A.B. spol. s r.o.;;;;;;45022291;CZ45022291;;True;1;;False;MSSF;567;0
+999;2;1;1;1;105309;ZD Březina nad Jizerou;ZD Březina nad Jizerou;ZD Březina nad Jizerou;ZD Březina nad Jizerou;;;;;;105309;CZ00105309;;True;1;;False;MSSF;568;0
+1000;2;1;1;1;139696;Zemědělské družstvo Kouty;Zemědělské družstvo Kouty;Zemědělské družstvo Kouty;Zemědělské družstvo Kouty;;;;;;139696;CZ00139696;;True;1;;False;MSSF;569;0
+1001;2;1;1;16;25173073;Agraspol Předmíř, a.s.;Agraspol Předmíř, a.s.;Agraspol Předmíř, a.s.;Agraspol Předmíř, a.s.;;;;;;25173073;CZ25173073;;True;1;;False;MSSF;570;0
+1002;2;1;1;1;25352041;Starojicko, a.s.;Starojicko, a.s.;Starojicko, a.s.;Starojicko, a.s.;;;;;;25352041;CZ25352041;;True;1;;False;MSSF;571;0
+1003;2;1;1;16;65278844;Zemědělský podnik Kvasicko, a. s.;Zemědělský podnik Kvasicko, a. s.;Zemědělský podnik Kvasicko, a. s.;Zemědělský podnik Kvasicko, a. s.;;;;;;65278844;CZ65278844;;True;1;;False;MSSF;572;0
+1004;2;1;1;16;25505769;ZEAS Polešovice, a.s.;ZEAS Polešovice, a.s.;ZEAS Polešovice, a.s.;ZEAS Polešovice, a.s.;;;;;;25505769;CZ25505769;;True;1;;False;MSSF;573;0
+1005;2;1;1;21;151041;Zemědělské obchodní družstvo Lešná se sídlem v Lešné;Zemědělské obchodní družstvo Lešná se sídlem v Lešné;Zemědělské obchodní družstvo Lešná se sídlem v Lešné;Zemědělské obchodní družstvo Lešná se sídlem v Lešné;;;;;;151041;CZ00151041;;True;1;;False;MSSF;574;0
+1006;2;1;1;1;64356370;Bílovská zemědělská a.s.;Bílovská zemědělská a.s.;Bílovská zemědělská a.s.;Bílovská zemědělská a.s.;;;;;;64356370;CZ64356370;;True;1;;False;MSSF;575;0
+1007;2;1;1;1;25934546;Zemědělská společnost Horní Krupá, a.s.;Zemědělská společnost Horní Krupá, a.s.;Zemědělská společnost Horní Krupá, a.s.;Zemědělská společnost Horní Krupá, a.s.;;;;;;25934546;CZ25934546;;True;1;;False;MSSF;576;0
+1008;2;1;1;9;45350531;Agročas spol. s r. o.;Agročas spol. s r. o.;Agročas spol. s r. o.;Agročas spol. s r. o.;;;;;;45350531;CZ45350531;;True;1;;False;MSSF;577;0
+1009;2;1;1;3;5806131419;Pavel Houba;5806131419;Pavel Houba;5806131419;;;;;;45396205;CZ5806131419;5806131419;True;1;;False;MSSF;578;0
+1010;2;1;1;16;63483688;PROAGRO Radešínská Svratka, a.s.;PROAGRO Radešínská Svratka, a.s.;PROAGRO Radešínská Svratka, a.s.;PROAGRO Radešínská Svratka, a.s.;;;;;;63483688;CZ63483688;;True;1;;False;MSSF;579;0
+1011;2;1;1;16;46356398;Zemědělská obchodní společnost Šestajovice-Jirny, a.s.;Zemědělská obchodní společnost Šestajovice-Jirny, a.s.;Zemědělská obchodní společnost Šestajovice-Jirny, a.s.;Zemědělská obchodní společnost Šestajovice-Jirny, a.s.;;;;;;46356398;CZ46356398;;True;1;;False;MSSF;580;0
+1012;2;1;1;21;139513;Zemědělské družstvo Hrotovice, družstvo;Zemědělské družstvo Hrotovice, družstvo;Zemědělské družstvo Hrotovice, družstvo;Zemědělské družstvo Hrotovice, družstvo;;;;;;139513;CZ00139513;;True;1;;False;MSSF;581;0
+1013;2;1;1;16;46352911;Zemědělská akciová společnost HLUBOŠ;Zemědělská akciová společnost HLUBOŠ;Zemědělská akciová společnost HLUBOŠ;Zemědělská akciová společnost HLUBOŠ;;;;;;46352911;CZ46352911;;True;1;;False;MSSF;582;0
+1014;2;1;1;21;47900695;Zemědělské družstvo Korolupy;Zemědělské družstvo Korolupy;Zemědělské družstvo Korolupy;Zemědělské družstvo Korolupy;;;;;;47900695;CZ47900695;;True;1;;False;MSSF;583;0
+1015;2;1;1;16;107999;ZD Krásná Hora nad Vltavou a.s.;ZD Krásná Hora nad Vltavou a.s.;ZD Krásná Hora nad Vltavou a.s.;ZD Krásná Hora nad Vltavou a.s.;;;;;;107999;CZ00107999;;True;1;;False;MSSF;584;0
+1016;2;1;1;21;111953;Zemědělské družstvo Velká Chyška;Zemědělské družstvo Velká Chyška;Zemědělské družstvo Velká Chyška;Zemědělské družstvo Velká Chyška;;;;;;111953;CZ00111953;;True;1;;False;MSSF;585;0
+1017;2;1;1;16;46904671;SELMA a.s.;SELMA a.s.;SELMA a.s.;SELMA a.s.;;;;;;46904671;CZ46904671;;True;1;;False;MSSF;586;0
+1018;2;1;1;21;47676159;Agro - družstvo MORAVA;Agro - družstvo MORAVA;Agro - družstvo MORAVA;Agro - družstvo MORAVA;;;;;;47676159;CZ47676159;;True;1;;False;MSSF;587;0
+1019;2;1;1;4;7505021425;Jan Houška;Jan Houška;Jan Houška;Jan Houška;Jan;Houška;;;;70966281;CZ7505021425;7505021425;True;1;;False;MSSF;588;0
+1020;2;1;1;16;25250868;AGRO Posázaví, a.s.;AGRO Posázaví, a.s.;AGRO Posázaví, a.s.;AGRO Posázaví, a.s.;;;;;;25250868;CZ25250868;;True;1;;False;MSSF;589;0
+1021;2;1;1;21;47048042;AGRO DRUŽSTVO Načeradec;AGRO DRUŽSTVO Načeradec;AGRO DRUŽSTVO Načeradec;AGRO DRUŽSTVO Načeradec;;;;;;47048042;CZ47048042;;True;1;;False;MSSF;590;0
+1022;2;1;1;21;141640;ZOD Haná, družstvo se sídlem ve Švábenicích;ZOD Haná, družstvo se sídlem ve Švábenicích;ZOD Haná, družstvo se sídlem ve Švábenicích;ZOD Haná, družstvo se sídlem ve Švábenicích;;;;;;141640;CZ00141640;;True;1;;False;MSSF;591;0
+1023;2;1;1;16;64506843;GenAgro Říčany , a.s.;GenAgro Říčany , a.s.;GenAgro Říčany , a.s.;GenAgro Říčany , a.s.;;;;;;64506843;CZ64506843;;True;1;;False;MSSF;592;0
+1024;2;1;1;3;7812223342;Jan Basař;7812223342;Jan Basař;7812223342;;;;;;64203409;CZ7812223342;7812223342;True;1;;False;MSSF;593;0
+1025;2;1;1;9;47538155;Sady Tuchoraz spol. s.r.o.;Sady Tuchoraz spol. s.r.o.;Sady Tuchoraz spol. s.r.o.;Sady Tuchoraz spol. s.r.o.;;;;;;47538155;CZ47538155;;True;1;;False;MSSF;594;0
+1026;2;1;1;1;47903082;Družstvo Vysočina;Družstvo Vysočina;Družstvo Vysočina;Družstvo Vysočina;;;;;;47903082;CZ47903082;;True;1;;False;MSSF;595;0
+1027;2;1;1;21;47048336;Zemědělské družstvo se sídlem v Dlouhé Lhotě;Zemědělské družstvo se sídlem v Dlouhé Lhotě;Zemědělské družstvo se sídlem v Dlouhé Lhotě;Zemědělské družstvo se sídlem v Dlouhé Lhotě;;;;;;47048336;CZ47048336;;True;1;;False;MSSF;596;0
+1028;2;1;1;4;495523079;Tamara Bečičková;Tamara Bečičková;Tamara Bečičková;Tamara Bečičková;Tamara;Bečičková;;;;18459170;CZ495523079;495523079;True;1;;False;MSSF;597;0
+1029;2;1;1;1;60752858;BLATINIE,a.s.;BLATINIE,a.s.;BLATINIE,a.s.;BLATINIE,a.s.;;;;;;60752858;CZ60752858;;True;1;;False;MSSF;598;0
+1030;2;1;1;21;111228;Zemědělské obchodní družstvo Hořice;Zemědělské obchodní družstvo Hořice;Zemědělské obchodní družstvo Hořice;Zemědělské obchodní družstvo Hořice;;;;;;111228;CZ00111228;;True;1;;False;MSSF;599;0
+1031;2;1;1;21;47048573;Výrobně-obchodní družstvo Zdislavice;Výrobně-obchodní družstvo Zdislavice;Výrobně-obchodní družstvo Zdislavice;Výrobně-obchodní družstvo Zdislavice;;;;;;47048573;CZ47048573;;True;1;;False;MSSF;600;0
+1032;2;1;1;16;46355821;UNIKOM, a.s. Kutná Hora;UNIKOM, a.s. Kutná Hora;UNIKOM, a.s. Kutná Hora;UNIKOM, a.s. Kutná Hora;;;;;;46355821;CZ46355821;;True;1;;False;MSSF;601;0
+1033;2;1;1;1;61673196;Podblanicko Louňovice pod Blaníkem a.s.;Podblanicko Louňovice pod Blaníkem a.s.;Podblanicko Louňovice pod Blaníkem a.s.;Podblanicko Louňovice pod Blaníkem a.s.;;;;;;61673196;CZ61673196;;True;1;;False;MSSF;602;0
+1034;2;1;1;16;25596900;Zemědělská společnost Zhoř a.s.;Zemědělská společnost Zhoř a.s.;Zemědělská společnost Zhoř a.s.;Zemědělská společnost Zhoř a.s.;;;;;;25596900;CZ25596900;;True;1;;False;MSSF;603;0
+1035;2;1;1;20;126365;Zemědělské družstvo Dolany;Zemědělské družstvo Dolany;Zemědělské družstvo Dolany;Zemědělské družstvo Dolany;;;;;;126365;CZ00126365;;True;1;;False;MSSF;604;0
+1036;2;1;1;1;47468378;Zemědělské a obchodní družstvo Lánov;Zemědělské a obchodní družstvo Lánov;Zemědělské a obchodní družstvo Lánov;Zemědělské a obchodní družstvo Lánov;;;;;;47468378;CZ47468378;;True;1;;False;MSSF;605;0
+1037;2;1;1;3;6106091552;Miroslav Machálek;6106091552;Miroslav Machálek;6106091552;;;;;;16355130;CZ 6106091552;6106091552;True;1;;False;MSSF;606;0
+1038;2;1;1;21;123170;Zemědělské obchodní družstvo Vilémov;Zemědělské obchodní družstvo Vilémov;Zemědělské obchodní družstvo Vilémov;Zemědělské obchodní družstvo Vilémov;;;;;;123170;CZ00123170;;True;1;;False;MSSF;607;0
+1039;2;1;1;16;44628;ANIMO Žatec, a.s.;ANIMO Žatec, a.s.;ANIMO Žatec, a.s.;ANIMO Žatec, a.s.;;;;;;44628;CZ00044628;;True;1;;False;MSSF;608;0
+1040;2;1;1;16;25838938;NETIS, a.s.;NETIS, a.s.;NETIS, a.s.;NETIS, a.s.;;;;;;25838938;CZ25838938;;True;1;;False;MSSF;609;0
+1041;2;1;1;1;48907651;AGROSPOL, spol. s r.o.;AGROSPOL, spol. s r.o.;AGROSPOL, spol. s r.o.;AGROSPOL, spol. s r.o.;;;;;;48907651;CZ 48907651;;True;1;;False;MSSF;610;0
+1042;2;1;1;9;45351295;BLOND BREEDING Žebráky, spol. s.r.o.;BLOND BREEDING Žebráky, spol. s.r.o.;BLOND BREEDING Žebráky, spol. s.r.o.;BLOND BREEDING Žebráky, spol. s.r.o.;;;;;;45351295;CZ45351295;;True;1;;False;MSSF;611;0
+1043;2;1;1;9;47450797;P.S. JEZBOŘICE s.r.o.;P.S. JEZBOŘICE s.r.o.;P.S. JEZBOŘICE s.r.o.;P.S. JEZBOŘICE s.r.o.;;;;;;47450797;CZ47450797;;True;1;;False;MSSF;612;0
+1044;2;1;1;3;6302240252;Milan Šebelka;6302240252;Milan Šebelka;6302240252;;;;;;14500736;CZ6302240252;6302240252;True;1;;False;MSSF;613;0
+1045;2;1;1;16;25502832;ZS Bohuslavice, a.s.;ZS Bohuslavice, a.s.;ZS Bohuslavice, a.s.;ZS Bohuslavice, a.s.;;;;;;25502832;CZ25502832;;True;1;;False;MSSF;614;0
+1046;2;1;1;21;46991719;Zemědělské družstvo VRBÁTKY;Zemědělské družstvo VRBÁTKY;Zemědělské družstvo VRBÁTKY;Zemědělské družstvo VRBÁTKY;;;;;;46991719;CZ46991719;;True;1;;False;MSSF;615;0
+1047;2;1;1;21;49455958;AGRODRUŽSTVO JEVIŠOVICE;AGRODRUŽSTVO JEVIŠOVICE;AGRODRUŽSTVO JEVIŠOVICE;AGRODRUŽSTVO JEVIŠOVICE;;;;;;49455958;CZ49455958;;True;1;;False;MSSF;616;0
+1048;2;1;1;20;109916;Zemědělské družstvo Brloh se sídlem v Brloze;Zemědělské družstvo Brloh se sídlem v Brloze;Zemědělské družstvo Brloh se sídlem v Brloze;Zemědělské družstvo Brloh se sídlem v Brloze;;;;;;109916;CZ00109916;;True;1;;False;MSSF;617;0
+1049;2;1;1;16;47452749;Drupork Svitavy, a.s.;Drupork Svitavy, a.s.;Drupork Svitavy, a.s.;Drupork Svitavy, a.s.;;;;;;47452749;CZ 47452749;;True;1;;False;MSSF;618;0
+1050;2;1;1;20;125369;Zemědělské družstvo Bašnice;Zemědělské družstvo Bašnice;Zemědělské družstvo Bašnice;Zemědělské družstvo Bašnice;;;;;;125369;CZ00125369;;True;1;;False;MSSF;619;0
+1051;2;1;1;16;25573306;ZP Mikulčice a.s.;ZP Mikulčice a.s.;ZP Mikulčice a.s.;ZP Mikulčice a.s.;;;;;;25573306;CZ25573306;;True;1;;False;MSSF;620;0
+1052;2;1;1;16;61974986;ZEMSPOL STUDÉNKA a.s.;ZEMSPOL STUDÉNKA a.s.;ZEMSPOL STUDÉNKA a.s.;ZEMSPOL STUDÉNKA a.s.;;;;;;61974986;CZ61974986;;True;1;;False;MSSF;621;0
+1053;2;1;1;1;47915382;Zemědělské družstvo Vícov;Zemědělské družstvo Vícov;Zemědělské družstvo Vícov;Zemědělské družstvo Vícov;;;;;;47915382;CZ47915382;;True;1;;False;MSSF;622;0
+1054;2;1;1;3;6108291222;Vladimír Janák;6108291222;Vladimír Janák;6108291222;;;;;;16758463;CZ16758463;6108291222;True;1;;False;MSSF;623;0
+1055;2;1;1;3;6203031736;Ing. Josef Košťál;6203031736;Ing. Josef Košťál;6203031736;;;;;;16351045;CZ6203031736;6203031736;True;1;;False;MSSF;624;0
+1056;2;1;1;16;25172735;AGRA Deštná, a.s.;AGRA Deštná, a.s.;AGRA Deštná, a.s.;AGRA Deštná, a.s.;;;;;;25172735;CZ25172735;;True;1;;False;MSSF;625;0
+1057;2;1;1;21;104655;Zemědělské obchodní družstvo Úmonín;Zemědělské obchodní družstvo Úmonín;Zemědělské obchodní družstvo Úmonín;Zemědělské obchodní družstvo Úmonín;;;;;;104655;CZ00104655;;True;1;;False;MSSF;626;0
+1058;2;1;1;3;6912020665;Pavel Novák;6912020665;Pavel Novák;6912020665;;;;;;40028071;CZ6912020665;6912020665;True;1;;False;MSSF;627;0
+1059;2;1;1;21;115649;Zemědělské obchodní družstvo Mrákov;Zemědělské obchodní družstvo Mrákov;Zemědělské obchodní družstvo Mrákov;Zemědělské obchodní družstvo Mrákov;;;;;;115649;CZ00115649;;True;1;;False;MSSF;628;0
+1060;2;1;1;21;49023233;AGRO, družstvo Záhoří;AGRO, družstvo Záhoří;AGRO, družstvo Záhoří;AGRO, družstvo Záhoří;;;;;;49023233;CZ49023233;;True;1;;False;MSSF;629;0
+1061;2;1;1;9;60827548;AGROCON Kájov s.r.o.;AGROCON Kájov s.r.o.;AGROCON Kájov s.r.o.;AGROCON Kájov s.r.o.;;;;;;60827548;CZ60827548;;True;1;;False;MSSF;630;0
+1062;2;1;1;16;61672998;ZEA Světice, a.s.;ZEA Světice, a.s.;ZEA Světice, a.s.;ZEA Světice, a.s.;;;;;;61672998;CZ61672998;;True;1;;False;MSSF;631;0
+1063;2;1;1;16;25179403;Příkosická zemědělská a.s.;Příkosická zemědělská a.s.;Příkosická zemědělská a.s.;Příkosická zemědělská a.s.;;;;;;25179403;CZ25179403;;True;1;;False;MSSF;632;0
+1064;2;1;1;16;63489244;AGROS Vyškov-Dědice a.s.;AGROS Vyškov-Dědice a.s.;AGROS Vyškov-Dědice a.s.;AGROS Vyškov-Dědice a.s.;;;;;;63489244;CZ63489244;;True;1;;False;MSSF;633;0
+1065;2;1;1;9;49062581;AGROZA, spol. s r.o.;AGROZA, spol. s r.o.;AGROZA, spol. s r.o.;AGROZA, spol. s r.o.;;;;;;49062581;CZ49062581;;True;1;;False;MSSF;634;0
+1066;2;1;1;4;490125/111;Ing. Milan Řehořka;490125/111;Ing. Milan Řehořka;490125/111;;;;;;42329671;CZ490125/111;490125/111;True;1;;False;MSSF;635;0
+1067;2;1;1;1;109959;Zemědělské družstvo Podkleťan Křemže;Zemědělské družstvo Podkleťan Křemže;Zemědělské družstvo Podkleťan Křemže;Zemědělské družstvo Podkleťan Křemže;;;;;;109959;CZ00109959;;True;1;;False;MSSF;636;0
+1068;2;1;1;3;7010231679;Jan Mačl;7010231679;Jan Mačl;7010231679;;;;;;18236871;CZ7010231679;7010231679;True;1;;False;MSSF;637;0
+1069;2;1;1;21;110264;Zemědělské družstvo RADELO;Zemědělské družstvo RADELO;Zemědělské družstvo RADELO;Zemědělské družstvo RADELO;;;;;;110264;CZ00110264;;True;1;;False;MSSF;638;0
+1070;2;1;1;21;145106;Zemědělské družstvo Velká Losenice;Zemědělské družstvo Velká Losenice;Zemědělské družstvo Velká Losenice;Zemědělské družstvo Velká Losenice;;;;;;145106;CZ00145106;;True;1;;False;MSSF;639;0
+1071;2;1;1;1;25421921;ASTUR Straškov, a.s.;ASTUR Straškov, a.s.;ASTUR Straškov, a.s.;ASTUR Straškov, a.s.;;;;;;25421921;CZ25421921;;True;1;;False;MSSF;640;0
+1072;2;1;1;4;390925003;František Kolář;390925003;František Kolář;390925003;;;;;;48237639;CZ390925003;390925003;True;1;;False;MSSF;641;0
+1073;2;1;1;4;501009317;Zdeněk Rebeka;501009317;Zdeněk Rebeka;501009317;;;;;;46688048;CZ501009317;501009317;True;1;;False;MSSF;642;0
+1074;2;1;1;3;7905021971;Ladislav Váchal;7905021971;Ladislav Váchal;7905021971;;;;;;69974624;CZ7905021971;7905021971;True;1;;False;MSSF;643;0
+1075;2;1;1;3;460223128;Josef Vlach;460223128;Josef Vlach;460223128;;;;;;46502769;CZ460223128;460223128;True;1;;False;MSSF;644;0
+1076;2;1;1;16;25816403;MESPOL Medlov, a.s.;MESPOL Medlov, a.s.;MESPOL Medlov, a.s.;MESPOL Medlov, a.s.;;;;;;25816403;CZ25816403;;True;1;;False;MSSF;645;0
+1077;2;1;1;4;5407230719;Jan Danko;Jan Danko;Jan Danko;Jan Danko;Jan;Danko;;;;15759105;CZ5407230719;5407230719;True;1;;False;MSSF;646;0
+1078;2;1;1;4;7809024355;Vlastimil Zelený;7809024355;Vlastimil Zelený;7809024355;;;;;;70933499;CZ7809024355;7809024355;True;1;;False;MSSF;647;0
+1079;2;1;1;3;6952181951;Petra Vraná;6952181951;Petra Vraná;6952181951;;;;;;49751808;CZ6952181951;6952181951;True;1;;False;MSSF;648;0
+1080;2;1;1;2;7607293870;Petr Kosmák;Petr Kosmák;Petr Kosmák;Petr Kosmák;Petr;Kosmák;;;;72401826;CZ7607293870;7607293870;True;1;;False;MSSF;649;0
+1081;2;1;1;4;511126250;František Bartoň;František Bartoň;František Bartoň;František Bartoň;František;Bartoň;;;;61766186;CZ511126250;511126250;True;1;;False;MSSF;650;0
+1082;2;1;1;9;63490021;JAVORNÍK - CZ s.r.o.;JAVORNÍK - CZ s.r.o.;JAVORNÍK - CZ s.r.o.;JAVORNÍK - CZ s.r.o.;;;;;;63490021;CZ63490021;;True;1;;False;MSSF;651;0
+1083;2;1;1;16;64052931;AGRI LIBOCHOVICE a.s.;AGRI LIBOCHOVICE a.s.;AGRI LIBOCHOVICE a.s.;AGRI LIBOCHOVICE a.s.;;;;;;64052931;CZ64052931;;True;1;;False;MSSF;652;0
+1084;2;1;1;4;7103181976;Jiří Zelený;Jiří Zelený;Jiří Zelený;Jiří Zelený;Jiří;Zelený;;;;40539709;CZ7103181976;7103181976;True;1;;False;MSSF;653;0
+1085;2;1;1;20;103632;AGROS Vraný, družstvo vlastníků;AGROS Vraný, družstvo vlastníků;AGROS Vraný, družstvo vlastníků;AGROS Vraný, družstvo vlastníků;;;;;;103632;CZ00103632;;True;1;;False;MSSF;654;0
+1086;2;1;1;21;134881;Zemědělské družstvo vlastníků Fryšták;Zemědělské družstvo vlastníků Fryšták;Zemědělské družstvo vlastníků Fryšták;Zemědělské družstvo vlastníků Fryšták;;;;;;134881;CZ00134881;;True;1;;False;MSSF;655;0
+1087;2;1;1;3;470910212;Josef Potměšil;470910212;Josef Potměšil;470910212;;;;;;40652513;CZ470910212;470910212;True;1;;False;MSSF;656;0
+1088;2;1;1;16;47912961;AGRO Brno - Tuřany, a.s.;AGRO Brno - Tuřany, a.s.;AGRO Brno - Tuřany, a.s.;AGRO Brno - Tuřany, a.s.;;;;;;47912961;CZ47912961;;True;1;;False;MSSF;657;0
+1089;2;1;1;9;49814800;VH Agroprodukt, spol. s r.o.;VH Agroprodukt, spol. s r.o.;VH Agroprodukt, spol. s r.o.;VH Agroprodukt, spol. s r.o.;;;;;;49814800;CZ 49814800;;True;1;;False;MSSF;658;0
+1090;2;1;1;16;47903490;Agropodnik, a.s.;Agropodnik, a.s.;Agropodnik, a.s.;Agropodnik, a.s.;;;;;;47903490;CZ47903490;;True;1;;False;MSSF;659;0
+1091;2;1;1;16;64789462;Zemědělská společnost Ostřetín, a.s.;Zemědělská společnost Ostřetín, a.s.;Zemědělská společnost Ostřetín, a.s.;Zemědělská společnost Ostřetín, a.s.;;;;;;64789462;CZ64789462;;True;1;;False;MSSF;660;0
+1092;2;1;1;16;25196049;ALIMEX NEZVĚSTICE a.s.;ALIMEX NEZVĚSTICE a.s.;ALIMEX NEZVĚSTICE a.s.;ALIMEX NEZVĚSTICE a.s.;;;;;;25196049;CZ25196049;;True;1;;False;MSSF;661;0
+1093;2;1;1;3;501017206;Ladislav Hošna;501017206;Ladislav Hošna;501017206;;;;;;47261099;CZ-501017206;501017206;True;1;;False;MSSF;662;0
+1094;2;1;1;4;7505141622;Jiří Netík;Jiří Netík;Jiří Netík;Jiří Netík;Jiří;Netík;;;;49021052;CZ7505141622;7505141622;True;1;;False;MSSF;663;0
+1095;2;1;1;1;42371929;AGROSPOL LIBKOVA VODA;AGROSPOL LIBKOVA VODA;AGROSPOL LIBKOVA VODA;AGROSPOL LIBKOVA VODA;;;;;;42371929;CZ42371929;;True;1;;False;MSSF;664;0
+1096;2;1;1;3;8060193229;Marie Dostálová;8060193229;Marie Dostálová;8060193229;;;;;;70957380;CZ 8060193229;8060193229;True;1;;False;MSSF;665;0
+1097;2;1;1;1;48390682;ZEVYR, spol. s r.o.;ZEVYR, spol. s r.o.;ZEVYR, spol. s r.o.;ZEVYR, spol. s r.o.;;;;;;48390682;CZ48390682;;True;1;;False;MSSF;666;0
+1098;2;1;1;20;47673222;Zemědělské družstvo vlastníků Nošovice;Zemědělské družstvo vlastníků Nošovice;Zemědělské družstvo vlastníků Nošovice;Zemědělské družstvo vlastníků Nošovice;;;;;;47673222;CZ47673222;;True;1;;False;MSSF;667;0
+1099;2;1;1;20;112402;Zemědělsko-obchodní družstvo M Á J;Zemědělsko-obchodní družstvo M Á J;Zemědělsko-obchodní družstvo M Á J;Zemědělsko-obchodní družstvo M Á J;;;;;;112402;CZ00112402;;True;1;;False;MSSF;668;0
+1100;2;1;1;3;6051150303;Ludmila Podzimková;6051150303;Ludmila Podzimková;6051150303;;;;;;61236861;CZ6051150303;6051150303;True;1;;False;MSSF;669;0
+1101;2;1;1;4;7505223132;Marek Popelka;7505223132;Marek Popelka;7505223132;;;;;;60923857;CZ7505223132;7505223132;True;1;;False;MSSF;670;0
+1102;2;1;1;9;60318937;Farma Morava, spol. s r.o.;Farma Morava, spol. s r.o.;Farma Morava, spol. s r.o.;Farma Morava, spol. s r.o.;;;;;;60318937;CZ60318937;;True;1;;False;MSSF;671;0
+1103;2;1;1;16;25183982;Šumava, a.s.;Šumava, a.s.;Šumava, a.s.;Šumava, a.s.;;;;;;25183982;CZ25183982;;True;1;;False;MSSF;672;0
+1104;2;1;1;37;551023;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;;;;;MPSV;551023;;;False;1;;False;MSSF;673;0
+1105;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;;;;;MŠMT;22985;;;False;1;;False;MSSF;674;0
+1106;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;;;;;MPSV;551023;;;False;1;;False;MSSF;675;0
+1107;2;1;1;37;551023;MPSV odbor 42;MPSV odbor 42;MPSV odbor 42;MPSV odbor 42;;;;;MPSV;551023;;;False;1;;False;MSSF;676;0
+1108;2;1;1;37;551023;MPSV odbor 41;MPSV odbor 41;MPSV odbor 41;MPSV odbor 41;;;;;MPSV;551023;;;False;1;;False;MSSF;677;0
+1109;2;1;1;37;72496991;Úřad práce v Českých Budějovicích;Úřad práce v Českých Budějovicích;Úřad práce v Českých Budějovicích;Úřad práce v Českých Budějovicích;;;;;UPCB;72496991;;;False;1;;False;MSSF;678;0
+1110;2;1;1;37;72496991;Úřad práce ve Zlíně;Úřad práce ve Zlíně;Úřad práce ve Zlíně;Úřad práce ve Zlíně;;;;;UP ZL;72496991;;;False;1;;False;MSSF;679;0
+1111;2;1;1;37;72496991;Úřad práce v Plzni;Úřad práce v Plzni;Úřad práce v Plzni;Úřad práce v Plzni;;;;;ÚP v ;72496991;CZ00519073;;False;1;;False;MSSF;680;0
+1112;2;1;1;37;72496991;Úřad práce v Příbrami;Úřad práce v Příbrami;Úřad práce v Příbrami;Úřad práce v Příbrami;;;;;ÚP PB;72496991;;;False;1;;False;MSSF;681;0
+1113;2;1;1;37;72496991;Úřad práce Brno-venkov;Úřad práce Brno-venkov;Úřad práce Brno-venkov;Úřad práce Brno-venkov;;;;;UP BO;72496991;;;False;1;;False;MSSF;682;0
+1114;2;1;1;37;72496991;Úřad práce v Jihlavě;Úřad práce v Jihlavě;Úřad práce v Jihlavě;Úřad práce v Jihlavě;;;;;UP JI;72496991;;;False;1;;False;MSSF;683;0
+1115;2;1;1;37;72496991;Úřad práce v Liberci;Úřad práce v Liberci;Úřad práce v Liberci;Úřad práce v Liberci;;;;;ÚP LB;72496991;;;False;1;;False;MSSF;684;0
+1116;2;1;1;37;72496991;Úřad práce v Karlových Varech;Úřad práce v Karlových Varech;Úřad práce v Karlových Varech;Úřad práce v Karlových Varech;;;;;ÚP KV;72496991;;;False;1;;False;MSSF;685;0
+1117;2;1;1;37;72496991;Úřad práce v Pardubicích;Úřad práce v Pardubicích;Úřad práce v Pardubicích;Úřad práce v Pardubicích;;;;;ÚP v ;72496991;;;False;1;;False;MSSF;686;0
+1118;2;1;1;37;72496991;Úřad práce v Ostravě;Úřad práce v Ostravě;Úřad práce v Ostravě;Úřad práce v Ostravě;;;;;ÚPO;72496991;;;False;1;;False;MSSF;687;0
+1119;2;1;1;37;72496991;Úřad práce v Olomouci;Úřad práce v Olomouci;Úřad práce v Olomouci;Úřad práce v Olomouci;;;;;ÚP OL;72496991;;;False;1;;False;MSSF;688;0
+1120;2;1;1;37;72496991;Úřad práce v Pardubicích;Úřad práce v Pardubicích;Úřad práce v Pardubicích;Úřad práce v Pardubicích;;;;;UP-PA;72496991;;;False;1;;False;MSSF;689;0
+1121;2;1;1;37;72496991;Úřad práce v Mostě;Úřad práce v Mostě;Úřad práce v Mostě;Úřad práce v Mostě;;;;;ÚP Mo;72496991;;;False;1;;False;MSSF;690;0
+1122;2;1;1;37;72496991;Úřad práce v Liberci;Úřad práce v Liberci;Úřad práce v Liberci;Úřad práce v Liberci;;;;;ÚP LB;72496991;;;False;1;;False;MSSF;691;0
+1123;2;1;1;37;72496991;Úřad práce v Olomouci;Úřad práce v Olomouci;Úřad práce v Olomouci;Úřad práce v Olomouci;;;;;ÚP OL;72496991;;;False;1;;False;MSSF;692;0
+1124;2;1;1;37;72496991;Úřad práce v Karlových Varech;Úřad práce v Karlových Varech;Úřad práce v Karlových Varech;Úřad práce v Karlových Varech;;;;;ÚP KV;72496991;;;False;1;;False;MSSF;693;0
+1125;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;;;;;MPSV;551023;;;False;1;;False;MSSF;694;0
+1126;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;;;;;MŠMT;22985;;;False;1;;False;MSSF;695;0
+1127;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy ČR;Ministerstvo školství, mládeže a tělovýchovy ČR;Ministerstvo školství, mládeže a tělovýchovy ČR;Ministerstvo školství, mládeže a tělovýchovy ČR;;;;;MŠMT;22985;;;False;1;;False;MSSF;696;0
+1128;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;;;;;MŠMT;22985;;;False;1;;False;MSSF;697;0
+1129;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor72;Ministerstvo práce a sociálních věcí - odbor72;Ministerstvo práce a sociálních věcí - odbor72;Ministerstvo práce a sociálních věcí - odbor72;;;;;MPSV;551023;;;False;1;;False;MSSF;698;0
+1130;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 22;Ministerstvo práce a sociálních věcí - odbor 22;Ministerstvo práce a sociálních věcí - odbor 22;Ministerstvo práce a sociálních věcí - odbor 22;;;;;MPSV;551023;;;False;1;;False;MSSF;699;0
+1131;2;1;1;37;551023;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;;;;;MPSV;551023;;;False;1;;False;MSSF;700;0
+1132;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;;;;;MPSV;551023;;;False;1;;False;MSSF;701;0
+1133;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;;;;;MPSV;551023;;;False;1;;False;MSSF;702;0
+1134;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;703;0
+1135;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;;;;;MŠMT;22985;;;False;1;;False;MSSF;704;0
+1136;2;1;1;37;551023;Ministerstvo práce  a sociálních věcí - odbor 72;Ministerstvo práce  a sociálních věcí - odbor 72;Ministerstvo práce  a sociálních věcí - odbor 72;Ministerstvo práce  a sociálních věcí - odbor 72;;;;;MPSV;551023;;;False;1;;False;MSSF;705;0
+1137;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;Ministerstvo práce a sociálních věcí - odbor 72/722;;;;;MPSV;551023;;;False;1;;False;MSSF;706;0
+1138;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;;;;;MPSV;551023;;;False;1;;False;MSSF;707;0
+1139;2;1;1;37;551023;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;;;;;MPSV ;551023;;;False;1;;False;MSSF;708;0
+1140;2;1;1;79;70939659;Region Orlicko - Třebovsko;Region Orlicko - Třebovsko;Region Orlicko - Třebovsko;Region Orlicko - Třebovsko;;;;;ROT;70939659;CZ70939659;;False;1;;False;MSSF;713;0
+1141;2;1;1;92;261939;MĚSTO Klášterec nad Ohří;MĚSTO Klášterec nad Ohří;MĚSTO Klášterec nad Ohří;MĚSTO Klášterec nad Ohří;;;;;MÚ KL;261939;CZ00261939;;False;1;;False;MSSF;714;0
+1142;2;1;1;92;247618;Město Třeboň;Město Třeboň;Město Třeboň;Město Třeboň;;;;;---;247618;;;False;1;;False;MSSF;715;0
+1143;2;1;1;92;302724;Město Jeseník;Město Jeseník;Město Jeseník;Město Jeseník;;;;;Jes;302724;CZ00302724;;False;1;;False;MSSF;716;0
+1144;2;1;1;1;430213403;Šerý;430213403;Šerý;430213403;;;;;;;;430213403;False;1;;False;MSSF;717;0
+1150;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;;;;;MŠMT;22985;;;False;1;;False;MSSF;718;0
+1151;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;;;;;MŠMT;22985;;;False;1;;False;MSSF;719;0
+1185;2;1;1;92;44225946;Euroregion Labe;Euroregion Labe;Euroregion Labe;Euroregion Labe;;;;;EL;44225946;;;False;1;;False;MSSF;720;0
+1186;2;1;1;16;60793066;TAGROS a.s.;TAGROS a.s.;TAGROS a.s.;TAGROS a.s.;;;;;;60793066;CZ60793066;;True;1;;False;MSSF;721;0
+1187;2;1;1;16;25546341;ZP Ostrov, a.s.;ZP Ostrov, a.s.;ZP Ostrov, a.s.;ZP Ostrov, a.s.;;;;;;25546341;CZ2554631;;True;1;;False;MSSF;722;0
+1188;2;1;1;3;6208191704;Lubomír Novák;6208191704;Lubomír Novák;6208191704;;;;;;43497977;CZ6208191704;6208191704;True;1;;False;MSSF;723;0
+1189;2;1;1;4;7301202986;Jan Frühbauer;7301202986;Jan Frühbauer;7301202986;;;;;;15032230;CZ7301202986;7301202986;True;1;;False;MSSF;724;0
+1190;2;1;1;16;46683542;Podnik živočišné výroby, a.s.;Podnik živočišné výroby, a.s.;Podnik živočišné výroby, a.s.;Podnik živočišné výroby, a.s.;;;;;;46683542;CZ46683542;;True;1;;False;MSSF;725;0
+1191;2;1;1;1;45348600;DRUKO STŘÍŽOV;DRUKO STŘÍŽOV;DRUKO STŘÍŽOV;DRUKO STŘÍŽOV;;;;;;45348600;CZ45348600;;True;1;;False;MSSF;726;0
+1192;2;1;1;1;25924711;ZAS Věž, a.s.;ZAS Věž, a.s.;ZAS Věž, a.s.;ZAS Věž, a.s.;;;;;;25924711;CZ25924711;;True;1;;False;MSSF;727;0
+1193;2;1;1;4;420707/024;Ing. Jiří Mach;420707/024;Ing. Jiří Mach;420707/024;;;;;;14553261;CZ420707024;420707/024;True;1;;False;MSSF;728;0
+1194;2;1;1;21;129771;"Zemědělské družstvo "" Růžový palouček """;"Zemědělské družstvo "" Růžový palouček """;"Zemědělské družstvo "" Růžový palouček """;"Zemědělské družstvo "" Růžový palouček """;;;;;;129771;CZ00129771;;True;1;;False;MSSF;729;0
+1195;2;1;1;3;505515098;Ing. Alena Egidy;505515098;Ing. Alena Egidy;505515098;;;;;;15848299;CZ505515098;505515098;True;1;;False;MSSF;730;0
+1196;2;1;1;16;25575805;ZEMAS AG, a.s.;ZEMAS AG, a.s.;ZEMAS AG, a.s.;ZEMAS AG, a.s.;;;;;;25575805;CZ25575805;;True;1;;False;MSSF;731;0
+1197;2;1;1;4;510322171;Ing. Jaroslav Bačina;510322171;Ing. Jaroslav Bačina;510322171;;;;;;13281534;CZ510322171;510322171;True;1;;False;MSSF;732;0
+1198;2;1;1;9;49023837;Blatenská ryba,spol.s r.o.;Blatenská ryba,spol.s r.o.;Blatenská ryba,spol.s r.o.;Blatenská ryba,spol.s r.o.;;;;;;49023837;CZ49023837;;True;1;;False;MSSF;733;0
+1199;2;1;1;1;471201044;Mrkáček;471201044;Mrkáček;471201044;;;;;;;;471201044;False;1;;False;MSSF;734;0
+1200;2;1;1;3;400824474;Dr. Bedřich Schwarzenberg;400824474;Dr. Bedřich Schwarzenberg;400824474;;;;;;69535655;CZ400824474;400824474;True;1;;False;MSSF;735;0
+1201;2;1;1;1;47151609;Genoservis, a.s.;Genoservis, a.s.;Genoservis, a.s.;Genoservis, a.s.;;;;;;47151609;CZ 47151609;;True;1;;False;MSSF;736;0
+1202;2;1;1;16;25371681;PALOMO, a.s.;PALOMO, a.s.;PALOMO, a.s.;PALOMO, a.s.;;;;;;25371681;CZ25371681;;True;1;;False;MSSF;737;0
+1203;2;1;1;1;46349529;PROMA - družstvo;PROMA - družstvo;PROMA - družstvo;PROMA - družstvo;;;;;;46349529;CZ46349529;;True;1;;False;MSSF;738;0
+1204;2;1;1;9;60825677;ZEMOS Zubčice, spol. s r.o.;ZEMOS Zubčice, spol. s r.o.;ZEMOS Zubčice, spol. s r.o.;ZEMOS Zubčice, spol. s r.o.;;;;;;60825677;CZ60825677;;True;1;;False;MSSF;739;0
+1205;2;1;1;21;48201383;Výrobně obchodní družstvo Lidmovice;Výrobně obchodní družstvo Lidmovice;Výrobně obchodní družstvo Lidmovice;Výrobně obchodní družstvo Lidmovice;;;;;;48201383;CZ48201383;;True;1;;False;MSSF;740;0
+1206;2;1;1;21;25570480;ZEPO Bořitov, družstvo;ZEPO Bořitov, družstvo;ZEPO Bořitov, družstvo;ZEPO Bořitov, družstvo;;;;;;25570480;CZ25570480;;True;1;;False;MSSF;741;0
+1207;2;1;1;3;6912244361;Ing. Daniel DRŽMÍŠEK;6912244361;Ing. Daniel DRŽMÍŠEK;6912244361;;;;;;63443805;CZ 6912244361;6912244361;True;1;;False;MSSF;742;0
+1208;2;1;1;16;27460363;XAVERgen, a.s.;XAVERgen, a.s.;XAVERgen, a.s.;XAVERgen, a.s.;;;;;;27460363;CZ27460363;;True;1;;False;MSSF;743;0
+1209;2;1;1;3;461001/441;- Vladimír Fronc      -;461001/441;- Vladimír Fronc      -;461001/441;;;;;;49949039;CZ461001441;461001/441;True;1;;False;MSSF;744;0
+1210;2;1;1;4;7303154947;Mgr. Abraham Hofhanzl;Mgr. Abraham Hofhanzl;Mgr. Abraham Hofhanzl;Mgr. Abraham Hofhanzl;Abraham;Hofhanzl;Mgr.;;;63275341;;7303154947;False;1;;False;MSSF;745;0
+1211;2;1;1;3;6011240499;Pavel Pokorný;6011240499;Pavel Pokorný;6011240499;;;;;;12520934;CZ6011240499;6011240499;True;1;;False;MSSF;746;0
+1212;2;1;1;1;46508538;FADOM s.r.o.;FADOM s.r.o.;FADOM s.r.o.;FADOM s.r.o.;;;;;;46508538;CZ46508538;;True;1;;False;MSSF;747;0
+1213;2;1;1;16;25360663;AGRAS Želatovice , a.s.;AGRAS Želatovice , a.s.;AGRAS Želatovice , a.s.;AGRAS Želatovice , a.s.;;;;;;25360663;CZ25360663;;True;1;;False;MSSF;748;0
+1214;2;1;1;9;60712414;Agro-Hochstaffl s.r.o.;Agro-Hochstaffl s.r.o.;Agro-Hochstaffl s.r.o.;Agro-Hochstaffl s.r.o.;;;;;;60712414;CZ60712414;;True;1;;False;MSSF;749;0
+1215;2;1;1;3;5505291429;Ing. Jan Beneš;5505291429;Ing. Jan Beneš;5505291429;;;;;;41888618;CZ5505291429;5505291429;True;1;;False;MSSF;750;0
+1216;2;1;1;9;47545879;A G Á T A, spol. s r.o.;A G Á T A, spol. s r.o.;A G Á T A, spol. s r.o.;A G Á T A, spol. s r.o.;;;;;;47545879;CZ47545879;;True;1;;False;MSSF;751;0
+1217;2;1;1;1;49825763;První Labská, společnost s ručením omezeným;První Labská, společnost s ručením omezeným;První Labská, společnost s ručením omezeným;První Labská, společnost s ručením omezeným;;;;;;49825763;CZ49825763;;True;1;;False;MSSF;752;0
+1218;2;1;1;9;25826051;RPIC-ViP s.r.o.;RPIC-ViP s.r.o.;RPIC-ViP s.r.o.;RPIC-ViP s.r.o.;;;;;RPIC;25826051;CZ25826051;;True;1;;False;MSSF;871;0
+1219;2;1;1;38;70892181;Drom, romské středisko;Drom, romské středisko;Drom, romské středisko;Drom, romské středisko;;;;;DROM;70892181;CZ70892181;;False;1;;False;MSSF;872;0
+1220;2;1;1;9;63487250;Free Art Records s.r.o.;Free Art Records s.r.o.;Free Art Records s.r.o.;Free Art Records s.r.o.;;;;;FAR;63487250;CZ63487250;;True;1;;False;MSSF;873;0
+1221;2;1;1;84;47068531;Farní charita Starý Knín;Farní charita Starý Knín;Farní charita Starý Knín;Farní charita Starý Knín;;;;;FCH;47068531;;;False;1;;False;MSSF;874;0
+1222;2;1;1;9;25366254;DC VISION, s.r.o.;DC VISION, s.r.o.;DC VISION, s.r.o.;DC VISION, s.r.o.;;;;;DCV;25366254;CZ25366254;;True;1;;False;MSSF;875;0
+1223;2;1;1;79;70856478;NÁRODNÍ RADA ZDRAVOTNĚ POSTIŽENÝCH ČR;NÁRODNÍ RADA ZDRAVOTNĚ POSTIŽENÝCH ČR;NÁRODNÍ RADA ZDRAVOTNĚ POSTIŽENÝCH ČR;NÁRODNÍ RADA ZDRAVOTNĚ POSTIŽENÝCH ČR;;;;;NRZP;70856478;CZ70856478;;False;1;;False;MSSF;876;0
+1224;2;1;1;79;70415498;Moravská asociace podnikatelek a manažerek;Moravská asociace podnikatelek a manažerek;Moravská asociace podnikatelek a manažerek;Moravská asociace podnikatelek a manažerek;;;;;MAPM;70415498;CZ70415498;;False;1;;False;MSSF;877;0
+1225;2;1;1;88;49451197;Obchodní a hospodářská komora;Obchodní a hospodářská komora;Obchodní a hospodářská komora;Obchodní a hospodářská komora;;;;;OHK;49451197;CZ49451197;;False;1;;False;MSSF;878;0
+1226;2;1;1;37;72496991;Úřad práce v Semilech;Úřad práce v Semilech;Úřad práce v Semilech;Úřad práce v Semilech;;;;;UP SM;72496991;;;False;1;;False;MSSF;879;0
+1227;2;1;1;18;25441892;Dům romské kultury o. p. s.;Dům romské kultury o. p. s.;Dům romské kultury o. p. s.;Dům romské kultury o. p. s.;;;;;DRK;25441892;CZ25441892;;False;1;;False;MSSF;880;0
+1228;2;1;1;89;60800909;Sdružení CEPAC MORAVA;Sdružení CEPAC MORAVA;Sdružení CEPAC MORAVA;Sdružení CEPAC MORAVA;;;;;CEPAC;60800909;CZ60800909;;False;1;;False;MSSF;881;0
+1229;2;1;1;9;49098900;Vzdělávací společnost EDOST, s. r. o.;Vzdělávací společnost EDOST, s. r. o.;Vzdělávací společnost EDOST, s. r. o.;Vzdělávací společnost EDOST, s. r. o.;;;;;VSE;49098900;CZ49098900;;True;1;;False;MSSF;882;0
+1230;2;1;1;9;44743432;KAZUIST,spol. s r.o.;KAZUIST,spol. s r.o.;KAZUIST,spol. s r.o.;KAZUIST,spol. s r.o.;;;;;není;44743432;CZ44743432;;True;1;;False;MSSF;883;0
+1231;2;1;1;79;64326471;Sdružení pěstounských rodin;Sdružení pěstounských rodin;Sdružení pěstounských rodin;Sdružení pěstounských rodin;;;;;SPR;64326471;CZ64326471;;False;1;;False;MSSF;884;0
+1232;2;1;1;16;70994226;České dráhy;České dráhy;České dráhy;České dráhy;;;;;ČD;70994226;CZ70994226;;True;1;;False;MSSF;885;0
+1233;2;1;1;13;70893721;ORFEUS;ORFEUS;ORFEUS;ORFEUS;;;;;ORFEU;70893721;CZ70893721;;False;1;;False;MSSF;886;0
+1234;2;1;1;9;25687158;LANGMaster Group, s.r.o.;LANGMaster Group, s.r.o.;LANGMaster Group, s.r.o.;LANGMaster Group, s.r.o.;;;;;Lang;25687158;CZ25687158;;True;1;;False;MSSF;887;0
+1235;2;1;1;9;25069845;Expertis Praha spol. s r.o.;Expertis Praha spol. s r.o.;Expertis Praha spol. s r.o.;Expertis Praha spol. s r.o.;;;;;EXP;25069845;CZ25069845;;True;1;;False;MSSF;888;0
+1236;2;1;1;79;45246840;Asociace podnikatelek a manažerek ČR,o.s.;Asociace podnikatelek a manažerek ČR,o.s.;Asociace podnikatelek a manažerek ČR,o.s.;Asociace podnikatelek a manažerek ČR,o.s.;;;;;APMČR;45246840;CZ45246840;;False;1;;False;MSSF;889;0
+1237;2;1;1;71;216208;Univerzita Karlova v Praze, Ústav jazykové a odborné přípravy;Univerzita Karlova v Praze, Ústav jazykové a odborné přípravy;Univerzita Karlova v Praze, Ústav jazykové a odborné přípravy;Univerzita Karlova v Praze, Ústav jazykové a odborné přípravy;;;;;ÚJOP;216208;CZ00216208;;True;1;;False;MSSF;890;0
+1238;2;1;1;18;25737431;Otevřená společnost, obecně prospěšná společnost;Otevřená společnost, obecně prospěšná společnost;Otevřená společnost, obecně prospěšná společnost;Otevřená společnost, obecně prospěšná společnost;;;;;OS;25737431;;;False;1;;False;MSSF;891;0
+1239;2;1;1;9;26170621;S-COMP Centre CZ s.r.o.;S-COMP Centre CZ s.r.o.;S-COMP Centre CZ s.r.o.;S-COMP Centre CZ s.r.o.;;;;;SCOMP;26170621;CZ26170621;;True;1;;False;MSSF;892;0
+1240;2;1;1;79;63153548;Centrum komunitní práce Ústí nad Labem, poradenská organizace;Centrum komunitní práce Ústí nad Labem, poradenská organizace;Centrum komunitní práce Ústí nad Labem, poradenská organizace;Centrum komunitní práce Ústí nad Labem, poradenská organizace;;;;;CKP;63153548;;;False;1;;False;MSSF;893;0
+1241;2;1;1;79;65341511;IQ Roma servis;IQ Roma servis;IQ Roma servis;IQ Roma servis;;;;;IQRS;65341511;;;False;1;;False;MSSF;894;0
+1242;2;1;1;18;25755277;Člověk v tísni - společnost při ČT, o.p.s;Člověk v tísni - společnost při ČT, o.p.s;Člověk v tísni - společnost při ČT, o.p.s;Člověk v tísni - společnost při ČT, o.p.s;;;;;ČvT;25755277;CZ25755277;;True;1;;False;MSSF;895;0
+1243;2;1;1;79;31712;Svaz českých a moravských výrobních družstev;Svaz českých a moravských výrobních družstev;Svaz českých a moravských výrobních družstev;Svaz českých a moravských výrobních družstev;;;;;SČMVD;31712;CZ00031712;;True;1;;False;MSSF;896;0
+1244;2;1;1;92;297488;Statutární mesto Havírov;Statutární mesto Havírov;Statutární mesto Havírov;Statutární mesto Havírov;;;;;SMH;297488;CZ00297488;;False;1;;False;MSSF;897;0
+1245;2;1;1;79;61383783;RYTMUS;RYTMUS;RYTMUS;RYTMUS;;;;;-;61383783;CZ61383783;;False;1;;False;MSSF;898;0
+1246;2;1;1;79;65399447;Sjednocená organizace nevidomých a slabozrakých České republiky;Sjednocená organizace nevidomých a slabozrakých České republiky;Sjednocená organizace nevidomých a slabozrakých České republiky;Sjednocená organizace nevidomých a slabozrakých České republiky;;;;;SONS;65399447;;;False;1;;False;MSSF;899;0
+1247;2;1;1;37;72496991;Úřad práce v Chrudimi;Úřad práce v Chrudimi;Úřad práce v Chrudimi;Úřad práce v Chrudimi;;;;;ÚP;72496991;;;False;1;;False;MSSF;900;0
+1248;2;1;1;18;25737058;Gender Studies, o. p. s.;Gender Studies, o. p. s.;Gender Studies, o. p. s.;Gender Studies, o. p. s.;;;;;GS;25737058;;;False;1;;False;MSSF;901;0
+1249;2;1;1;18;25737058;Gender Studies, o.p.s.;Gender Studies, o.p.s.;Gender Studies, o.p.s.;Gender Studies, o.p.s.;;;;;GS;25737058;;;False;1;;False;MSSF;902;0
+1250;2;1;1;79;69056081;Nový Prostor;Nový Prostor;Nový Prostor;Nový Prostor;;;;;NP;69056081;CZ69056081;;False;1;;False;MSSF;903;0
+1251;2;1;1;14;65996631;Nadace Terezy Maxové;Nadace Terezy Maxové;Nadace Terezy Maxové;Nadace Terezy Maxové;;;;;NTM;65996631;CZ65996631;;False;1;;False;MSSF;904;0
+1252;2;1;1;79;69461091;Centrum pro komunitní práci západní Čechy;Centrum pro komunitní práci západní Čechy;Centrum pro komunitní práci západní Čechy;Centrum pro komunitní práci západní Čechy;;;;;CpKP;69461091;CZ69461091;;False;1;;False;MSSF;905;0
+1253;2;1;1;9;60729937;Střední odborné učiliště tradičních řemesel, spol. s r.o.;Střední odborné učiliště tradičních řemesel, spol. s r.o.;Střední odborné učiliště tradičních řemesel, spol. s r.o.;Střední odborné učiliště tradičních řemesel, spol. s r.o.;;;;;SOUTR;60729937;CZ60729937;;False;1;;False;MSSF;906;0
+1254;2;1;1;9;27097307;TROAS s.r.o.;TROAS s.r.o.;TROAS s.r.o.;TROAS s.r.o.;;;;;TROAS;27097307;CZ27097307;;True;1;;False;MSSF;907;0
+1255;2;1;1;9;25574990;CONEO, s.r.o.;CONEO, s.r.o.;CONEO, s.r.o.;CONEO, s.r.o.;;;;;Coneo;25574990;CZ25574990;;True;1;;False;MSSF;908;0
+1256;2;1;1;21;26641399;Občanské sdružení Svět dokořán;Občanské sdružení Svět dokořán;Občanské sdružení Svět dokořán;Občanské sdružení Svět dokořán;;;;;OSSD;26641399;CZ26641399;;False;1;;False;MSSF;909;0
+1257;2;1;1;95;70892156;Ústecký kraj;Ústecký kraj;Ústecký kraj;Ústecký kraj;;;;;ÚK;70892156;;;False;1;;False;MSSF;910;0
+1258;2;1;1;18;25737431;Otevřená společnost, obecně prospěšná společnost;Otevřená společnost, obecně prospěšná společnost;Otevřená společnost, obecně prospěšná společnost;Otevřená společnost, obecně prospěšná společnost;;;;;OS;25737431;;;False;1;;False;MSSF;911;0
+1259;2;1;1;79;45768676;Organizace pro pomoc uprchlíkům;Organizace pro pomoc uprchlíkům;Organizace pro pomoc uprchlíkům;Organizace pro pomoc uprchlíkům;;;;;OPU;45768676;CZ45768676;;False;1;;False;MSSF;912;0
+1260;2;1;1;79;67363610;Společnost pro ranou péči - Středisko rané péče v Liberci;Společnost pro ranou péči - Středisko rané péče v Liberci;Společnost pro ranou péči - Středisko rané péče v Liberci;Společnost pro ranou péči - Středisko rané péče v Liberci;;;;;SPRP;67363610;;;False;1;;False;MSSF;913;0
+1261;2;1;1;16;60279524;Regionální rozvojová agentura Ústeckého kraje;Regionální rozvojová agentura Ústeckého kraje;Regionální rozvojová agentura Ústeckého kraje;Regionální rozvojová agentura Ústeckého kraje;;;;;RRAÚK;60279524;CZ60279524;;True;1;;False;MSSF;914;0
+1262;2;1;1;84;65468562;Slezská diakonie;Slezská diakonie;Slezská diakonie;Slezská diakonie;;;;;SD;65468562;CZ65468562;;False;1;;False;MSSF;915;0
+1263;2;1;1;79;44994249;Sdružení občanů zabývajících se emigranty;Sdružení občanů zabývajících se emigranty;Sdružení občanů zabývajících se emigranty;Sdružení občanů zabývajících se emigranty;;;;;SOZE;44994249;;;False;1;;False;MSSF;916;0
+1264;2;1;1;18;25353446;Vyšší odborná škola DAKOL a střední školy DAKOL, o.p.s.;Vyšší odborná škola DAKOL a střední školy DAKOL, o.p.s.;Vyšší odborná škola DAKOL a střední školy DAKOL, o.p.s.;Vyšší odborná škola DAKOL a střední školy DAKOL, o.p.s.;;;;;DAKOL;25353446;;;False;1;;False;MSSF;917;0
+1265;2;1;1;92;261459;Město Krásná Lípa;Město Krásná Lípa;Město Krásná Lípa;Město Krásná Lípa;;;;;KL;261459;CZ00261459;;False;1;;False;MSSF;918;0
+1266;2;1;1;79;60446871;Sdružení pro probaci a mediaci v justici;Sdružení pro probaci a mediaci v justici;Sdružení pro probaci a mediaci v justici;Sdružení pro probaci a mediaci v justici;;;;;SPJ;60446871;CZ60446871;;False;1;;False;MSSF;919;0
+1267;2;1;1;79;69206414;Sdružení Romů Severní Moravy;Sdružení Romů Severní Moravy;Sdružení Romů Severní Moravy;Sdružení Romů Severní Moravy;;;;;ne;69206414;CZ69206414;;False;1;;False;MSSF;920;0
+1268;2;1;1;9;25438352;Rekvalifikační a informační centrum s.r.o.;Rekvalifikační a informační centrum s.r.o.;Rekvalifikační a informační centrum s.r.o.;Rekvalifikační a informační centrum s.r.o.;;;;;RIC;25438352;CZ25438352;;True;1;;False;MSSF;921;0
+1269;2;1;1;88;48208248;Jihočeská hospodářská komora;Jihočeská hospodářská komora;Jihočeská hospodářská komora;Jihočeská hospodářská komora;;;;;JHK;48208248;CZ48208248;;True;1;;False;MSSF;922;0
+1270;2;1;1;85;431095;Akademie Jana Amose Komenského;Akademie Jana Amose Komenského;Akademie Jana Amose Komenského;Akademie Jana Amose Komenského;;;;;AJAK;431095;CZ00431095;;True;1;;False;MSSF;923;0
+1271;2;1;1;85;45701822;Sdružení pro péči o duševně nemocné Fokus Praha;Sdružení pro péči o duševně nemocné Fokus Praha;Sdružení pro péči o duševně nemocné Fokus Praha;Sdružení pro péči o duševně nemocné Fokus Praha;;;;;-;45701822;CZ45701822;;False;1;;False;MSSF;924;0
+1272;2;1;1;9;62305972;OLOMOUC TRAINING CENTRE;OLOMOUC TRAINING CENTRE;OLOMOUC TRAINING CENTRE;OLOMOUC TRAINING CENTRE;;;;;OTC;62305972;CZ62305972;;True;1;;False;MSSF;925;0
+1273;2;1;1;79;69343951;Občanské sdružení Slovo 21;Občanské sdružení Slovo 21;Občanské sdružení Slovo 21;Občanské sdružení Slovo 21;;;;;Slovo;69343951;;;False;1;;False;MSSF;926;0
+1274;2;1;1;79;442801;Český svaz žen;Český svaz žen;Český svaz žen;Český svaz žen;;;;;ČSŽ;442801;CZ00442801;;False;1;;False;MSSF;927;0
+1275;2;1;1;79;26620553;Konzorcium nevládních organizací pracujících s uprchlíky v České republice;Konzorcium nevládních organizací pracujících s uprchlíky v České republice;Konzorcium nevládních organizací pracujících s uprchlíky v České republice;Konzorcium nevládních organizací pracujících s uprchlíky v České republice;;;;;-;26620553;CZ26620553;;False;1;;False;MSSF;928;0
+1276;2;1;1;79;45768676;Organizace pro pomoc uprchlíkům;Organizace pro pomoc uprchlíkům;Organizace pro pomoc uprchlíkům;Organizace pro pomoc uprchlíkům;;;;;OPU;45768676;CZ45768676;;False;1;;False;MSSF;929;0
+1277;2;1;1;37;66002222;Ministerstvo pro místní rozvoj - odbor rozvojových programů v cestovním ruchu;Ministerstvo pro místní rozvoj - odbor rozvojových programů v cestovním ruchu;Ministerstvo pro místní rozvoj - odbor rozvojových programů v cestovním ruchu;Ministerstvo pro místní rozvoj - odbor rozvojových programů v cestovním ruchu;;;;;MMR, ;66002222;CZ66002222;;False;1;;False;MSSF;930;0
+1278;2;1;1;95;70889546;Královéhradecký kraj;Královéhradecký kraj;Královéhradecký kraj;Královéhradecký kraj;;;;;KHK -;70889546;CZ70889546;;False;1;;False;MSSF;931;0
+1279;2;1;1;95;70891168;Karlovarský kraj;Karlovarský kraj;Karlovarský kraj;Karlovarský kraj;;;;;KV - ;70891168;CZ70891168;;False;1;;False;MSSF;932;0
+1280;2;1;1;95;70891508;Liberecký kraj;Liberecký kraj;Liberecký kraj;Liberecký kraj;;;;;LK - ;70891508;CZ70891508;;False;1;;False;MSSF;933;0
+1281;2;1;1;95;70888337;Jihomoravský kraj;Jihomoravský kraj;Jihomoravský kraj;Jihomoravský kraj;;;;;JMK -;70888337;CZ70888337;;True;1;;False;MSSF;934;0
+1282;2;1;1;95;70890650;Jihočeský kraj;Jihočeský kraj;Jihočeský kraj;Jihočeský kraj;;;;;JČK -;70890650;CZ70890650;;False;1;;False;MSSF;935;0
+1283;2;1;1;95;70890692;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;;;;;MSK -;70890692;CZ70890692;;False;1;;False;MSSF;936;0
+1284;2;1;1;95;70892156;Ústecký kraj;Ústecký kraj;Ústecký kraj;Ústecký kraj;;;;;ÚK - ;70892156;CZ70892156;;False;1;;False;MSSF;937;0
+1285;2;1;1;95;70890366;Plzeňský kraj;Plzeňský kraj;Plzeňský kraj;Plzeňský kraj;;;;;PK - ;70890366;CZ70890366;;False;1;;False;MSSF;938;0
+1286;2;1;1;95;70891320;Zlínský kraj;Zlínský kraj;Zlínský kraj;Zlínský kraj;;;;;ZK - ;70891320;CZ70891320;;False;1;;False;MSSF;939;0
+1287;2;1;1;95;60609460;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;;;;;OK - ;60609460;CZ60609460;;False;1;;False;MSSF;940;0
+1288;2;1;1;95;70891095;Středočeský kraj;Středočeský kraj;Středočeský kraj;Středočeský kraj;;;;;SČK -;70891095;CZ70891095;;False;1;;False;MSSF;941;0
+1289;2;1;1;95;70890749;Kraj Vysočina;Kraj Vysočina;Kraj Vysočina;Kraj Vysočina;;;;;KVy -;70890749;CZ70890749;;False;1;;False;MSSF;942;0
+1290;2;1;1;95;70892822;Pardubický kraj;Pardubický kraj;Pardubický kraj;Pardubický kraj;;;;;PK - ;70892822;CZ70892822;;False;1;;False;MSSF;943;0
+1291;2;1;1;16;5886;Dopravní podnik hl. m. Prahy, akciová společnost;Dopravní podnik hl. m. Prahy, akciová společnost;Dopravní podnik hl. m. Prahy, akciová společnost;Dopravní podnik hl. m. Prahy, akciová společnost;;;;;DP;5886;CZ00005886;;True;1;;False;MSSF;944;0
+1292;2;1;1;92;64581;Hlavní město Praha ( Odbor ochrany prostředí MHMP );Hlavní město Praha ( Odbor ochrany prostředí MHMP );Hlavní město Praha ( Odbor ochrany prostředí MHMP );Hlavní město Praha ( Odbor ochrany prostředí MHMP );;;;;HMP;64581;CZ00064581;;True;1;;False;MSSF;945;0
+1293;2;1;1;18;26912384;Prosperita, o.p.s.;Prosperita, o.p.s.;Prosperita, o.p.s.;Prosperita, o.p.s.;;;;;P;26912384;CZ26912384;;True;1;;False;MSSF;946;0
+1294;2;1;1;71;216208;Univerzita Karlova v Praze;Univerzita Karlova v Praze;Univerzita Karlova v Praze;Univerzita Karlova v Praze;;;;;UK;216208;CZ00216208;;True;1;;False;MSSF;947;0
+1295;2;1;1;92;240192;Městská část Praha 20;Městská část Praha 20;Městská část Praha 20;Městská část Praha 20;;;;;P20;240192;cz00064581;;True;1;;False;MSSF;948;0
+1296;2;1;1;92;63410;Městská část Praha 1;Městská část Praha 1;Městská část Praha 1;Městská část Praha 1;;;;;MĆP1;63410;CZ00063410;;True;1;;False;MSSF;949;0
+1297;2;1;1;37;66003008;Ministerstvo dopravy - Odbor fondů EU;Ministerstvo dopravy - Odbor fondů EU;Ministerstvo dopravy - Odbor fondů EU;Ministerstvo dopravy - Odbor fondů EU;;;;;O 430;66003008;;;False;1;;False;MSSF;950;0
+1298;2;1;1;37;66003008;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;;;;;MD;66003008;;;False;1;;False;MSSF;951;0
+1299;2;1;1;37;66003008;Ministerstvo dopravy - odbor fondů EU;Ministerstvo dopravy - odbor fondů EU;Ministerstvo dopravy - odbor fondů EU;Ministerstvo dopravy - odbor fondů EU;;;;;O 430;66003008;;;False;1;;False;MSSF;952;0
+1300;2;1;1;37;66003008;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;;;;;MD;66003008;;;False;1;;False;MSSF;953;0
+1301;2;1;1;37;66003008;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;;;;;MD;66003008;;;False;1;;False;MSSF;954;0
+1302;2;1;1;37;66003008;Ministerstvo dopravy ČR;Ministerstvo dopravy ČR;Ministerstvo dopravy ČR;Ministerstvo dopravy ČR;;;;;MD;66003008;;;False;1;;False;MSSF;955;0
+1303;2;1;1;37;66003008;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;;;;;MD;66003008;;;False;1;;False;MSSF;956;0
+1304;2;1;1;37;66003008;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;;;;;MD;66003008;;;False;1;;False;MSSF;957;0
+1305;2;1;1;37;66003008;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;;;;;MD;66003008;;;False;1;;False;MSSF;958;0
+1306;2;1;1;37;66003008;Ministerstvo dopravy - odbor fondů EU;Ministerstvo dopravy - odbor fondů EU;Ministerstvo dopravy - odbor fondů EU;Ministerstvo dopravy - odbor fondů EU;;;;;MD;66003008;;;False;1;;False;MSSF;959;0
+1307;2;1;1;37;66003008;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;;;;;MD;66003008;;;False;1;;False;MSSF;960;0
+1308;2;1;1;37;66003008;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;;;;;MD;66003008;;;False;1;;False;MSSF;961;0
+1309;2;1;1;37;66003008;Ministerstvo dopravy - Odbor fondů EU;Ministerstvo dopravy - Odbor fondů EU;Ministerstvo dopravy - Odbor fondů EU;Ministerstvo dopravy - Odbor fondů EU;;;;;MD;66003008;;;False;1;;False;MSSF;962;0
+1310;2;1;1;37;66003008;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;Ministerstvo dopravy ČR- odbor fondů EU;;;;;MD;66003008;;;False;1;;False;MSSF;963;0
+1311;2;1;1;37;66003008;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;Ministerstvo dopravy;;;;;MD;66003008;;;False;1;;False;MSSF;964;0
+1312;2;1;1;18;25436911;České Švýcarsko, o.p.s.;České Švýcarsko, o.p.s.;České Švýcarsko, o.p.s.;České Švýcarsko, o.p.s.;;;;;ČŠ;25436911;CZ25436911;;True;1;;False;MSSF;970;0
+1313;2;1;1;79;26652862;Klub tisícovkářů Čech, Moravy a Slezska;Klub tisícovkářů Čech, Moravy a Slezska;Klub tisícovkářů Čech, Moravy a Slezska;Klub tisícovkářů Čech, Moravy a Slezska;;;;;KT;26652862;CZ26652862;;True;1;;False;MSSF;971;0
+1314;2;1;1;92;261459;Město Krásná Lípa;Město Krásná Lípa;Město Krásná Lípa;Město Krásná Lípa;;;;;MKL;261459;CZ00261459;;False;1;;False;MSSF;972;0
+1315;2;1;1;79;71224432;Dobrovolný svazek obcí Jihomoravské lázně;Dobrovolný svazek obcí Jihomoravské lázně;Dobrovolný svazek obcí Jihomoravské lázně;Dobrovolný svazek obcí Jihomoravské lázně;;;;;JML;71224432;CZ71224432;;True;1;;False;MSSF;973;0
+1316;2;1;1;38;49277600;Česká centrála cestovního ruchu - CzechTourism;Česká centrála cestovního ruchu - CzechTourism;Česká centrála cestovního ruchu - CzechTourism;Česká centrála cestovního ruchu - CzechTourism;;;;;CzT;49277600;CZ49277600;;True;1;;False;MSSF;974;0
+1317;2;1;1;14;45773521;Nadace Partnerství;Nadace Partnerství;Nadace Partnerství;Nadace Partnerství;;;;;NP;45773521;CZ45773521;;True;1;;False;MSSF;975;0
+1319;2;1;1;37;551023;Ministerstvo práce  a sociálních věcí - SSZ - odbor 45;Ministerstvo práce  a sociálních věcí - SSZ - odbor 45;Ministerstvo práce  a sociálních věcí - SSZ - odbor 45;Ministerstvo práce  a sociálních věcí - SSZ - odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;976;0
+1320;2;1;1;37;551023;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;;;;;MPSV;551023;;;False;1;;False;MSSF;977;0
+1321;2;1;1;1;70891168;Karlovarský kraj - Krajský úřad;Karlovarský kraj - Krajský úřad;Karlovarský kraj - Krajský úřad;Karlovarský kraj - Krajský úřad;;;;;KÚ KV;70891168;;;False;1;;False;MSSF;978;0
+1322;2;1;1;37;66002222;Ministerstvo promístní rozvoj ČR - Odbor 34 (OŘOS);Ministerstvo promístní rozvoj ČR - Odbor 34 (OŘOS);Ministerstvo promístní rozvoj ČR - Odbor 34 (OŘOS);Ministerstvo promístní rozvoj ČR - Odbor 34 (OŘOS);;;;;MMR;66002222;;;False;1;;False;MSSF;979;0
+1323;2;1;1;37;66002222;Ministerstvo promístní rozvoj ČR - Odbor 34 (OŘOS);Ministerstvo promístní rozvoj ČR - Odbor 34 (OŘOS);Ministerstvo promístní rozvoj ČR - Odbor 34 (OŘOS);Ministerstvo promístní rozvoj ČR - Odbor 34 (OŘOS);;;;;MMR;66002222;;;False;1;;False;MSSF;980;0
+1324;2;1;1;89;832227;Euroregion Nisa - regionální sdružení Severních Čech;Euroregion Nisa - regionální sdružení Severních Čech;Euroregion Nisa - regionální sdružení Severních Čech;Euroregion Nisa - regionální sdružení Severních Čech;;;;;;832227;;;False;1;;False;MSSF;981;0
+1325;2;1;1;37;551023;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;;;;;MPSV;551023;;;False;1;;False;MSSF;982;0
+1326;2;1;1;37;72496991;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;;;;;ÚPP;72496991;;;False;1;;False;MSSF;983;0
+1327;2;1;1;37;551023;Ministerstvo práce a sociálních věcí, odbor 72 - řízení pomoci z ESF, oddělení 723 - řízení a implementace JPD 3;Ministerstvo práce a sociálních věcí, odbor 72 - řízení pomoci z ESF, oddělení 723 - řízení a implementace JPD 3;Ministerstvo práce a sociálních věcí, odbor 72 - řízení pomoci z ESF, oddělení 723 - řízení a implementace JPD 3;Ministerstvo práce a sociálních věcí, odbor 72 - řízení pomoci z ESF, oddělení 723 - řízení a implementace JPD 3;;;;;MPSV ;551023;;;False;1;;False;MSSF;984;0
+1328;2;1;1;37;551023;Ministerstvo práce a sociálních věcí, odbor 72 - řízení pomoci z ESF, oddělení 723 - řízení a implementace JPD 3;Ministerstvo práce a sociálních věcí, odbor 72 - řízení pomoci z ESF, oddělení 723 - řízení a implementace JPD 3;Ministerstvo práce a sociálních věcí, odbor 72 - řízení pomoci z ESF, oddělení 723 - řízení a implementace JPD 3;Ministerstvo práce a sociálních věcí, odbor 72 - řízení pomoci z ESF, oddělení 723 - řízení a implementace JPD 3;;;;;MPSV ;551023;;;False;1;;False;MSSF;985;0
+1329;2;1;1;37;551023;Ministerstvo práce a sociálních věcí ČR - odbor 723;Ministerstvo práce a sociálních věcí ČR - odbor 723;Ministerstvo práce a sociálních věcí ČR - odbor 723;Ministerstvo práce a sociálních věcí ČR - odbor 723;;;;;MPSV;551023;;;False;1;;False;MSSF;986;0
+1330;2;1;1;16;60192348;Aroma Praha, a. s.;Aroma Praha, a. s.;Aroma Praha, a. s.;Aroma Praha, a. s.;;;;;;60192348;CZ60192348;;False;1;;False;MSSF;987;0
+1331;2;1;1;9;63475073;Hestego s.r.o.;Hestego s.r.o.;Hestego s.r.o.;Hestego s.r.o.;;;;;;63475073;CZ63475073;;False;1;;False;MSSF;988;0
+1332;2;1;1;16;44015593;LAPEK, a.s.;LAPEK, a.s.;LAPEK, a.s.;LAPEK, a.s.;;;;;;44015593;CZ44015593;;False;1;;False;MSSF;989;0
+1333;2;1;1;18;62622561;Regionální hospodářská komora Poohří;Regionální hospodářská komora Poohří;Regionální hospodářská komora Poohří;Regionální hospodářská komora Poohří;;;;;;62622561;CZ62622561;;False;1;;False;MSSF;990;0
+1334;2;1;1;92;256552;Město Dobřany;Město Dobřany;Město Dobřany;Město Dobřany;;;;;;256552;CZ00256552;;False;1;;False;MSSF;991;0
+1335;2;1;1;9;25348876;Elakov s.r.o.;Elakov s.r.o.;Elakov s.r.o.;Elakov s.r.o.;;;;;;25348876;29325348876;;False;1;;False;MSSF;992;0
+1336;2;1;1;9;44015844;ENBRA, spol. s r.o.;ENBRA, spol. s r.o.;ENBRA, spol. s r.o.;ENBRA, spol. s r.o.;;;;;;44015844;CZ44015844;;False;1;;False;MSSF;993;0
+1337;2;1;1;16;25279645;JEMA Svitavy a.s;JEMA Svitavy a.s;JEMA Svitavy a.s;JEMA Svitavy a.s;;;;;;25279645;CZ25279645;;False;1;;False;MSSF;994;0
+1338;2;1;1;13;65338090;Regionální rozvojová agentura jižní Moravy;Regionální rozvojová agentura jižní Moravy;Regionální rozvojová agentura jižní Moravy;Regionální rozvojová agentura jižní Moravy;;;;;;65338090;CZ65338090;;False;1;;False;MSSF;995;0
+1339;2;1;1;9;48531987;MADEKOP, spol. s r.o.;MADEKOP, spol. s r.o.;MADEKOP, spol. s r.o.;MADEKOP, spol. s r.o.;;;;;;48531987;CZ48531987;;False;1;;False;MSSF;996;0
+1340;2;1;1;9;60747170;SMALT Brno, s. r. o.;SMALT Brno, s. r. o.;SMALT Brno, s. r. o.;SMALT Brno, s. r. o.;;;;;;60747170;-;;False;1;;False;MSSF;997;0
+1341;2;1;1;9;25353284;TRUMF International s.r.o.;TRUMF International s.r.o.;TRUMF International s.r.o.;TRUMF International s.r.o.;;;;;;25353284;CZ25353284;;False;1;;False;MSSF;998;0
+1342;2;1;1;7;450918088;Jaroslav Cankař a syn ATMOS;450918088;Jaroslav Cankař a syn ATMOS;450918088;;;;;;11303344;CZ450918088;450918088;False;1;;False;MSSF;999;0
+1343;2;1;1;9;48360830;SMS CZ, s.r.o.;SMS CZ, s.r.o.;SMS CZ, s.r.o.;SMS CZ, s.r.o.;;;;;;48360830;CZ48360830;;False;1;;False;MSSF;1000;0
+1344;2;1;1;9;44265859;Biomedica, spol. s r.o.;Biomedica, spol. s r.o.;Biomedica, spol. s r.o.;Biomedica, spol. s r.o.;;;;;;44265859;CZ44265859;;False;1;;False;MSSF;1001;0
+1345;2;1;1;9;25508717;ELKO EP, s.r.o.;ELKO EP, s.r.o.;ELKO EP, s.r.o.;ELKO EP, s.r.o.;;;;;;25508717;-;;False;1;;False;MSSF;1002;0
+1346;2;1;1;9;14613182;KARLA spol. s r.o.;KARLA spol. s r.o.;KARLA spol. s r.o.;KARLA spol. s r.o.;;;;;;14613182;CZ14613182;;False;1;;False;MSSF;1003;0
+1347;2;1;1;16;25380869;CNM textil a.s.;CNM textil a.s.;CNM textil a.s.;CNM textil a.s.;;;;;;25380869;CZ25380869;;False;1;;False;MSSF;1004;0
+1348;2;1;1;9;47238518;ČESKÁ ŽULA spol. s r.o.;ČESKÁ ŽULA spol. s r.o.;ČESKÁ ŽULA spol. s r.o.;ČESKÁ ŽULA spol. s r.o.;;;;;;47238518;-;;False;1;;False;MSSF;1005;0
+1349;2;1;1;16;26017997;HRANIPEX, a. s.;HRANIPEX, a. s.;HRANIPEX, a. s.;HRANIPEX, a. s.;;;;;;26017997;CZ26017997;;False;1;;False;MSSF;1006;0
+1350;2;1;1;9;47154144;H - nábytek s.r.o.;H - nábytek s.r.o.;H - nábytek s.r.o.;H - nábytek s.r.o.;;;;;;47154144;CZ47154144;;False;1;;False;MSSF;1007;0
+1351;2;1;1;9;25420887;AXUM BOHEMIA s.r.o.;AXUM BOHEMIA s.r.o.;AXUM BOHEMIA s.r.o.;AXUM BOHEMIA s.r.o.;;;;;;25420887;CZ25420887;;False;1;;False;MSSF;1008;0
+1352;2;1;1;9;47450720;KSK BONO s.r.o.;KSK BONO s.r.o.;KSK BONO s.r.o.;KSK BONO s.r.o.;;;;;;47450720;CZ47450720;;False;1;;False;MSSF;1009;0
+1353;2;1;1;9;46905910;BÖHM, spol. s r. o.;BÖHM, spol. s r. o.;BÖHM, spol. s r. o.;BÖHM, spol. s r. o.;;;;;;46905910;CZ46905910;;False;1;;False;MSSF;1010;0
+1354;2;1;1;9;48390470;VAE CONTROLS, s. r. o.;VAE CONTROLS, s. r. o.;VAE CONTROLS, s. r. o.;VAE CONTROLS, s. r. o.;;;;;;48390470;CZ48390470;;False;1;;False;MSSF;1011;0
+1355;2;1;1;9;62026381;PolyPlasty s.r.o.;PolyPlasty s.r.o.;PolyPlasty s.r.o.;PolyPlasty s.r.o.;;;;;;62026381;CZ62026381;;False;1;;False;MSSF;1012;0
+1356;2;1;1;16;26221179;MICROTEX a.s.;MICROTEX a.s.;MICROTEX a.s.;MICROTEX a.s.;;;;;;26221179;-;;False;1;;False;MSSF;1013;0
+1357;2;1;1;9;46970860;Racio, s. r. o.;Racio, s. r. o.;Racio, s. r. o.;Racio, s. r. o.;;;;;;46970860;CZ46970860;;False;1;;False;MSSF;1014;0
+1358;2;1;1;7;6154150376;Iva Vodáková - DURABO;6154150376;Iva Vodáková - DURABO;6154150376;;;;;;12229385;CZ6154150376;6154150376;False;1;;False;MSSF;1015;0
+1359;2;1;1;9;45148465;Družstevní závody Dražice - strojírna s r.o.;Družstevní závody Dražice - strojírna s r.o.;Družstevní závody Dražice - strojírna s r.o.;Družstevní závody Dražice - strojírna s r.o.;;;;;;45148465;CZ45148465;;False;1;;False;MSSF;1016;0
+1360;2;1;1;9;46708146;Slévárna hliníku s.r.o.;Slévárna hliníku s.r.o.;Slévárna hliníku s.r.o.;Slévárna hliníku s.r.o.;;;;;;46708146;CZ46708146;;False;1;;False;MSSF;1017;0
+1361;2;1;1;16;63908522;Farmtec a.s.;Farmtec a.s.;Farmtec a.s.;Farmtec a.s.;;;;;;63908522;CZ63908522;;False;1;;False;MSSF;1018;0
+1362;2;1;1;7;500223209;Květoslav Bašista;500223209;Květoslav Bašista;500223209;;;;;;18487009;CZ500223209;500223209;False;1;;False;MSSF;1019;0
+1363;2;1;1;9;46345426;DAFE-PLAST Jihlava, s.r.o.;DAFE-PLAST Jihlava, s.r.o.;DAFE-PLAST Jihlava, s.r.o.;DAFE-PLAST Jihlava, s.r.o.;;;;;;46345426;CZ46345426;;False;1;;False;MSSF;1020;0
+1364;2;1;1;9;46970860;Racio, s. r. o.;Racio, s. r. o.;Racio, s. r. o.;Racio, s. r. o.;;;;;;46970860;CZ46970860;;False;1;;False;MSSF;1021;0
+1365;2;1;1;9;48400874;STOMIX, spol. s r.o.;STOMIX, spol. s r.o.;STOMIX, spol. s r.o.;STOMIX, spol. s r.o.;;;;;;48400874;CZ48400874;;False;1;;False;MSSF;1022;0
+1366;2;1;1;9;25655809;Alca plast, s.r.o.;Alca plast, s.r.o.;Alca plast, s.r.o.;Alca plast, s.r.o.;;;;;;25655809;CZ25655809;;False;1;;False;MSSF;1023;0
+1367;2;1;1;9;25879715;Slezák-RAV CZ s.r.o.;Slezák-RAV CZ s.r.o.;Slezák-RAV CZ s.r.o.;Slezák-RAV CZ s.r.o.;;;;;;25879715;CZ25879715;;False;1;;False;MSSF;1024;0
+1368;2;1;1;9;25003330;MILOS s.r.o.;MILOS s.r.o.;MILOS s.r.o.;MILOS s.r.o.;;;;;;25003330;CZ25003330;;False;1;;False;MSSF;1025;0
+1369;2;1;1;9;544752;D PLAST, s. r. o.;D PLAST, s. r. o.;D PLAST, s. r. o.;D PLAST, s. r. o.;;;;;;544752;CZ00544752;;False;1;;False;MSSF;1026;0
+1370;2;1;1;9;60934000;Pavliš a Hartmann spol. s r.o.;Pavliš a Hartmann spol. s r.o.;Pavliš a Hartmann spol. s r.o.;Pavliš a Hartmann spol. s r.o.;;;;;;60934000;CZ60934000;;False;1;;False;MSSF;1027;0
+1371;2;1;1;9;43001343;Crocodille ČR, spol. s r.o.;Crocodille ČR, spol. s r.o.;Crocodille ČR, spol. s r.o.;Crocodille ČR, spol. s r.o.;;;;;;43001343;CZ43001343;;False;1;;False;MSSF;1028;0
+1372;2;1;1;9;64256383;ELITEX OK s.r.o.;ELITEX OK s.r.o.;ELITEX OK s.r.o.;ELITEX OK s.r.o.;;;;;;64256383;CZ64256383;;False;1;;False;MSSF;1029;0
+1373;2;1;1;9;48291986;Apollo Metal, spol. s r. o.;Apollo Metal, spol. s r. o.;Apollo Metal, spol. s r. o.;Apollo Metal, spol. s r. o.;;;;;;48291986;CZ48291986;;False;1;;False;MSSF;1030;0
+1374;2;1;1;9;26284812;Moravské sklárny Květná s.r.o.;Moravské sklárny Květná s.r.o.;Moravské sklárny Květná s.r.o.;Moravské sklárny Květná s.r.o.;;;;;;26284812;CZ26284812;;False;1;;False;MSSF;1031;0
+1375;2;1;1;9;63493845;SWN Moravia, s.r.o.;SWN Moravia, s.r.o.;SWN Moravia, s.r.o.;SWN Moravia, s.r.o.;;;;;;63493845;CZ63493845;;False;1;;False;MSSF;1032;0
+1376;2;1;1;9;49968416;BD Sensors s.r.o.;BD Sensors s.r.o.;BD Sensors s.r.o.;BD Sensors s.r.o.;;;;;;49968416;CZ49968416;;False;1;;False;MSSF;1033;0
+1377;2;1;1;9;48400874;STOMIX, spol. s r.o.;STOMIX, spol. s r.o.;STOMIX, spol. s r.o.;STOMIX, spol. s r.o.;;;;;;48400874;CZ48400874;;False;1;;False;MSSF;1034;0
+1378;2;1;1;9;669555;MEDICA FILTER spol. s r.o.;MEDICA FILTER spol. s r.o.;MEDICA FILTER spol. s r.o.;MEDICA FILTER spol. s r.o.;;;;;;669555;CZ00669555;;False;1;;False;MSSF;1035;0
+1379;2;1;1;7;501225107;Igor Láník - Techservis;501225107;Igor Láník - Techservis;501225107;;;;;;13080091;CZ501225107;501225107;False;1;;False;MSSF;1036;0
+1380;2;1;1;9;43371884;BAST s.r.o.;BAST s.r.o.;BAST s.r.o.;BAST s.r.o.;;;;;;43371884;CZ43371884;;False;1;;False;MSSF;1037;0
+1381;2;1;1;9;46979794;MAUTING spol. s r.o.;MAUTING spol. s r.o.;MAUTING spol. s r.o.;MAUTING spol. s r.o.;;;;;;46979794;-;;False;1;;False;MSSF;1038;0
+1382;2;1;1;9;47548282;CVP Galvanika s.r.o.;CVP Galvanika s.r.o.;CVP Galvanika s.r.o.;CVP Galvanika s.r.o.;;;;;;47548282;CZ47548282;;False;1;;False;MSSF;1039;0
+1383;2;1;1;9;62029959;DK PLAST, spol. s r.o.;DK PLAST, spol. s r.o.;DK PLAST, spol. s r.o.;DK PLAST, spol. s r.o.;;;;;;62029959;CZ62029959;;False;1;;False;MSSF;1040;0
+1384;2;1;1;16;25724304;BENEŠ a Lát, slévárna a strojírna a.s.;BENEŠ a Lát, slévárna a strojírna a.s.;BENEŠ a Lát, slévárna a strojírna a.s.;BENEŠ a Lát, slévárna a strojírna a.s.;;;;;;25724304;CZ25724304;;False;1;;False;MSSF;1041;0
+1385;2;1;1;9;18164358;BOSS engineering, spol. s r. o.;BOSS engineering, spol. s r. o.;BOSS engineering, spol. s r. o.;BOSS engineering, spol. s r. o.;;;;;;18164358;CZ18164358;;False;1;;False;MSSF;1042;0
+1386;2;1;1;9;18188494;Obchodní společnost KREDIT, spol. s r.o., Slavkov 284;Obchodní společnost KREDIT, spol. s r.o., Slavkov 284;Obchodní společnost KREDIT, spol. s r.o., Slavkov 284;Obchodní společnost KREDIT, spol. s r.o., Slavkov 284;;;;;;18188494;CZ18188494;;False;1;;False;MSSF;1043;0
+1387;2;1;1;16;26231573;HANÁK NÁBYTEK,a.s.;HANÁK NÁBYTEK,a.s.;HANÁK NÁBYTEK,a.s.;HANÁK NÁBYTEK,a.s.;;;;;;26231573;CZ26231573;;False;1;;False;MSSF;1044;0
+1388;2;1;1;9;45148465;Družstevní závody Dražice - strojírna, s. r. o.;Družstevní závody Dražice - strojírna, s. r. o.;Družstevní závody Dražice - strojírna, s. r. o.;Družstevní závody Dražice - strojírna, s. r. o.;;;;;;45148465;CZ45148465;;False;1;;False;MSSF;1045;0
+1389;2;1;1;16;45358656;Opravy a kovovýroba Záchlumí a.s.;Opravy a kovovýroba Záchlumí a.s.;Opravy a kovovýroba Záchlumí a.s.;Opravy a kovovýroba Záchlumí a.s.;;;;;;45358656;CZ45358656;;False;1;;False;MSSF;1046;0
+1390;2;1;1;9;46509917;Singing Rock , s.r.o.;Singing Rock , s.r.o.;Singing Rock , s.r.o.;Singing Rock , s.r.o.;;;;;;46509917;CZ46509917;;False;1;;False;MSSF;1047;0
+1391;2;1;1;9;25531344;GOLD-CRYSTAL s.r.o.;GOLD-CRYSTAL s.r.o.;GOLD-CRYSTAL s.r.o.;GOLD-CRYSTAL s.r.o.;;;;;;25531344;CZ25531344;;False;1;;False;MSSF;1048;0
+1392;2;1;1;9;46709347;TECHNOSKLO s.r.o.;TECHNOSKLO s.r.o.;TECHNOSKLO s.r.o.;TECHNOSKLO s.r.o.;;;;;;46709347;CZ46709347;;False;1;;False;MSSF;1049;0
+1393;2;1;1;9;48950874;Sázavan strojírny, s.r.o.;Sázavan strojírny, s.r.o.;Sázavan strojírny, s.r.o.;Sázavan strojírny, s.r.o.;;;;;;48950874;CZ48950874;;False;1;;False;MSSF;1050;0
+1394;2;1;1;9;26285444;MIVOKOR s. r. o.;MIVOKOR s. r. o.;MIVOKOR s. r. o.;MIVOKOR s. r. o.;;;;;;26285444;CZ26285444;;False;1;;False;MSSF;1051;0
+1395;2;1;1;9;63469511;NWT Computer s. r. o.;NWT Computer s. r. o.;NWT Computer s. r. o.;NWT Computer s. r. o.;;;;;;63469511;CZ63469511;;False;1;;False;MSSF;1052;0
+1396;2;1;1;9;25507494;MORFICO, s.r.o.;MORFICO, s.r.o.;MORFICO, s.r.o.;MORFICO, s.r.o.;;;;;;25507494;CZ25507494;;False;1;;False;MSSF;1053;0
+1397;2;1;1;16;25855123;Aeroterm, a.s.;Aeroterm, a.s.;Aeroterm, a.s.;Aeroterm, a.s.;;;;;;25855123;CZ25855123;;False;1;;False;MSSF;1054;0
+1398;2;1;1;16;47674601;SIWATEC, a.s.;SIWATEC, a.s.;SIWATEC, a.s.;SIWATEC, a.s.;;;;;;47674601;CZ47674601;;False;1;;False;MSSF;1055;0
+1399;2;1;1;9;25836846;CAT-GATO, s.r.o.;CAT-GATO, s.r.o.;CAT-GATO, s.r.o.;CAT-GATO, s.r.o.;;;;;;25836846;CZ25836846;;False;1;;False;MSSF;1056;0
+1400;2;1;1;9;44016191;Chepos Engineering spol. s r.o.;Chepos Engineering spol. s r.o.;Chepos Engineering spol. s r.o.;Chepos Engineering spol. s r.o.;;;;;;44016191;CZ44016191;;False;1;;False;MSSF;1057;0
+1401;2;1;1;9;60747170;SMALT Brno, s. r. o.;SMALT Brno, s. r. o.;SMALT Brno, s. r. o.;SMALT Brno, s. r. o.;;;;;;60747170;-;;False;1;;False;MSSF;1058;0
+1402;2;1;1;9;49810146;OEZ s.r.o.;OEZ s.r.o.;OEZ s.r.o.;OEZ s.r.o.;;;;;;49810146;CZ49810146;;False;1;;False;MSSF;1059;0
+1403;2;1;1;38;62941976;ČEA;ČEA;ČEA;ČEA;;;;;;62941976;-;;False;1;;False;MSSF;1060;0
+1404;2;1;1;16;25247409;BLEX, a.s.;BLEX, a.s.;BLEX, a.s.;BLEX, a.s.;;;;;;25247409;CZ25247409;;False;1;;False;MSSF;1061;0
+1405;2;1;1;16;25387146;UNITOOLS CZ a.s.;UNITOOLS CZ a.s.;UNITOOLS CZ a.s.;UNITOOLS CZ a.s.;;;;;;25387146;40525387146;;False;1;;False;MSSF;1062;0
+1406;2;1;1;9;62741471;SALTEK, s.r.o.;SALTEK, s.r.o.;SALTEK, s.r.o.;SALTEK, s.r.o.;;;;;;62741471;CZ62741471;;False;1;;False;MSSF;1063;0
+1407;2;1;1;9;25951653;DESPA OK s.r.o.;DESPA OK s.r.o.;DESPA OK s.r.o.;DESPA OK s.r.o.;;;;;;25951653;CZ25951653;;False;1;;False;MSSF;1064;0
+1408;2;1;1;9;25420887;AXUM BOHEMIA s.r.o.;AXUM BOHEMIA s.r.o.;AXUM BOHEMIA s.r.o.;AXUM BOHEMIA s.r.o.;;;;;;25420887;CZ25420887;;False;1;;False;MSSF;1065;0
+1409;2;1;1;9;45479593;LASKI, s.r.o.;LASKI, s.r.o.;LASKI, s.r.o.;LASKI, s.r.o.;;;;;;45479593;CZ45479593;;False;1;;False;MSSF;1066;0
+1410;2;1;1;9;15035816;Roltechnik, spol. s r. o.;Roltechnik, spol. s r. o.;Roltechnik, spol. s r. o.;Roltechnik, spol. s r. o.;;;;;;15035816;-;;False;1;;False;MSSF;1067;0
+1411;2;1;1;13;576310;Sdružení pro rozvoj Moravskoslezského kraje;Sdružení pro rozvoj Moravskoslezského kraje;Sdružení pro rozvoj Moravskoslezského kraje;Sdružení pro rozvoj Moravskoslezského kraje;;;;;;576310;CZ00576310;;False;1;;False;MSSF;1068;0
+1412;2;1;1;9;45359571;Kartáčovna Koloveč spol.s r.o.;Kartáčovna Koloveč spol.s r.o.;Kartáčovna Koloveč spol.s r.o.;Kartáčovna Koloveč spol.s r.o.;;;;;;45359571;CZ45359571;;False;1;;False;MSSF;1069;0
+1413;2;1;1;9;16361261;DEKOR, spol. s.r.o.;DEKOR, spol. s.r.o.;DEKOR, spol. s.r.o.;DEKOR, spol. s.r.o.;;;;;;16361261;CZ16361261;;False;1;;False;MSSF;1070;0
+1414;2;1;1;16;64506789;PANBEX s. r. o.;PANBEX s. r. o.;PANBEX s. r. o.;PANBEX s. r. o.;;;;;;64506789;CZ64506789;;False;1;;False;MSSF;1071;0
+1415;2;1;1;9;48950874;Sázavan strojírny, s.r.o.;Sázavan strojírny, s.r.o.;Sázavan strojírny, s.r.o.;Sázavan strojírny, s.r.o.;;;;;;48950874;CZ48950874;;False;1;;False;MSSF;1072;0
+1416;2;1;1;9;63493845;SWN Moravia, s.r.o.;SWN Moravia, s.r.o.;SWN Moravia, s.r.o.;SWN Moravia, s.r.o.;;;;;;63493845;CZ63493845;;False;1;;False;MSSF;1073;0
+1417;2;1;1;9;47473452;H & H hodinářská s.r.o.;H & H hodinářská s.r.o.;H & H hodinářská s.r.o.;H & H hodinářská s.r.o.;;;;;;47473452;CZ47473452;;False;1;;False;MSSF;1074;0
+1418;2;1;1;16;61974994;ZP Šumvald, a.s.;ZP Šumvald, a.s.;ZP Šumvald, a.s.;ZP Šumvald, a.s.;;;;;;61974994;CZ61974994;;False;1;;False;MSSF;1075;0
+1419;2;1;1;9;26138417;CZ DRAMI s.r.o.;CZ DRAMI s.r.o.;CZ DRAMI s.r.o.;CZ DRAMI s.r.o.;;;;;;26138417;CZ26138417;;False;1;;False;MSSF;1076;0
+1420;2;1;1;9;44707070;ZENIT, spol. s r. o.;ZENIT, spol. s r. o.;ZENIT, spol. s r. o.;ZENIT, spol. s r. o.;;;;;;44707070;CZ44707070;;False;1;;False;MSSF;1077;0
+1421;2;1;1;9;61062812;TECHNOSERVICE - technické a komerční služby, s.r.o.;TECHNOSERVICE - technické a komerční služby, s.r.o.;TECHNOSERVICE - technické a komerční služby, s.r.o.;TECHNOSERVICE - technické a komerční služby, s.r.o.;;;;;;61062812;CZ61062812;;False;1;;False;MSSF;1078;0
+1422;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;;;;;MPSV;551023;CZ00551023;;False;1;;False;MSSF;1079;0
+1423;2;1;1;37;551023;Řídící orgán CIP EQUAL - MPSV, Oddělení řízení a implementace Iniciativy Společenství EQUAL;Řídící orgán CIP EQUAL - MPSV, Oddělení řízení a implementace Iniciativy Společenství EQUAL;Řídící orgán CIP EQUAL - MPSV, Oddělení řízení a implementace Iniciativy Společenství EQUAL;Řídící orgán CIP EQUAL - MPSV, Oddělení řízení a implementace Iniciativy Společenství EQUAL;;;;;MPSV;551023;CZ00551023;;False;1;;False;MSSF;1080;0
+1424;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;;;;;MPSV;551023;CZ00551023;;False;1;;False;MSSF;1081;0
+1425;2;1;1;37;551023;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;;;;;MPSV7;551023;CZ00551023;;False;1;;False;MSSF;1082;0
+1426;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;;;;;MPSV7;551023;CZ00551023;;False;1;;False;MSSF;1083;0
+1427;2;1;1;14;49279416;Nadace rozvoje občanské společnosti (NROS);Nadace rozvoje občanské společnosti (NROS);Nadace rozvoje občanské společnosti (NROS);Nadace rozvoje občanské společnosti (NROS);;;;;NROS;49279416;CZ49279416;;False;1;;False;MSSF;1084;0
+1434;2;1;1;3;40580563;SAN;SAN;SAN;SAN;;;;;;40580563;;;False;1;;False;MSSF;1085;0
+1435;2;1;1;9;26448807;CIT.CZ, spol. s r.o.;CIT.CZ, spol. s r.o.;CIT.CZ, spol. s r.o.;CIT.CZ, spol. s r.o.;;;;;CIT.C;26448807;CZ26448807;;True;1;;False;MSSF;1086;0
+1436;2;1;1;38;64467;Městská knihovna v Praze;Městská knihovna v Praze;Městská knihovna v Praze;Městská knihovna v Praze;;;;;MKP;64467;CZ00064467;;False;1;;False;MSSF;1087;0
+1437;2;1;1;92;231151;Městská část Praha 12;Městská část Praha 12;Městská část Praha 12;Městská část Praha 12;;;;;MČP12;231151;;;False;1;;False;MSSF;1088;0
+1438;2;1;1;92;231304;Městská část Praha 19;Městská část Praha 19;Městská část Praha 19;Městská část Praha 19;;;;;MČ;231304;;;True;1;;False;MSSF;1089;0
+1439;2;1;1;92;64581;Hlavní město Praha;Hlavní město Praha;Hlavní město Praha;Hlavní město Praha;;;;;HMP;64581;CZ00064581;;True;1;;False;MSSF;1090;0
+1440;2;1;1;92;64581;Hlavní město Praha - Odbor rozvoje dopravy MHMP;Hlavní město Praha - Odbor rozvoje dopravy MHMP;Hlavní město Praha - Odbor rozvoje dopravy MHMP;Hlavní město Praha - Odbor rozvoje dopravy MHMP;;;;;HMP;64581;CZ00064581;;True;1;;False;MSSF;1091;0
+1441;2;1;1;92;233129;Město Beroun;Město Beroun;Město Beroun;Město Beroun;;;;;;233129;;;False;1;;False;MSSF;1092;0
+1442;2;1;1;92;75370;Statutární město Plzeň;Statutární město Plzeň;Statutární město Plzeň;Statutární město Plzeň;;;;;;75370;;;False;1;;False;MSSF;1093;0
+1443;2;1;1;16;26271303;Skanska DS a.s.;Skanska DS a.s.;Skanska DS a.s.;Skanska DS a.s.;;;;;;26271303;CZ26271303;;True;1;;False;MSSF;1095;0
+1444;2;1;1;79;14915;Sdružení Metrostav a MBaJK II;Sdružení Metrostav a MBaJK II;Sdružení Metrostav a MBaJK II;Sdružení Metrostav a MBaJK II;;;;;;14915;CZ00014915;;True;1;;False;MSSF;1096;0
+1447;2;1;1;37;72496991;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;;;;;Úřad ;72496991;;;False;1;;False;MSSF;1097;0
+1448;2;1;1;37;72496991;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;Úřad práce hl. m. Prahy;;;;;Úřad ;72496991;;;False;1;;False;MSSF;1098;0
+1458;2;1;1;95;70891320;Zlínský kraj;Zlínský kraj;Zlínský kraj;Zlínský kraj;;;;;ZK;70891320;;;False;1;;False;MSSF;1099;0
+1459;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - SSZ, odbor 45;Ministerstvo práce a sociálních věcí - SSZ, odbor 45;Ministerstvo práce a sociálních věcí - SSZ, odbor 45;Ministerstvo práce a sociálních věcí - SSZ, odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1100;0
+1460;2;1;1;95;70892822;Pardubický kraj;Pardubický kraj;Pardubický kraj;Pardubický kraj;;;;;Pk;70892822;;;False;1;;False;MSSF;1101;0
+1461;2;1;1;95;60609460;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;;;;;;60609460;CZ60609460;;False;1;;False;MSSF;1102;0
+1462;2;1;1;95;70890749;Vysočina, kraj se sídlem v Jihlavě;Vysočina, kraj se sídlem v Jihlavě;Vysočina, kraj se sídlem v Jihlavě;Vysočina, kraj se sídlem v Jihlavě;;;;;Kraj;70890749;;;False;1;;False;MSSF;1103;0
+1463;2;1;1;37;551023;Ministerstvo práce a sociálních věcí, odbor 45;Ministerstvo práce a sociálních věcí, odbor 45;Ministerstvo práce a sociálních věcí, odbor 45;Ministerstvo práce a sociálních věcí, odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1104;0
+1464;2;1;1;95;70888337;Jihomoravský kraj;Jihomoravský kraj;Jihomoravský kraj;Jihomoravský kraj;;;;;JMK;70888337;;;False;1;;False;MSSF;1105;0
+1465;2;1;1;37;551023;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;;;;;MPSV;551023;;;False;1;;False;MSSF;1106;0
+1466;2;1;1;95;70890366;Plzeňský kraj;Plzeňský kraj;Plzeňský kraj;Plzeňský kraj;;;;;PK;70890366;;;False;1;;False;MSSF;1107;0
+1467;2;1;1;95;70892156;Ústecký kraj;Ústecký kraj;Ústecký kraj;Ústecký kraj;;;;;ÚK;70892156;;;False;1;;False;MSSF;1108;0
+1468;2;1;1;37;551023;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;;;;;MPSV;551023;;;False;1;;False;MSSF;1109;0
+1469;2;1;1;37;551023;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;Ministerstvo práce a sociálních věcí;;;;;MPSV;551023;CZ00551023;;False;1;;False;MSSF;1110;0
+1470;2;1;1;37;551023;Odbor trhu práce Správy služeb zaměstnanosti MPSV ČR;Odbor trhu práce Správy služeb zaměstnanosti MPSV ČR;Odbor trhu práce Správy služeb zaměstnanosti MPSV ČR;Odbor trhu práce Správy služeb zaměstnanosti MPSV ČR;;;;;Odbor;551023;;;False;1;;False;MSSF;1111;0
+1471;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1112;0
+1472;2;1;1;45;70890650;Krajský úřad Jihočeského kraje;Krajský úřad Jihočeského kraje;Krajský úřad Jihočeského kraje;Krajský úřad Jihočeského kraje;;;;;KÚJčK;70890650;CZ70890650;;True;1;;False;MSSF;1113;0
+1473;2;1;1;37;515132;Ú?ad práce v Českých Bud?jovicích;Ú?ad práce v Českých Bud?jovicích;Ú?ad práce v Českých Bud?jovicích;Ú?ad práce v Českých Bud?jovicích;;;;;UPCB;515132;;;False;1;;False;MSSF;1114;0
+1474;2;1;1;37;72496991;Úřad práce v Českých Budějovicích;Úřad práce v Českých Budějovicích;Úřad práce v Českých Budějovicích;Úřad práce v Českých Budějovicích;;;;;UPCB;72496991;;;False;1;;False;MSSF;1115;0
+1475;2;1;1;37;655040;Ú?ad práce v Pardubicích;Ú?ad práce v Pardubicích;Ú?ad práce v Pardubicích;Ú?ad práce v Pardubicích;;;;;ÚP PA;655040;;;False;1;;False;MSSF;1116;0
+1476;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;;;;;MPSV;551023;;;False;1;;False;MSSF;1117;0
+1477;2;1;1;37;551023;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;;;;;MPSV;551023;;;False;1;;False;MSSF;1118;0
+1478;2;1;1;37;72496991;Ú?ad práce v Plzni;Ú?ad práce v Plzni;Ú?ad práce v Plzni;Ú?ad práce v Plzni;;;;;ÚP v ;72496991;;;False;1;;False;MSSF;1119;0
+1479;2;1;1;37;72496991;Ú?ad práce v Plzni;Ú?ad práce v Plzni;Ú?ad práce v Plzni;Ú?ad práce v Plzni;;;;;ÚP v ;72496991;;;False;1;;False;MSSF;1120;0
+1480;2;1;1;37;576166;Ú?ad práce v Olomouci;Ú?ad práce v Olomouci;Ú?ad práce v Olomouci;Ú?ad práce v Olomouci;;;;;Ú?ad ;576166;;;False;1;;False;MSSF;1121;0
+1481;2;1;1;37;567167;Ú?ad práce Brno-venkov;Ú?ad práce Brno-venkov;Ú?ad práce Brno-venkov;Ú?ad práce Brno-venkov;;;;;Ú?ad ;567167;;;False;1;;False;MSSF;1122;0
+1482;2;1;1;37;576166;Ú?ad práce v Olomouci;Ú?ad práce v Olomouci;Ú?ad práce v Olomouci;Ú?ad práce v Olomouci;;;;;Ú?ad ;576166;;;False;1;;False;MSSF;1123;0
+1483;2;1;1;37;529397;Ú?ad práce v Hradci Králov?;Ú?ad práce v Hradci Králov?;Ú?ad práce v Hradci Králov?;Ú?ad práce v Hradci Králov?;;;;;ÚP HK;529397;CZ00529397;;False;1;;False;MSSF;1124;0
+1484;2;1;1;38;14891409;Střední odborné učiliště elektrotechnické Praha 9;Střední odborné učiliště elektrotechnické Praha 9;Střední odborné učiliště elektrotechnické Praha 9;Střední odborné učiliště elektrotechnické Praha 9;;;;;SOUE;14891409;;;False;1;;False;MSSF;1125;0
+1486;2;1;1;1;1243967;Mott MacDonald Ltd.;Mott MacDonald Ltd.;Mott MacDonald Ltd.;Mott MacDonald Ltd.;;;;;MMD;1243967;;;False;8;;False;MSSF;1126;0
+1487;2;1;1;79;25378147;Sdružení Dobrá 2002;Sdružení Dobrá 2002;Sdružení Dobrá 2002;Sdružení Dobrá 2002;;;;;;25378147;CZ25378147;;True;1;;False;MSSF;1127;0
+1493;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;Ministerstvo práce a sociálních věcí - odbor 72;;;;;MPSV7;551023;CZ00551023;;False;1;;False;MSSF;1130;0
+1494;2;1;1;38;63834197;Technická správa komunikací hl. m. Prahy;Technická správa komunikací hl. m. Prahy;Technická správa komunikací hl. m. Prahy;Technická správa komunikací hl. m. Prahy;;;;;ÚDI;63834197;CZ00063266;;True;1;;False;MSSF;1131;0
+1495;2;1;1;92;240150;Městská část Praha - Dolní Počernice;Městská část Praha - Dolní Počernice;Městská část Praha - Dolní Počernice;Městská část Praha - Dolní Počernice;;;;;MČ;240150;;;True;1;;False;MSSF;1132;0
+1496;2;1;1;38;70976490;Základní škola Aš, Okružní 57;Základní škola Aš, Okružní 57;Základní škola Aš, Okružní 57;Základní škola Aš, Okružní 57;;;;;ZŠ Aš;70976490;CZ70976490;;False;1;;False;MSSF;1133;0
+1497;2;1;1;38;47443456;Základní škola T.G. Masaryka Moravské Budějovice, okr. Třebíč;Základní škola T.G. Masaryka Moravské Budějovice, okr. Třebíč;Základní škola T.G. Masaryka Moravské Budějovice, okr. Třebíč;Základní škola T.G. Masaryka Moravské Budějovice, okr. Třebíč;;;;;ZŠ;47443456;CZ47443456;;False;1;;False;MSSF;1134;0
+1498;2;1;1;92;289965;Město Náměšť nad Oslavou;Město Náměšť nad Oslavou;Město Náměšť nad Oslavou;Město Náměšť nad Oslavou;;;;;Město;289965;;;False;1;;False;MSSF;1135;0
+1499;2;1;1;79;571750;Svaz chovatelů českého strakatého skotu;Svaz chovatelů českého strakatého skotu;Svaz chovatelů českého strakatého skotu;Svaz chovatelů českého strakatého skotu;;;;;SCHCS;571750;CZ00571750;;True;1;;False;MSSF;1136;0
+1500;2;1;1;95;70891095;Středočeský kraj;Středočeský kraj;Středočeský kraj;Středočeský kraj;;;;;;70891095;;;False;1;;False;MSSF;1137;0
+1501;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - SSZ odbor 45;Ministerstvo práce a sociálních věcí - SSZ odbor 45;Ministerstvo práce a sociálních věcí - SSZ odbor 45;Ministerstvo práce a sociálních věcí - SSZ odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1138;0
+1502;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - SSZ odbor 45;Ministerstvo práce a sociálních věcí - SSZ odbor 45;Ministerstvo práce a sociálních věcí - SSZ odbor 45;Ministerstvo práce a sociálních věcí - SSZ odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1139;0
+1503;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - SSZ - odbor 45;Ministerstvo práce a sociálních věcí - SSZ - odbor 45;Ministerstvo práce a sociálních věcí - SSZ - odbor 45;Ministerstvo práce a sociálních věcí - SSZ - odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1140;0
+1504;2;1;1;45;70891508;Liberecký kraj;Liberecký kraj;Liberecký kraj;Liberecký kraj;;;;;Liber;70891508;;;False;1;;False;MSSF;1141;0
+1505;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - SSZ - odbor 45;Ministerstvo práce a sociálních věcí - SSZ - odbor 45;Ministerstvo práce a sociálních věcí - SSZ - odbor 45;Ministerstvo práce a sociálních věcí - SSZ - odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1142;0
+1506;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - SSZ , odbor 45;Ministerstvo práce a sociálních věcí - SSZ , odbor 45;Ministerstvo práce a sociálních věcí - SSZ , odbor 45;Ministerstvo práce a sociálních věcí - SSZ , odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1143;0
+1507;2;1;1;95;70890692;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;;;;;MSK;70890692;CZ70890692;;False;1;;False;MSSF;1144;0
+1508;2;1;1;37;551023;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;Ministerstvo práce a sociálních věcí - správa služeb zaměstnanosti, odbor 45;;;;;MPSV;551023;;;False;1;;False;MSSF;1145;0
+1509;2;1;1;37;551023;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;Ministerstvo práce a sociálních věcí ČR;;;;;MPSV;551023;;;False;1;;False;MSSF;1146;0
+1510;2;1;1;89;68941773;Euroregion Silesia - CZ;Euroregion Silesia - CZ;Euroregion Silesia - CZ;Euroregion Silesia - CZ;;;;;Eur S;68941773;;;False;1;;False;MSSF;1147;0
+1511;2;1;1;89;64224619;Euroregion Pomezí Čech Moravy a Kladska - Euroregion Glacensis;Euroregion Pomezí Čech Moravy a Kladska - Euroregion Glacensis;Euroregion Pomezí Čech Moravy a Kladska - Euroregion Glacensis;Euroregion Pomezí Čech Moravy a Kladska - Euroregion Glacensis;;;;;Eur G;64224619;;;False;1;;False;MSSF;1148;0
+1512;2;1;1;79;70632073;"Euroregion Beskydy (oficiální název ""Region Beskydy"")";"Euroregion Beskydy (oficiální název ""Region Beskydy"")";"Euroregion Beskydy (oficiální název ""Region Beskydy"")";"Euroregion Beskydy (oficiální název ""Region Beskydy"")";;;;;Eur B;70632073;;;False;1;;False;MSSF;1149;0
+1513;2;1;1;92;267449;Město Havlíčkův Brod;Město Havlíčkův Brod;Město Havlíčkův Brod;Město Havlíčkův Brod;;;;;MUHB;267449;CZ00267449;;False;1;;False;MSSF;1150;0
+1514;2;1;1;16;25512897;Dopravní podnik města Jihlavy, a.s.;Dopravní podnik města Jihlavy, a.s.;Dopravní podnik města Jihlavy, a.s.;Dopravní podnik města Jihlavy, a.s.;;;;;DP JI;25512897;CZ25512897;;True;1;;False;MSSF;1151;0
+1515;2;1;1;92;237051;Město Mělník;Město Mělník;Město Mělník;Město Mělník;;;;;Bus M;237051;CZ00237051;;False;1;;False;MSSF;1152;0
+1516;2;1;1;92;244899;město Hluboká nad Vltavou;město Hluboká nad Vltavou;město Hluboká nad Vltavou;město Hluboká nad Vltavou;;;;;HnV;244899;;;False;1;;False;MSSF;1153;0
+1517;2;1;1;95;60609460;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;;;;;OLK;60609460;;;False;1;;False;MSSF;1154;0
+1518;2;1;1;95;70890692;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;;;;;MSK;70890692;CZ70890692;;False;1;;False;MSSF;1155;0
+1519;2;1;1;92;297534;Statutární město Karviná;Statutární město Karviná;Statutární město Karviná;Statutární město Karviná;;;;;SMK;297534;CZ00297534;;False;1;;False;MSSF;1156;0
+1520;2;1;1;92;299634;Město Uničov;Město Uničov;Město Uničov;Město Uničov;;;;;Uničo;299634;CZ00299634;;False;1;;False;MSSF;1157;0
+1521;2;1;1;92;572675;Obec Krásná;Obec Krásná;Obec Krásná;Obec Krásná;;;;;Krásn;572675;;;False;1;;False;MSSF;1158;0
+1522;2;1;1;38;70966206;Krajská knihovna Karlovy Vary;Krajská knihovna Karlovy Vary;Krajská knihovna Karlovy Vary;Krajská knihovna Karlovy Vary;;;;;KKnih;70966206;;;False;1;;False;MSSF;1159;0
+1523;2;1;1;92;75370;statutární město Plzeň;statutární město Plzeň;statutární město Plzeň;statutární město Plzeň;;;;;měst ;75370;CZ00075370;;False;1;;False;MSSF;1160;0
+1524;2;1;1;95;70890366;Plzeňský kraj;Plzeňský kraj;Plzeňský kraj;Plzeňský kraj;;;;;PK;70890366;CZ70890366;;False;1;;False;MSSF;1161;0
+1525;2;1;1;16;25220683;Plzeňské městské dopravní podniky, a.s.;Plzeňské městské dopravní podniky, a.s.;Plzeňské městské dopravní podniky, a.s.;Plzeňské městské dopravní podniky, a.s.;;;;;PMDP;25220683;CZ25220683;;True;1;;False;MSSF;1162;0
+1526;2;1;1;38;95711;Správa silnic Moravskoslezského kraje;Správa silnic Moravskoslezského kraje;Správa silnic Moravskoslezského kraje;Správa silnic Moravskoslezského kraje;;;;;SS MS;95711;CZ00095711;;False;1;;False;MSSF;1163;0
+1527;2;1;1;38;95711;Správa silnic Moravskoslezkého kraje;Správa silnic Moravskoslezkého kraje;Správa silnic Moravskoslezkého kraje;Správa silnic Moravskoslezkého kraje;;;;;SSMSK;95711;CZ00095711;;False;1;;False;MSSF;1164;0
+1528;2;1;1;38;95711;Správa silnic Moravskoslezkého kraje;Správa silnic Moravskoslezkého kraje;Správa silnic Moravskoslezkého kraje;Správa silnic Moravskoslezkého kraje;;;;;SSMSK;95711;CZ00095711;;False;1;;False;MSSF;1165;0
+1529;2;1;1;92;261891;Město Chomutov;Město Chomutov;Město Chomutov;Město Chomutov;;;;;CV;261891;;;False;1;;False;MSSF;1166;0
+1530;2;1;1;92;261904;Město Jirkov;Město Jirkov;Město Jirkov;Město Jirkov;;;;;Ji;261904;CZ00261904;;False;1;;False;MSSF;1167;0
+1531;2;1;1;16;25488627;Krajská zdravotní, a.s. - Nemocnice Chomutov, o.z.;Krajská zdravotní, a.s. - Nemocnice Chomutov, o.z.;Krajská zdravotní, a.s. - Nemocnice Chomutov, o.z.;Krajská zdravotní, a.s. - Nemocnice Chomutov, o.z.;;;;;Nem C;25488627;;;False;1;;False;MSSF;1168;0
+1532;2;1;1;92;266094;Statutární město Most;Statutární město Most;Statutární město Most;Statutární město Most;;;;;Most;266094;;;False;1;;False;MSSF;1169;0
+1533;2;1;1;16;25439022;Metropolnet a.s;Metropolnet a.s;Metropolnet a.s;Metropolnet a.s;;;;;Mnet;25439022;CZ25439022;;True;1;;False;MSSF;1170;0
+1534;2;1;1;92;284891;Město Hodonín;Město Hodonín;Město Hodonín;Město Hodonín;;;;;Město;284891;CZ00284891;;True;1;;False;MSSF;1171;0
+1535;2;1;1;95;70888337;Jihomoravský kraj;Jihomoravský kraj;Jihomoravský kraj;Jihomoravský kraj;;;;;JmK;70888337;CZ70888337;;False;1;;False;MSSF;1172;0
+1536;2;1;1;92;243132;MĚSTO PŘÍBRAM;MĚSTO PŘÍBRAM;MĚSTO PŘÍBRAM;MĚSTO PŘÍBRAM;;;;;Příbr;243132;;;False;1;;False;MSSF;1173;0
+1537;2;1;1;38;61904040;Sdružení obcí Sedlčanska;Sdružení obcí Sedlčanska;Sdružení obcí Sedlčanska;Sdružení obcí Sedlčanska;;;;;SOS;61904040;CZ61904040;;False;1;;False;MSSF;1174;0
+1538;2;1;1;84;73632767;Diakonie Českobratrské Církve Evangelické, středisko Plzeň;Diakonie Českobratrské Církve Evangelické, středisko Plzeň;Diakonie Českobratrské Církve Evangelické, středisko Plzeň;Diakonie Českobratrské Církve Evangelické, středisko Plzeň;;;;;D ČCE;73632767;CZ73632767;;False;1;;False;MSSF;1175;0
+1539;2;1;1;84;49774034;Diecézní charita Plzeň;Diecézní charita Plzeň;Diecézní charita Plzeň;Diecézní charita Plzeň;;;;;DCHP;49774034;CZ49774034;;False;1;;False;MSSF;1176;0
+1540;2;1;1;95;70890692;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;;;;;MSK;70890692;CZ70890692;;False;1;;False;MSSF;1177;0
+1541;2;1;1;92;573418;Obec Modrava;Obec Modrava;Obec Modrava;Obec Modrava;;;;;Modra;573418;CZ00573418;;False;1;;False;MSSF;1178;0
+1542;2;1;1;38;601322;Střední průmyslová škola, Bruntál, Kavalcova 1;Střední průmyslová škola, Bruntál, Kavalcova 1;Střední průmyslová škola, Bruntál, Kavalcova 1;Střední průmyslová škola, Bruntál, Kavalcova 1;;;;;SPŠ;601322;CZ00601322;;False;1;;False;MSSF;1179;0
+1543;2;1;1;95;70890692;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;Moravskoslezský kraj;;;;;MSK;70890692;CZ70890692;;False;1;;False;MSSF;1180;0
+1544;2;1;1;76;77461;Integrovaná střední škola Cheb;Integrovaná střední škola Cheb;Integrovaná střední škola Cheb;Integrovaná střední škola Cheb;;;;;ISŠ C;77461;;;False;1;;False;MSSF;1181;0
+1545;2;1;1;74;75059151;Střední škola živnostenská Sokolov;Střední škola živnostenská Sokolov;Střední škola živnostenská Sokolov;Střední škola živnostenská Sokolov;;;;;SOŽ S;75059151;;;False;1;;False;MSSF;1182;0
+1546;2;1;1;38;49766929;Integrovaná střední škola technická a ekonomická;Integrovaná střední škola technická a ekonomická;Integrovaná střední škola technická a ekonomická;Integrovaná střední škola technická a ekonomická;;;;;ISŠTE;49766929;CZ49766929;;False;1;;False;MSSF;1183;0
+1547;2;1;1;38;669725;Střední odborná škola stavební Karlovy Vary;Střední odborná škola stavební Karlovy Vary;Střední odborná škola stavební Karlovy Vary;Střední odborná škola stavební Karlovy Vary;;;;;SOUS;669725;CZ00669725;;True;1;;False;MSSF;1184;0
+1548;2;1;1;38;669709;Střední zdravotnická škola a Vyšší zdravotnická škola, Karlovy Vary, Poděbradská 2;Střední zdravotnická škola a Vyšší zdravotnická škola, Karlovy Vary, Poděbradská 2;Střední zdravotnická škola a Vyšší zdravotnická škola, Karlovy Vary, Poděbradská 2;Střední zdravotnická škola a Vyšší zdravotnická škola, Karlovy Vary, Poděbradská 2;;;;;SZŠ;669709;;;False;1;;False;MSSF;1185;0
+1549;2;1;1;38;70845425;Střední průmyslová škola Ostrov;Střední průmyslová škola Ostrov;Střední průmyslová škola Ostrov;Střední průmyslová škola Ostrov;;;;;SPŠ O;70845425;CZ70845425;;False;1;;False;MSSF;1186;0
+1550;2;1;1;79;26639866;Občanské sdružení HOLOS;Občanské sdružení HOLOS;Občanské sdružení HOLOS;Občanské sdružení HOLOS;;;;;OS HO;26639866;CZ26639866;;True;1;;False;MSSF;1187;0
+1551;2;1;1;15;25830741;Rodný dům J.G. Mendela;Rodný dům J.G. Mendela;Rodný dům J.G. Mendela;Rodný dům J.G. Mendela;;;;;NF Me;25830741;;;False;1;;False;MSSF;1188;0
+1552;2;1;1;84;65468562;Slezská diakonie;Slezská diakonie;Slezská diakonie;Slezská diakonie;;;;;SD;65468562;CZ65468562;;False;1;;False;MSSF;1189;0
+1553;2;1;1;92;298077;Město Kopřivnice;Město Kopřivnice;Město Kopřivnice;Město Kopřivnice;;;;;MK;298077;CZ00298077;;True;1;;False;MSSF;1190;0
+1554;2;1;1;38;368636;Městské kulturní středisko v Kynšperku nad Ohří;Městské kulturní středisko v Kynšperku nad Ohří;Městské kulturní středisko v Kynšperku nad Ohří;Městské kulturní středisko v Kynšperku nad Ohří;;;;;MKS;368636;;;False;1;;False;MSSF;1191;0
+1555;2;1;1;92;261891;Město Chomutov;Město Chomutov;Město Chomutov;Město Chomutov;;;;;---;261891;;;False;1;;False;MSSF;1192;0
+1556;2;1;1;92;263648;Obec Hoštka;Obec Hoštka;Obec Hoštka;Obec Hoštka;;;;;Ou Ho;263648;;;False;1;;False;MSSF;1193;0
+1557;2;1;1;84;70828920;Oblastní charita Most;Oblastní charita Most;Oblastní charita Most;Oblastní charita Most;;;;;Chari;70828920;CZ70828920;;False;1;;False;MSSF;1194;0
+1558;2;1;1;14;44224648;Purkyňova nadace;Purkyňova nadace;Purkyňova nadace;Purkyňova nadace;;;;;PN;44224648;;;False;1;;False;MSSF;1195;0
+1559;2;1;1;38;601314;Obchodní akademie a Střední zemědělská škola Bruntál;Obchodní akademie a Střední zemědělská škola Bruntál;Obchodní akademie a Střední zemědělská škola Bruntál;Obchodní akademie a Střední zemědělská škola Bruntál;;;;;OAB;601314;CZ00601314;;False;1;;False;MSSF;1196;0
+1560;2;1;1;79;26640899;Ergon- Chráněná dílna;Ergon- Chráněná dílna;Ergon- Chráněná dílna;Ergon- Chráněná dílna;;;;;Ergon;26640899;CZ26640899;;True;1;;False;MSSF;1197;0
+1561;2;1;1;95;64581;Hlavní město Praha;Hlavní město Praha;Hlavní město Praha;Hlavní město Praha;;;;;;64581;;;False;1;;False;MSSF;1198;0
+1562;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;;;;;MŠMT;22985;CZ00022985;;False;1;;False;MSSF;1199;0
+1563;2;1;1;37;22985;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;Ministerstvo školství, mládeže a tělovýchovy;;;;;MŠMT;22985;;;False;1;;False;MSSF;1200;0
+1564;2;1;1;18;25761382;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;;;;;SEVEn;25761382;CZ25761382;;True;1;;False;MSSF;1201;0
+1565;2;1;1;18;25761382;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;;;;;SEVEn;25761382;CZ25761382;;True;1;;False;MSSF;1202;0
+1566;2;1;1;18;25761382;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;SEVEn, Středisko pro efektivní využívání energie, o.p.s;;;;;SEVEn;25761382;CZ25761382;;True;1;;False;MSSF;1203;0
+1567;2;1;1;92;250627;Město Prachatice;Město Prachatice;Město Prachatice;Město Prachatice;;;;;Město;250627;;;False;1;;False;MSSF;1204;0
+1568;2;1;1;92;250627;Město Prachatice;Město Prachatice;Město Prachatice;Město Prachatice;;;;;Město;250627;CZ00250627;;False;1;;False;MSSF;1205;0
+1569;2;1;1;92;250627;Město Prachatice;Město Prachatice;Město Prachatice;Město Prachatice;;;;;Město;250627;CZ00250627;;False;1;;False;MSSF;1206;0
+1570;2;1;1;92;250520;Obec Lažiště;Obec Lažiště;Obec Lažiště;Obec Lažiště;;;;;Lažiš;250520;CZ00250520;;False;1;;False;MSSF;1207;0
+1571;2;1;1;88;48208248;Jihočeská hospodářská komora;Jihočeská hospodářská komora;Jihočeská hospodářská komora;Jihočeská hospodářská komora;;;;;JHK;48208248;CZ48208248;;True;1;;False;MSSF;1208;0
+1572;2;1;1;92;250627;Město Prachatice;Město Prachatice;Město Prachatice;Město Prachatice;;;;;Město;250627;CZ00250627;;False;1;;False;MSSF;1209;0
+1573;2;1;1;84;63913836;Římskokatolická farnost Prachatice;Římskokatolická farnost Prachatice;Římskokatolická farnost Prachatice;Římskokatolická farnost Prachatice;;;;;ŘKF;63913836;;;False;1;;False;MSSF;1210;0
+1574;2;1;1;88;60698187;Hospodářská komora Třebíč;Hospodářská komora Třebíč;Hospodářská komora Třebíč;Hospodářská komora Třebíč;;;;;HK Tř;60698187;CZ60698187;;True;1;;False;MSSF;1211;0
+1575;2;1;1;95;70890749;Vysočina;Vysočina;Vysočina;Vysočina;;;;;KrÚ;70890749;CZ70890749;;False;1;;False;MSSF;1212;0
+1576;2;1;1;79;45250553;EkoWATT ? středisko pro obnovitelné zdroje a úspory energie;EkoWATT ? středisko pro obnovitelné zdroje a úspory energie;EkoWATT ? středisko pro obnovitelné zdroje a úspory energie;EkoWATT ? středisko pro obnovitelné zdroje a úspory energie;;;;;EkoWA;45250553;CZ45250553;;True;1;;False;MSSF;1213;0
+1577;2;1;1;92;67024645;Obec Suchohrdly;Obec Suchohrdly;Obec Suchohrdly;Obec Suchohrdly;;;;;Sucho;67024645;;;False;1;;False;MSSF;1214;0
+1578;2;1;1;79;62159950;Sportovní klub HOBIT Brno;Sportovní klub HOBIT Brno;Sportovní klub HOBIT Brno;Sportovní klub HOBIT Brno;;;;;HOBIT;62159950;;;False;1;;False;MSSF;1215;0
+1579;2;1;1;95;70888337;Jihomoravský kraj;Jihomoravský kraj;Jihomoravský kraj;Jihomoravský kraj;;;;;JMK;70888337;CZ70888337;;False;1;;False;MSSF;1216;0
+1580;2;1;1;89;65338090;Regionální rozvojová agentura jižní Moravy;Regionální rozvojová agentura jižní Moravy;Regionální rozvojová agentura jižní Moravy;Regionální rozvojová agentura jižní Moravy;;;;;RRAJM;65338090;CZ65338090;;False;1;;False;MSSF;1217;0
+1581;2;1;1;85;26677628;ACCC Ceska Republika o. s.;ACCC Ceska Republika o. s.;ACCC Ceska Republika o. s.;ACCC Ceska Republika o. s.;;;;;ACCC ;26677628;;;False;1;;False;MSSF;1218;0
+1582;2;1;1;37;75014149;Státní zemědělská a potravinářská inspekce;Státní zemědělská a potravinářská inspekce;Státní zemědělská a potravinářská inspekce;Státní zemědělská a potravinářská inspekce;;;;;SZPI;75014149;CZ75014149;;False;1;;False;MSSF;1219;0
+1583;2;1;1;18;26052199;Národní muzeum fotografie;Národní muzeum fotografie;Národní muzeum fotografie;Národní muzeum fotografie;;;;;NMF;26052199;CZ26052199;;False;1;;False;MSSF;1220;0
+1584;2;1;1;18;25173154;ENKI, o.p.s.;ENKI, o.p.s.;ENKI, o.p.s.;ENKI, o.p.s.;;;;;ENKI;25173154;CZ25173154;;True;1;;False;MSSF;1221;0
+1585;2;1;1;18;26074419;Třeboňská rozvojová o.p.s.;Třeboňská rozvojová o.p.s.;Třeboňská rozvojová o.p.s.;Třeboňská rozvojová o.p.s.;;;;;TRops;26074419;CZ26074419;;False;1;;False;MSSF;1222;0
+1586;2;1;1;79;26632691;Sdružení přátel vyšebrodského kláštera;Sdružení přátel vyšebrodského kláštera;Sdružení přátel vyšebrodského kláštera;Sdružení přátel vyšebrodského kláštera;;;;;Sdruž;26632691;;;False;1;;False;MSSF;1223;0
+1587;2;1;1;89;70926140;Mikroregion Ostrožsko, svazek obcí pro celkový rozvoj zájmové oblasti;Mikroregion Ostrožsko, svazek obcí pro celkový rozvoj zájmové oblasti;Mikroregion Ostrožsko, svazek obcí pro celkový rozvoj zájmové oblasti;Mikroregion Ostrožsko, svazek obcí pro celkový rozvoj zájmové oblasti;;;;;Ostro;70926140;;;False;1;;False;MSSF;1224;0
+1588;2;1;1;79;62831585;"Občanské sdružení ""Kunovjan""";"Občanské sdružení ""Kunovjan""";"Občanské sdružení ""Kunovjan""";"Občanské sdružení ""Kunovjan""";;;;;Občan;62831585;;;False;1;;False;MSSF;1225;0
+1589;2;1;1;92;303755;Obec Francova Lhota;Obec Francova Lhota;Obec Francova Lhota;Obec Francova Lhota;;;;;Fr. L;303755;;;False;1;;False;MSSF;1226;0
+1590;2;1;1;92;290874;Obec Bystřice pod Lopeníkem;Obec Bystřice pod Lopeníkem;Obec Bystřice pod Lopeníkem;Obec Bystřice pod Lopeníkem;;;;;Bystř;290874;;;False;1;;False;MSSF;1227;0
+1591;2;1;1;92;254843;Město Ostrov;Město Ostrov;Město Ostrov;Město Ostrov;;;;;Město;254843;CZ00254843;;False;1;;False;MSSF;1228;0
+1592;2;1;1;92;277444;Město Svitavy;Město Svitavy;Město Svitavy;Město Svitavy;;;;;SY;277444;CZ00277444;;True;1;;False;MSSF;1229;0
+1593;2;1;1;92;81531;Statutární město Ústí nad Labem;Statutární město Ústí nad Labem;Statutární město Ústí nad Labem;Statutární město Ústí nad Labem;;;;;SM ÚL;81531;CZ00081531;;True;1;;False;MSSF;1230;0
+1594;2;1;1;92;250546;Obec Lhenice;Obec Lhenice;Obec Lhenice;Obec Lhenice;;;;;Lheni;250546;;;False;1;;False;MSSF;1231;0
+1595;2;1;1;74;60869038;Střední průmyslová škola a Vyšší odborná škola Písek;Střední průmyslová škola a Vyšší odborná škola Písek;Střední průmyslová škola a Vyšší odborná škola Písek;Střední průmyslová škola a Vyšší odborná škola Písek;;;;;SPŠ a;60869038;;;False;1;;False;MSSF;1232;0
+1596;2;1;1;92;544515;Obec Jarohněvice;Obec Jarohněvice;Obec Jarohněvice;Obec Jarohněvice;;;;;OBEC;544515;;;False;1;;False;MSSF;1233;0
+1597;2;1;1;92;251984;Město Vodňany;Město Vodňany;Město Vodňany;Město Vodňany;;;;;Vodnň;251984;;;False;1;;False;MSSF;1234;0
+1598;2;1;1;92;247618;Město Třeboň;Město Třeboň;Město Třeboň;Město Třeboň;;;;;MT;247618;;;False;1;;False;MSSF;1235;0
+1599;2;1;1;92;245267;Město Nové Hrady;Město Nové Hrady;Město Nové Hrady;Město Nové Hrady;;;;;N.H.;245267;;;False;1;;False;MSSF;1236;0
+1600;2;1;1;92;568708;obec Pozlovice;obec Pozlovice;obec Pozlovice;obec Pozlovice;;;;;Pozl;568708;;;False;1;;False;MSSF;1237;0
+1601;2;1;1;95;60609460;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;;;;;OK;60609460;;;False;1;;False;MSSF;1238;0
+1602;2;1;1;92;636622;Obec Teplice nad Bečvou;Obec Teplice nad Bečvou;Obec Teplice nad Bečvou;Obec Teplice nad Bečvou;;;;;Tepl;636622;;;False;1;;False;MSSF;1239;0
+1603;2;1;1;92;287351;Město Kroměříž;Město Kroměříž;Město Kroměříž;Město Kroměříž;;;;;MK;287351;;;False;1;;False;MSSF;1240;0
+1604;2;1;1;95;60609460;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;Olomoucký kraj;;;;;OL;60609460;;;False;1;;False;MSSF;1241;0
+1605;2;1;1;95;70891320;Zlínský kraj;Zlínský kraj;Zlínský kraj;Zlínský kraj;;;;;ZK;70891320;;;False;1;;False;MSSF;1242;0
+1606;2;1;1;92;291129;Obec Mistřice;Obec Mistřice;Obec Mistřice;Obec Mistřice;;;;;Mistř;291129;;;False;1;;False;MSSF;1243;0
+1607;2;1;1;92;288870;Obec Určice;Obec Určice;Obec Určice;Obec Určice;;;;;Určic;288870;;;False;1;;False;MSSF;1244;0
+1608;2;1;1;92;303160;Obec Písečná;Obec Písečná;Obec Písečná;Obec Písečná;;;;;Obec;303160;;;False;1;;False;MSSF;1245;0
+1609;2;1;1;38;75028891;Základní škola Vápenná;Základní škola Vápenná;Základní škola Vápenná;Základní škola Vápenná;;;;;ZŠ Vá;75028891;;;False;1;;False;MSSF;1246;0
+1610;2;1;1;38;70960399;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;;;;;SSOK;70960399;CZ70960399;;True;1;;False;MSSF;1247;0
+1611;2;1;1;38;70960399;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;;;;;SSOK;70960399;CZ70960399;;True;1;;False;MSSF;1248;0
+1612;2;1;1;92;288969;Obec Výšovice;Obec Výšovice;Obec Výšovice;Obec Výšovice;;;;;Výšov;288969;;;False;1;;False;MSSF;1249;0
+1613;2;1;1;79;71205501;Svazek obcí Mikroregionu Žulovska;Svazek obcí Mikroregionu Žulovska;Svazek obcí Mikroregionu Žulovska;Svazek obcí Mikroregionu Žulovska;;;;;Svaze;71205501;;;False;1;;False;MSSF;1250;0
+1614;2;1;1;38;70960399;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;Správa silnic Olomouckého kraje;;;;;SSOK;70960399;;;True;1;;False;MSSF;1251;0
+1615;2;1;1;92;303640;Město Zábřeh;Město Zábřeh;Město Zábřeh;Město Zábřeh;;;;;Zábře;303640;;;False;1;;False;MSSF;1252;0
+1616;2;1;1;38;66935733;Sigmundova střední škola strojírenská, Lutín;Sigmundova střední škola strojírenská, Lutín;Sigmundova střední škola strojírenská, Lutín;Sigmundova střední škola strojírenská, Lutín;;;;;SSOUS;66935733;CZ66935733;;True;1;;False;MSSF;1253;0
+1617;2;1;1;92;291480;Město Uherský Ostroh;Město Uherský Ostroh;Město Uherský Ostroh;Město Uherský Ostroh;;;;;x;291480;;;False;1;;False;MSSF;1254;0
+1618;2;1;1;79;66932246;Oblastní unie neslyšících Olomouc;Oblastní unie neslyšících Olomouc;Oblastní unie neslyšících Olomouc;Oblastní unie neslyšících Olomouc;;;;;OUN O;66932246;;;False;1;;False;MSSF;1255;0

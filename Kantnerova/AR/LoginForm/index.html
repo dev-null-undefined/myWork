@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <form action="/post.php" class="container">
+      <div class="title center">Registration</div>
+      <hr />
+      <div class="center">
+        <span class="checkmark"></span><input type="radio" name="distribution" value="Personal" class="radio" checked/> Personal <span class="checkmark"></span
+        ><input type="radio" name="distribution" value="Company" class="radio" /> Company
+      </div>
+      <hr />
+      <label class="input-container">
+        <i class="fas fa-user-alt icon"></i>
+        <input type="email" name="emailaddress" class="field" />
+      </label>
+      <label class="input-container"> <i class="fas fa-envelope icon"></i><input type="text" name="Name" class="field" /> </label>
+      <label class="input-container"> <i class="fas fa-key icon"></i><input type="password" name="password" class="field" /> </label>
+      <div class="center">
+        <span class="checkmark"></span><input type="radio" name="gender" value="Male" class="radio" checked/> Male <span class="checkmark"></span
+        ><input type="radio" name="gender" value="Female" class="radio" /> Female
+      </div>
+      <br>
+      <div class="text">
+        Lorem ipsum dolor <br>
+        sit amet consectetur adipisicing elit.<br>
+        Praesentium soluta cumque,<br>
+        iure eveniet maiores eaque?<br>
+      </div>
+      <div class="div-submit">
+        <input type="submit" value="Submit" class="submit" />
+      </div>
+    </form>
+    <i class="divnavec"></i>
+  </body>
+</html>

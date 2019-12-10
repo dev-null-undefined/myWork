@@ -1,0 +1,28 @@
+/* Uprava seznamu*/
+nav ul {
+  /*border: solid red;*/
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+/* Uprava polozky*/
+nav li {
+  /*border: solid blue;*/
+  background-color: black;
+  transition: background-color 0.5s;
+  float: left;
+}
+nav li:hover {
+  /*border: solid blue;*/
+  background-color: rgb(39, 37, 37);
+}
+/* Uprava Odkazu*/
+nav li a {
+  /*border: solid green;*/
+  text-decoration: none;
+  padding: 14px 16px;
+  display: inline-block;
+  color: white;
+}

@@ -1,0 +1,20 @@
+@media screen and (max-width:1199px){
+	img{
+		width:100%;
+	}
+	.container{
+		width:100%;
+	}
+	footer{
+		width:100%;
+	}
+
+}
+
+@media screen and (max-width:650px){
+	nav li{
+		  margin-left: 20px;
+	}
+
+		
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="java.awt.TextField" name="textField2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="textField2"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="textDateFrom" min="-2" pref="50" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="textMonthFrom" min="-2" pref="50" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="textYearFrom" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="textDayTo" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="textMonthTo" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="textYearTo" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="textSearch" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="buttonSubmit" min="-2" pref="54" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="labelTo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelFrom" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="labelFrom" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="textMonthFrom" min="-2" max="-2" attributes="0"/>
+                  <Component id="textDateFrom" min="-2" max="-2" attributes="0"/>
+                  <Component id="textYearFrom" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="labelTo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="textMonthTo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="textDayTo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="textYearTo" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="buttonSubmit" pref="46" max="32767" attributes="0"/>
+                  <Component id="textSearch" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="java.awt.TextField" name="textSearch">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Search"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Button" name="buttonSubmit">
+      <Properties>
+        <Property name="actionCommand" type="java.lang.String" value="okButton"/>
+        <Property name="label" type="java.lang.String" value="OK"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonSubmitMouseClicked"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="buttonSubmitKeyPressed"/>
+      </Events>
+    </Component>
+    <Component class="java.awt.TextField" name="textYearFrom">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Year"/>
+        <Property name="selectionEnd" type="int" value="99"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.TextField" name="textDateFrom">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Day"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.TextField" name="textMonthFrom">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Month"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.TextField" name="textDayTo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Day"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.TextField" name="textMonthTo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Month"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.TextField" name="textYearTo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Year"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Label" name="labelTo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="To date"/>
+      </Properties>
+    </Component>
+    <Component class="java.awt.Label" name="labelFrom">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="From date"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

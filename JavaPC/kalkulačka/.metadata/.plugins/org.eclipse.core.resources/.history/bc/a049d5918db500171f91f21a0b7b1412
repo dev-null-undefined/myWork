@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class jedna {
+	public static boolean isInteger(String string) {
+	    try { 
+	        Integer.parseInt(string); 
+	    } catch(NumberFormatException e) { 
+	    	System.out.println("");
+	    	System.out.print("This is not integer");
+	        return false; 
+	    } catch(NullPointerException e) {
+	    	System.out.println("");
+	    	System.out.print("This is not integer");
+	        return false; 
+	    }
+	    return true;
+	}	
+	public static boolean isDouble(String string) {
+	    try { 
+	        Double.parseDouble(string); 
+	    } catch(NumberFormatException e) { 
+	    	System.out.println(" and, this is not double.");
+	        return false; 
+	    } catch(NullPointerException e) {
+	    	System.out.println(" and, this is not double.");
+	        return false; 
+	    }
+	    return true;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.format("You can: %n  1)sum%n  2)deduct%n  3)multiply%n  4)devide%nYour option: ");
+    	Scanner in = new Scanner (System.in);
+    	String option=in.nextLine();
+    	
+    
+    
+    
+	}
+
+}

@@ -1,0 +1,17 @@
+@media only screen and (min-width: 600px) {
+    li{
+        display: inline-block;
+    }
+    .group{
+        width: 50%;
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .group{
+        width: 33%;
+        float: left;
+    
+    }
+}

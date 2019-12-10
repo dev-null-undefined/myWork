@@ -1,0 +1,28 @@
+package Cvičení_1;
+import java.util.Scanner;
+
+public class Hora {
+
+	Scanner sc = new Scanner(System.in);
+	
+	private String ZnackaAuta;
+	private int RychlostAuta;
+ 
+	public Hora(String ZnackaAuta, int RychlostAuta) {
+		while(RychlostAuta < 0) {
+			System.out.print("Zadal jsi blbost. Zadej prosim kladnou rychlost auta: ");
+			RychlostAuta = sc.nextInt();
+		}
+		this.ZnackaAuta = ZnackaAuta;
+		this.RychlostAuta = RychlostAuta;
+	}
+	
+	public String getZnackaAuta() {
+		return ZnackaAuta;
+	}
+	
+	public int getRychlostAuta() {
+		return RychlostAuta;
+	}
+	
+}

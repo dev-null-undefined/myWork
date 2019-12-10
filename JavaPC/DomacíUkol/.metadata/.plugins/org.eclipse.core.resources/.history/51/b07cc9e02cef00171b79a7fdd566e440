@@ -1,0 +1,9 @@
+package Ukol_3;
+
+public class Zvire {
+
+	public Zvire() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,37 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Mian {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.print("Zadejte stranu nádoby(dm): ");
+		while (true) {
+			try {
+				int strana = in.nextInt();
+				System.out.print("Zadejte stav nádoby(l): ");
+
+				while (true) {
+					try {
+						int l = in.nextInt();
+						KrychlovaNadoba jedna = new KrychlovaNadoba(strana, l, in);
+						try {
+
+						} catch (InputMismatchException e) {
+
+						}
+					} catch (InputMismatchException e) {
+						System.out.print("Zadejte stav nádoby(l): ");
+						in.nextLine();
+					}
+				}
+
+			} catch (InputMismatchException e) {
+				System.out.print("Zadejte stranu nádoby(dm): ");
+				in.nextLine();
+			}
+		}
+
+	}
+
+}

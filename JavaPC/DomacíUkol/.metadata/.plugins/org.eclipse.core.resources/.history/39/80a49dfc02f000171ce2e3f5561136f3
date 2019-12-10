@@ -1,0 +1,70 @@
+package Cvičení_1;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Zadej jmeno hory 1. : ");
+		String a = sc.nextLine();
+		System.out.print("S vyskou: ");
+		int b = sc.nextInt();
+		sc.nextLine();
+		Hora hora1 = new Hora(a, b);
+		System.out.println("Hora " + hora1.getJmenoHory() + " ma vysku " + hora1.getVyskaHory() + "km.");
+		System.out.print("Zadej jmeno hory 2. : ");
+		String ZnackaAuta2 = sc.nextLine();
+		System.out.print("S vyskou: ");
+		b = sc.nextInt();
+		sc.nextLine();
+		Hora hora2 = new Hora(a, b);
+		System.out.println("Hora " + hora2.getJmenoHory() + " ma vysku " + hora2.getVyskaHory() + "km.");
+		System.out.print("Zadej jmeno hory 3. : ");
+		String ZnackaAuta3 = sc.nextLine();
+		System.out.print("S vyskou: ");
+		b = sc.nextInt();
+		sc.nextLine();
+		Hora hora3 = new Hora(a, b);
+		System.out.println("Hora " + hora3.getJmenoHory() + " ma vysku " + hora3.getVyskaHory() + "km.");
+		System.out.print("Zadej jmeno hory 4. : ");
+		String ZnackaAuta4 = sc.nextLine();
+		System.out.print("S vyskou: ");
+		b = sc.nextInt();
+		sc.nextLine();
+		Hora hora4 = new Hora(a, b);
+		System.out.println("Hora " + hora4.getJmenoHory() + " ma vysku " + hora4.getVyskaHory() + "km.");
+		System.out.print("Zadej jmeno hory 5. : ");
+		String ZnackaAuta5 = sc.nextLine();
+		System.out.print("S vyskou: ");
+		b = sc.nextInt();
+		sc.nextLine();
+		Hora hora5 = new Hora(a, b);
+		System.out.println("Hora " + hora5.getJmenoHory() + " ma vysku " + hora5.getVyskaHory() + "km.");
+
+		int max = 0;
+		String nejmensi=null;
+		if (hora1.getVyskaHory() >= max) {
+			max = hora1.getVyskaHory();
+			nejmensi=hora1.getJmenoHory();
+		}
+		if (hora2.getVyskaHory() >= max) {
+			max = hora2.getVyskaHory();
+			nejmensi=hora2.getJmenoHory();
+		}
+		if (hora3.getVyskaHory() >= max) {
+			max = hora3.getVyskaHory();
+			nejmensi=hora3.getJmenoHory();
+		}
+		if (hora4.getVyskaHory() >= max) {
+			max = hora4.getVyskaHory();
+			nejmensi=hora4.getJmenoHory();
+		}
+		if (hora5.getVyskaHory() >= max) {
+			max = hora5.getVyskaHory();
+			nejmensi=hora5.getJmenoHory();
+		}
+		System.out.print("Nejmenší hora "+ nejmensi +" a meri "+ max + "km.");
+	}
+
+}
+

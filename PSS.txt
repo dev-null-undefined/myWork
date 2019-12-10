@@ -1,0 +1,51 @@
+iptables -t nat -A PREROUTING -p tcp --dport 9873 -j DNAT --to-destination 192.168.1.21:22
+iptables -t nat -A POSTROUTING -p tcp -d 192.168.1.21 --dport 22 -j SNAT --to-source 10.0.2.1:9873
+
+iptables --table nat --append POSTROUTING --out-interface eth0 -j MASQUERADE
+
+iptables -t nat -A PREROUTING -d 10.0.2.14 -p tcp --dport 9873 -j DNAT --to-destination 192.168.1.21:22
+iptables -t nat -A POSTROUTING --out-interface enp0s3 -d 192.168.1.21 -p tcp --dport 22 -j SNAT --to-source 10.0.2.14:9873
+
+
+iptables -t nat -A PREROUTING -p tcp -s 0/0 -d 10.0.2.14 --dport 9873 -j DNAT --to 192.168.1.21:22
+iptables -t nat -A POSTROUTING -o enp0s3 -d 192.168.1.21 -j SNAT --to-source 10.0.2.14
+
+iptables -A FORWARD -i enp0s3 -o enp0s8 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i enp0s3 -o enp0s8 -j ACCEPT
+
+
+
+
+
+
+-A INPUT -p tcp --dport 22 -j ACCEPT
+
+-A INPUT -p udp --dport 6003 -j DROP
+-A INPUT -p udp --dport 7002 -j DROP
+-A INPUT -p udp --dport 27010 -j DROP
+-A INPUT -p udp --dport 27015 -j DROP
+-A INPUT -p udp --dport 27025 -j DROP
+
+-A INPUT -p tcp -m state --state NEW --dport 2300:2400 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW --dport 47624 -j ACCEPT
+
+-A INPUT -p udp -m state --state NEW --dport 6073 -j ACCEPT
+-A INPUT -p udp -m state --state NEW --dport 2300:2400 -j ACCEPT
+
+-A OUTPUT -p tcp -m state --state NEW --sport 22 -j ACCEPT
+-A OUTPUT -p udp --sport 6003 -j DROP
+-A OUTPUT -p udp --sport 7002 -j DROP
+-A OUTPUT -p udp --sport 27010 -j DROP
+-A OUTPUT -p udp --sport 27015 -j DROP
+-A OUTPUT -p udp --sport 27025 -j DROP
+-A OUTPUT -p tcp -m state --state NEW --sport 2300:2400 -j ACCEPT
+-A OUTPUT -p tcp -m state --state NEW --sport 47624 -j ACCEPT
+-A OUTPUT -p udp -m state --state NEW --sport 6073 -j ACCEPT
+-A OUTPUT -p udp -m state --state NEW --sport 2300:2400 -j ACCEPT
+
+
+-A INPUT -j DROP
+
+
+
+

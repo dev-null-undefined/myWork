@@ -1,0 +1,75 @@
+body {
+    background-image: url("../img/picture_background.jpg");
+    background-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.LoginPanel {
+    position: relative;
+    margin-left:37.5%;
+    margin-top: 10%;
+    width: 25%;
+    height: 500px;
+    background: #FFF;
+    border-radius: 3%;
+}
+
+.LoginPanel h1 {
+    padding-top: 8%;
+    text-align: center;
+    font-size: 40px;
+}
+ .loginC {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+ }
+
+ .input_t {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    color: black;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+ 
+ .input_t input{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+ }
+ .input_t input:focus{
+    border: 2px solid red;
+
+
+ }
+
+ .input_t i{
+    color: white;
+    padding: 25px;
+    margin-right: 0px;
+    background-color: red;
+}
+
+input[type=submit]{
+    background-color: red;
+    color: white;
+    padding: 25px;
+    border: none;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 40%;
+    opacity: 0.9;
+    transition: 0.1s;
+    font-size: 20px;
+    
+    
+ }
+ input[type=submit]:hover{
+    opacity: 1;
+    
+ }
+
+

@@ -1,0 +1,28 @@
+package Ukol_3;
+
+public class Zvire {
+	private String druh;
+	private int jidlo;
+
+	public String getDruh() {
+		return druh;
+	}
+
+	public void setDruh(String druh) {
+		this.druh = druh;
+	}
+
+	public int getJidlo() {
+		return jidlo;
+	}
+
+	public void setJidlo(int jidlo) {
+		this.jidlo = jidlo;
+	}
+
+	public Zvire(String druh, int jidlo) {
+		this.druh = druh;
+		this.jidlo = jidlo;
+	}
+
+}

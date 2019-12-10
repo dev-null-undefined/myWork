@@ -1,0 +1,43 @@
+@media screen and (max-width:1199px) {
+	img{
+		width:100%;
+	}
+	.headNav{
+		width:100%;
+	}
+	body{
+		width: 100%;
+	}
+	#footer{
+		width:100%;
+	}
+	#contact .foto {
+		margin-right: 50%;
+		margin-left: 50%;
+		float: left;
+		height: 50%;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width:480px) {
+	nav li {
+		display: inline-block;
+		padding: 10px 0 0;
+	}
+	#gallery li {
+		float: left;
+		width: 45%;
+		margin: 2.5%;
+		background-color: #f5f5f5;
+	}
+}
+
+@media screen and (min-width:860px) {
+	#gallery li {
+		float: left;
+		width: 28.333%;
+		margin: 2.5%;
+		background-color: #f5f5f5;
+	}
+}

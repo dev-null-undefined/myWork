@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class jedna {
+	public static boolean isInteger(String string) {
+	    try { 
+	        Integer.parseInt(string); 
+	    } catch(NumberFormatException e) { 
+	    	System.out.println("");
+	    	System.out.println("This is not Integer.");
+	        return false; 
+	    } catch(NullPointerException e) {
+	    	System.out.println("");
+	    	System.out.println("This is not Integer.");
+	        return false; 
+	    }
+	    return true;
+	}	
+	public static boolean isDouble(String string) {
+	    try { 
+	        Double.parseDouble(string); 
+	    } catch(NumberFormatException e) { 
+	    	System.out.println("");
+	        return false; 
+	    } catch(NullPointerException e) {
+	    	System.out.println("");
+	        return false; 
+	    }
+	    return true;
+	}
+
+	public static void main(String[] args) {
+		boolean Int;
+    Scanner in=new Scanner (System.in);
+    System.out.println("Zadejte cokoliv k počítání.");
+    String text=in.nextLine();
+    in.close();
+    boolean Double=isDouble(text);
+	if (Double == true ) {
+		System.out.println("What do you want to do with this Double");
+	}
+	else {
+		Int=isInteger(text);
+		if (Int==true){
+		System.out.println("What do you want to do with this Integer");
+		}
+	}
+	System.out.println("konec");
+	
+    
+    
+	}
+
+}

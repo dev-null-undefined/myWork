@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://www.crazygames.com/gameframe/the-impossible-quiz?v12bcdebbb -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="preload" href="./crazygames-gameframe-v1.bundle.js.download" as="script" importance="high">
+<link rel="preload" href="./sdk.js.download" as="script" importance="high">
+<title>The Impossible Quiz Game Files | Crazy Games</title>
+<link rel="canonical" href="https://www.crazygames.com/game/the-impossible-quiz">
+
+
+<meta http-equiv="Accept-CH" content="DPR">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui">
+<style>
+        body {
+            /* purple background */
+            background-image: linear-gradient(239deg, #654383, #20254c);
+            background-position: center;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        /* for positioning of pacman loader */
+        html { height: 100%; }
+        @keyframes rotate_pacman_half_up{0%{transform:rotate(270deg)}50%{transform:rotate(360deg)}100%{transform:rotate(270deg)}}@keyframes rotate_pacman_half_down{0%{transform:rotate(90deg)}50%{transform:rotate(0deg)}100%{transform:rotate(90deg)}}@keyframes pacman-balls{75%{opacity:0.7}100%{transform:translate(-100px, -6.25px)}}.pacman{position:relative}.pacman>div:nth-child(2){animation:pacman-balls 1s -.99s infinite linear}.pacman>div:nth-child(3){animation:pacman-balls 1s -.66s infinite linear}.pacman>div:nth-child(4){animation:pacman-balls 1s -.33s infinite linear}.pacman>div:nth-child(5){animation:pacman-balls 1s 0s infinite linear}.pacman>div:first-of-type{width:0px;height:0px;border-right:25px solid transparent;border-top:25px solid #fff;border-left:25px solid #fff;border-bottom:25px solid #fff;border-radius:25px;animation:rotate_pacman_half_up 0.5s 0s infinite;position:relative;left:-30px}.pacman>div:nth-child(2){width:0px;height:0px;border-right:25px solid transparent;border-top:25px solid #fff;border-left:25px solid #fff;border-bottom:25px solid #fff;border-radius:25px;animation:rotate_pacman_half_down 0.5s 0s infinite;margin-top:-50px;position:relative;left:-30px}.pacman>div:nth-child(3),.pacman>div:nth-child(4),.pacman>div:nth-child(5),.pacman>div:nth-child(6){background-color:#fff;width:15px;height:15px;border-radius:100%;margin:2px;width:10px;height:10px;position:absolute;transform:translate(0, -6.25px);top:25px;left:70px}    </style>
+<script async="" src="./analytics.js.download"></script><script type="text/javascript" src="./crazygames-gameframe-v1.bundle.js.download" async=""></script><script type="text/javascript" src="./sdk.js.download" async=""></script><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: bolder;
+}
+body {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #fafafa;
+}
+</style><style data-jss="" data-meta="MuiGrid">
+.MuiGrid-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.MuiGrid-item {
+  margin: 0;
+  box-sizing: border-box;
+}
+.MuiGrid-zeroMinWidth {
+  min-width: 0;
+}
+.MuiGrid-direction-xs-column {
+  flex-direction: column;
+}
+.MuiGrid-direction-xs-column-reverse {
+  flex-direction: column-reverse;
+}
+.MuiGrid-direction-xs-row-reverse {
+  flex-direction: row-reverse;
+}
+.MuiGrid-wrap-xs-nowrap {
+  flex-wrap: nowrap;
+}
+.MuiGrid-wrap-xs-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.MuiGrid-align-items-xs-center {
+  align-items: center;
+}
+.MuiGrid-align-items-xs-flex-start {
+  align-items: flex-start;
+}
+.MuiGrid-align-items-xs-flex-end {
+  align-items: flex-end;
+}
+.MuiGrid-align-items-xs-baseline {
+  align-items: baseline;
+}
+.MuiGrid-align-content-xs-center {
+  align-content: center;
+}
+.MuiGrid-align-content-xs-flex-start {
+  align-content: flex-start;
+}
+.MuiGrid-align-content-xs-flex-end {
+  align-content: flex-end;
+}
+.MuiGrid-align-content-xs-space-between {
+  align-content: space-between;
+}
+.MuiGrid-align-content-xs-space-around {
+  align-content: space-around;
+}
+.MuiGrid-justify-xs-center {
+  justify-content: center;
+}
+.MuiGrid-justify-xs-flex-end {
+  justify-content: flex-end;
+}
+.MuiGrid-justify-xs-space-between {
+  justify-content: space-between;
+}
+.MuiGrid-justify-xs-space-around {
+  justify-content: space-around;
+}
+.MuiGrid-justify-xs-space-evenly {
+  justify-content: space-evenly;
+}
+.MuiGrid-spacing-xs-1 {
+  width: calc(100% + 16px);
+  margin: -8px;
+}
+.MuiGrid-spacing-xs-1 > .MuiGrid-item {
+  padding: 8px;
+}
+.MuiGrid-spacing-xs-2 {
+  width: calc(100% + 32px);
+  margin: -16px;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 16px;
+}
+.MuiGrid-spacing-xs-3 {
+  width: calc(100% + 48px);
+  margin: -24px;
+}
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding: 24px;
+}
+.MuiGrid-spacing-xs-4 {
+  width: calc(100% + 64px);
+  margin: -32px;
+}
+.MuiGrid-spacing-xs-4 > .MuiGrid-item {
+  padding: 32px;
+}
+.MuiGrid-spacing-xs-5 {
+  width: calc(100% + 80px);
+  margin: -40px;
+}
+.MuiGrid-spacing-xs-5 > .MuiGrid-item {
+  padding: 40px;
+}
+.MuiGrid-spacing-xs-6 {
+  width: calc(100% + 96px);
+  margin: -48px;
+}
+.MuiGrid-spacing-xs-6 > .MuiGrid-item {
+  padding: 48px;
+}
+.MuiGrid-spacing-xs-7 {
+  width: calc(100% + 112px);
+  margin: -56px;
+}
+.MuiGrid-spacing-xs-7 > .MuiGrid-item {
+  padding: 56px;
+}
+.MuiGrid-spacing-xs-8 {
+  width: calc(100% + 128px);
+  margin: -64px;
+}
+.MuiGrid-spacing-xs-8 > .MuiGrid-item {
+  padding: 64px;
+}
+.MuiGrid-spacing-xs-9 {
+  width: calc(100% + 144px);
+  margin: -72px;
+}
+.MuiGrid-spacing-xs-9 > .MuiGrid-item {
+  padding: 72px;
+}
+.MuiGrid-spacing-xs-10 {
+  width: calc(100% + 160px);
+  margin: -80px;
+}
+.MuiGrid-spacing-xs-10 > .MuiGrid-item {
+  padding: 80px;
+}
+.MuiGrid-grid-xs-auto {
+  flex-grow: 0;
+  max-width: none;
+  flex-basis: auto;
+}
+.MuiGrid-grid-xs-true {
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+}
+.MuiGrid-grid-xs-1 {
+  flex-grow: 0;
+  max-width: 8.333333%;
+  flex-basis: 8.333333%;
+}
+.MuiGrid-grid-xs-2 {
+  flex-grow: 0;
+  max-width: 16.666667%;
+  flex-basis: 16.666667%;
+}
+.MuiGrid-grid-xs-3 {
+  flex-grow: 0;
+  max-width: 25%;
+  flex-basis: 25%;
+}
+.MuiGrid-grid-xs-4 {
+  flex-grow: 0;
+  max-width: 33.333333%;
+  flex-basis: 33.333333%;
+}
+.MuiGrid-grid-xs-5 {
+  flex-grow: 0;
+  max-width: 41.666667%;
+  flex-basis: 41.666667%;
+}
+.MuiGrid-grid-xs-6 {
+  flex-grow: 0;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.MuiGrid-grid-xs-7 {
+  flex-grow: 0;
+  max-width: 58.333333%;
+  flex-basis: 58.333333%;
+}
+.MuiGrid-grid-xs-8 {
+  flex-grow: 0;
+  max-width: 66.666667%;
+  flex-basis: 66.666667%;
+}
+.MuiGrid-grid-xs-9 {
+  flex-grow: 0;
+  max-width: 75%;
+  flex-basis: 75%;
+}
+.MuiGrid-grid-xs-10 {
+  flex-grow: 0;
+  max-width: 83.333333%;
+  flex-basis: 83.333333%;
+}
+.MuiGrid-grid-xs-11 {
+  flex-grow: 0;
+  max-width: 91.666667%;
+  flex-basis: 91.666667%;
+}
+.MuiGrid-grid-xs-12 {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media (min-width:600px) {
+  .MuiGrid-grid-sm-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-sm-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-sm-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-sm-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-sm-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-sm-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-sm-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-sm-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-sm-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-sm-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-sm-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-sm-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-sm-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-sm-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .MuiGrid-grid-md-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-md-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-md-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-md-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-md-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-md-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-md-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-md-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-md-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-md-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-md-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-md-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-md-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-md-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .MuiGrid-grid-lg-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-lg-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-lg-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-lg-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-lg-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-lg-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-lg-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-lg-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-lg-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-lg-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-lg-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-lg-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-lg-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-lg-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .MuiGrid-grid-xl-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xl-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xl-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xl-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xl-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xl-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xl-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xl-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xl-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xl-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xl-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xl-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xl-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xl-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss439 {
+  font-weight: bold;
+}
+.jss440 {
+  color: white;
+}
+.jss441 {
+  color: #d7ebf6;
+}
+.jss442 {
+  color: #4dff3a;
+}
+.jss443 {
+  color: #ffe53a;
+}
+.jss444 {
+  color: #ffa044;
+}
+.jss445 {
+  color: #ff6c6c;
+}
+.jss446 {
+  color: #ef68ff;
+}
+.jss447 {
+  color: #4dff3a;
+}
+.jss448 {
+  color: #ffe53a;
+}
+.jss449 {
+  color: #ff6c6c;
+}
+.jss450 {
+  color: #ef68ff;
+}
+.jss451 {
+  color: #4dff3a;
+}
+.jss452 {
+  color: #ffe53a;
+}
+.jss453 {
+  color: #ffa044;
+}
+.jss454 {
+  color: #ff6c6c;
+}
+.jss455 {
+  color: #4dff3a;
+}
+.jss456 {
+  color: #ffe53a;
+}
+.jss457 {
+  color: #ffa044;
+}
+.jss458 {
+  color: #ff6c6c;
+}
+.jss459 {
+  color: #ef68ff;
+}
+.jss460 {
+  color: #4dff3a;
+}
+.jss461 {
+  color: #ffe53a;
+}
+.jss462 {
+  color: #ffa044;
+}
+.jss463 {
+  color: #ff6c6c;
+}
+.jss464 {
+  color: #ef68ff;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss413 {
+  font-weight: bold;
+}
+.jss414 {
+  color: white;
+}
+.jss415 {
+  color: #d7ebf6;
+}
+.jss416 {
+  color: #4dff3a;
+}
+.jss417 {
+  color: #ffe53a;
+}
+.jss418 {
+  color: #ffa044;
+}
+.jss419 {
+  color: #ff6c6c;
+}
+.jss420 {
+  color: #ef68ff;
+}
+.jss421 {
+  color: #4dff3a;
+}
+.jss422 {
+  color: #ffe53a;
+}
+.jss423 {
+  color: #ff6c6c;
+}
+.jss424 {
+  color: #ef68ff;
+}
+.jss425 {
+  color: #4dff3a;
+}
+.jss426 {
+  color: #ffe53a;
+}
+.jss427 {
+  color: #ffa044;
+}
+.jss428 {
+  color: #ff6c6c;
+}
+.jss429 {
+  color: #4dff3a;
+}
+.jss430 {
+  color: #ffe53a;
+}
+.jss431 {
+  color: #ffa044;
+}
+.jss432 {
+  color: #ff6c6c;
+}
+.jss433 {
+  color: #ef68ff;
+}
+.jss434 {
+  color: #4dff3a;
+}
+.jss435 {
+  color: #ffe53a;
+}
+.jss436 {
+  color: #ffa044;
+}
+.jss437 {
+  color: #ff6c6c;
+}
+.jss438 {
+  color: #ef68ff;
+}
+</style><style data-jss="" data-meta="MuiPopover">
+.MuiPopover-paper {
+  outline: 0;
+  position: absolute;
+  max-width: calc(100% - 32px);
+  min-width: 16px;
+  max-height: calc(100% - 32px);
+  min-height: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+</style><style data-jss="" data-meta="MuiMenu">
+.MuiMenu-paper {
+  max-height: calc(100% - 96px);
+  -webkit-overflow-scrolling: touch;
+}
+.MuiMenu-list {
+  outline: 0;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss298 {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45px;
+  z-index: 1;
+  position: absolute;
+  background: #1d1828;
+  box-sizing: content-box;
+  user-select: none;
+}
+.jss299 {
+  color: white;
+  cursor: hand;
+  height: 45px;
+  overflow-y: hidden;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.jss299:hover, .jss299.active {
+  background-color: #353435;
+}
+.jss300 {
+  height: 15px;
+  display: inline-block;
+  min-height: 45px;
+  line-height: 15px;
+}
+.jss300:link, .jss300:visited {
+  color: white;
+  text-decoration: none;
+}
+.jss300:hover, .jss300.active {
+  background-color: #353435;
+}
+.jss301 {
+  display: none;
+}
+.jss302 {
+  padding: 0 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.jss303 img {
+  transition: all .2s ease-in-out;
+}
+.jss303:hover img {
+  transform: scale(1.15);
+}
+.jss304 {
+  width: 70px;
+  cursor: pointer;
+  height: 45px;
+  overflow-x: hidden;
+}
+.jss304 div {
+  height: 45px;
+  text-align: center;
+}
+.jss304 div a {
+  font-size: 0;
+}
+.jss305 {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 24px;
+  line-height: 45px;
+}
+.jss305 a, .jss305 a:hover, .jss305 a:active {
+  color: inherit;
+  text-decoration: none;
+}
+.jss306 {
+  min-width: 198px;
+  background-color: #1d1828;
+}
+.jss307 {
+  color: white;
+  font-size: 0.8em;
+}
+.jss308 {
+  height: 10px;
+  font-size: 1em;
+  box-sizing: content-box;
+  line-height: 1.5em;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-color: #1d1828;
+}
+.jss308:hover {
+  background-color: #2e2544;
+}
+.jss309 {
+  z-index: 2;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss10 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.jss11 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 45px;
+  z-index: 0;
+  position: fixed;
+  box-shadow: 0 5px 5px #888888;
+  background-color: #fff;
+}
+.jss11.fullscreen {
+  bottom: 0;
+}
+.jss12 {
+  bottom: 0;
+}
+.jss13 {
+  width: 100%;
+  height: 100%;
+  position: static;
+  padding-bottom: 45px;
+}
+</style><script charset="utf-8" src="./0.26e407ba.js.download"></script><script charset="utf-8" src="./7.68f21e0f.js.download"></script></head>
+<body marginwidth="0" marginheight="0">
+<div class="pacman">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<script type="text/javascript">
+      var options = {
+        author: "Splapp-me-do",        thumbnail: decodeURIComponent("https%3A%2F%2Fimages.crazygames.com%2Ftheimpossiblequiz.png%3Fauto%3Dformat%2Ccompress%26ch%3DDPR%26q%3D90%26cs%3Dstrip%26w%3D360"),
+        gameName: "The Impossible Quiz",
+        gameSlug: "the-impossible-quiz",
+        dollarRate: 0.90370972843523,
+        gameHttps: true,
+        category: "Quiz",
+        categoryLink: decodeURIComponent("https%3A%2F%2Fwww.crazygames.com%2Ft%2Fquiz"),
+        allowFullscreen: false,
+        locale: "en_US",
+        noAdInFirstMinutes: 3,
+        minTimeBetweenAdsInMs: 180000,
+        showGDPRNotice: true,
+        hasOwnToolbar: false,
+
+                          loader: "iframe",
+                                loaderOptions: {"url":"https:\/\/files.crazygames.com\/the-impossible-quiz\/4\/index.html","sandbox":false,"startInFullscreen":false,"scrolling":"auto"},
+                                    disableEmbedding: true,
+                                      gameStatus: "published",
+                                      releaseDate: "2014-01-01",
+                                      alternativeGames: [{"gameSlug":"the-impossible-quiz-2","gameName":"The Impossible Quiz 2","loader":"flash","thumbnail":"https:\/\/images.crazygames.com\/theimpossiblequiz2.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/the-impossible-quiz-2","category":"Puzzle","rating":"8.4","videoThumbnail":"https:\/\/videos.crazygames.com\/the-impossible-quiz-2.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/the-impossible-quiz-2.mp4"}],"original":null}},{"gameSlug":"the-impossible-quizmas","gameName":"The Impossible Quizmas","loader":"flash","thumbnail":"https:\/\/images.crazygames.com\/theimpossiblequizmas.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/the-impossible-quizmas","category":"Arcade","rating":"7.9","videoThumbnail":"https:\/\/videos.crazygames.com\/the-impossible-quizmas.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/the-impossible-quizmas.mp4"}],"original":null}},{"gameSlug":"the-world-s-easyest-game","gameName":"The World's Easyest Game","loader":"flash","thumbnail":"https:\/\/images.crazygames.com\/theworldseasyestgame.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/the-world-s-easyest-game","category":"Puzzle","rating":"8.8","videoThumbnail":"https:\/\/videos.crazygames.com\/the-world-s-easyest-game\/1\/the-world-s-easyest-game-180x111.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/the-world-s-easyest-game\/1\/the-world-s-easyest-game-180x111.mp4"},{"width":360,"height":222,"location":"https:\/\/videos.crazygames.com\/the-world-s-easyest-game\/1\/the-world-s-easyest-game-360x222.mp4"},{"width":540,"height":333,"location":"https:\/\/videos.crazygames.com\/the-world-s-easyest-game\/1\/the-world-s-easyest-game-540x333.mp4"},{"width":720,"height":444,"location":"https:\/\/videos.crazygames.com\/the-world-s-easyest-game\/1\/the-world-s-easyest-game-720x444.mp4"}],"original":"https:\/\/videos.crazygames.com\/original-resolution\/the-world-s-easyest-game.mp4"}},{"gameSlug":"basketball-stars-2019","gameName":"Basketball Stars","loader":"iframe","thumbnail":"https:\/\/images.crazygames.com\/games\/basketball-stars-2019\/thumb-1559122887817.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/basketball-stars-2019","category":"Sports","rating":"9.0","videoThumbnail":"https:\/\/videos.crazygames.com\/basketball-stars-2019\/1\/basketball-stars-2019-thumbnail.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/basketball-stars-2019\/1\/basketball-stars-2019-180x111.mp4"},{"width":360,"height":222,"location":"https:\/\/videos.crazygames.com\/basketball-stars-2019\/1\/basketball-stars-2019-360x222.mp4"},{"width":540,"height":333,"location":"https:\/\/videos.crazygames.com\/basketball-stars-2019\/1\/basketball-stars-2019-540x333.mp4"},{"width":720,"height":444,"location":"https:\/\/videos.crazygames.com\/basketball-stars-2019\/1\/basketball-stars-2019-720x444.mp4"}],"original":"https:\/\/videos.crazygames.com\/basketball-stars-2019\/1\/basketball-stars-2019.mp4"}},{"gameSlug":"bullet-force-multiplayer","gameName":"Bullet Force","loader":"5.6.x","thumbnail":"https:\/\/images.crazygames.com\/games\/bullet-force-multiplayer\/thumb-1570696045655.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/bullet-force-multiplayer","category":"Shooting","rating":"9.2","videoThumbnail":"https:\/\/videos.crazygames.com\/bullet-force-multiplayer\/8\/bullet-force-multiplayer-180x111.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/bullet-force-multiplayer\/8\/bullet-force-multiplayer-180x111.mp4"},{"width":360,"height":222,"location":"https:\/\/videos.crazygames.com\/bullet-force-multiplayer\/8\/bullet-force-multiplayer-360x222.mp4"},{"width":540,"height":333,"location":"https:\/\/videos.crazygames.com\/bullet-force-multiplayer\/8\/bullet-force-multiplayer-540x333.mp4"},{"width":720,"height":444,"location":"https:\/\/videos.crazygames.com\/bullet-force-multiplayer\/8\/bullet-force-multiplayer-720x444.mp4"}],"original":"https:\/\/videos.crazygames.com\/bullet-force-multiplayer\/8\/bullet-force-multiplayer.mp4"}},{"gameSlug":"slitherio","gameName":"Slither.io","loader":"iframe","thumbnail":"https:\/\/images.crazygames.com\/slitheriob.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"http:\/\/www.crazygames.com\/game\/slitherio","category":".io","rating":"9.0","videoThumbnail":"https:\/\/videos.crazygames.com\/slitherio-trimmed.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/slitherio-trimmed.mp4"}],"original":null}},{"gameSlug":"krunker-io","gameName":"Krunker.io","loader":"iframe","thumbnail":"https:\/\/images.crazygames.com\/krunkerio.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/krunker-io","category":".io","rating":"9.4","videoThumbnail":"https:\/\/videos.crazygames.com\/krunker-io\/2\/krunker-io-180x111.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/krunker-io\/2\/krunker-io-180x111.mp4"},{"width":360,"height":222,"location":"https:\/\/videos.crazygames.com\/krunker-io\/2\/krunker-io-360x222.mp4"},{"width":540,"height":333,"location":"https:\/\/videos.crazygames.com\/krunker-io\/2\/krunker-io-540x333.mp4"},{"width":720,"height":444,"location":"https:\/\/videos.crazygames.com\/krunker-io\/2\/krunker-io-720x444.mp4"}],"original":"https:\/\/videos.crazygames.com\/original-resolution\/krunker-io.mp4"}},{"gameSlug":"madalin-stunt-cars-2","gameName":"Madalin Stunt Cars 2","loader":"5.6.x","thumbnail":"https:\/\/images.crazygames.com\/madalinstuntcars2b.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/madalin-stunt-cars-2","category":"Driving","rating":"9.2","videoThumbnail":"https:\/\/videos.crazygames.com\/madalin-stunt-cars-2\/2\/madalin-stunt-cars-2-180x111.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/madalin-stunt-cars-2\/2\/madalin-stunt-cars-2-180x111.mp4"},{"width":360,"height":222,"location":"https:\/\/videos.crazygames.com\/madalin-stunt-cars-2\/2\/madalin-stunt-cars-2-360x222.mp4"},{"width":540,"height":333,"location":"https:\/\/videos.crazygames.com\/madalin-stunt-cars-2\/2\/madalin-stunt-cars-2-540x333.mp4"},{"width":720,"height":444,"location":"https:\/\/videos.crazygames.com\/madalin-stunt-cars-2\/2\/madalin-stunt-cars-2-720x444.mp4"}],"original":"https:\/\/videos.crazygames.com\/original-resolution\/madalin-stunt-cars-2-trimmedc.mp4"}},{"gameSlug":"doge-miner-2","gameName":"Doge Miner 2","loader":"iframe","thumbnail":"https:\/\/images.crazygames.com\/dogeminer2.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/doge-miner-2","category":"Clicker","rating":"9.4","videoThumbnail":"https:\/\/videos.crazygames.com\/doge-miner-2\/1\/doge-miner-2-180x111.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/doge-miner-2\/1\/doge-miner-2-180x111.mp4"},{"width":360,"height":222,"location":"https:\/\/videos.crazygames.com\/doge-miner-2\/1\/doge-miner-2-360x222.mp4"},{"width":540,"height":333,"location":"https:\/\/videos.crazygames.com\/doge-miner-2\/1\/doge-miner-2-540x333.mp4"},{"width":720,"height":444,"location":"https:\/\/videos.crazygames.com\/doge-miner-2\/1\/doge-miner-2-720x444.mp4"}],"original":"https:\/\/videos.crazygames.com\/archive\/dogeminer2.mp4"}},{"gameSlug":"mahjong-classic","gameName":"Mahjong Classic","loader":"iframe","thumbnail":"https:\/\/images.crazygames.com\/mahjongclassic.png?auto=format,compress&ch=DPR&q=90&cs=strip&w=360","gameLink":"https:\/\/www.crazygames.com\/game\/mahjong-classic","category":"Puzzle","rating":"8.3","videoThumbnail":"https:\/\/videos.crazygames.com\/mahjong-classic\/1\/mahjong-classic-180x111.mp4","video":{"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/mahjong-classic\/1\/mahjong-classic-180x111.mp4"},{"width":360,"height":222,"location":"https:\/\/videos.crazygames.com\/mahjong-classic\/1\/mahjong-classic-360x222.mp4"},{"width":540,"height":333,"location":"https:\/\/videos.crazygames.com\/mahjong-classic\/1\/mahjong-classic-540x333.mp4"},{"width":720,"height":444,"location":"https:\/\/videos.crazygames.com\/mahjong-classic\/1\/mahjong-classic-720x444.mp4"}],"original":"https:\/\/videos.crazygames.com\/original-resolution\/mahjong-classic.mp4"}}],
+                                  video: {"sizes":[{"width":180,"height":111,"location":"https:\/\/videos.crazygames.com\/the-impossible-quiz.mp4"}],"original":null},
+                                      orientation: 'BOTH',
+                       };
+
+      /* helper */
+      function loadScript(url, async, callback) {
+        /*
+         * load a script with callback
+         */
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        if(async) {
+          script.async = true;
+        }
+
+        // Then bind the event to the callback function.
+        // There are several events for cross browser compatibility.
+        script.onreadystatechange = callback;
+        script.onload = callback;
+
+        // Fire the loading
+        head.appendChild(script);
+      }
+
+      var SDK_READY = false;
+      var GF_READY = false;
+      var GF_LOAD_CALLED = false;
+
+      function loadIfAllReady() {
+        if(SDK_READY && GF_READY && !GF_LOAD_CALLED) {
+          GF_LOAD_CALLED = true;
+          Crazygames.load(options);
+        }
+      }
+
+      loadScript("https://gameframe.crazygames.com/crazygames-gameframe-v1.bundle.js", true, function() {
+        GF_READY = true;
+        loadIfAllReady();
+      });
+
+      loadScript("https://sdk.crazygames.com/sdk.js?v20052019", true, function() {
+        SDK_READY = true;
+        loadIfAllReady();
+      });
+
+    </script>
+
+
+<div><style>
+                a {
+                  text-decoration: none;
+                }
+                a:hover {
+                  text-decoration: none;
+                }
+              </style><div class="jss10" style=""><div id="game-container" class="false jss11"><iframe src="./index.html" scrolling="auto" allow="autoplay; fullscreen; microphone" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" style="border: 0px; width: 10px; height: 10px; min-width: 100%; min-height: 100%;"></iframe></div><div class="jss298"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-around"><div class="MuiGrid-root MuiGrid-item" style="flex: 1 1 0%;"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center"><div class="MuiGrid-root MuiGrid-item"><div class="jss305 "><span class="jss439"><span><span class="jss416">C</span><span class="jss417">R</span><span class="jss418">A</span><span class="jss419">Z</span><span class="jss420">Y</span></span><span class="jss439 jss440">GAMES</span><span class="jss439 jss441" style="display: none;">.COM</span></span></div></div></div></div><div class="MuiGrid-root MuiGrid-item"></div><div class="MuiGrid-root MuiGrid-item"><div class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-around"></div></div></div></div></div><link href="./css" rel="stylesheet"><link href="./css(1)" rel="stylesheet"></div></body></html>

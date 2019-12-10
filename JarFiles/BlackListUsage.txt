@@ -1,0 +1,4 @@
+1 logFile.csv not kismet.csv
+2 Wifi BSSID or ignore separate with ,
+3 fileOUT blacklist
+4 fileIn whiteList

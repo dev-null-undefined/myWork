@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "App"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ProjectEuler1",
+            "request": "launch",
+            "mainClass": "projecteuler.pkg1.ProjectEuler1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TextTospeach",
+            "request": "launch",
+            "mainClass": "TextTospeach"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AutoClicker",
+            "request": "launch",
+            "mainClass": "autoclicker.AutoClicker"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "filesorterbydatatype.Main"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FIleSorterByDataType",
+            "request": "launch",
+            "mainClass": "filesorterbydatatype.FIleSorterByDataType"
+        }
+    ]
+}

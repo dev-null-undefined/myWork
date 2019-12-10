@@ -1,0 +1,3 @@
+function a(g){var c=document.createElement("script");c.src="https://mrb.upapi.net/code?w="+g+"&upapi=true";c.async="true";(document.body||document.head||document.documentElement).appendChild(c)}
+var b={"1001juegos.com":"5677735133315072","bloomsbury.crazygames.com":"5699982600437760","crazygames.com":"5713783414587392","gioca.re":"5713185927593984","onlinegame.co.id":"5707653556731904","speelspelletjes.nl":"5640528452386816"},d=!1,e=window.location.hostname;0===e.indexOf("www.")&&(e=e.replace("www.",""));
+if(e&&e in b)a(b[e]),d=!0;else for(var f in b)if(-1<document.location.hostname.indexOf(f.toLowerCase())){a(b[f]);d=!0;break}d||((new Image).src="//mrb.upapi.net/l?event=unknownDomain&org=5635927334453248&domain="+e);

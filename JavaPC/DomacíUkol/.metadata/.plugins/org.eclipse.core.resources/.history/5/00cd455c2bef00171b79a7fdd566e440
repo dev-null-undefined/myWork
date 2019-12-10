@@ -1,0 +1,9 @@
+package Ukol_2;
+
+public class Kniha {
+
+	public Kniha() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

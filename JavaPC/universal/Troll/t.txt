@@ -1,0 +1,15 @@
+ Volume in drive H is pr ce
+ Volume Serial Number is 76FE-DE73
+
+ Directory of H:\java\universal\Troll
+
+12/25/2017  13:28    <DIR>          .
+12/25/2017  13:28    <DIR>          ..
+12/25/2017  12:39               301 .classpath
+12/25/2017  12:39               381 .project
+12/25/2017  12:39    <DIR>          .settings
+12/25/2017  13:28    <DIR>          bin
+12/25/2017  12:39    <DIR>          src
+12/25/2017  13:28                 0 t.txt
+               3 File(s)            682 bytes
+               5 Dir(s)  296,260,231,168 bytes free
