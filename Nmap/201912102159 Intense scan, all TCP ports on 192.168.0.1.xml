@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl" ?>
+<nmaprun start="1576011596" profile_name="Intense scan, all TCP ports" xmloutputversion="1.04" scanner="nmap" version="7.80" startstr="Tue Dec 10 21:59:56 2019" args="nmap -p 1-65535 -T4 -A -v 192.168.0.1">
+    <scaninfo services="1-65535" protocol="tcp" numservices="65535" type="syn"></scaninfo>
+    <verbose level="1"></verbose>
+    <debugging level="0"></debugging>
+    <output type="interactive">Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-10 21:59 Central Europe Standard Time
+
+NSE: Loaded 151 scripts for scanning.
+
+NSE: Script Pre-scanning.
+
+Initiating NSE at 21:59
+
+Completed NSE at 21:59, 0.00s elapsed
+
+Initiating NSE at 21:59
+
+Completed NSE at 21:59, 0.00s elapsed
+
+Initiating NSE at 21:59
+
+Completed NSE at 21:59, 0.00s elapsed
+
+Initiating Ping Scan at 21:59
+
+Scanning 192.168.0.1 [4 ports]
+
+Completed Ping Scan at 21:59, 0.58s elapsed (1 total hosts)
+
+Initiating Parallel DNS resolution of 1 host. at 21:59
+
+Completed Parallel DNS resolution of 1 host. at 21:59, 0.00s elapsed
+
+Initiating SYN Stealth Scan at 21:59
+
+Scanning 192.168.0.1 [65535 ports]
+
+Discovered open port 139/tcp on 192.168.0.1
+
+Discovered open port 3306/tcp on 192.168.0.1
+
+Discovered open port 53/tcp on 192.168.0.1
+
+Discovered open port 445/tcp on 192.168.0.1
+
+Discovered open port 80/tcp on 192.168.0.1
+
+Discovered open port 25/tcp on 192.168.0.1
+
+Discovered open port 21/tcp on 192.168.0.1
+
+Discovered open port 22/tcp on 192.168.0.1
+
+Discovered open port 993/tcp on 192.168.0.1
+
+Discovered open port 143/tcp on 192.168.0.1
+
+Increasing send delay for 192.168.0.1 from 0 to 5 due to max_successful_tryno increase to 5
+
+SYN Stealth Scan Timing: About 7.03% done; ETC: 22:07 (0:06:50 remaining)
+
+Discovered open port 5223/tcp on 192.168.0.1
+
+Discovered open port 5754/tcp on 192.168.0.1
+
+Discovered open port 250/tcp on 192.168.0.1
+
+SYN Stealth Scan Timing: About 13.83% done; ETC: 22:07 (0:06:20 remaining)
+
+Discovered open port 5456/tcp on 192.168.0.1
+
+SYN Stealth Scan Timing: About 20.84% done; ETC: 22:07 (0:05:46 remaining)
+
+Discovered open port 5654/tcp on 192.168.0.1
+
+Discovered open port 5755/tcp on 192.168.0.1
+
+SYN Stealth Scan Timing: About 27.83% done; ETC: 22:07 (0:05:14 remaining)
+
+SYN Stealth Scan Timing: About 34.90% done; ETC: 22:07 (0:04:42 remaining)
+
+SYN Stealth Scan Timing: About 41.98% done; ETC: 22:07 (0:04:10 remaining)
+
+Discovered open port 5455/tcp on 192.168.0.1
+
+SYN Stealth Scan Timing: About 49.38% done; ETC: 22:07 (0:03:36 remaining)
+
+Discovered open port 5457/tcp on 192.168.0.1
+
+SYN Stealth Scan Timing: About 56.69% done; ETC: 22:07 (0:03:04 remaining)
+
+Discovered open port 5554/tcp on 192.168.0.1
+
+SYN Stealth Scan Timing: About 64.00% done; ETC: 22:07 (0:02:32 remaining)
+
+Discovered open port 6000/tcp on 192.168.0.1
+
+SYN Stealth Scan Timing: About 71.17% done; ETC: 22:07 (0:02:02 remaining)
+
+SYN Stealth Scan Timing: About 78.40% done; ETC: 22:07 (0:01:31 remaining)
+
+SYN Stealth Scan Timing: About 85.72% done; ETC: 22:07 (0:01:00 remaining)
+
+Discovered open port 5655/tcp on 192.168.0.1
+
+Completed SYN Stealth Scan at 22:06, 419.40s elapsed (65535 total ports)
+
+Initiating Service scan at 22:06
+
+Scanning 21 services on 192.168.0.1
+
+Completed Service scan at 22:07, 22.43s elapsed (21 services on 1 host)
+
+Initiating OS detection (try #1) against 192.168.0.1
+
+Initiating Traceroute at 22:07
+
+Completed Traceroute at 22:07, 0.01s elapsed
+
+Initiating Parallel DNS resolution of 2 hosts. at 22:07
+
+Completed Parallel DNS resolution of 2 hosts. at 22:07, 0.00s elapsed
+
+NSE: Script scanning 192.168.0.1.
+
+Initiating NSE at 22:07
+
+Completed NSE at 22:08, 85.67s elapsed
+
+Initiating NSE at 22:08
+
+Completed NSE at 22:09, 60.73s elapsed
+
+Initiating NSE at 22:09
+
+Completed NSE at 22:09, 0.01s elapsed
+
+Nmap scan report for 192.168.0.1
+
+Host is up (0.00075s latency).
+
+Not shown: 65514 closed ports
+
+PORT     STATE SERVICE      VERSION
+
+21/tcp   open  ftp          ProFTPD 1.3.3c
+
+22/tcp   open  ssh          OpenSSH 5.4p1 (FreeBSD 20100308; protocol 2.0)
+
+| ssh-hostkey: 
+
+|   1024 37:95:e8:90:e4:c1:e8:6f:46:47:e0:38:c5:c7:79:7e (DSA)
+
+|_  2048 39:46:cb:f7:3a:98:d8:c5:48:d6:de:e0:98:e1:14:2a (RSA)
+
+25/tcp   open  smtp         Postfix smtpd
+
+|_smtp-commands: mail.nvl.cz, PIPELINING, SIZE 40960000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+
+| ssl-cert: Subject: commonName=mail.nvl.cz/organizationName=NVL/stateOrProvinceName=NA/countryName=CZ
+
+| Issuer: commonName=mail.nvl.cz/organizationName=NVL/stateOrProvinceName=NA/countryName=CZ
+
+| Public Key type: rsa
+
+| Public Key bits: 1024
+
+| Signature Algorithm: sha1WithRSAEncryption
+
+| Not valid before: 2010-12-12T12:14:55
+
+| Not valid after:  2020-12-09T12:14:55
+
+| MD5:   0a0a ec64 4e5b d74c d2fd fc8a f5d0 5dba
+
+|_SHA-1: 5b70 678b 9576 af23 e078 4acd 6442 ad19 6449 fdf8
+
+|_ssl-date: 2019-12-10T21:14:56+00:00; +6m07s from scanner time.
+
+| sslv2: 
+
+|   SSLv2 supported
+
+|   ciphers: 
+
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+
+|     SSL2_DES_64_CBC_WITH_MD5
+
+|     SSL2_RC4_128_WITH_MD5
+
+|_    SSL2_RC2_128_CBC_WITH_MD5
+
+53/tcp   open  domain       ISC BIND 9.6.2-P2
+
+| dns-nsid: 
+
+|_  bind.version: 9.6.2-P2
+
+80/tcp   open  http         Apache httpd 2.2.17 ((FreeBSD) mod_ssl/2.2.17 OpenSSL/0.9.8n DAV/2 PHP/5.3.3 with Suhosin-Patch)
+
+| http-methods: 
+
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+
+|_  Potentially risky methods: TRACE
+
+|_http-server-header: Apache/2.2.17 (FreeBSD) mod_ssl/2.2.17 OpenSSL/0.9.8n DAV/2 PHP/5.3.3 with Suhosin-Patch
+
+|_http-title: Site doesn't have a title (text/html).
+
+139/tcp  open  netbios-ssn  Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+
+143/tcp  open  imap         Courier Imapd (released 2010)
+
+|_imap-capabilities: completed NAMESPACE SORT THREAD=ORDEREDSUBJECT UIDPLUS CAPABILITY OK QUOTA IMAP4rev1 CHILDREN ACL2=UNION ACL STARTTLSA0001 IDLE THREAD=REFERENCES
+
+|_ssl-date: 2019-12-10T21:14:56+00:00; +6m07s from scanner time.
+
+250/tcp  open  smtp         Postfix smtpd
+
+|_smtp-commands: mail.nvl.cz, PIPELINING, SIZE 40960000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+
+| ssl-cert: Subject: commonName=mail.nvl.cz/organizationName=NVL/stateOrProvinceName=NA/countryName=CZ
+
+| Issuer: commonName=mail.nvl.cz/organizationName=NVL/stateOrProvinceName=NA/countryName=CZ
+
+| Public Key type: rsa
+
+| Public Key bits: 1024
+
+| Signature Algorithm: sha1WithRSAEncryption
+
+| Not valid before: 2010-12-12T12:14:55
+
+| Not valid after:  2020-12-09T12:14:55
+
+| MD5:   0a0a ec64 4e5b d74c d2fd fc8a f5d0 5dba
+
+|_SHA-1: 5b70 678b 9576 af23 e078 4acd 6442 ad19 6449 fdf8
+
+|_ssl-date: 2019-12-10T21:14:56+00:00; +6m07s from scanner time.
+
+| sslv2: 
+
+|   SSLv2 supported
+
+|   ciphers: 
+
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+
+|     SSL2_DES_64_CBC_WITH_MD5
+
+|     SSL2_RC4_128_WITH_MD5
+
+|_    SSL2_RC2_128_CBC_WITH_MD5
+
+445/tcp  open  netbios-ssn  Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+
+993/tcp  open  ssl/imap     Courier Imapd (released 2010)
+
+|_imap-capabilities: CAPABILITY
+
+| ssl-cert: Subject: commonName=mail.nvl.cz/organizationName=NVL/stateOrProvinceName=Czech Republic/countryName=CZ
+
+| Issuer: commonName=mail.nvl.cz/organizationName=NVL/stateOrProvinceName=Czech Republic/countryName=CZ
+
+| Public Key type: rsa
+
+| Public Key bits: 1024
+
+| Signature Algorithm: sha1WithRSAEncryption
+
+| Not valid before: 2010-12-12T13:24:05
+
+| Not valid after:  2020-12-09T13:24:05
+
+| MD5:   d9d5 6d0e 041e f76f 2e04 c52b 9467 c0a6
+
+|_SHA-1: 9120 cbba b9ea 0f9a 5290 25d8 d1bb 6cd3 8938 6205
+
+|_ssl-date: 2019-12-10T21:14:56+00:00; +6m07s from scanner time.
+
+3306/tcp open  mysql        MySQL (unauthorized)
+
+5223/tcp open  ssl/imap     Courier Imapd (released 2010)
+
+|_ssl-date: 2019-12-10T21:14:56+00:00; +6m07s from scanner time.
+
+5455/tcp open  apc-5455?
+
+5456/tcp open  apc-5456?
+
+5457/tcp open  unknown
+
+5554/tcp open  sgi-esphttp?
+
+5654/tcp open  http         ASUS WRT http admin
+
+| http-methods: 
+
+|_  Supported Methods: GET HEAD POST
+
+|_http-server-header: httpd/2.0
+
+|_http-title: Site doesn't have a title (text/html).
+
+5655/tcp open  unknown
+
+5754/tcp open  unknown
+
+5755/tcp open  openmailg?
+
+6000/tcp open  X11?
+
+|_x11-access: ERROR: Script execution failed (use -d to debug)
+
+Device type: general purpose
+
+Running: FreeBSD 7.X|8.X
+
+OS CPE: cpe:/o:freebsd:freebsd:7 cpe:/o:freebsd:freebsd:8
+
+OS details: FreeBSD 7.1-RELEASE - 9.0-CURRENT
+
+Uptime guess: 0.002 days (since Tue Dec 10 22:07:21 2019)
+
+Network Distance: 2 hops
+
+TCP Sequence Prediction: Difficulty=250 (Good luck!)
+
+IP ID Sequence Generation: Incremental
+
+Service Info: Host:  mail.nvl.cz; OSs: Unix, FreeBSD; CPE: cpe:/o:freebsd:freebsd, cpe:/o:asus:wrt_firmware
+
+
+
+Host script results:
+
+|_clock-skew: mean: 6m06s, deviation: 0s, median: 6m06s
+
+| nbstat: NetBIOS name: SERVER, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)
+
+| Names:
+
+|   SERVER&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;
+
+|   SERVER&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;
+
+|   SERVER&lt;03&gt;           Flags: &lt;unique&gt;&lt;active&gt;
+
+|   \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;
+
+|   WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;
+
+|   WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;
+
+|_  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;
+
+| smb-security-mode: 
+
+|   account_used: guest
+
+|   authentication_level: user
+
+|   challenge_response: supported
+
+|_  message_signing: disabled (dangerous, but default)
+
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+
+
+TRACEROUTE (using port 3389/tcp)
+
+HOP RTT     ADDRESS
+
+1   3.00 ms router.asus.com (192.168.1.1)
+
+2   4.00 ms 192.168.0.1
+
+
+
+NSE: Script Post-scanning.
+
+Initiating NSE at 22:09
+
+Completed NSE at 22:09, 0.00s elapsed
+
+Initiating NSE at 22:09
+
+Completed NSE at 22:09, 0.00s elapsed
+
+Initiating NSE at 22:09
+
+Completed NSE at 22:09, 0.00s elapsed
+
+Read data files from: C:\Program Files (x86)\Nmap
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+
+Nmap done: 1 IP address (1 host up) scanned in 593.80 seconds
+
+           Raw packets sent: 66247 (2.916MB) | Rcvd: 65622 (2.626MB)
+
+</output>
+    <host comment="">
+        <status state="up"></status>
+        <address addrtype="ipv4" vendor="" addr="192.168.0.1"></address>
+        <hostnames></hostnames>
+        <ports>
+            <extraports count="65514" state="closed"></extraports>
+            <port protocol="tcp" portid="21">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="ProFTPD" version="1.3.3c" method="probed" conf="10" name="ftp"></service>
+            </port>
+            <port protocol="tcp" portid="22">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="OpenSSH" name="ssh" extrainfo="FreeBSD 20100308; protocol 2.0" version="5.4p1" conf="10" method="probed"></service>
+            </port>
+            <port protocol="tcp" portid="25">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="Postfix smtpd" method="probed" conf="10" name="smtp"></service>
+            </port>
+            <port protocol="tcp" portid="53">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="ISC BIND" version="9.6.2-P2" method="probed" conf="10" name="domain"></service>
+            </port>
+            <port protocol="tcp" portid="80">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="Apache httpd" name="http" extrainfo="(FreeBSD) mod_ssl/2.2.17 OpenSSL/0.9.8n DAV/2 PHP/5.3.3 with Suhosin-Patch" version="2.2.17" conf="10" method="probed"></service>
+            </port>
+            <port protocol="tcp" portid="139">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="Samba smbd" name="netbios-ssn" extrainfo="workgroup: WORKGROUP" version="3.X - 4.X" conf="10" method="probed"></service>
+            </port>
+            <port protocol="tcp" portid="143">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="Courier Imapd" extrainfo="released 2010" method="probed" conf="10" name="imap"></service>
+            </port>
+            <port protocol="tcp" portid="250">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="Postfix smtpd" method="probed" conf="10" name="smtp"></service>
+            </port>
+            <port protocol="tcp" portid="445">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="Samba smbd" name="netbios-ssn" extrainfo="workgroup: WORKGROUP" version="3.X - 4.X" conf="10" method="probed"></service>
+            </port>
+            <port protocol="tcp" portid="993">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="Courier Imapd" extrainfo="released 2010" method="probed" conf="10" name="imap"></service>
+            </port>
+            <port protocol="tcp" portid="3306">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="MySQL" extrainfo="unauthorized" method="probed" conf="10" name="mysql"></service>
+            </port>
+            <port protocol="tcp" portid="5223">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="Courier Imapd" extrainfo="released 2010" method="probed" conf="10" name="imap"></service>
+            </port>
+            <port protocol="tcp" portid="5455">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service method="table" conf="3" name="apc-5455"></service>
+            </port>
+            <port protocol="tcp" portid="5456">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service method="table" conf="3" name="apc-5456"></service>
+            </port>
+            <port protocol="tcp" portid="5457">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service method="table" conf="3" name="unknown"></service>
+            </port>
+            <port protocol="tcp" portid="5554">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service method="table" conf="3" name="sgi-esphttp"></service>
+            </port>
+            <port protocol="tcp" portid="5654">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service product="ASUS WRT http admin" method="probed" conf="10" name="http"></service>
+            </port>
+            <port protocol="tcp" portid="5655">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service></service>
+            </port>
+            <port protocol="tcp" portid="5754">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service></service>
+            </port>
+            <port protocol="tcp" portid="5755">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service method="table" conf="3" name="openmailg"></service>
+            </port>
+            <port protocol="tcp" portid="6000">
+                <state reason="syn-ack" state="open" reason_ttl="63"></state>
+                <service method="table" conf="3" name="X11"></service>
+            </port>
+        </ports>
+        <os>
+            <portused state="open" portid="21" proto="tcp"></portused>
+            <portused state="closed" portid="1" proto="tcp"></portused>
+            <portused state="closed" portid="30247" proto="udp"></portused>
+            <osmatch line="28200" name="FreeBSD 7.1-RELEASE - 9.0-CURRENT" accuracy="100">
+                <osclass type="general purpose" osfamily="FreeBSD" vendor="FreeBSD" osgen="8.X" accuracy="100"></osclass>
+            </osmatch>
+        </os>
+        <uptime lastboot="Tue Dec 10 22:07:21 2019" seconds="148"></uptime>
+        <tcpsequence index="250" values="52CDDB68,C4090C0,A44C0BB6,FC1E688C,692888B8,CC7D079A" difficulty="Good luck!"></tcpsequence>
+        <ipidsequence values="BEAC,BEAD,BEAE,BEAF,BEB0,BEB1" class="Incremental"></ipidsequence>
+        <tcptssequence values="68E0E433,44C0F431,A15055D9,90CA8883,F7D7CED2,5AD94A7C" class="other"></tcptssequence>
+        <trace port="3389" proto="tcp">
+            <hop rtt="3.00" host="router.asus.com" ipaddr="192.168.1.1" ttl="1"></hop>
+            <hop rtt="4.00" host="" ipaddr="192.168.0.1" ttl="2"></hop>
+        </trace>
+    </host>
+    <runstats>
+        <finished timestr="Tue Dec 10 22:09:49 2019" time="1576012189"></finished>
+        <hosts down="0" total="1" up="1"></hosts>
+    </runstats>
+</nmaprun>
