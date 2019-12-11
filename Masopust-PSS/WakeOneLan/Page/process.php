@@ -1,0 +1,11 @@
+<html><body>
+<?php
+if(isset($_GET['session_id'])){
+    session_id($_GET['session_id']);
+}
+session_start();
+session_unset();
+session_destroy();
+header("Location:index.php");
+?>
+</body></html>
