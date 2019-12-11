@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,21 +9,39 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body>
     <?php
-    // error_reporting(E_ALL);
-    // ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
     session_start();
-    if(isset($_SESSION['Legit'])&&$_SESSION['Legit']){
-        shell_exec("touch /ahojky");
-        header("Location:WakingPc.html");
+    if (isset($_SESSION['Legit']) && $_SESSION['Legit']) {
+        $out = shell_exec("../Wake_on_lan.sh");
+        // echo $out;
+        // echo "whad up boy";
+        echo '<h1>
+        Waking PC
+      </h1>
+      <form class="butout" action="./process.php" method="post">
+        <input style="display:none;" type="text" name="destroye" value="true">
+        <input type="submit" value="Odhlasit" />
+    </form>';
+        exit();
     }
-    if (isset($_POST['Password']) && is_array($_POST['Password']) == false ) {
-        if($_POST['Password'] == "HesloJeJEdnaDVA34"){
+    if (isset($_POST['Password']) && is_array($_POST['Password']) == false) {
+        if ($_POST['Password'] == "HesloJeJEdnaDVA34") {
             $_SESSION["Legit"] = true;
-            shell_exec("touch /ahojky");
-            header("Location:WakingPc.html");
-        }else{
+            $out = shell_exec("../Wake_on_lan.sh");
+            // echo $out;
+            echo '<h1>
+        Waking PC
+        </h1>
+        <form class="butout" action="./process.php" method="post">
+          <input style="display:none;" type="text" name="destroye" value="true">
+          <input type="submit" value="Odhlasit" />
+      </form>';
+            exit();
+        } else {
             header("Location:index.php#wrongpass");
         }
     }
@@ -41,4 +60,5 @@
 <div id="wrongpass" class="LoginPanel wrong-password"><div class="botom">Wrong Password or Username</div></div>';
     ?>
 </body>
+
 </html>
