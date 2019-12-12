@@ -5,24 +5,27 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
+  margin-right: 10px;
 }
 
-.dropbtn:hover,
-.dropbtn:focus {
+.dropbtn:hover:not(.red),.dropbtn:focus:not(.red) {
   background-color: #3e8e41;
 }
-
+.red{
+  background-color: rgb(136, 28, 28);
+  display: none;
+}
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
 .dropdown-content {
+  overflow: visible;
   display: none;
   position: absolute;
   background-color: #f6f6f6;
   min-width: 230px;
-  overflow: auto;
   border: 1px solid #ddd;
   z-index: 1;
 }
@@ -53,9 +56,18 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    width: 250px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .submit:hover{
     background-color: rgb(67, 134, 196);
+}
+.p5Canvas{
+  display: none;
+}
+form{
+  margin: 0;
 }
 
 .datagrid table { border-collapse: collapse; text-align: left; width: 100%; } 
@@ -76,12 +88,4 @@
 .datagrid table tfoot  li { display: inline; }
 .datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #006699;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; }
 .datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #006699; color: #FFFFFF; background: none; background-color:#00557F;}
-.datagrid table tr.low, div.legend span.low { background: #7dff77;}
-.datagrid table tr.ok, div.legend span.ok { background: #ffda77;}
-.datagrid table tr.high, div.legend span.high { background: #ff526a;}
-.datagrid table tr.bold  td, div.legend span.bold { font-weight: bold; }
-.datagrid table tr td.ok, div.legend span.snrOk { font-weight: normal; background: #ffffff; color: #2fa22f; } 
-.datagrid table tr td.low, div.legend span.snrLow { font-weight: normal; background: #ffffff; color: #f1a22f; } 
-.datagrid table tr td.error, div.legend span.snrError { font-weight: normal; background: #ffffff; color: #ff0000; } 
-.datagrid table tr td.empty, div.legend span.snrEmpty { font-weight: normal; background: #ffffff; color: #000000; } 
 div.datagrid { float: left; height: 90%; overflow: scroll; width: 100%; }
