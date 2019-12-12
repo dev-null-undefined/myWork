@@ -14,4 +14,4 @@ magic_packet=$(
   echo $magic_packet | sed -e 's/../\\x&/g'
 )
 
-echo -e $magic_packet | nc -w1 -u $broadcast $port
+echo -e $magic_packet | sudo nc -w1 -b -u $broadcast $port
