@@ -1,5 +1,5 @@
 #!/bin/bash
-mac_address=$0
+mac_address=$1
 mac_address=$(echo $mac_address | sed 's/://g')
 broadcast="255.255.255.255"
 port=9
