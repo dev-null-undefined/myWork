@@ -328,5 +328,5 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-Language/JavaPC/Libaries
-Language/JavaPC/universal/PololetniProjectPCV/lib
+**/Libaries/
+**/lib/
