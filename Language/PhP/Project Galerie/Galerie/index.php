@@ -192,8 +192,8 @@ if (!isset($_SESSION['Username'])) {
 
                                 $buffer .= '<div id="pic-' . $currentImage . '" class="overlay">
                                     <img id="img-' . $currentImage . '" class="big-img" data-src="./getImage.php?Image=' . $file . '&Small=false">
-                                    <a onclick="' . ($currentImage > 1 ? 'load("img-' . ($currentImage - 1) . '")' : 'closeX()') . '" class="prev" title="Prev">►►</a> 
-                                    <a onclick="' . ($currentImage < $numberOfImages - 1 ? 'load("img-' . ($currentImage + 1) . '")' : 'closeX()') . '" class="next" title="Next">►►</a> 
+                                    <a onclick=' . ($currentImage > 1 ? 'load("img-' . ($currentImage - 1) . '")' : 'closeX()') . ' class="prev" title="Prev">►►</a> 
+                                    <a onclick=' . ($currentImage < $numberOfImages - 1 ? 'load("img-' . ($currentImage + 1) . '")' : 'closeX()') . ' class="next" title="Next">►►</a> 
                                     <a onclick="closeX()" class="close" title="Close">×</a> 
                                     </div>';
                             }
@@ -203,8 +203,8 @@ if (!isset($_SESSION['Username'])) {
                             $currentImage++;
                             $buffer .= '<div id="pic-' . $currentImage . '" class="overlay">
                                 <img id="img-' . $currentImage . '" class="big-img" data-src="' . '.' . '/' . $dir . '/' . $file . '" alt="' . $file . '">
-                                <a onclick="' . ($currentImage > 1 ? 'load("img-' . ($currentImage - 1) . '")' : 'closeX()') . '" class="prev" title="Prev">►►</a> 
-                                <a onclick="' . ($currentImage < $numberOfImages - 1 ? 'load("img-' . ($currentImage + 1) . '")' : 'closeX()') . '" class="next" title="Next">►►</a> 
+                                <a onclick=' . ($currentImage > 1 ? 'load("img-' . ($currentImage - 1) . '")' : 'closeX()') . ' class="prev" title="Prev">►►</a> 
+                                <a onclick=' . ($currentImage < $numberOfImages - 1 ? 'load("img-' . ($currentImage + 1) . '")' : 'closeX()') . ' class="next" title="Next">►►</a> 
                                 <a onclick="closeX()" class="close" title="Close">×</a> 
                                 </div>';
                         }
