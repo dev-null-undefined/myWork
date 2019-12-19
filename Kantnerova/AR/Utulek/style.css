@@ -28,8 +28,8 @@
 .top-navigation li.current a {
   background-color: rgb(7, 41, 104);
 }
-.top-navigation li:hover {
-  background-color: rgb(72, 126, 226);
+.top-navigation li:hover a {
+  background-color: rgb(61, 123, 236);
 }
 .image-header {
   width: 100%;
@@ -41,15 +41,55 @@ body {
   width: 100%;
   margin: 0;
 }
-.content{
- width: 1000px;
- margin: 0 auto;
+.content {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: beige;
 }
-footer{
-    width: 100%;
-    display: block;
-    text-align: center;
+footer {
+  width: 100%;
+  display: block;
+  text-align: center;
 }
-.left-image{
-  position: relative;
+body {
+  background-color: #f5ead4;
+}
+.atribute-name {
+  text-align: right;
+}
+.pejsek-info {
+  background-color: rgb(253, 194, 32);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.pejsek-info table {
+  display: inline-block;
+  /* border: 5px solid rgba(245, 245, 245, 0.295); */
+}
+.pejsek-info img {
+  vertical-align: top;
+  margin-top: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.nabidka{
+  overflow: auto;
+}
+main{
+  display: inline-block;
+  width: 68%;
+  margin-right: 5%;
+  margin-left: 2%;
+}
+aside{
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+}
+.gallery img{
+  width:30%;
+  margin-left: 3%;
+}
+article{
+  background-color: azure;
 }
