@@ -1,42 +1,79 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const bash = new RegExp("^!run bash");
-//const python = new RegExp("^!run python");
+const bash = new RegExp("^!run bash ");
+const python = new RegExp("^!run python ");
+const php = new RegExp("^!run php ");
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
 const { exec } = require("child_process");
-let msgText;
+let currentMsg;
+
 client.on("message", msg => {
+  currentMsg=msg;
+  msgText = "";
+  if (msg.content == "!run help") {
+    msg.reply("!run bash || !run python || !run php");
+    return;
+  }
   if (bash.test(msg.content)) {
     let text = msg.content;
     if (text.endsWith("`")) {
-      text = text.substring(12, text.length - 3);
-    }else{
+      text = text.substring(13, text.length - 3);
+    } else {
       text = text.substring(9, text.length);
     }
-    msgText = "";
     msgText += "Running :``` " + text + " ``` ";
-    exec("cd / && " + text, (err, stdout, stderr) => {
-      if (err) {
-        //some err occurred
-        msgText += "Error:``` " + err + " ``` ";
+    exec("cd / && " + text, myMethod);
+  } else {
+    if (python.test(msg.content)) {
+      let text = msg.content;
+      if (text.endsWith("`")) {
+        text = text.substring(15, text.length - 3);
       } else {
-        // the *entire* stdout and stderr (buffered)
-        if (stdout) {
-          msgText += "Response:``` " + stdout + " ``` ";
-        }
-        if (stderr) {
-          msgText += "Response:``` " + stderr + " ``` ";
-        }
+        text = text.substring(11, text.length);
       }
-      msg.reply(msgText);
-    });
-  }else{
+      msgText += "Running with python :``` " + text + " ``` ";
+      exec("python -c '" + text + "'", myMethod);
+    } else {
+      if (php.test(msg.content)) {
+        let text = msg.content;
+        if (text.endsWith("`")) {
+          text = text.substring(12, text.length - 3);
+        } else {
+          text = text.substring(8, text.length);
+        }
+        msgText += "Running with php :``` " + text + " ``` ";
+        exec("php -r '" + text + "'", myMethod);
+      }
+    }
   }
 });
+function replyThis(msgText) {
+  if (msgText.length > 2000) {
+    exec("echo '" + msgText + "' > result.txt");
+    currentMsg.reply("Result is too BIG here is it in file.", {
+      files: ["./result.txt"]
+    });
+  } else {
+    currentMsg.reply(msgText);
+  }
+}
+function myMethod(err, stdout, stderr) {
+  if (err) {
+    msgText += "Error:``` " + err + " ``` ";
+  } else {
+    if (stdout) {
+      msgText += "Response:``` " + stdout + " ``` ";
+    }
+    if (stderr) {
+      msgText += "Response:``` " + stderr + " ``` ";
+    }
+  }
+  replyThis(msgText);
+}
 
-client.login("NjU4NDY3MjYxNTMwNTA1MjE3.XgAT5g.Xd2grtkmZMEwyeJASL0rysNW2xk");
+client.login("NjU4NDY3MjYxNTMwNTA1MjE3.XgBCgQ.tNYqyrOXDl-0Xh6_YAULhTgI9S8");
