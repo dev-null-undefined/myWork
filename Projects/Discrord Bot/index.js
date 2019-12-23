@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+const bash = new RegExp("^!run bash");
+//const python = new RegExp("^!run python");
+
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -8,13 +11,12 @@ client.on("ready", () => {
 const { exec } = require("child_process");
 let msgText;
 client.on("message", msg => {
-  let regex = new RegExp("^!run ");
-  if (regex.test(msg.content)) {
+  if (bash.test(msg.content)) {
     let text = msg.content;
     if (text.endsWith("`")) {
-      text = text.substring(8, text.length - 3);
+      text = text.substring(12, text.length - 3);
     }else{
-      text = text.substring(5, text.length);
+      text = text.substring(9, text.length);
     }
     msgText = "";
     msgText += "Running :``` " + text + " ``` ";
@@ -33,6 +35,7 @@ client.on("message", msg => {
       }
       msg.reply(msgText);
     });
+  }else{
   }
 });
 
