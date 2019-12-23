@@ -87,6 +87,8 @@ function myMethod(err, stdout, stderr) {
 
 fs.readFile('token', (err, data) => { 
   if (err) throw err; 
-  console.log(data.toString()); 
-  client.login(data.toString());
+  let token=data.toString();
+  token=token.replace(/(\r\n|\n|\r)/gm, "");
+  console.log(token); 
+  client.login(token);
 });
