@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const fs = require("fs");
 
 const bash = new RegExp("^!run bash ");
 const python = new RegExp("^!run python ");
@@ -12,8 +13,13 @@ client.on("ready", () => {
 const { exec } = require("child_process");
 let currentMsg;
 
+function writeToFile(params) {
+  fs.writeFile("execute", params, err => {
+    if (err) throw err;
+  });
+}
 client.on("message", msg => {
-  currentMsg=msg;
+  currentMsg = msg;
   msgText = "";
   if (msg.content == "!run help") {
     msg.reply("!run bash || !run python || !run php");
@@ -27,17 +33,19 @@ client.on("message", msg => {
       text = text.substring(9, text.length);
     }
     msgText += "Running :``` " + text + " ``` ";
-    exec("cd / && " + text, myMethod);
+    writeToFile(text);
+    exec("/bin/bash execute" + text, myMethod);
   } else {
     if (python.test(msg.content)) {
       let text = msg.content;
       if (text.endsWith("`")) {
         text = text.substring(15, text.length - 3);
       } else {
-        text = text.substring(11, text.length);
+        text = text.substring(12, text.length);
       }
       msgText += "Running with python :``` " + text + " ``` ";
-      exec("python -c '" + text + "'", myMethod);
+      writeToFile(text);
+      exec("python execute", myMethod);
     } else {
       if (php.test(msg.content)) {
         let text = msg.content;
@@ -47,7 +55,8 @@ client.on("message", msg => {
           text = text.substring(8, text.length);
         }
         msgText += "Running with php :``` " + text + " ``` ";
-        exec("php -r '" + text + "'", myMethod);
+        writeToFile("<?php"+text+"?>");
+        exec("php -f execute", myMethod);
       }
     }
   }
@@ -64,16 +73,16 @@ function replyThis(msgText) {
 }
 function myMethod(err, stdout, stderr) {
   if (err) {
-    msgText += "Error:``` " + err + " ``` ";
+    msgText += "Error:```" + err + "``` ";
   } else {
     if (stdout) {
-      msgText += "Response:``` " + stdout + " ``` ";
+      msgText += "Response:```" + stdout + "``` ";
     }
     if (stderr) {
-      msgText += "Response:``` " + stderr + " ``` ";
+      msgText += "Response:```" + stderr + "``` ";
     }
   }
   replyThis(msgText);
 }
 
-client.login("NjU4NDY3MjYxNTMwNTA1MjE3.XgBCgQ.tNYqyrOXDl-0Xh6_YAULhTgI9S8");
+client.login("NjU4NDY3MjYxNTMwNTA1MjE3.XgBH3w.HclGnq6yc3CDvs79P5T_nkixm1A");
