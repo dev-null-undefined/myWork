@@ -85,4 +85,8 @@ function myMethod(err, stdout, stderr) {
   replyThis(msgText);
 }
 
-client.login("NjU4NDY3MjYxNTMwNTA1MjE3.XgBH3w.HclGnq6yc3CDvs79P5T_nkixm1A");
+fs.readFile('token', (err, data) => { 
+  if (err) throw err; 
+  console.log(data.toString()); 
+  client.login(data.toString());
+});
