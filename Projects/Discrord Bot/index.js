@@ -20,15 +20,15 @@ function writeToFile(params) {
   });
 }
 client.on("message", msg => {
+  //HELP
+  if (msg.content == "!run help") {
+    msg.reply("```!run bash/python/php/js```");
+    return;
+  }
   if (bash.test(msg.content) || php.test(msg.content) || python.test(msg.content) || js.test(msg.content)) {
-    if (msg.member.roles.find(r => r.name === "Admin") || msg.member.roles.find(r => r.name === "Owner") || msg.member.roles.find(r => r.name === "Linux Bot User")) {
+    if (msg.member!=null&&(msg.member.roles.find(r => r.name === "Admin"||r.name === "Owner"||r.name === "Linux Bot User"))) {
       currentMsg = msg;
       msgText = "";
-      //HELP
-      if (msg.content == "!run help") {
-        msg.reply("!run bash || !run python || !run php");
-        return;
-      }
       //BASH
       if (bash.test(msg.content)) {
         let text = msg.content;
