@@ -32,7 +32,7 @@ client.on("message", msg => {
       //BASH
       if (bash.test(msg.content)) {
         let text = msg.content;
-        if (text.endsWith("`")) {
+        if (text.endsWith("`")) { 
           text = text.substring(13, text.length - 3);
         } else {
           text = text.substring(9, text.length);
@@ -69,7 +69,7 @@ client.on("message", msg => {
       if (js.test(msg.content)) {
         let text = msg.content;
         if (text.endsWith("`")) {
-          text = text.substring(12, text.length - 3);
+          text = text.substring(11, text.length - 3);
         } else {
           text = text.substring(8, text.length);
         }
