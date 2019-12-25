@@ -6,6 +6,8 @@ const bash = new RegExp("^!run bash ");
 const python = new RegExp("^!run python ");
 const php = new RegExp("^!run php ");
 const js = new RegExp("^!run js ");
+const java = new RegExp("^!run java ");
+const csharp = new RegExp("^!run c# ");
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -22,10 +24,10 @@ function writeToFile(params) {
 client.on("message", msg => {
   //HELP
   if (msg.content == "!run help") {
-    msg.reply("```!run bash/python/php/js```");
+    msg.reply("```!run bash/python/php/js/java/c#```");
     return;
   }
-  if (bash.test(msg.content) || php.test(msg.content) || python.test(msg.content) || js.test(msg.content)) {
+  if (bash.test(msg.content) || php.test(msg.content) || python.test(msg.content) || js.test(msg.content) || java.test(msg.content) ||csharp.test(msg.content)) {
     if (msg.member!=null&&(msg.member.roles.find(r => r.name === "Admin"||r.name === "Owner"||r.name === "Linux Bot User"))) {
       currentMsg = msg;
       msgText = "";
@@ -76,6 +78,30 @@ client.on("message", msg => {
         msgText += "Running with java script :``` " + text + " ``` ";
         writeToFile(text);
         exec("node execute", myMethod);
+      }
+      //JAVA
+      if (java.test(msg.content)) {
+        let text = msg.content;
+        if (text.endsWith("`")) {
+          text = text.substring(13, text.length - 3);
+        } else {
+          text = text.substring(10, text.length);
+        }
+        msgText += "Running with java :``` " + text + " ``` ";
+        writeToFile("class Main{"+text+"}");
+        exec("mv execute java/class.java && cd java/ && javac class.java && java Main", myMethod);
+      }
+      //C#
+      if(csharp.test(msg.content)){
+        let text = msg.content;
+        if (text.endsWith("`")) {
+          text = text.substring(11, text.length - 3);
+        } else {
+          text = text.substring(8, text.length);
+        }
+        msgText += "Running with C# :``` " + text + " ``` ";
+        writeToFile(text);
+        exec("mcs -out:execute.exe execute && mono execute.exe", myMethod);
       }
     } else {
       msg.reply("You dont have permition to do this. Ask admin for perm.");
