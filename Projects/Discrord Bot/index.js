@@ -2,12 +2,14 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 
-const bash = new RegExp("^!run bash ");
-const python = new RegExp("^!run python ");
-const php = new RegExp("^!run php ");
-const js = new RegExp("^!run js ");
-const java = new RegExp("^!run java ");
-const csharp = new RegExp("^!run c# ");
+const run = new RegExp("^!run ");
+
+const reset = new RegExp("^!linux reset");
+const stop = new RegExp("^!linux stop");
+const shutdown = new RegExp("^!linux shutdown");
+const start = new RegExp("^!linux start");
+const restore = new RegExp("^!linux restore");
+const status = new RegExp("^!linux status");
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -16,92 +18,91 @@ client.on("ready", () => {
 const { exec } = require("child_process");
 let currentMsg;
 
-function writeToFile(params) {
-  fs.writeFile("execute", params, err => {
+let msgText;
+
+function appendToFile(fileName, text) {
+  fs.appendFile(fileName, text, err => {
     if (err) throw err;
   });
 }
+function writeToFile(fileName, text) {
+  fs.writeFile(fileName, text, err => {
+    if (err) throw err;
+  });
+}
+
 client.on("message", msg => {
+  if (run.test(msg.content)) {
+    var currentdate = new Date();
+    var datetime =
+      "Last Sync: " +
+      currentdate.getDate() +
+      "/" +
+      (currentdate.getMonth() + 1) +
+      "/" +
+      currentdate.getFullYear() +
+      " @ " +
+      currentdate.getHours() +
+      ":" +
+      currentdate.getMinutes() +
+      ":" +
+      currentdate.getSeconds();
+    appendToFile("run_log", datetime + "  " + msg.author.tag + "  " + msg.content + "\n");
+  }
+  msgText = "";
   //HELP
-  if (msg.content == "!run help") {
-    msg.reply("```!run bash/python/php/js/java/c#```");
+  if (msg.content == "!linux help") {
+    msg.reply("```!linux reset/stop/start/shutdown/restore/status```");
     return;
   }
-  if (bash.test(msg.content) || php.test(msg.content) || python.test(msg.content) || js.test(msg.content) || java.test(msg.content) ||csharp.test(msg.content)) {
-    if (msg.member!=null&&(msg.member.roles.find(r => r.name === "Admin"||r.name === "Owner"||r.name === "Linux Bot User"))) {
-      currentMsg = msg;
-      msgText = "";
-      //BASH
-      if (bash.test(msg.content)) {
-        let text = msg.content;
-        if (text.endsWith("`")) { 
-          text = text.substring(13, text.length - 3);
-        } else {
-          text = text.substring(9, text.length);
-        }
-        msgText += "Running with bash:``` " + text + " ``` ";
-        writeToFile(text);
-        exec("/bin/bash ./execute", myMethod);
-      }
-      //PYTHON
-      if (python.test(msg.content)) {
-        let text = msg.content;
-        if (text.endsWith("`")) {
-          text = text.substring(15, text.length - 3);
-        } else {
-          text = text.substring(12, text.length);
-        }
-        msgText += "Running with python :``` " + text + " ``` ";
-        writeToFile(text);
-        exec("python execute", myMethod);
-      }
-      //PHP
-      if (php.test(msg.content)) {
-        let text = msg.content;
-        if (text.endsWith("`")) {
-          text = text.substring(12, text.length - 3);
-        } else {
-          text = text.substring(8, text.length);
-        }
-        msgText += "Running with php :``` " + text + " ``` ";
-        writeToFile("<?php" + text + "?>");
-        exec("php -f execute", myMethod);
-      }
-      //Java scirpt
-      if (js.test(msg.content)) {
-        let text = msg.content;
-        if (text.endsWith("`")) {
-          text = text.substring(11, text.length - 3);
-        } else {
-          text = text.substring(8, text.length);
-        }
-        msgText += "Running with java script :``` " + text + " ``` ";
-        writeToFile(text);
-        exec("node execute", myMethod);
-      }
-      //JAVA
-      if (java.test(msg.content)) {
-        let text = msg.content;
-        if (text.endsWith("`")) {
-          text = text.substring(13, text.length - 3);
-        } else {
-          text = text.substring(10, text.length);
-        }
-        msgText += "Running with java :``` " + text + " ``` ";
-        writeToFile("class Main{"+text+"}");
-        exec("mv execute java/class.java && cd java/ && javac class.java && java Main", myMethod);
-      }
-      //C#
-      if(csharp.test(msg.content)){
-        let text = msg.content;
-        if (text.endsWith("`")) {
-          text = text.substring(11, text.length - 3);
-        } else {
-          text = text.substring(8, text.length);
-        }
-        msgText += "Running with C# :``` " + text + " ``` ";
-        writeToFile(text);
-        exec("mcs -out:execute.exe execute && mono execute.exe", myMethod);
+  if (
+    reset.test(msg.content) ||
+    stop.test(msg.content) ||
+    start.test(msg.content) ||
+    restore.test(msg.content) ||
+    shutdown.test(msg.content) ||
+    status.test(msg.content)
+  ) {
+    currentMsg = msg;
+    if (msg.member != null && msg.member.roles.find(r => r.name === "Admin" || r.name === "Owner")) {
+      var currentdate = new Date();
+      var datetime =
+        "Last Sync: " +
+        currentdate.getDate() +
+        "/" +
+        (currentdate.getMonth() + 1) +
+        "/" +
+        currentdate.getFullYear() +
+        " @ " +
+        currentdate.getHours() +
+        ":" +
+        currentdate.getMinutes() +
+        ":" +
+        currentdate.getSeconds();
+      appendToFile("linux_log", datetime + "  " + msg.author.tag + "  " + msg.content + "\n");
+      switch (true) {
+        case reset.test(msg.content):
+          exec("virsh destroy debian10 && virsh start debian10", myMethod);
+          break;
+        case start.test(msg.content):
+          exec("virsh start debian10", myMethod);
+          break;
+        case stop.test(msg.content):
+          exec("virsh destroy debian10", myMethod);
+          break;
+        case restore.test(msg.content):
+          msg.reply("This can take up to 10 minutes please wait.");
+          exec(
+            "virsh destroy debian10; virsh undefine debian10 && rm -f /home/martin/debian10 &&  virt-clone --original debian10-clone --name debian10 --auto-clone && virsh start debian10",
+            myMethodRestore
+          );
+          break;
+        case shutdown.test(msg.content):
+          exec("virsh shutdown debian10", myMethod);
+          break;
+        case status.test(msg.content):
+          exec('virsh list --all | grep "debian10 "', myMethod);
+          break;
       }
     } else {
       msg.reply("You dont have permition to do this. Ask admin for perm.");
@@ -110,7 +111,7 @@ client.on("message", msg => {
 });
 function replyThis(msgText) {
   if (msgText.length > 2000) {
-    exec("echo '" + msgText + "' > result.txt");
+    writeToFile("result.txt", msgText);
     currentMsg.reply("Result is too BIG here is it in file.", {
       files: ["./result.txt"]
     });
@@ -129,6 +130,9 @@ function myMethod(err, stdout, stderr) {
     msgText += "Response:```" + stderr + "``` ";
   }
   replyThis(msgText);
+}
+function myMethodRestore(err, stdout, stderr) {
+  replyThis("DONE");
 }
 
 fs.readFile("token", (err, data) => {
