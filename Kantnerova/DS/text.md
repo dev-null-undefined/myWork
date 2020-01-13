@@ -55,3 +55,17 @@ Nevytvari se methody     tvori se jedno radkove prikazy
    - tabulka je ve třetí normální formě, pokud neexistují žádné závislosti mezi neklíčovými sloupci
 
 **[Neco navic](http://www.databaze.chytrak.cz/)**
+
+### Self reference 
+- Odkaz tabulky sama na sebe
+1) **1:N** hiearchisky vztah (Podrizeny nadrizeny)
+    
+            Zamestnanec
+    
+            PK:id
+    
+            prijmeni
+    
+            jmeno
+    
+            FK:vedouci_id
