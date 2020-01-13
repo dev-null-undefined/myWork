@@ -51,7 +51,6 @@ int main() {
     accelerometer->get_x_axes(axes2);
     acc_gyro->get_x_axes(axes3);
     acc_gyro->get_g_axes(axes4);
-   
     printf("INSERT INTO Report(Senzor_id,Date_time,HTS221_temp,HTS221_hum,LPS22HB_temp,LPS22HB_press,LSM303AGR_mag_x,LSM303AGR_mag_y,LSM303AGR_mag_z,LSM303AGR_acc_x,LSM303AGR_acc_y,LSM303AGR_acc_z,LSM6DSL_gyro_x,LSM6DSL_gyro_y,LSM6DSL_gyro_z,LSM6DSL_acc_x,LSM6DSL_acc_y,LSM6DSL_acc_z)VALUES('1',NOW(),%s,%s,%s,%s,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld,%ld);\n\r",print_double(buffer1, value1), print_double(buffer2, value2),print_double(buffer3, value3), print_double(buffer4, value4),axes1[0], axes1[1], axes1[2],axes2[0], axes2[1], axes2[2],axes3[0], axes3[1], axes3[2],axes4[0], axes4[1], axes4[2]);
     wait(2);
   }

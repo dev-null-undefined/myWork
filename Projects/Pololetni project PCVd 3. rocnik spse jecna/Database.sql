@@ -26,8 +26,3 @@ CREATE TABLE Report(
   PRIMARY KEY (`Id`),
   CONSTRAINT `Report_fk` FOREIGN KEY (`Senzor_id`) REFERENCES `Senzor` (`Id`)
 );
-INSERT INTO Senzor(Nazev)VALUES('Arduino_01');
-INSERT INTO Report(Senzor_id,Date_time,HTS221_temp,HTS221_hum,LPS22HB_temp,LPS22HB_press,LSM303AGR_mag_x,LSM303AGR_mag_y,LSM303AGR_mag_z,LSM303AGR_acc_x,LSM303AGR_acc_y,LSM303AGR_acc_z,LSM6DSL_gyro_x,LSM6DSL_gyro_y,LSM6DSL_gyro_z,LSM6DSL_acc_x,LSM6DSL_acc_y,LSM6DSL_acc_z)VALUES('1',NOW(),"hojda","hojda","hojda","hojda",1,1,1,1,1,1,1,1,1,1,1,1);
-
-INSERT INTO Report(Senzor_id,Date_time,HTS221_temp,HTS221_hum,LPS22HB_temp,LPS22HB_press,LSM303AGR_mag_x,LSM303AGR_mag_y,LSM303AGR_mag_z,LSM303AGR_acc_x,LSM303AGR_acc_y,LSM303AGR_acc_z,LSM6DSL_gyro_x,LSM6DSL_gyro_y,LSM6DSL_gyro_z,LSM6DSL_acc_x,LSM6DSL_acc_y,LSM6DSL_acc_z)VALUES('1',NOW(),"hojda","hojda","hojda","hojda",1,1,1,1,1,1,1,1,1,1,1,1);
-

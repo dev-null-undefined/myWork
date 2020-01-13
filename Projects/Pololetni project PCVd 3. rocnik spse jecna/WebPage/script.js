@@ -256,13 +256,27 @@ function draw() {
       }
     }
   }
+  let maxAndMin = abs(minimum) + abs(maximum);
+  fill(255);
+  textAlign(LEFT, TOP);
+  textSize(17);
+  if (minimum < 0) {
+    for (let i = 0; i < 10; i++) {
+      text((maxAndMin - (maxAndMin / 10) * i + minimum).toFixed(2), 0, (canvas.height / 10) * i);
+    }
+  } else {
+    let maxAndMin = maximum;
+    for (let i = 0; i < 10; i++) {
+      text((maxAndMin - (maxAndMin / 10) * i).toFixed(2), 0, (canvas.height / 10) * i);
+    }
+  }
 }
 function windowResized() {
   resizeCanvas(window.windowWidth * 0.98, window.windowHeight * 0.9);
 }
-function resetInputs(){
-  let dropDown=document.getElementById("myDropdown")
-  let inputs=Array.from(dropDown.getElementsByTagName("input"));
-  inputs.filter(element=>element.type=="checkbox");
-  inputs.forEach(element=>element.checked=false);
+function resetInputs() {
+  let dropDown = document.getElementById("myDropdown");
+  let inputs = Array.from(dropDown.getElementsByTagName("input"));
+  inputs.filter(element => element.type == "checkbox");
+  inputs.forEach(element => (element.checked = false));
 }
