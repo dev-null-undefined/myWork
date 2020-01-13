@@ -50,6 +50,7 @@ footer {
   width: 100%;
   display: block;
   text-align: center;
+  background: rgb(62,62,240);
 }
 body {
   background-color: #f5ead4;
@@ -58,7 +59,7 @@ body {
   text-align: right;
 }
 .pejsek-info {
-  background-color: rgb(253, 194, 32);
+  background-color: rgb(234, 224, 194);
   border: 1px solid black;
   border-radius: 10px;
 }
@@ -77,14 +78,17 @@ body {
 }
 main{
   display: inline-block;
-  width: 68%;
-  margin-right: 5%;
+  width: 70%;
+  margin-right: 2%;
   margin-left: 2%;
 }
 aside{
   display: inline-block;
-  width: 24%;
+  width: 22%;
   vertical-align: top;
+  background: azure;
+  margin-top: 2%;
+  padding: 10px;
 }
 .gallery img{
   width:30%;
@@ -92,4 +96,6 @@ aside{
 }
 article{
   background-color: azure;
+  padding: 10px;
+  margin-top: 2%;
 }

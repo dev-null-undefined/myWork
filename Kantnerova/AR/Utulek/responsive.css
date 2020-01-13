@@ -1,0 +1,44 @@
+@media screen and (max-width: 1000px) {
+  main {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  aside {
+    width: 93%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 10px;
+  }
+  .content {
+    width: 100%;
+  }
+  .gallery img {
+    width: 46%;
+  }
+  .top-navigation li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  main {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  aside {
+    width: 93%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 10px;
+  }
+  .content {
+    width: 100%;
+  }
+  .gallery img {
+    width: 94%;
+  }
+  .top-navigation li {
+    width: 100%;
+  }
+}
