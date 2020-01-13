@@ -10,6 +10,7 @@ iptables -t nat -A POSTROUTING --out-interface enp0s3 -d 192.168.1.21 -p tcp --d
 iptables -t nat -A PREROUTING -p tcp -s 0/0 -d 10.0.2.14 --dport 9873 -j DNAT --to 192.168.1.21:22
 iptables -t nat -A POSTROUTING -o enp0s3 -d 192.168.1.21 -j SNAT --to-source 10.0.2.14
 
+
 iptables -A FORWARD -i enp0s3 -o enp0s8 -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -i enp0s3 -o enp0s8 -j ACCEPT
 
