@@ -35,7 +35,7 @@ client.on("message", msg => {
   if (run.test(msg.content)) {
     var currentdate = new Date();
     var datetime =
-      "Last Sync: " +
+      "Date-time: " +
       currentdate.getDate() +
       "/" +
       (currentdate.getMonth() + 1) +
@@ -67,7 +67,7 @@ client.on("message", msg => {
     if (msg.member != null && msg.member.roles.find(r => r.name === "Admin" || r.name === "Owner")) {
       var currentdate = new Date();
       var datetime =
-        "Last Sync: " +
+        "Date-time: " +
         currentdate.getDate() +
         "/" +
         (currentdate.getMonth() + 1) +
@@ -82,15 +82,39 @@ client.on("message", msg => {
       appendToFile("linux_log", datetime + "  " + msg.author.tag + "  " + msg.content + "\n");
       switch (true) {
         case reset.test(msg.content):
-          exec("virsh destroy debian10 && virsh start debian10", myMethod);
+          client.user.setPresence({
+            status: "idle",
+            game: {
+                name: '!linux help !run is REBOOTING',
+                type: "LISTENING"
+            }
+          });
+          exec("virsh destroy debian10; virsh start debian10", myMethod);
+
           break;
         case start.test(msg.content):
           exec("virsh start debian10", myMethod);
           break;
         case stop.test(msg.content):
+          client.user.setPresence({
+            status: 'idle',
+            game: {
+                name: '!linux help !run is poweredOff',
+                type: "LISTENING"
+            }
+          });
+
           exec("virsh destroy debian10", myMethod);
           break;
         case restore.test(msg.content):
+          client.user.setPresence({
+            status: "dnd",
+            game: {
+                name: 'Restoring!',
+                type: "LISTENING"
+            }
+          });
+
           msg.reply("This can take up to 10 minutes please wait.");
           exec(
             "virsh destroy debian10; virsh undefine debian10 && rm -f /home/martin/debian10 &&  virt-clone --original debian10-clone --name debian10 --auto-clone && virsh start debian10",
@@ -98,6 +122,14 @@ client.on("message", msg => {
           );
           break;
         case shutdown.test(msg.content):
+          client.user.setPresence({
+            status: "idle",
+            game: {
+                name: '!linux help !run is poweredOff',
+                type: "LISTENING"
+            }
+          });
+
           exec("virsh shutdown debian10", myMethod);
           break;
         case status.test(msg.content):
@@ -132,6 +164,13 @@ function myMethod(err, stdout, stderr) {
   replyThis(msgText);
 }
 function myMethodRestore(err, stdout, stderr) {
+  client.user.setPresence({
+    status: "idle",
+    game: {
+        name: '!linux help !run is REBOOTING',
+        type: "LISTENING"
+    }
+  });
   replyThis("DONE");
 }
 

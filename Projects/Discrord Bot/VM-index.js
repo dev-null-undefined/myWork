@@ -11,6 +11,14 @@ const csharp = new RegExp("^!run c# ");
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setStatus('online');
+  client.user.setPresence({
+    game: {
+        name: '!run help or !linux help',
+        type: "LISTENING",
+        url: "https://www.twitch.tv/learningstudent"
+    }
+  });
 });
 
 const { exec } = require("child_process");
