@@ -39,7 +39,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		if (args.length > 2) {
-			if (args[2].equalsIgnoreCase("-debug")) {
+			if (args[1].equalsIgnoreCase("-debug")) {
 				debug = true;
 			}
 		}

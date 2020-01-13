@@ -11,6 +11,6 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="PololetniProjectPCV/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/marti/OneDrive/Programing/JavaPC/universal/PololetniProjectPCV/lib/mysql-connector-java-5.1.48.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.48.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
