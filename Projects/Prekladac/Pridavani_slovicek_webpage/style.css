@@ -1,10 +1,44 @@
-.Strana{
-    width: 49%;
-    display: inline-block;
+* {
+  margin: 0 auto;
 }
-textarea{
-    width: 100%;
+textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.575);
 }
-select{
-    width: 100%;
+.pravaStrana textarea {
+  border-radius: 0px 15px 15px 0px;
+}
+.levaStrana textarea {
+  border-radius: 15px 0px 0px 15px;
+}
+textarea:active{
+    border-color: rgb(12, 126, 255);
+}
+textarea:focus{
+  border-color: rgba(56, 138, 231, 0.61);
+}
+select {
+  width: 100%;
+}
+
+.levaStrana {
+  width: 30%;
+  margin-top: 50px;
+  margin-left: 15%;
+  float: left;
+}
+.pravaStrana {
+  width: 30%;
+  float: left;
+  margin-top: 50px;
+}
+select {
+  width: 100%;
+}
+.submit {
+  float: none;
+  width: 5%;
+  margin-left: 42.5%;
 }

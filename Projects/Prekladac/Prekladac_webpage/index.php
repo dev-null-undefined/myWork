@@ -89,7 +89,7 @@ if (isset($_GET['jazyk1'])) {
   echo '
       </select>
     </div>
-    <input type="submit" value="Submit" />
+    <input type="image" src="imgs/arrow.png" class="submit" alt="Submit" />
   </form>
   <a href="http://84.242.120.206:5554/Pridavani_slovicek_webpage/">Pridat Slova</a>
 </body>';
@@ -115,7 +115,7 @@ if (isset($_GET['jazyk1'])) {
   echo '
       </select>
     </div>
-    <input type="submit" value="Submit" />
+    <input type="image" src="imgs/arrow.png" class="submit" alt="Submit" />
   </form>
   <a href="http://84.242.120.206:5554/Pridavani_slovicek_webpage/">Pridat Slova</a>
 </body>';

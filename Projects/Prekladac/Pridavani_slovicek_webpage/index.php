@@ -99,7 +99,8 @@ if (isset($_GET['jazyk1'])) {
   echo '
       </select>
     </div>
-    <input type="submit" value="Submit" />
+    
+    <input type="image" src="imgs/arrow.png" class="submit" alt="Submit" />
   </form>
   <form action="post.php">
       <input type="text" name="jazyk">
@@ -128,7 +129,8 @@ if (isset($_GET['jazyk1'])) {
   echo '
       </select>
     </div>
-    <input type="submit" value="Submit" />
+    
+    <input type="image" src="imgs/arrow.png" class="submit" alt="Submit" />
   </form>
   <form action="post.php">
       <input type="text" name="jazyk">
