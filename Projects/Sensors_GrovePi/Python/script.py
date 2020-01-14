@@ -1,27 +1,51 @@
 import time
-import mysql.connector
+import pymysql
 from grovepi import *
 from grove_rgb_lcd import *
 
+
 def insertVariblesIntoTable(connection, hum, temp, lux, noise):
-    try:
-        cursor = connection.cursor()
-        mySql_insert_query = """INSERT INTO Laptop (Id, Name, Price, Purchase_date) 
-                                VALUES (%s, %s, %s, %s) """
+    cursor = connection.cursor()
+    mySql_insert_query = """INSERT INTO Zaznam (Hum, Temp, Lux, Noise, Time)
+                                VALUES (%s, %s, %s, %s, %s) """
+    now = time.strftime('%Y-%m-%d %H:%M:%S')
+    recordTuple = (hum, temp, lux, noise, now)
+    cursor.execute(mySql_insert_query, recordTuple)
+    connection.commit()
 
-        now = time.strftime('%Y-%m-%d %H:%M:%S',datetime.now())
-        recordTuple = (hum, temp, lux, noise, now)
-        cursor.execute(mySql_insert_query, recordTuple)
-        connection.commit()
 
-connection = mysql.connector.connect(host='192.168.0.170', database='Pi', user='Pi', password='hesloProPiDoDatabaze')
-setRGB(40,125,0)
+connection = pymysql.connect(
+    host='192.168.0.170', user='Pi', passwd='hesloProPiDoDatabaze', db='Pi', port=5456)
+show = True
+loop = 0
+avgT = 0
+avgH = 0
+avgLux = 0
+avgNoise = 0
 while True:
-    try:
-        [ temp,hum ]=dht(7,0)
-        t=str(temp)
-        h=str(hum)
-        lux=str(analogRead(1))
-        noise=str(analogRead(0))
-        insertVariblesIntoTable(connection,hum,temp,lux,noise)
-        setText("Temp="+t+"C, Humidity="+h+"Lux level="+lux+", Sound="+noise+"db")
+    temp, hum = dht(7, 0)
+    lux = analogRead(0)
+    noise = analogRead(1)
+    avgT += temp
+    avgH += hum
+    avgLux += lux
+    avgNoise += noise
+    loop += 1
+    if loop == 60:
+        insertVariblesIntoTable(connection, str("{0:.2f}".format(avgH/60.0)), str("{0:.2f}".format(
+            avgT/60.0)), str("{0:.2f}".format(avgLux/60.0)), str("{0:.2f}".format(avgNoise/60.0)))
+        loop = 0
+        avgT = 0
+        avgH = 0
+        avgLux = 0
+        avgNoise = 0
+    if digitalRead(3) == 1:
+        show = not show
+    if show:
+        setRGB(10, 40, 5)
+        setText("T="+str(temp)+"C, H="+str(hum)+"%Lux="+str(lux) +
+                ", S="+str(noise)+"db"+str(loop))  # 15 char na radek
+    else:
+        setRGB(0, 0, 0)
+        setText("")  # 15 char na radek
+    time.sleep(1)
