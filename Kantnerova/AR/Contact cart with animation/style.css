@@ -1,0 +1,57 @@
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+.card {
+  display: block;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  width: 25%;
+  margin-left: 37%;
+  margin-right: 37%;
+  margin-top: 10%;
+}
+.card:hover {
+  animation: scale-up-center 0.4s;
+  /* animation-iteration-count: infinite; */
+  -webkit-animation-fill-mode: forwards;
+}
+.card:active {
+  animation: move-to-the-right 0.4s;
+  /* animation-iteration-count: infinite; */
+  -webkit-animation-fill-mode: forwards;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  90% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+@-webkit-keyframes move-to-the-right {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    left: 500px;
+  }
+  100% {
+    left: 600px;
+  }
+}
