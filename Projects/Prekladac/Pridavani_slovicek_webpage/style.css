@@ -1,0 +1,10 @@
+.Strana{
+    width: 49%;
+    display: inline-block;
+}
+textarea{
+    width: 100%;
+}
+select{
+    width: 100%;
+}
