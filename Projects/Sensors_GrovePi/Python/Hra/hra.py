@@ -117,4 +117,3 @@ while not done:
                 done=True
                 setText("!YOU WIN! :)    Heslo:hesloje123")
                 setRGB(255, 255, 255)
-return 1
