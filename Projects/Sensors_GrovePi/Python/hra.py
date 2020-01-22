@@ -7,7 +7,7 @@ ranger = 2  # digital ultrasonicRead(ranger)
 button = 3  # digital digitalRead(button)
 greenDiod = 4  # digital digitalWrite(greenDiod,1/0)
 blueDiod = 5  # digital digitalWrite(blueDiod,1/0)
-relay = 6  # digital digitalWrite(relay,1/0)
+redDiod = 6  # digital digitalWrite(relay,1/0)
 humTemp = 7  # digital dht(humTemp, 0)
 buzzer = 8  # digitalWrite(buzzer,1/0)
 
@@ -17,6 +17,11 @@ rotary = 2  # analog analogRead(rotary)
 # pinMode(5,"OUTPUT")
 # analogWrite(5,0-255)
 showText = True
+
+
+digitalWrite(blueDiod, 0)
+digitalWrite(redDiod, 0)
+digitalWrite(greenDiod, 0)
 
 done = False
 doneBlue = False
@@ -117,4 +122,7 @@ while not done:
                 done=True
                 setText("!YOU WIN! :)    Heslo:hesloje123")
                 setRGB(255, 255, 255)
-return 1
+        else:
+            digitalWrite(greenDiod, 0)
+            digitalWrite(blueDiod, 0)
+

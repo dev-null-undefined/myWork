@@ -10,8 +10,8 @@ relay = 6  # digital digitalWrite(relay,1/0)
 humTemp = 7  # digital dht(humTemp, 0)
 buzzer = 8  # digital dht(humTemp, 0)
 
-lux = 0  # analog analogRead(lux)
-noise = 1  # analog analogRead(noise)
+luxId = 0  # analog analogRead(lux)
+noiseId = 1  # analog analogRead(noise)
 rotary = 2  # analog analogRead(rotary)
 # pinMode(5,"OUTPUT")
 # analogWrite(5,0-255)
@@ -29,24 +29,29 @@ def insertVariblesIntoTable(connection, hum, temp, lux, noise):
 
 connection = pymysql.connect(
     host='192.168.0.170', user='Pi', passwd='hesloProPiDoDatabaze', db='Pi', port=5456)
+connection.query('SET GLOBAL connect_timeout=172800')
+connection.query('SET GLOBAL wait_timeout=172800')
+connection.query('SET GLOBAL interactive_timeout=172800')
+
 show = True
 loop = 0
 avgT = 0
 avgH = 0
 avgLux = 0
 avgNoise = 0
+
 while True:
     temp, hum = dht(humTemp, 0)
-    lux = analogRead(lux)
-    noise = analogRead(noise)
+    lux = analogRead(luxId)
+    noise = analogRead(noiseId)
     avgT += temp
     avgH += hum
     avgLux += lux
     avgNoise += noise
     loop += 1
-    if loop == 6:
-        insertVariblesIntoTable(connection, str("{0:.2f}".format(avgH/6.0)), str("{0:.2f}".format(
-            avgT/6.0)), str("{0:.2f}".format(avgLux/6.0)), str("{0:.2f}".format(avgNoise/6.0)))
+    if loop == 1:
+        insertVariblesIntoTable(connection, str("{0:.2f}".format(avgH)), str("{0:.2f}".format(
+            avgT)), str("{0:.2f}".format(avgLux)), str("{0:.2f}".format(avgNoise)))
         loop = 0
         avgT = 0
         avgH = 0
@@ -61,4 +66,4 @@ while True:
     else:
         setRGB(0, 0, 0)
         setText("")  # 15 char na radek
-    time.sleep(10)
+    time.sleep(60)

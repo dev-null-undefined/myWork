@@ -82,10 +82,10 @@ if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
 
 <body>
   <?php
-  echo '<div class="dropdown">
-  <button onclick="toggleDropDown()" class="dropbtn">Filter</button>
-  <div id="myDropdown" class="dropdown-content">
-    <form action="index.php">';
+  echo '<form action="index.php">
+  <div class="dropdown">
+  <button onclick="toggleDropDown()" type="button" class="dropbtn">Filter</button>
+  <div id="myDropdown" class="dropdown-content">';
   foreach ($Fields as $fieldName) {
     if (in_array($fieldName, $FilterFields)) {
       printf('<label class="myInput"><input type="checkbox" name="input[]" value="%s" checked/>%s</label><br/>', $fieldName, $fieldName);
@@ -94,7 +94,7 @@ if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
     }
   }
   echo ' <input type="submit" value="Submit" class="submit"/>
-<button onclick="resetInputs()" class="submit">Reset Input</button> 
+<button type="button" onclick="resetInputs()" class="submit">Reset Input</button> 
 </div>
 </div>
 <div class="datagrid" id="datagrid">
@@ -127,8 +127,8 @@ if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
     }
     echo '</table></div>';
   }
-  echo '<button onclick="togleGraphView()" class="dropbtn">Togle Graph</button>';
-  echo '<button onclick="togleRefrash()" class="dropbtn red">Auto refrash</button>';
+  echo '<button type="button" onclick="togleGraphView()" class="dropbtn">Togle Graph</button>';
+  echo '<button type="button" onclick="togleRefrash()" class="dropbtn red">Auto refrash</button>';
   if (isNullorNotSet($_GET['from'])) {
     echo '<input type="datetime-local" name="from" value="' . $_GET['from'] . '">
           <input type="datetime-local" name="to"  value="' . $_GET['to'] . '">

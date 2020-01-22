@@ -16,10 +16,30 @@ function togleRefrash(e) {
     document.getElementsByClassName("red")[0].style.background = "#3e8e41";
     intervalValue = setInterval(getData, 4000);
   }
+  return false;
+}
+function getData() {
+  let myUrl = location.href;
+  if (location.search == "") {
+    myUrl += "?onlyData=true";
+  } else {
+    myUrl += "&onlyData=true";
+  }
+  $.ajax({
+    url: myUrl,
+    async: false,
+    success: function(result) {
+      console.log("DataLoadet");
+      let datagrid = document.getElementById("datagrid");
+      datagrid.innerHTML = result;
+      initGraph();
+    }
+  });
 }
 function toggleDropDown() {
   document.getElementById("myDropdown").classList.toggle("show");
   filter = !filter;
+  return false;
 }
 function togleGraphView() {
   if (filter) {
@@ -37,6 +57,7 @@ function togleGraphView() {
     document.cookie = "Graph=false";
   }
   graphView = !graphView;
+  return false;
 }
 function getCookie(cname) {
   var name = cname + "=";
@@ -84,24 +105,7 @@ function minim(param) {
   return o;
 }
 
-function getData() {
-  let myUrl = location.href;
-  if (location.search == "") {
-    myUrl += "?onlyData=true";
-  } else {
-    myUrl += "&onlyData=true";
-  }
-  $.ajax({
-    url: myUrl,
-    async: false,
-    success: function(result) {
-      console.log("DataLoadet");
-      let datagrid = document.getElementById("datagrid");
-      datagrid.innerHTML = result;
-      initGraph();
-    }
-  });
-}
+
 function colomnsDevide() {
   return colomns.length / 2 - Math.floor(colomns.length / 2) >= 0.5 ? Math.floor(colomns.length / 2) + 1 : Math.floor(colomns.length / 2);
 }
@@ -279,4 +283,5 @@ function resetInputs() {
   let inputs = Array.from(dropDown.getElementsByTagName("input"));
   inputs.filter(element => element.type == "checkbox");
   inputs.forEach(element => (element.checked = false));
+  return false;
 }
