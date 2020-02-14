@@ -20,7 +20,6 @@ function saveValue(x, y, value) {
   this.yCoord = y;
   this.value = value;
 }
-
 function preload() {
   images[0] = loadImage("images\\UnOpened.png");
   images[1] = loadImage("images\\Mine.jpg");
@@ -30,8 +29,8 @@ function preload() {
   winSound = new Audio("Sound\\Win.mp3");
 }
 function setup() {
-  canvas = createCanvas(1000, 500);
-  startWithMoreArg(15, 10 * 5, 5 * 5);
+  canvas = createCanvas(1920, 1076);
+  startWithMoreArg(8, 20 * 5, 10 * 5);
   //drawArr=mine;
   frameRate(5);
 }
@@ -117,11 +116,10 @@ function win() {
 }
 function lose() {
   audio.play();
-  
   for (var x = 0; x < velikostX; x++) {
     for (var y = 0; y < velikostY; y++) {
-      if(drawArr[x][y]==-3&&mine[x][y]==1){
-        mine[x][y]=-3;
+      if (drawArr[x][y] == -3 && mine[x][y] == 1) {
+        mine[x][y] = -3;
       }
     }
   }
@@ -173,10 +171,7 @@ function drawGreyAgain(x, y) {
   // console.log(beenTo + "," + x + "x" + "," + y + "y");
   if (x < velikostX - 1) {
     if (beenTo[x + 1][y] === 0) {
-      if (
-        mine[x + 1][y] === 0 &&
-        (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y] != -1)
-      ) {
+      if (mine[x + 1][y] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y] != -1)) {
         drawGreyAgain(x + 1, y, beenTo);
       } else {
         drawArr[x][y] = -2;
@@ -184,10 +179,7 @@ function drawGreyAgain(x, y) {
     }
     if (y > 0) {
       if (beenTo[x + 1][y - 1] === 0) {
-        if (
-          mine[x + 1][y - 1] === 0 &&
-          (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y - 1] != -1)
-        ) {
+        if (mine[x + 1][y - 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y - 1] != -1)) {
           drawGreyAgain(x + 1, y - 1, beenTo);
         } else {
           drawArr[x][y] = -2;
@@ -196,10 +188,7 @@ function drawGreyAgain(x, y) {
     }
     if (y < velikostY) {
       if (beenTo[x + 1][y + 1] === 0) {
-        if (
-          mine[x + 1][y + 1] === 0 &&
-          (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y + 1] != -1)
-        ) {
+        if (mine[x + 1][y + 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y + 1] != -1)) {
           drawGreyAgain(x + 1, y + 1, beenTo);
         } else {
           drawArr[x][y] = -2;
@@ -210,10 +199,7 @@ function drawGreyAgain(x, y) {
 
   if (x > 0) {
     if (beenTo[x - 1][y] === 0) {
-      if (
-        mine[x - 1][y] === 0 &&
-        (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y] != -1)
-      ) {
+      if (mine[x - 1][y] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y] != -1)) {
         drawGreyAgain(x - 1, y, beenTo);
       } else {
         drawArr[x][y] = -2;
@@ -221,10 +207,7 @@ function drawGreyAgain(x, y) {
     }
     if (y > 0) {
       if (beenTo[x - 1][y - 1] === 0) {
-        if (
-          mine[x - 1][y - 1] === 0 &&
-          (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y - 1] != -1)
-        ) {
+        if (mine[x - 1][y - 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y - 1] != -1)) {
           drawGreyAgain(x - 1, y - 1, beenTo);
         } else {
           drawArr[x][y] = -2;
@@ -233,10 +216,7 @@ function drawGreyAgain(x, y) {
     }
     if (y < velikostY) {
       if (beenTo[x - 1][y + 1] === 0) {
-        if (
-          mine[x - 1][y + 1] === 0 &&
-          (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y + 1] != -1)
-        ) {
+        if (mine[x - 1][y + 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y + 1] != -1)) {
           drawGreyAgain(x - 1, y + 1, beenTo);
         } else {
           drawArr[x][y] = -2;
@@ -246,10 +226,7 @@ function drawGreyAgain(x, y) {
   }
   if (y < velikostY) {
     if (beenTo[x][y + 1] === 0) {
-      if (
-        mine[x][y + 1] === 0 &&
-        (getMinesNextTo(x, y) < 1 || drawArr[x][y + 1] != -1)
-      ) {
+      if (mine[x][y + 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x][y + 1] != -1)) {
         drawGreyAgain(x, y + 1, beenTo);
       } else {
         drawArr[x][y] = -2;
@@ -258,10 +235,7 @@ function drawGreyAgain(x, y) {
   }
   if (y > 0) {
     if (beenTo[x][y - 1] === 0) {
-      if (
-        mine[x][y - 1] === 0 &&
-        (getMinesNextTo(x, y) < 1 || drawArr[x][y - 1] != -1)
-      ) {
+      if (mine[x][y - 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x][y - 1] != -1)) {
         drawGreyAgain(x, y - 1, beenTo);
       } else {
         drawArr[x][y] = -2;
@@ -271,35 +245,26 @@ function drawGreyAgain(x, y) {
 }
 
 document.addEventListener("click", function(evt) {
-  var x = evt.pageX - $("#Hra").offset().left;
-  var y = evt.pageY - $("#Hra").offset().top;
+  var clickX = evt.pageX - $("#Hra").offset().left;
+  var clickY = evt.pageY - $("#Hra").offset().top;
   //console.log(evt.pageX+','+evt.pageY);
-  if (x > 0 && y > 0 && x < canvas.width && y < canvas.height) {
+  if (clickX > 0 && clickY > 0 && clickX < canvas.width && clickY < canvas.height) {
     if (reset) {
       startWithMoreArg(seedSeeds, velikostX, velikostY);
       reset = false;
     } else {
-      x = Math.floor(x / helpX);
-      y = Math.floor(y / helpY);
-      console.log(
-        "Left click x=" +
-          x +
-          ", y=" +
-          y +
-          ", drawArr value= " +
-          drawArr[x][y] +
-          ", mine valuer= " +
-          mine[x][y]
-      );
+      clickX = Math.floor(clickX / helpX);
+      clickY = Math.floor(clickY / helpY);
+      //console.log("Left click x=" + clickX + ", y=" + clickY + ", drawArr value= " + drawArr[clickX][clickY] + ", mine valuer= " + mine[clickX][clickY]);
       //drawArr[x][y] = mine[x][y];
-      if (mine[x][y] === 1) {
+      if (mine[clickX][clickY] === 1) {
         //start(seedSeeds, velikost);
-        mine[x][y] = 2;
+        mine[clickX][clickY] = 2;
         lose();
         console.log("prohra");
         reset = true;
       } else {
-        drawGrey(x, y);
+        drawGrey(clickX, clickY);
       }
     }
   }
@@ -308,29 +273,19 @@ document.addEventListener("click", function(evt) {
 document.addEventListener(
   "contextmenu",
   function(ev) {
-    var x = ev.pageX - $("#Hra").offset().left;
-    var y = ev.pageY - $("#Hra").offset().top;
-    if (x > 0 && y > 0 && x < canvas.width && y < canvas.height) {
+    var clickX = ev.pageX - $("#Hra").offset().left;
+    var clickY = ev.pageY - $("#Hra").offset().top;
+    if (clickX > 0 && clickY > 0 && clickX < canvas.width && clickY < canvas.height) {
       ev.preventDefault();
-      x = Math.floor(x / helpX);
-      y = Math.floor(y / helpY);
-      //console.log(x + "," + y);
+      clickX = Math.floor(clickX / helpX);
+      clickY = Math.floor(clickY / helpY);
       if (reset) {
         startWithMoreArg(seedSeeds, velikostX, velikostY);
         reset = false;
       } else {
-        if (drawArr[x][y] === -1 || drawArr[x][y] === -3) {
-          console.log(
-            "right click x=" +
-              x +
-              ", y=" +
-              y +
-              ", drawArr value= " +
-              drawArr[x][y] +
-              ", mine valuer= " +
-              mine[x][y]
-          );
-          mineFound(x, y);
+        if (drawArr[clickX][clickY] === -1 || drawArr[clickX][clickY] === -3) {
+          //console.log("right click x=" + clickX + ", y=" + clickY + ", drawArr value= " + drawArr[clickX][clickY] + ", mine valuer= " + mine[clickX][clickY]);
+          mineFound(clickX, clickY);
           if (win()) {
             reset = true;
             drawArr = mine;
@@ -342,6 +297,87 @@ document.addEventListener(
   },
   false
 );
+
+function draw() {
+  if (!reset) {
+    saveDrawArr.forEach(ele => {
+      drawArr[ele.xCoord][ele.yCoord] = -3;
+    });
+  }
+  background(220);
+  fill(0, 255, 0);
+  stroke(100);
+  var x = 0;
+  var y = 0;
+  for (x = 0; x < mine.length; x++) {
+    for (y = 0; y < mine[x].length; y++) {
+      switch (drawArr[x][y]) {
+        case -3:
+          image(images[2], x * helpX, y * helpY, helpX, helpY);
+          break;
+        case -2:
+          fill(150);
+          rect(x * helpX, y * helpY, (x + 1) * helpX, (y + 1) * helpY);
+          break;
+        case -1:
+          image(images[0], x * helpX, y * helpY, helpX, helpY);
+          break;
+        case 0:
+          fill(150);
+          rect(x * helpX, y * helpY, (x + 1) * helpX, (y + 1) * helpY);
+          break;
+        case 1:
+          image(images[1], x * helpX + 1, y * helpY + 1, helpX - 2, helpY - 2);
+          break;
+        case 2:
+          image(images[3], x * helpX + 1, y * helpY + 1, helpX - 2, helpY - 2);
+          break;
+      }
+    }
+  }
+  stroke(255, 0, 0);
+  fill(0);
+  for (x = 0; x < mine.length; x++) {
+    for (y = 0; y < mine[0].length; y++) {
+      if (drawArr[x][y] === -2) {
+        let amunt = getMinesNextTo(x, y);
+        text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+        if (x < velikostX - 1) {
+          if (drawArr[x + 1][y] === 0) {
+            x += 1;
+            amunt = getMinesNextTo(x, y);
+            if (amunt != 0) text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+            x -= 1;
+          }
+        }
+        if (x > 0) {
+          if (drawArr[x - 1][y] === 0) {
+            x -= 1;
+            amunt = getMinesNextTo(x, y);
+            if (amunt != 0) text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+            x += 1;
+          }
+        }
+        if (y < velikostY - 1) {
+          if (drawArr[x][y + 1] === 0) {
+            y += 1;
+            amunt = getMinesNextTo(x, y);
+            if (amunt != 0) text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+            y -= 1;
+          }
+        }
+        if (y > 0) {
+          if (drawArr[x][y - 1] === 0) {
+            y -= 1;
+            amunt = getMinesNextTo(x, y);
+            if (amunt != 0) text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+            y += 1;
+          }
+        }
+      }
+    }
+  }
+}
 
 function getMinesNextTo(x, y) {
   var amunt = 0;
@@ -370,131 +406,4 @@ function getMinesNextTo(x, y) {
     }
   }
   return amunt;
-}
-
-function draw() {
-  if(!reset){
-    saveDrawArr.forEach(ele => {
-      drawArr[ele.xCoord][ele.yCoord] = -3;
-    });
-  }
-  background(220);
-  fill(0, 255, 0);
-  stroke(100);
-  var x = 0;
-  var y = 0;
-  for (x = 0; x < mine.length; x++) {
-    for (y = 0; y < mine[x].length; y++) {
-      switch (drawArr[x][y]) {
-        case -3:
-          //flag
-          //fill(150, 0, 0);
-          image(images[2], x * helpX, y * helpY, helpX, helpY);
-          break;
-        case -2:
-          fill(150);
-          rect(x * helpX, y * helpY, (x + 1) * helpX, (y + 1) * helpY);
-          break;
-        case -1:
-          //fill(0, 255, 0);
-          //secret
-          image(images[0], x * helpX, y * helpY, helpX, helpY);
-          break;
-        case 0:
-          fill(150);
-          rect(x * helpX, y * helpY, (x + 1) * helpX, (y + 1) * helpY);
-          break;
-        case 1:
-          //fill(255);
-          //bomb
-          image(images[1], x * helpX + 1, y * helpY + 1, helpX - 2, helpY - 2);
-          break;
-        case 2:
-          //fill(255);
-          //bomb exploded
-          image(images[3], x * helpX + 1, y * helpY + 1, helpX - 2, helpY - 2);
-          break;
-        // image(images[0],x * help, y * help,  help,  help);
-      }
-      //rect(x * help, y * help, (x + 1) * help, (y + 1) * help);
-      //stroke(255, 0, 0);
-    }
-  }
-
-  stroke(255, 0, 0);
-  fill(0);
-  for (x = 0; x < mine.length; x++) {
-    for (y = 0; y < mine[0].length; y++) {
-      if (drawArr[x][y] === -2) {
-        let amunt = getMinesNextTo(x, y);
-        text(
-          amunt,
-          x * helpX + helpX / 3.5,
-          y * helpY + helpY / 5,
-          (x + 1) * helpX,
-          (y + 1) * helpY
-        );
-        if (x < velikostX - 1) {
-          if (drawArr[x + 1][y] === 0) {
-            x += 1;
-            amunt = getMinesNextTo(x, y);
-            if (amunt != 0)
-              text(
-                amunt,
-                x * helpX + helpX / 3.5,
-                y * helpY + helpY / 5,
-                (x + 1) * helpX,
-                (y + 1) * helpY
-              );
-            x -= 1;
-          }
-        }
-        if (x > 0) {
-          if (drawArr[x - 1][y] === 0) {
-            x -= 1;
-            amunt = getMinesNextTo(x, y);
-            if (amunt != 0)
-              text(
-                amunt,
-                x * helpX + helpX / 3.5,
-                y * helpY + helpY / 5,
-                (x + 1) * helpX,
-                (y + 1) * helpY
-              );
-            x += 1;
-          }
-        }
-        if (y < velikostY - 1) {
-          if (drawArr[x][y + 1] === 0) {
-            y += 1;
-            amunt = getMinesNextTo(x, y);
-            if (amunt != 0)
-              text(
-                amunt,
-                x * helpX + helpX / 3.5,
-                y * helpY + helpY / 5,
-                (x + 1) * helpX,
-                (y + 1) * helpY
-              );
-            y -= 1;
-          }
-        }
-        if (y > 0) {
-          if (drawArr[x][y - 1] === 0) {
-            y -= 1;
-            amunt = getMinesNextTo(x, y);
-            if (amunt != 0)
-              text(
-                amunt,
-                x * helpX + helpX / 3.5,
-                y * helpY + helpY / 5,
-                (x + 1) * helpX,
-                (y + 1) * helpY
-              );
-            y += 1;
-          }
-        }
-      }
-    }
-  }
 }
