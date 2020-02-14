@@ -3,5 +3,6 @@ html, body {
     padding: 0;
 }
 p{
+    margin: 0;
     position: relative;
 }
