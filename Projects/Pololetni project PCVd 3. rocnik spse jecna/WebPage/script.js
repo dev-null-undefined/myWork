@@ -4,6 +4,7 @@ let auto = false;
 let graphView = false;
 let values = new Array();
 let colomns = new Array();
+let drawen=true;
 let colors = ["rgb(51, 204, 51)", "rgb(0, 51, 204)", "rgb(255, 0, 255)", "rgb(255, 0, 0)", "rgb(204, 153, 0)", "rgb(0, 153, 153)", "rgb(255, 255, 102)"];
 let intervalValue;
 function togleRefrash(e) {
@@ -26,6 +27,7 @@ function togleGraphView() {
     toggleDropDown();
   }
   if (!graphView) {
+    drawen=false;
     document.getElementsByClassName("datagrid")[0].style.display = "none";
     document.getElementsByClassName("p5Canvas")[0].style.display = "inline-block";
     document.getElementsByClassName("red")[0].style.display = "inline-block";
@@ -52,7 +54,6 @@ function getCookie(cname) {
   }
   return "";
 }
-
 function initGraph() {
   let rowsNames = document.getElementsByTagName("tr")[0].getElementsByTagName("th");
   let id = 0;
