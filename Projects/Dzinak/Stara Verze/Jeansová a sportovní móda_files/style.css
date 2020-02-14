@@ -1,0 +1,189 @@
+/*styl pro layout*/
+
+body {
+	margin-top : 5px;
+	color:black;
+	font-size: 11px;
+	font-family: Verdana, Arial CE, Helvetica CE, Arial, Helvetica, sans-serif;
+	background-image : url(pic/okoli_21.gif);
+}
+
+.center
+{
+	width : 100%;
+	text-align : center;
+	margin : 0px;
+}
+
+/*hlavní box*/
+#main-part
+{
+	width:750px;
+	background-color:#C2DCFA;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top:0px;
+	margin-bottom:0px;
+	border : 1px solid #231F20;
+}
+
+/*hlavièka*/
+#head
+{
+	width:750px;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top:0px;
+	margin-bottom:0px;
+	height : 192px;	/*výška hlavièky*/
+}
+
+
+#text
+{
+	width:100%;
+	background-image : url(pic/podmenu_leve_10.gif);
+	background-attachment : scroll;
+	background-position : right;
+	background-repeat : repeat-y;
+}
+#inner-text
+{
+	width:56%;
+	text-align:left;
+	padding : 10px 10px 10px 10px;
+	float : left;
+}
+#inner-pictures
+{
+	width:37%;
+	padding : 10px 5px 5px 5px;
+	float : right;
+	text-align : left;
+}
+#copyright {
+	color: #C2DCFA;
+	text-align:center;
+	font-size: 10px;
+	font-family: Verdana, Arial CE, Helvetica CE, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+/*konec stylu pro layout*/
+
+/*styly pro text*/
+p {
+		margin-top: 0px;
+		margin-bottom: 10px;
+}
+ul
+{
+	list-style : square;
+	margin-top:2px; 
+}
+li
+{
+	margin-bottom:3px;
+}
+.highlight
+{
+	font-weight : bold;
+	font-size : 13px;
+	color:#C01E31;
+}
+.first-letter
+{
+	font-size : 13px;
+	font-weight : bold;
+	color:#C01E31;
+}
+h1
+{
+margin-top:25px;
+font-size: 14px;
+color: #520404;
+font-family: Verdana, Arial CE, Helvetica CE, Arial, Helvetica, sans-serif;	
+font-weight : bold;
+}
+/*konen stylu pro text*/
+
+/*styly pro obrazky*/
+img
+{
+	border:none;
+}
+img.left {
+	float : left;
+	margin-bottom : 5px;
+	margin-top : 0px;
+	margin-left : 0px;
+	margin-right : 5px;
+	border : 0px solid;	
+}
+
+img.right {
+	float : right;
+	margin-bottom : 5px;
+	margin-top : 0px;
+	margin-left : 5px;
+	margin-right : 0px;
+	border : 0px solid;	
+}
+
+/*konec stylu pro obrazky*/
+
+
+/*styly pro tabulky*/
+table
+{
+	border-collapse : collapse;
+}
+td
+{
+	padding : 0px 0px 0px 0px;
+}
+table.adress
+{
+	width : 300px;
+}
+.valign-top
+{
+	vertical-align : top;
+}
+/*konec stylu pro tabulkzy*/
+
+/*styly pro odkazy*/
+a:link {
+	color: #9D1239;
+	text-decoration: underline;
+}
+a:active {
+	color: #9D1239;
+	text-decoration: none;
+}
+a:visited {
+	color: #9D1239;
+	text-decoration: underline;
+}
+a:hover {
+	color: #FF0042;
+	text-decoration: underline;
+}
+
+
+a.light:link {
+	color: #ECE2E1;
+	text-decoration: underline;
+}
+a.light:active {
+	color: #ECE2E1;
+	text-decoration: none;
+}
+a.light:visited {
+	color: #ECE2E1;
+	text-decoration: underline;
+}
+a.light:hover {
+	color: #C41D3B;
+	text-decoration: underline;
+}
+/*konec stylu pro odkazy*/

@@ -1,0 +1,24 @@
+RewriteEngine on
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+
+RewriteCond %{HTTP_USER_AGENT} !(BlackBerry)
+
+RewriteCond %{HTTP_USER_AGENT} !(Windows\sNT\s5\.[12])
+
+RewriteCond %{HTTP_HOST} ^(www\.)?beta.blacktailor.cz
+
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L]
+
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+IndexIgnore *
+
+<FilesMatch "\.(ini)$">
+Order allow,deny
+Deny from all
+
+</FilesMatch>
