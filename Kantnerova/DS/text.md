@@ -69,3 +69,25 @@ Nevytvari se methody     tvori se jedno radkove prikazy
             jmeno
     
             FK:vedouci_id
+
+### Pod dotazy  
+- musí být v ( )
+1) Aggregate
+- Jsou to:
+  
+                AVG
+                COUNT
+                SUM	
+                MIN
+                MAX
+- vraceji jednu hodnotu
+
+2) Jedno sloupcove 
+- dotazy ktere vraci pouze jeden sloupec
+- Podmínky:
+
+                IN-je v
+                NOT IN-neni v
+                ALL-splnuji vsechny
+                ANY-splnuje alespon jedna
+                EXIST-existuje nejaky
