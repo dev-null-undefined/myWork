@@ -1,0 +1,29 @@
+Vytvořte soubor app.js a style.css, oba soubory připojte k index.html,
+
+soubor index.html  a požadovaný konečný vzhled je v příloze
+
+
+
+A) pomocí Javascriptu (app.js):
+
+ 1: najděte nadpis <h1> a nastavte mu požadovaný text
+
+ 2: nastavte vhodný font a barvu nadpisu <h1> podle vzoru
+
+ 3: najděte paragraf podle třídy '.desc' a nastavte požadovaný text
+
+ 4: podle vzoru ytvořte a přidejte  novou položku a přidejte ji do seznamu <ul>
+
+ 5: změňte všechny <input> elementy z textových polí na checkboxy
+
+ 6: vytvořte <button> element, a nastavte mu text na 'Delete' a přidejte <button> dovnitř '.extra' <div>
+
+ 7: odstraňte '.extra' <div> element z DOM, když uživatel klikne na 'Delete' button
+
+
+
+B) pomocí CSS (style.css):
+
+ 1: vytvořte podle požadavků vzhled pro třídy: .container, .desc a .extra
+
+ 2: nastavte vzhled 'ul' a 'li'

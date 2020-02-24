@@ -1,0 +1,29 @@
+body{
+    background-color: #edeff0;
+}
+.container{
+    width: 400px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+h1{
+    padding: 1px;
+}
+ul{
+    /* width: 100%; */
+    padding: 10px;
+    padding-inline-start: 10px;
+    list-style: none;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px #c7c7c7;
+}
+.extra{
+    background-color: #ff6347;
+    padding:15px;
+    border-radius: 0px  0px 5px 5px;
+}
+.extra p{
+    color: white;
+    margin-block-end: 0;
+}
