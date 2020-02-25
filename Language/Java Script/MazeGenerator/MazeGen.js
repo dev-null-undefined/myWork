@@ -3,11 +3,11 @@ let canvas;
 let cells = new Array();
 // let colms = 192;
 // let rows = 107;
-let colms = 19*2;
-let rows = 10*2;
-let sizeOfCell = 30;
+let colms = 190;
+let rows = 107;
+let sizeOfCell = 10;
 
-let justBuild = false;
+let justBuild = true;
 let stack = new Array();
 let currentCell;
 let numberToSolve;

@@ -8,32 +8,44 @@ namespace Server
 {
     class Server
     {
-        public static Dictionary<string, ICommand> commands = new Dictionary<string, ICommand>();
+        public static List<Socket> inQueue = new List<Client>();
         public static List<Client> clients = new List<Client>();
         public static Socket socket;
-        static void fillCommands()
-        {
-            commands.Add("help", new Help());
-        }
+        public static int numberOfClientsAtOnce = 5, queueUpdateTime = 10;
         static void Main(string[] args)
         {
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 65525));
-            
+
             socket.Listen(1);
-            Socket accept = socket.Accept();
-            byte[] data = new byte[accept.SendBufferSize];
-            int j = accept.Receive(data);
-            byte[] adata = new byte[j];
-            for (int i = 0; i < j; i++)
+            if (clients.Count >= numberOfClientsAtOnce)
             {
-                adata[i] = data[i];
+                Socket accept = socket.Accept();
+                clients.Add(new Client(accept));
             }
-            string dat = Encoding.Default.GetString(adata);
-            Console.WriteLine(dat);
-            byte[] data2 = Encoding.Default.GetBytes("Ahoj");
-            accept.Send(data2);
+            else
+            {
+                Socket accept = socket.Accept();
+                inQueue.Add(accept);
+            }
         }
-        static void Main()
+        static void inQueueChacker()
+        {
+            for (int i = 0; i < inQueue.Count; i++)
+            {
+                byte[] data = Encoding.Default.GetBytes("You are in " + (i + 1) + " queue");
+                accept.Send(data);
+            }
+            inQueueChacker();
+        }
+        public static void clientClosed(Client c)
+        {
+            Socket t = inQueue[0];
+            inQueue.RemoveAt(0);
+            
+            Client a=new Client(t);
+            clients.Remove(c);
+            clients.Add(a);
+        }
     }
 }
