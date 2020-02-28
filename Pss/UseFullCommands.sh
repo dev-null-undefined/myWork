@@ -19,5 +19,13 @@ cat file | tee -a log | cat > /dev/null
 disown -a && exit
 # Print file appending in real time 
 tail -f {FileName}
-# Raspberry Pi camera stream VLC 
-raspivid -o - -t 0 -hf -w 800 -h 400 -fps 24 |cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8160}' :demux=h264
+# Raspberry Pi camera stream VLC and save to /home/pi/Videos/video.h264
+raspivid -o - -t 0 -hf -w 800 -h 400 -fps 24 | tee /home/pi/Videos/video.h264 | cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8160}' :demux=h264
+# Raspberrt Pi camera on browser 
+raspivid -o - -t 0 -n -w 600 -h 400 -fps 12 | cvlc -vvv stream:///dev/stdin --sout '#rtp{sdp=rtsp://:8554/}' :demux=h264
+# screen with name
+screen -S session_name
+# Connect to screen with more users
+screen -x youruser/multisession
+# h264 to mp4 
+ffmpeg -framerate 24 -i Video1.h264 -c copy Video1.mp4

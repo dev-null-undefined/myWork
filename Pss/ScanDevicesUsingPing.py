@@ -18,3 +18,5 @@ for ip in ipaddress.IPv4Network(input()):
         print("NO :"+str(ip))
 
 print(hosts)
+for host in hosts:
+    print(str(host)+"\n")
