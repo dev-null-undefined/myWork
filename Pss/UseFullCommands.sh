@@ -29,3 +29,5 @@ screen -S session_name
 screen -x youruser/multisession
 # h264 to mp4 
 ffmpeg -framerate 24 -i Video1.h264 -c copy Video1.mp4
+# spotify from terminal
+librespot
