@@ -70,10 +70,12 @@ button[type="submit"] {
 }
 
 #invitedList li {
+
+  box-shadow: 1px 1px 10px 1px #c7c7c7;
   list-style: none;
-  background-color: #aaa3a3;
   color: black;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
   font-size: 150%;
+  overflow: hidden;
 }
