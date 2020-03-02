@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f0f5ec;
+}
+.wrapper {
+  margin-top: 1%;
+  width: 40%;
+  margin-left: 30%;
+  height: 60vh;
+  border-radius: 6px;
+  background-image: url(../imgs/football.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.wrapper h1,
+.wrapper p {
+  text-align: center;
+}
+.wrapper h1 {
+  padding-top: 100px;
+  color: white;
+  font-size: 50px;
+}
+.wrapper p {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10%;
+}
+.main {
+  margin-top: -24px;
+  background-color: #fcfcfc;
+  height: 150px;
+  border-radius: 0 0 6px 6px;
+}
+input[type="text"] {
+  border-radius: 4px;
+  margin: 0;
+  margin-left: 21%;
+  width: 50%;
+  height: 40px;
+  padding-right: 50px;
+}
+input::placeholder {
+  padding-left: 10px;
+  font-size: 17px;
+}
+button[type="submit"] {
+  margin-left: -75px;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #7bcbc4;
+}
+.main h2 {
+  padding-top: 40px;
+  padding-left: 30px;
+  font-family: Brush Script MT, cursive;
+}
+#invitedList {
+  width: 90%;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 10px;
+  background-color: #fcfcfc;
+  border-radius: 0 0 5px 5px;
+  color: #444;
+}
+
+#invitedList li {
+  list-style: none;
+  background-color: #aaa3a3;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
