@@ -61,21 +61,22 @@ button[type="submit"] {
 #invitedList {
   width: 90%;
   padding: 5%;
-  display: grid;
-  grid-template-columns: 32% 32% 32%;
-  grid-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
   background-color: #fcfcfc;
   border-radius: 0 0 5px 5px;
   color: #444;
+  overflow: hidden;
 }
-
 #invitedList li {
-
   box-shadow: 1px 1px 10px 1px #c7c7c7;
+  flex-grow: 1;
+  min-width: 20%;
   list-style: none;
   color: black;
   border-radius: 5px;
   padding: 10px;
+  margin: 10px;
   font-size: 150%;
   overflow: hidden;
 }
