@@ -13,7 +13,7 @@ namespace Server
         public static List<Client> clients = new List<Client>();
 
         public static Socket socket;
-        public static int numberOfClientsAtOnce = 5, queueUpdateTime = 5000;
+        public static int numberOfClientsAtOnce = 3, queueUpdateTime = 5000;
 
         static void Main(string[] args)
         {
@@ -42,14 +42,19 @@ namespace Server
         }
         static void inQueueChacker()
         {
-            int a = 0;
             for (int i = 0; i < inQueue.Count; i++)
             {
-                a++;
-                byte[] data = Encoding.Default.GetBytes("You are in " + (i + 1) + " queue\n");
-                inQueue[i].Send(data);
+                byte[] data = Encoding.Default.GetBytes("You are in " + (i + 1) + " queue\r\n");
+                try 
+                {
+                    inQueue[i].Send(data);
+                }
+                catch (System.Net.Sockets.SocketException e)
+                {
+                    inQueue.RemoveAt(i);
+                }
             }
-            Console.WriteLine("There are " + a + " clients in queue and "+clients.Count+" active clients");
+            Console.WriteLine("There are " + inQueue.Count + " clients in queue and "+clients.Count+" active clients");
             Thread.Sleep(queueUpdateTime);
             inQueueChacker();
         }

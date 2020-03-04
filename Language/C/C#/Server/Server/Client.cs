@@ -8,12 +8,16 @@ namespace Server
 {
     class Client
     {
+
+        public static List<string> endCommands = new List<string>();
         private delegate void command(Client c, string data);
         private static Dictionary<string, command> commands = new Dictionary<string, command>();
-        private static Random random = new Random(); 
+        private static Random random = new Random();
         public static void fillCommands()
         {
             commands.Add("chat", Chat.takeControll);
+            endCommands.Add("end");
+            endCommands.Add("disconnect");
         }
 
         private Socket _socket;
@@ -37,7 +41,7 @@ namespace Server
         public Client(Socket s)
         {
             _socket = s;
-            _id=random.Next(100000000,999999999);
+            _id = random.Next(100000000, 999999999);
             _t = new Thread(velcome);
             _t.Start();
         }
@@ -53,9 +57,8 @@ namespace Server
             string data;
             do
             {
-                write(_name+":");
+                write(_name + ":");
                 data = read();
-                if (data != "") {
                     if (commands.ContainsKey(data))
                     {
                         commands[data](this, data);
@@ -64,34 +67,34 @@ namespace Server
                     {
                         write("Not command: " + data + "\r\n");
                     }
-                }
-            } while (data != "end");
+            } while (!endCommands.Contains(data));
             endConnection();
         }
+
         public string read()
         {
             byte[] data = new byte[_socket.SendBufferSize];
             try
             {
                 int j = _socket.Receive(data);
-                
                 string dat = Encoding.ASCII.GetString(data, 0, j);
-                dat = dat.Replace("\r", "").Replace("\n","");
-                Console.WriteLine("Client with ID: " + _id + " and name: " + _name + " ,data: " + dat);
-                //foreach(char r in dat)
-                //{
-                //    console.writeline(r+","+(int) r);
-                //}
-                if (dat == "")
+                dat=dat.Replace("\r\n", "");
+                Console.WriteLine("Client with ID: " + _id + " and name: " + _name + " ,data: " + dat + " ,size: " + j);
+                if (j == 0)
+                {
+                    dead = true;
+                    return endCommands[0];
+                }
+                if (dat=="")
                 {
                     return read();
                 }
                 return dat;
             }
-            catch(System.Net.Sockets.SocketException e)
+            catch (System.Net.Sockets.SocketException e)
             {
                 dead = true;
-                return "end";
+                return endCommands[0];
             }
         }
         public void write(string data)

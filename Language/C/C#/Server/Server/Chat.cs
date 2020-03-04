@@ -32,7 +32,7 @@ namespace Server
                     c.write("(1) Connect to session, (2) create session:");
                     input = c.read();
                     Console.WriteLine(input);
-                } while (input != "1" && input != "2" && input!="end");
+                } while (input != "1" && input != "2" && !Client.endCommands.Contains(input));
                 Chat t = null;
                 switch (input)
                 {
@@ -51,7 +51,7 @@ namespace Server
                                         c.write("! Wrong password !\r\n");
                                     }
                             }
-                        } while (t == null && input != "end");
+                        } while (t == null && !Client.endCommands.Contains(input));
                         if (t != null)
                         {
                             c.write("Connected to chat room with ID: " + t.id + "\r\n");
@@ -67,7 +67,7 @@ namespace Server
                         {
                             c.write("(1) Unlock session, (2) Locked session:");
                             input = c.read();
-                        } while (input != "1" && input != "2" && input != "end");
+                        } while (input != "1" && input != "2" && !Client.endCommands.Contains(input));
                         switch (input)
                         {
                             case "1":
@@ -84,14 +84,10 @@ namespace Server
                                 sessions.Add(t);
                                 t.connect(c);
                                 break;
-                            case "end":
-                                return;
                         }
                         break;
-                    case "end":
-                        return;
                 }
-            } while (input != "end");
+            } while (!Client.endCommands.Contains(input));
         }
         public void connect(Client c)
         {
@@ -107,7 +103,7 @@ namespace Server
             {
                 c.write(c.name + ":");
                 input = c.read();
-                if (input != "end"&&!input.StartsWith("/"))
+                if (!Client.endCommands.Contains(input) && !input.StartsWith("/"))
                 {
                     _clients.ForEach(x => {
                         if (x != c)
@@ -116,7 +112,7 @@ namespace Server
                         }
                     });
                 }
-            } while (input != "end");
+            } while (!Client.endCommands.Contains(input));
             _clients.ForEach(x => {
                 if (x != c)
                 {
