@@ -1,7 +1,11 @@
 import time
 import pymysql
 from grovepi import *
-from grove_rgb_lcd import *
+from grove_rgb_lcd import *\
+
+loopSize=1
+updateTime=30
+
 ranger = 2  # digital ultrasonicRead(ranger)
 button = 3  # digital digitalRead(button)
 greenDiod = 4  # digital digitalWrite(greenDiod,1/0)
@@ -41,6 +45,13 @@ avgLux = 0
 avgNoise = 0
 
 while True:
+    if show:
+        setRGB(150,40,5)
+    time.sleep(1)
+    if show:
+        setRGB(0,0,0)
+    time.sleep(0.01)
+
     temp, hum = dht(humTemp, 0)
     lux = analogRead(luxId)
     noise = analogRead(noiseId)
@@ -49,7 +60,7 @@ while True:
     avgLux += lux
     avgNoise += noise
     loop += 1
-    if loop == 1:
+    if loop == loopSize:
         insertVariblesIntoTable(connection, str("{0:.2f}".format(avgH)), str("{0:.2f}".format(
             avgT)), str("{0:.2f}".format(avgLux)), str("{0:.2f}".format(avgNoise)))
         loop = 0
@@ -62,8 +73,8 @@ while True:
     if show:
         setRGB(10, 40, 5)
         setText("T="+str(temp)+"C, H="+str(hum)+"%Lux="+str(lux) +
-                ", S="+str(noise)+"db"+str(loop))  # 15 char na radek
+                ", S="+str(noise)+"db")  # 15 char na radek
     else:
         setRGB(0, 0, 0)
         setText("")  # 15 char na radek
-    time.sleep(60)
+    time.sleep(updateTime-1)
