@@ -3,21 +3,22 @@
 //var_dump($_GET['input']);
 $Fields = array();
 $conn =  new mysqli("localhost", "Pi", "hesloProPiDoDatabaze", "Pi", 5456);
+$TableName = "Zaznam";
 $select;
 function isNullorNotSet($var){
   return isset($var)&&$var!="";
 }
 if (isNullorNotSet($_GET['from'])) {
   if (isNullorNotSet($_GET['to'])) {
-    $select = 'select * from Zaznam where Time>"' . str_replace("T", " ", $_GET['from']) . '" AND Time<"' . str_replace("T", " ", $_GET['to']).'"';
+    $select = 'select * from '.$TableName.' where Time>"' . str_replace("T", " ", $_GET['from']) . '" AND Time<"' . str_replace("T", " ", $_GET['to']).'"';
   } else {
-    $select = 'select * from Zaznam where Time>"' . str_replace("T", " ", $_GET['from']).'"';
+    $select = 'select * from '.$TableName.' where Time>"' . str_replace("T", " ", $_GET['from']).'"';
   }
 } else {
   if (isNullorNotSet($_GET['to'])) {
-    $select = 'select * from Zaznam where Time>"' . str_replace("T", " ", $_GET['to']).'"';
+    $select = 'select * from '.$TableName.' where Time>"' . str_replace("T", " ", $_GET['to']).'"';
   } else {
-    $select = "select * from Zaznam";
+    $select = 'select * from '.$TableName.;
   }
 }
 // var_dump($select);
@@ -38,13 +39,16 @@ if (isset($_GET['input']) && is_array($_GET['input'])) {
 }
 if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
   echo '<div class="datagrid" id="datagrid">
-    <table>
-        <tr>';
+    <table>';
   if (!$FilterSetted) {
+    printf('<thead class="tableHeader">
+    <tr>');
     foreach ($Fields as $field) {
-      printf("<th>%s</th>", $field);
+      printf("<td>%s</td>", $field);
     }
     echo '</tr>';
+    printf('</thead>
+    <tbody>');
     while ($row = mysqli_fetch_array($selectResoult)) {
       echo '<tr>';
       foreach ($Fields as $collom) {
@@ -52,20 +56,24 @@ if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
       }
       echo '</tr>';
     }
-    echo '</table></div>';
+    echo '</tbody></table></div>';
   } else {
+    printf('<thead class="tableHeader">
+    <tr>');
     for ($i = 0; $i < count($FilterFields); $i++) {
       printf("<th>%s</th>", $FilterFields[$i]);
     }
     echo '</tr>';
+    printf('</thead>
+    <tbody>');
     while ($row = mysqli_fetch_array($selectResoult)) {
       echo '<tr>';
       for ($i = 0; $i < count($FilterFields); $i++) {
-        printf("<th>%s</th>", $row[$FilterFields[$i]]);
+        printf("<td>%s</td>", $row[$FilterFields[$i]]);
       }
       echo '</tr>';
     }
-    echo '</table></div>';
+    echo '</tbody></table></div>';
   }
   exit();
 }
@@ -96,50 +104,58 @@ if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
   echo ' <input type="submit" value="Submit" class="submit"/>
 <button type="button" onclick="resetInputs()" class="submit">Reset Input</button> 
 </div>
-</div>
-<div class="datagrid" id="datagrid">
-  <table>
-      <tr>';
-  if (count($FilterFields) == 0) {
+</div>';
+echo '<button type="button" onclick="togleGraphView()" class="dropbtn">Togle Graph</button>';
+echo '<button type="button" onclick="togleRefrash()" class="dropbtn red">Auto refrash</button>';
+if (isNullorNotSet($_GET['from'])) {
+  echo '<input type="datetime-local" name="from" value="' . $_GET['from'] . '">
+        <input type="datetime-local" name="to"  value="' . $_GET['to'] . '">
+        <input type="submit" value="Submit" class="submit"/>
+      </form>';
+} else {
+  echo '<input type="datetime-local" name="from">
+        <input type="datetime-local" name="to">
+        <input type="submit" value="Submit" class="submit"/>
+      </form>';
+}
+echo '<div class="datagrid" id="datagrid">
+  <table>';
+  if (!$FilterSetted) {
+    printf('<thead class="tableHeader">
+    <tr>');
     foreach ($Fields as $field) {
       printf("<th>%s</th>", $field);
-    }
+    } 
     echo '</tr>';
+    printf('</thead>
+    <tbody>');
     while ($row = mysqli_fetch_array($selectResoult)) {
       echo '<tr>';
       foreach ($Fields as $collom) {
-        printf("<th>%s</th>", $row[$collom]);
+        printf("<td>%s</td>", $row[$collom]);
       }
       echo '</tr>';
     }
-    echo '</table></div>';
+    echo '</tbody></table></div>';
   } else {
+    printf('<thead class="tableHeader">
+    <tr>');
     for ($i = 0; $i < count($FilterFields); $i++) {
       printf("<th>%s</th>", $FilterFields[$i]);
     }
     echo '</tr>';
+    printf('</thead>
+    <tbody>');
     while ($row = mysqli_fetch_array($selectResoult)) {
       echo '<tr>';
       for ($i = 0; $i < count($FilterFields); $i++) {
-        printf("<th>%s</th>", $row[$FilterFields[$i]]);
+        printf("<td>%s</td>", $row[$FilterFields[$i]]);
       }
       echo '</tr>';
     }
-    echo '</table></div>';
+    echo '</tbody></table></div>';
   }
-  echo '<button type="button" onclick="togleGraphView()" class="dropbtn">Togle Graph</button>';
-  echo '<button type="button" onclick="togleRefrash()" class="dropbtn red">Auto refrash</button>';
-  if (isNullorNotSet($_GET['from'])) {
-    echo '<input type="datetime-local" name="from" value="' . $_GET['from'] . '">
-          <input type="datetime-local" name="to"  value="' . $_GET['to'] . '">
-          <input type="submit" value="Submit" class="submit"/>
-        </form>';
-  } else {
-    echo '<input type="datetime-local" name="from">
-          <input type="datetime-local" name="to">
-          <input type="submit" value="Submit" class="submit"/>
-        </form>';
-  }
+ 
   ?>
 </body>
 

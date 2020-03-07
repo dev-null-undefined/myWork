@@ -1,0 +1,21 @@
+{
+  "rotation": 180,
+  "saveAll": false,
+  "saveAllFile": "/home/pi/Videos/Full",
+  "show_video": false,
+  "use_dropbox": true,
+  "dropbox_access_token": "Ed--UFGEKhAAAAAAAAAAWVwLHfZpSonU4K-4wFPqHeilnA2gu0mhBBM6QV_KRmq9",
+  "dropbox_base_path": "motion-detect",
+  "min_upload_seconds": 1.5,
+  "min_motion_frames": 12,
+  "camera_warmup_time": 2.5,
+  "delta_thresh": 5,
+  "resolution": [1280, 720],
+  "fps": 24,
+  "min_area": 5000,
+  "stdout": false,
+  "framesafter": 24,
+  "outPutFile": "/home/pi/Videos/Output-",
+  "logToFile": true,
+  "logFile": "/home/pi/Logs/PiCameraMotion.log"
+}

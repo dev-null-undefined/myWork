@@ -4,13 +4,22 @@ let auto = false;
 let graphView = false;
 let values = new Array();
 let colomns = new Array();
-let colors = ["rgb(51, 204, 51)", "rgb(0, 51, 204)", "rgb(255, 0, 255)", "rgb(255, 0, 0)", "rgb(204, 153, 0)", "rgb(0, 153, 153)", "rgb(255, 255, 102)"];
+let colors = [
+  "rgb(51, 204, 51)",
+  "rgb(0, 51, 204)",
+  "rgb(255, 0, 255)",
+  "rgb(255, 0, 0)",
+  "rgb(204, 153, 0)",
+  "rgb(0, 153, 153)",
+  "rgb(255, 255, 102)"
+];
 let intervalValue;
 function togleRefrash(e) {
   // e.preventDefault();
   auto = !auto;
   if (!auto) {
-    document.getElementsByClassName("red")[0].style.background = "rgb(136, 28, 28)";
+    document.getElementsByClassName("red")[0].style.background =
+      "rgb(136, 28, 28)";
     clearInterval(intervalValue);
   } else {
     document.getElementsByClassName("red")[0].style.background = "#3e8e41";
@@ -47,7 +56,8 @@ function togleGraphView() {
   }
   if (!graphView) {
     document.getElementsByClassName("datagrid")[0].style.display = "none";
-    document.getElementsByClassName("p5Canvas")[0].style.display = "inline-block";
+    document.getElementsByClassName("p5Canvas")[0].style.display =
+      "inline-block";
     document.getElementsByClassName("red")[0].style.display = "inline-block";
     document.cookie = "Graph=true";
   } else {
@@ -75,16 +85,16 @@ function getCookie(cname) {
 }
 
 function initGraph() {
-  let rowsNames = document.getElementsByTagName("tr")[0].getElementsByTagName("th");
+  let rowsNames = document.getElementById("datagrid").getElementsByTagName("thead")[0].getElementsByTagName("th")
   let id = 0;
   colomns = new Array();
   Array.from(rowsNames).forEach(element => {
     values[element.innerText] = new Array();
     colomns.push(element.innerText);
   });
-  let rows = document.getElementsByTagName("tr");
+  let rows = document.getElementById("datagrid").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
   for (id = 1; id < rows.length; id++) {
-    let currentRow = document.getElementsByTagName("tr")[id].getElementsByTagName("th");
+    let currentRow = rows[id].getElementsByTagName("td");
     for (let x = 0; x < currentRow.length; x++) {
       values[colomns[x]].push(currentRow[x].innerText);
     }
@@ -105,9 +115,10 @@ function minim(param) {
   return o;
 }
 
-
 function colomnsDevide() {
-  return colomns.length / 2 - Math.floor(colomns.length / 2) >= 0.5 ? Math.floor(colomns.length / 2) + 1 : Math.floor(colomns.length / 2);
+  return colomns.length / 2 - Math.floor(colomns.length / 2) >= 0.5
+    ? Math.floor(colomns.length / 2) + 1
+    : Math.floor(colomns.length / 2);
 }
 //P5 Graf
 function linedash(x1, y1, x2, y2, delta, style = "-") {
@@ -137,7 +148,7 @@ function setup() {
     togleGraphView();
   }
   initGraph();
-  canvas = createCanvas(window.windowWidth * 0.98, window.windowHeight * 0.9);
+  canvas = createCanvas(window.windowWidth, window.windowHeight - 52);
 }
 function draw() {
   let vyska = canvas.height - colomnsDevide() * 18;
@@ -170,16 +181,42 @@ function draw() {
     for (let i = 0; i < values[colomns[x]].length; i++) {
       switch (Math.floor(x / colors.length)) {
         case 0:
-          line(i * gap, vyska - (center + values[colomns[x]][i] * h), (i + 1) * gap, vyska - (center + values[colomns[x]][i + 1] * h));
+          line(
+            i * gap,
+            vyska - (center + values[colomns[x]][i] * h),
+            (i + 1) * gap,
+            vyska - (center + values[colomns[x]][i + 1] * h)
+          );
           break;
         case 1:
-          linedash(i * gap, vyska - (center + values[colomns[x]][i] * h), (i + 1) * gap, vyska - (center + values[colomns[x]][i + 1] * h), gap / 10, "-");
+          linedash(
+            i * gap,
+            vyska - (center + values[colomns[x]][i] * h),
+            (i + 1) * gap,
+            vyska - (center + values[colomns[x]][i + 1] * h),
+            gap / 10,
+            "-"
+          );
           break;
         case 2:
-          linedash(i * gap, vyska - (center + values[colomns[x]][i] * h), (i + 1) * gap, vyska - (center + values[colomns[x]][i + 1] * h), gap / 10, ".");
+          linedash(
+            i * gap,
+            vyska - (center + values[colomns[x]][i] * h),
+            (i + 1) * gap,
+            vyska - (center + values[colomns[x]][i + 1] * h),
+            gap / 10,
+            "."
+          );
           break;
         case 3:
-          linedash(i * gap, vyska - (center + values[colomns[x]][i] * h), (i + 1) * gap, vyska - (center + values[colomns[x]][i + 1] * h), gap / 10, "o");
+          linedash(
+            i * gap,
+            vyska - (center + values[colomns[x]][i] * h),
+            (i + 1) * gap,
+            vyska - (center + values[colomns[x]][i + 1] * h),
+            gap / 10,
+            "o"
+          );
           break;
       }
     }
@@ -199,16 +236,42 @@ function draw() {
       stroke(colors[x % colors.length]);
       switch (Math.floor(x / colors.length)) {
         case 0:
-          line(textWidth(colomns[x]) + 10, vyska + 1 + textHelp * x + textHelp / 2, textWidth(colomns[x]) * 2, vyska + 1 + textHelp * x + textHelp / 2);
+          line(
+            textWidth(colomns[x]) + 10,
+            vyska + 1 + textHelp * x + textHelp / 2,
+            textWidth(colomns[x]) * 2,
+            vyska + 1 + textHelp * x + textHelp / 2
+          );
           break;
         case 1:
-          linedash(textWidth(colomns[x]) + 10, vyska + 1 + textHelp * x + textHelp / 2, textWidth(colomns[x]) * 2, vyska + 1 + textHelp * x + textHelp / 2, 5, "-");
+          linedash(
+            textWidth(colomns[x]) + 10,
+            vyska + 1 + textHelp * x + textHelp / 2,
+            textWidth(colomns[x]) * 2,
+            vyska + 1 + textHelp * x + textHelp / 2,
+            5,
+            "-"
+          );
           break;
         case 2:
-          linedash(textWidth(colomns[x]) + 10, vyska + 1 + textHelp * x + textHelp / 2, textWidth(colomns[x]) * 2, vyska + 1 + textHelp * x + textHelp / 2, 5, ".");
+          linedash(
+            textWidth(colomns[x]) + 10,
+            vyska + 1 + textHelp * x + textHelp / 2,
+            textWidth(colomns[x]) * 2,
+            vyska + 1 + textHelp * x + textHelp / 2,
+            5,
+            "."
+          );
           break;
         case 3:
-          linedash(textWidth(colomns[x]) + 10, vyska + 1 + textHelp * x + textHelp / 2, textWidth(colomns[x]) * 2, vyska + 1 + textHelp * x + textHelp / 2, 5, "o");
+          linedash(
+            textWidth(colomns[x]) + 10,
+            vyska + 1 + textHelp * x + textHelp / 2,
+            textWidth(colomns[x]) * 2,
+            vyska + 1 + textHelp * x + textHelp / 2,
+            5,
+            "o"
+          );
           break;
       }
     } else {
@@ -216,7 +279,11 @@ function draw() {
       textAlign(LEFT, TOP);
       textSize(18);
       textStyle(BOLD);
-      text(colomns[x], canvas.width / 2, vyska + 1 + textHelp * (x - colomns.length / 2));
+      text(
+        colomns[x],
+        canvas.width / 2,
+        vyska + 1 + textHelp * (x - colomns.length / 2)
+      );
       stroke(colors[x % colors.length]);
       switch (Math.floor(x / colors.length)) {
         case 0:
@@ -266,17 +333,25 @@ function draw() {
   textSize(17);
   if (minimum < 0) {
     for (let i = 0; i < 10; i++) {
-      text((maxAndMin - (maxAndMin / 10) * i + minimum).toFixed(2), 0, (canvas.height / 10) * i);
+      text(
+        (maxAndMin - (maxAndMin / 10) * i + minimum).toFixed(2),
+        0,
+        (canvas.height / 10) * i
+      );
     }
   } else {
     let maxAndMin = maximum;
     for (let i = 0; i < 10; i++) {
-      text((maxAndMin - (maxAndMin / 10) * i).toFixed(2), 0, (canvas.height / 10) * i);
+      text(
+        (maxAndMin - (maxAndMin / 10) * i).toFixed(2),
+        0,
+        (canvas.height / 10) * i
+      );
     }
   }
 }
 function windowResized() {
-  resizeCanvas(window.windowWidth * 0.98, window.windowHeight * 0.9);
+  resizeCanvas(window.windowWidth, window.windowHeight - 52);
 }
 function resetInputs() {
   let dropDown = document.getElementById("myDropdown");
