@@ -1,10 +1,9 @@
 import time
 import pymysql
 from grovepi import *
-from grove_rgb_lcd import *\
+from grove_rgb_lcd import *
 
-loopSize=1
-updateTime=30
+loopSize = 10
 
 ranger = 2  # digital ultrasonicRead(ranger)
 button = 3  # digital digitalRead(button)
@@ -21,10 +20,14 @@ rotary = 2  # analog analogRead(rotary)
 # analogWrite(5,0-255)
 
 
-def insertVariblesIntoTable(connection, hum, temp, lux, noise):
+def insertVariblesIntoTable(connection, hum, temp, lux, noise, avg):
     cursor = connection.cursor()
-    mySql_insert_query = """INSERT INTO Zaznam (Hum, Temp, Lux, Noise, Time)
-                                VALUES (%s, %s, %s, %s, %s) """
+    if avg:
+        mySql_insert_query = """INSERT INTO ZaznamAvg (Hum, Temp, Lux, Noise, Time)
+                                    VALUES (%s, %s, %s, %s, %s) """
+    else:
+        mySql_insert_query = """INSERT INTO Zaznam (Hum, Temp, Lux, Noise, Time)
+                                 VALUES (%s, %s, %s, %s, %s) """
     now = time.strftime('%Y-%m-%d %H:%M:%S')
     recordTuple = (hum, temp, lux, noise, now)
     cursor.execute(mySql_insert_query, recordTuple)
@@ -46,23 +49,30 @@ avgNoise = 0
 
 while True:
     if show:
-        setRGB(150,40,5)
+        setRGB(150, 40, 5)
     time.sleep(1)
     if show:
-        setRGB(0,0,0)
+        setRGB(0, 0, 0)
     time.sleep(0.01)
 
     temp, hum = dht(humTemp, 0)
+    time.sleep(0.01)
     lux = analogRead(luxId)
+    time.sleep(0.01)
     noise = analogRead(noiseId)
     avgT += temp
     avgH += hum
+    time.sleep(0.01)
     avgLux += lux
+    time.sleep(0.01)
     avgNoise += noise
+    time.sleep(0.01)
     loop += 1
+    insertVariblesIntoTable(connection, str("{0:.2f}".format(hum)), str(
+        "{0:.2f}".format(temp)), str("{0:.2f}".format(lux)), str("{0:.2f}".format(noise)),False)
     if loop == loopSize:
-        insertVariblesIntoTable(connection, str("{0:.2f}".format(avgH)), str("{0:.2f}".format(
-            avgT)), str("{0:.2f}".format(avgLux)), str("{0:.2f}".format(avgNoise)))
+        insertVariblesIntoTable(connection, str("{0:.2f}".format(avgH/loopSize)), str("{0:.2f}".format(
+            avgT/loopSize)), str("{0:.2f}".format(avgLux/loopSize)), str("{0:.2f}".format(avgNoise/loopSize)),True)
         loop = 0
         avgT = 0
         avgH = 0
@@ -73,8 +83,8 @@ while True:
     if show:
         setRGB(10, 40, 5)
         setText("T="+str(temp)+"C, H="+str(hum)+"%Lux="+str(lux) +
-                ", S="+str(noise)+"db")  # 15 char na radek
+                ", S="+str(noise)+"db"+str(loop))  # 15 char na radek
     else:
         setRGB(0, 0, 0)
         setText("")  # 15 char na radek
-    time.sleep(updateTime-1)
+    time.sleep(60+(60*((analogRead(2)+1)/1025)))
