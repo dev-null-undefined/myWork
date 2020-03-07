@@ -3,21 +3,22 @@
 //var_dump($_GET['input']);
 $Fields = array();
 $conn =  new mysqli("localhost", "Pi", "hesloProPiDoDatabaze", "Pi", 5456);
+$TableName = "Zaznam";
 $select;
 function isNullorNotSet($var){
   return isset($var)&&$var!="";
 }
 if (isNullorNotSet($_GET['from'])) {
   if (isNullorNotSet($_GET['to'])) {
-    $select = 'select * from Zaznam where Time>"' . str_replace("T", " ", $_GET['from']) . '" AND Time<"' . str_replace("T", " ", $_GET['to']).'"';
+    $select = 'select * from '.$TableName.' where Time>"' . str_replace("T", " ", $_GET['from']) . '" AND Time<"' . str_replace("T", " ", $_GET['to']).'"';
   } else {
-    $select = 'select * from Zaznam where Time>"' . str_replace("T", " ", $_GET['from']).'"';
+    $select = 'select * from '.$TableName.' where Time>"' . str_replace("T", " ", $_GET['from']).'"';
   }
 } else {
   if (isNullorNotSet($_GET['to'])) {
-    $select = 'select * from Zaznam where Time>"' . str_replace("T", " ", $_GET['to']).'"';
+    $select = 'select * from '.$TableName.' where Time>"' . str_replace("T", " ", $_GET['to']).'"';
   } else {
-    $select = "select * from Zaznam";
+    $select = 'select * from '.$TableName.;
   }
 }
 // var_dump($select);
