@@ -13,6 +13,7 @@ import imutils
 import json
 import time
 import cv2
+import sys
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -26,42 +27,85 @@ warnings.filterwarnings("ignore")
 conf = json.load(open(args["conf"]))
 client = None
 
+logFile = None
+if conf["logToFile"]:
+	logFile = open(conf["logFile"],"w")
+
+stream=conf["stdout"]
 # check to see if the Dropbox should be used
 if conf["use_dropbox"]:
 	# connect to dropbox and start the session authorization process
 	client = dropbox.Dropbox(conf["dropbox_access_token"])
-	print("[SUCCESS] dropbox account linked")
+	if conf["logToFile"]:
+		logFile.write("[SUCCESS] dropbox account linked")
+	else:
+		if not stream:
+			print("[SUCCESS] dropbox account linked")
 
 # initialize the camera and grab a reference to the raw camera capture
 camera = PiCamera()
 camera.resolution = tuple(conf["resolution"])
 camera.framerate = conf["fps"]
+camera.rotation = conf["rotation"]
 rawCapture = PiRGBArray(camera, size=tuple(conf["resolution"]))
 
 # allow the camera to warmup, then initialize the average frame, last
 # uploaded timestamp, and frame motion counter
-print("[INFO] warming up...")
+
+if conf["logToFile"]:
+	logFile.write("[INFO] warming up...")
+else:
+	if not stream:
+		print("[INFO] warming up...")
 time.sleep(conf["camera_warmup_time"])
 avg = None
 lastUploaded = datetime.datetime.now()
 motionCounter = 0
+framesAfter = 0
+
+# Video writer for saving sequnces when movement is detected
+fileCounter=0
+writer = cv2.VideoWriter(conf["outPutFile"]+str(fileCounter)+".avi",cv2.VideoWriter_fourcc(*'XVID'), float(conf["fps"]),tuple(conf["resolution"]))
+newWriter=True
+
+# if SaveAll
+SaveAll=conf["saveAll"]
+saveAllWriter = None
+if SaveAll:
+	saveAllWriter = cv2.VideoWriter(conf["saveAllFile"]+str(fileCounter)+".avi",cv2.VideoWriter_fourcc(*'XVID'), float(conf["fps"]),tuple(conf["resolution"]))
 
 # capture frames from the camera
 for f in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
+
 	# grab the raw NumPy array representing the image and initialize
 	# the timestamp and occupied/unoccupied text
 	frame = f.array
 	timestamp = datetime.datetime.now()
 	text = "Unoccupied"
 
+	# output the frame 
+	if framesAfter > 0:
+		writer.write(frame)
+	elif not newWriter:
+		writer.release()
+		fileCounter+=1
+		writer = cv2.VideoWriter(conf["outPutFile"]+str(fileCounter)+".avi",cv2.VideoWriter_fourcc(*'XVID'), float(conf["fps"]),tuple(conf["resolution"]))
+		newWriter=True
+	
+	if SaveAll:
+		saveAllWriter.write(frame)
 	# resize the frame, convert it to grayscale, and blur it
-	frame = imutils.resize(frame, width=500)
+	frame = imutils.resize(frame, width=450)
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	gray = cv2.GaussianBlur(gray, (21, 21), 0)
 
 	# if the average frame is None, initialize it
 	if avg is None:
-		print("[INFO] starting background model...")
+		if conf["logToFile"]:
+			logFile.write("[INFO] starting background model...")
+		else:
+			if not stream:
+				print("[INFO] starting background model...")
 		avg = gray.copy().astype("float")
 		rawCapture.truncate(0)
 		continue
@@ -86,7 +130,6 @@ for f in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True
 		# if the contour is too small, ignore it
 		if cv2.contourArea(c) < conf["min_area"]:
 			continue
-
 		# compute the bounding box for the contour, draw it on the frame,
 		# and update the text
 		(x, y, w, h) = cv2.boundingRect(c)
@@ -97,11 +140,15 @@ for f in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True
 	ts = timestamp.strftime("%A %d %B %Y %I:%M:%S%p")
 	cv2.putText(frame, "Room Status: {}".format(text), (10, 20),
 		cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+	cv2.putText(frame, "Time after: {}".format(framesAfter), (10, 40),
+		cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
 	cv2.putText(frame, ts, (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX,
 		0.35, (0, 0, 255), 1)
 
 	# check to see if the room is occupied
 	if text == "Occupied":
+		newWriter=False
+		framesAfter=conf["framesafter"]
 		# check to see if enough time has passed between uploads
 		if (timestamp - lastUploaded).seconds >= conf["min_upload_seconds"]:
 			# increment the motion counter
@@ -117,19 +164,23 @@ for f in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True
 					cv2.imwrite(t.path, frame)
 
 					# upload the image to Dropbox and cleanup the tempory image
-					print("[UPLOAD] {}".format(ts))
+					if conf["logToFile"]:
+						logFile.write("[UPLOAD] {}".format(ts))
+					else:
+						if not stream:
+							print("[UPLOAD] {}".format(ts))
 					path = "/{base_path}/{timestamp}.jpg".format(
 					    base_path=conf["dropbox_base_path"], timestamp=ts)
 					client.files_upload(open(t.path, "rb").read(), path)
 					t.cleanup()
 
 				# update the last uploaded timestamp and reset the motion
-				# counter
-				lastUploaded = timestamp
-				motionCounter = 0
+				# counteroCapture
 
 	# otherwise, the room is not occupied
 	else:
+		if framesAfter>0:
+			framesAfter-=1
 		motionCounter = 0
 
 	# check to see if the frames should be displayed to screen
@@ -143,4 +194,10 @@ for f in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True
 			break
 
 	# clear the stream in preparation for the next frame
+	if stream:
+		sys.stdout.buffer.write(frame.tostring())
 	rawCapture.truncate(0)
+writer.release()
+saveAllWriter.release()
+if conf["logToFile"]:
+	logFile.close()
