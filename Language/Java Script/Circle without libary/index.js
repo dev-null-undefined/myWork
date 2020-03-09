@@ -1,9 +1,9 @@
-let ctx;
-let c;
-function onLoad() {
-  c = document.getElementById("myCanvas");
-  ctx = c.getContext("2d");
-  //ctx.moveTo(0, 0);
+let ctx
+let c
+function onLoad () {
+  c = document.getElementById('myCanvas')
+  ctx = c.getContext('2d')
+  // ctx.moveTo(0, 0);
   for (let i = 0; i < 360 * 2; i++) {
     drawPixel(
       Math.sin(degree(i / 2.0)) * 50 + c.width / 2,
@@ -18,18 +18,18 @@ function onLoad() {
       (i / c.width) * 360,
       Math.sin(degree(i / 2.0)) * 50 + c.height / 2,
       ctx
-    );
+    )
   }
   ctx.stroke();
 }
-function drawPixel(x, y, ctx, size = 1) {
+function drawPixel (x, y, ctx, size = 1) {
   ctx.fillRect(x, y, size, size);
 }
-function degree(degrees) {
+function degree (degrees) {
   return (degrees * Math.PI) / 180;
 }
-window.onload = onLoad;
+window.onload = onLoad
 
-document.addEventListener("click", function myOnClick(evt) {
-  drawPixel(evt.clientX, evt.clientY, ctx, 2);
+document.addEventListener('click', function myOnClick (evt) {
+  drawPixel(evt.clientX, evt.clientY, ctx, 2)
 });
