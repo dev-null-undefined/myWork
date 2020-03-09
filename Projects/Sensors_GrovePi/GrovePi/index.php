@@ -18,7 +18,7 @@ if (isNullorNotSet($_GET['from'])) {
   if (isNullorNotSet($_GET['to'])) {
     $select = 'select * from '.$TableName.' where Time>"' . str_replace("T", " ", $_GET['to']).'"';
   } else {
-    $select = 'select * from '.$TableName.;
+    $select = 'select * from '.$TableName;
   }
 }
 // var_dump($select);
@@ -38,25 +38,24 @@ if (isset($_GET['input']) && is_array($_GET['input'])) {
   $FilterSetted = false;
 }
 if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
-  echo '<div class="datagrid" id="datagrid">
-    <table>';
+  echo '<table>';
   if (!$FilterSetted) {
     printf('<thead class="tableHeader">
     <tr>');
     foreach ($Fields as $field) {
-      printf("<td>%s</td>", $field);
-    }
+      printf("<th>%s</th>", $field);
+    } 
     echo '</tr>';
     printf('</thead>
     <tbody>');
     while ($row = mysqli_fetch_array($selectResoult)) {
       echo '<tr>';
       foreach ($Fields as $collom) {
-        printf("<th>%s</th>", $row[$collom]);
+        printf("<td>%s</td>", $row[$collom]);
       }
       echo '</tr>';
     }
-    echo '</tbody></table></div>';
+    echo '</tbody></table>';
   } else {
     printf('<thead class="tableHeader">
     <tr>');
@@ -73,7 +72,7 @@ if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
       }
       echo '</tr>';
     }
-    echo '</tbody></table></div>';
+    echo '</tbody></table>';
   }
   exit();
 }

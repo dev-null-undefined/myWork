@@ -1,0 +1,412 @@
+/*
+Theme Name: Hete it
+Author: Martin Kos
+*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.menu nav {
+  background: #00223b;
+  height: 80px;
+  width: 100%;
+}
+/* label.logo{
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      margin-left: 100px;
+      font-weight: bold;
+    }*/
+.logo img {
+  float: left;
+  margin-left: 100px;
+  height: 80px;
+}
+.menu nav ul {
+  float: right;
+  margin-right: 30px;
+}
+.menu nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 0px;
+}
+.menu nav ul li a {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-size: 17px;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.menu a.active {
+  font-weight: bold;
+}
+.menu a:hover {
+  background: #004174;
+  transition: 1s;
+}
+.btncheck {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#checkmenu {
+  display: none;
+}
+.container {
+  width: 100%;
+  /*   width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;*/
+}
+.left {
+  width: 50%;
+  float: left;
+  height: 500px;
+}
+.right {
+  width: 50%;
+  float: left;
+  height: 500px;
+}
+.right img {
+  width: 100%;
+  max-height: 500px;
+}
+.left img {
+  width: 100%;
+  height: 500px;
+}
+.left p,
+.right p {
+  margin: 5%;
+  font-size: 17px;
+}
+.left h2,
+.right h2,
+.cards h3,
+.contact h3 {
+  margin-top: 50px;
+  color: #00223b;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container ul {
+  margin: 5%;
+}
+
+.container ul li {
+  margin: 2%;
+  font-size: 17px;
+}
+.list {
+  list-style-type: square;
+}
+
+footer {
+  width: 100%;
+  background: #00223b;
+  height: 80px;
+  clear: both;
+  color: white;
+}
+footer p {
+  text-align: center;
+}
+
+.content-table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin-left: 35%;
+  width: 30%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #00223b;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 19px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #00223b;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #00223b;
+}
+
+.card {
+  box-shadow: 0px 0px 10px 1px rgba(0, 34, 59, 1);
+  float: left;
+
+  width: calc(20% - 4px);
+  display: grid;
+  grid-template-rows: 200px;
+  grid-template-areas: "image";
+  border-radius: 18px;
+  background: white;
+  border: 2px solid #00223b;
+  text-align: center;
+}
+.card-image {
+  grid-area: image;
+}
+
+.card-image img {
+  grid-area: image;
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card:hover {
+  transform: scale(1.15);
+}
+.card {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin-left: 4%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.cards {
+  width: 100%;
+  float: left;
+}
+
+.cards h3 {
+  margin-top: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contact {
+  float: left;
+
+  width: 100%;
+}
+
+.open {
+  width: 100%;
+
+  float: left;
+}
+
+.map iframe {
+  margin-left: 20%;
+  margin-top: 100px;
+  border: 5px solid #00223b;
+  width: 60%;
+  height: 500px;
+
+  margin-bottom: 100px;
+}
+.cont {
+  width: 30%;
+  float: left;
+  margin-top: 20px;
+  margin-left: 15%;
+}
+
+.contact-info {
+  float: left;
+  display: flex;
+  margin-left: 20%;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.cardc {
+  background: white;
+  border: 2px solid #00223b;
+  padding: 0 20px;
+  margin: 0 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.card-icon {
+  font-size: 28px;
+  background: #00223b;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.cardc:hover .card-icon {
+  background: none;
+  color: #ff6348;
+  transform: scale(1.6);
+}
+
+.cardc p {
+  margin-top: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.cardc:hover p {
+  max-height: 40px;
+  color: black;
+  opacity: 1;
+}
+@media (max-width: 1500px) {
+  .card {
+    width: calc(28% - 4px);
+    margin-left: 3.6%;
+  }
+
+  .right img {
+    margin-top: 50px;
+  }
+
+  .open,
+  .cont {
+    margin-left: 10%;
+  }
+  .content-table {
+    min-width: 400px;
+  }
+}
+@media (max-width: 900px) {
+  .left,
+  .right {
+    width: 100%;
+  }
+  .right img {
+    margin-top: 0px;
+  }
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  .logo img {
+    margin-left: 50px;
+  }
+  .menu nav ul li a {
+    font-size: 16px;
+  }
+  .card {
+    width: calc(45% - 4px);
+    margin-left: 3.2%;
+  }
+}
+@media (max-width: 700px) {
+  .right,
+  .right img {
+    height: 400px;
+  }
+  .btncheck {
+    display: block;
+  }
+  .menu ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #282c31;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 1s;
+  }
+  .menu nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .menu nav ul li a {
+    font-size: 20px;
+  }
+  .menu a:hover {
+    background: none;
+    color: teal;
+  }
+  .logo img {
+    margin-left: 20px;
+  }
+  #checkmenu:checked ~ ul {
+    left: 0;
+  }
+  .card {
+    grid-template-rows: 300px;
+  }
+  .card-image img {
+    height: 300px;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+  .contact-info {
+    flex-direction: column;
+  }
+  .cardc {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}
