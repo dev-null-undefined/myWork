@@ -4,6 +4,7 @@ from grovepi import *
 from grove_rgb_lcd import *
 
 loopSize = 10
+sleep = 60
 
 ranger = 2  # digital ultrasonicRead(ranger)
 button = 3  # digital digitalRead(button)
@@ -50,23 +51,20 @@ avgNoise = 0
 while True:
     if show:
         setRGB(150, 40, 5)
-    time.sleep(1)
-    if show:
-        setRGB(0, 0, 0)
-    time.sleep(0.01)
+    time.sleep(sleep)
 
     temp, hum = dht(humTemp, 0)
-    time.sleep(0.01)
+    time.sleep(sleep)
     lux = analogRead(luxId)
-    time.sleep(0.01)
+    time.sleep(sleep)
     noise = analogRead(noiseId)
+    time.sleep(sleep)
+
+    # Adding values to avg
     avgT += temp
     avgH += hum
-    time.sleep(0.01)
     avgLux += lux
-    time.sleep(0.01)
     avgNoise += noise
-    time.sleep(0.01)
     loop += 1
     insertVariblesIntoTable(connection, str("{0:.2f}".format(hum)), str(
         "{0:.2f}".format(temp)), str("{0:.2f}".format(lux)), str("{0:.2f}".format(noise)),False)
@@ -87,4 +85,4 @@ while True:
     else:
         setRGB(0, 0, 0)
         setText("")  # 15 char na radek
-    time.sleep(60+(60*((analogRead(2)+1)/1025)))
+    time.sleep(sleep*5*((analogRead(2)+1)/1025))
