@@ -17,12 +17,22 @@ let tailSize = 5
 let speed = false
 
 function draw (event) {
-  content.fillStyle = '#000000'
+  content.fillStyle = "#000000"
   content.fillRect(0, 0, width, height)
-  content.fillStyle = 'lime'
-  content.fillRect(px * width / sizeX, py * height / sizeY, (width / sizeX) - 1, (height / sizeY) - 1)
-  content.fillStyle = 'white'
-  content.fillRect(bx * width / sizeX, by * height / sizeY, (width / sizeX) - 1, (height / sizeY) - 1)
+  content.fillStyle = "lime"
+  content.fillRect(
+    (px * width) / sizeX,
+    (py * height) / sizeY,
+    width / sizeX - 1,
+    height / sizeY - 1
+  )
+  content.fillStyle = "white"
+  content.fillRect(
+    (bx * width) / sizeX,
+    (by * height) / sizeY,
+    width / sizeX - 1,
+    height / sizeY - 1
+  )
   px += ax
   py -= ay
   px = px < 0 ? sizeX - 1 : px >= sizeX ? 0 : px
@@ -38,8 +48,13 @@ function draw (event) {
       ax = 0
       ay = 0
     }
-    content.fillStyle = 'lime'
-    content.fillRect(element.x * width / sizeX, element.y * height / sizeY, (width / sizeX) - 1, (height / sizeY) - 1)
+    content.fillStyle = "lime"
+    content.fillRect(
+      (element.x * width) / sizeX,
+      (element.y * height) / sizeY,
+      width / sizeX - 1,
+      height / sizeY - 1
+    )
   })
   snake.push({ x: px, y: py })
   while (snake.length > tailSize) {
@@ -47,7 +62,7 @@ function draw (event) {
   }
 }
 
-window.addEventListener('keydown', (event) => {
+window.addEventListener("keydown", event => {
   switch (event.which) {
     case 37:
       ax = -1
@@ -70,7 +85,7 @@ window.addEventListener('keydown', (event) => {
       break
   }
 })
-window.addEventListener('keyup', env => {
+window.addEventListener("keyup", env => {
   switch (env.which) {
     case 32:
       speed = false
@@ -78,11 +93,11 @@ window.addEventListener('keyup', env => {
   }
 })
 function start () {
-  game = document.getElementById('game')
-  content = game.getContext('2d')
+  game = document.getElementById("game")
+  content = game.getContext("2d")
   width = game.width
   height = game.height
-  content.fillStyle = '#000000'
+  content.fillStyle = "#000000"
   content.fillRect(0, 0, width, height)
   setTimeout(drawRefresh, 144)
 }
