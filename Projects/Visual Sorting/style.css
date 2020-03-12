@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+header {
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10vh;
+  background-color: black;
+}
+header * {
+  display: inline-block;
+  height: 100%;
+}
+.sortMethods {
+  display: inline-block;
+  width: auto;
+}
+
+/* #region Slider settings */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.slider:disabled::-webkit-slider-thumb {
+  background: rgb(160, 35, 31);
+}
+.slider:hover:not([disabled]) {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4caf50;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4caf50;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* #endregion*/
+/* #region Buttons */
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+button:disabled {
+  background-color: rgb(160, 35, 31);
+}
+button:hover:not(.selectedSort):not([disabled]) {
+  background-color: rgb(51, 204, 56);
+}
+button:active {
+  outline: none;
+  border: none;
+}
+.selectedSort {
+  background-color: rgba(175, 175, 175, 0.466);
+  outline: none;
+  border: none;
+}
+/* #endregion */
+
+canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 5px;
+}

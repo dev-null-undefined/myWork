@@ -4,6 +4,10 @@ class Part {
     this.a = a
     this.b = b
   }
+
+  contains(c) {
+    return c >= this.a && c <= this.b
+  }
 }
 let sortingInterval = null
 let arrayToSort = []
@@ -191,16 +195,13 @@ function sortingRecursion() {
         quickParts = []
         quickDone = []
         quickParts.push(new Part(0, arrayToSort.length - 1))
-        console.log(quickParts)
       }
       if (quickCurrentPart == null) {
-        do {
-          if (quickParts.length === 0) {
-            isDoneSorting = true
-            break
-          }
-          quickCurrentPart = quickParts.pop()
-        } while (quickCurrentPart.a === quickCurrentPart.b)
+        if (quickParts.length === 0) {
+          isDoneSorting = true
+          break
+        }
+        quickCurrentPart = quickParts.pop()
         if (quickCurrentPart.a === quickCurrentPart.b) {
           isDoneSorting = true
         } else {
@@ -211,21 +212,27 @@ function sortingRecursion() {
           quickCurrent = quickCurrentPart.a + 1
           swap(quickCurrentPivot, quickCurrentPart.a, arrayToSort)
           quickCurrentPivot = quickCurrentPart.a
-          quickSmaller = quickCurrentPart.a + 1
+          quickSmaller = quickCurrentPart.a
         } else {
-          if (quickCurrent === quickCurrentPart.b) {
+          if (quickCurrent > quickCurrentPart.b) {
             swap(quickSmaller, quickCurrentPart.a, arrayToSort)
             quickDone.push(quickSmaller)
             // add some code
-            quickParts.push(new Part(quickCurrentPart.a, quickSmaller - 1))
-            quickParts.push(new Part(quickSmaller + 1, quickCurrentPart.b))
+            if (quickCurrentPart.a < quickSmaller - 1) {
+              quickParts.push(new Part(quickCurrentPart.a, quickSmaller - 1))
+            } else if (quickCurrentPart.a === quickSmaller - 1) {
+              quickDone.push(quickCurrentPart.a)
+            }
+            if (quickSmaller + 1 < quickCurrentPart.b) {
+              quickParts.push(new Part(quickSmaller + 1, quickCurrentPart.b))
+            } else if (quickSmaller + 1 === quickCurrentPart.b) {
+              quickDone.push(quickCurrentPart.b)
+            }
             quickCurrentPart = null
             quickCurrent = null
           } else {
-            if (arrayToSort[quickCurrent] <= arrayToSort[quickCurrentPivot]) {
-              swap(quickSmaller, quickCurrent, arrayToSort)
-              quickSmaller++
-              quickCurrent++
+            if (arrayToSort[quickCurrent] < arrayToSort[quickCurrentPivot]) {
+              swap(++quickSmaller, quickCurrent++, arrayToSort)
             } else {
               quickCurrent++
             }
@@ -395,21 +402,21 @@ function drawQuickSort() {
   content.fillRect(0, 0, width, height)
   const sizeOfBlock = width / arrayToSort.length
   arrayToSort.forEach((element, index) => {
-    if (quickDone.indexOf(index) >= 0) {
+    if (quickCurrentPivot === index) {
+      content.fillStyle = "#ff0000"
+    } else if (quickDone.indexOf(index) >= 0) {
       content.fillStyle = "#55b809"
+    } else if (index === quickCurrent) {
+      content.fillStyle = "#08c7d1"
+    } else if (quickCurrentPart !== null && quickCurrentPart.contains(index) && index < quickSmaller) {
+      content.fillStyle = "#fcd303"
     } else {
-      if (index <= quickSmaller) {
-        content.fillStyle = "#fcd303"
-      } else {
-        if (index === quickCurrent) {
-          content.fillStyle = "#08c7d1"
-        } else {
-          content.fillStyle = "#ffffff"
-        }
-      }
+      content.fillStyle = "#ffffff"
     }
     content.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, height * element)
   })
+  content.fillStyle = "#ff0000"
+  content.fillRect(0, height * arrayToSort[quickCurrentPivot], width, 2)
 }
 // #endregion
 // #endregion
