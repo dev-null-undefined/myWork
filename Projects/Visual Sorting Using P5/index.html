@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <button id="generator" class="generator">Generate Array</button>
+      <div class="arraySizeSlider">
+        <input type="range" min="2" max="250" value="50" class="slider" id="arraySize" />
+      </div>
+      <div class="speedSlider">
+        <input type="range" min="40" max="500" value="250" class="slider" id="speed" />
+      </div>
+      <div id="sortMethods" class="sortMethods">
+        <button>Marge Sort</button>
+        <button>Quick Sort</button>
+        <button>Bubble Sort</button>
+        <button>Random sort</button>
+        <button>Selection sort</button>
+        <button>Stalin Sort</button>
+      </div>
+      <button id="startButton" class="startButton">Start sorting</button>
+    </header>
+    <canvas id="canvas"></canvas>
+    <script src="app.js"></script>
+  </body>
+</html>
