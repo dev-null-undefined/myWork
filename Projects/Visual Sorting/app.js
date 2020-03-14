@@ -17,7 +17,6 @@ class Part {
 
 let sortingInterval = null;
 let arrayToSort = [];
-let sortType = null;
 
 const speedSlider = document.getElementById("speed");
 const sizeSlider = document.getElementById("arraySize");
@@ -29,39 +28,19 @@ const speedSliderInfo = document.getElementById("speedText");
 const canvas = document.getElementById("canvas");
 
 let width = window.innerWidth * 0.8;
-let height = window.innerHeight * 0.7;
+let height = window.innerHeight - 250;
 canvas.width = width;
 canvas.height = height;
 
 const cnt = canvas.getContext("2d");
 
 // Chack box from buttons
-function markChosen(element) {
-  element.className = "selectedSort";
-}
-function unMarkChosen(element) {
-  element.className = element.className.replace("selectedSort", "");
-}
-function choseSortType(event) {
-  if (!sortType) {
-    markChosen(event.target);
-    sortType = event.target;
-  } else {
-    unMarkChosen(sortType);
-    markChosen(event.target);
-    sortType = event.target;
-  }
-}
-
 function generateArrayAndDraw(event) {
   arrayToSort = generateArray(sizeSlider.value);
   draw();
 }
 
 // #region Adding event Listener
-Array.from(sortMethodes.getElementsByTagName("button")).forEach(element => {
-  element.addEventListener("click", choseSortType);
-});
 generateButton.addEventListener("click", generateArrayAndDraw);
 startButton.addEventListener("click", startSorting);
 speedSlider.onchange = speedSliderOnChange;
@@ -76,7 +55,7 @@ function speedSliderOnChange(event) {
 window.onresize = windowsResize;
 function windowsResize() {
   width = window.innerWidth * 0.8;
-  height = window.innerHeight * 0.7;
+  height = window.innerHeight - 250;
   canvas.width = width;
   canvas.height = height;
   draw();

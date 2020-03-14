@@ -8,28 +8,38 @@
   </head>
   <body>
     <header>
-      <button id="generator" class="generator">Restart</button>
-      <div class="sliderContainer">
-        <input type="range" min="5" max="500" value="64" class="slider" id="arraySize" />
-        <div id="arraySizeText">Array size: 64</div>
+      <div class="left">
+        <button id="generator" class="generator">Restart</button>
       </div>
-      <div class="sliderContainer">
-        <input type="range" min="0" max="50" value="25" class="slider" id="speed" />
-        <div id="speedText">Speed: 25</div>
+      <div class="midle">
+        <div class="sliderContainer">
+          <input type="range" min="5" max="500" value="64" class="slider" id="arraySize" />
+          <div id="arraySizeText">Array size: 64</div>
+        </div>
+        <div class="sliderContainer">
+          <input type="range" min="0" max="50" value="25" class="slider" id="speed" />
+          <div id="speedText">Speed: 25</div>
+        </div>
+        <div id="sortMethods" class="custom-select">
+          <select>
+            <option value="0">Select sort:</option>
+            <option value="1">Tim Sort</option>
+            <option value="2">Insertion Sort</option>
+            <option value="3">Selection sort</option>
+            <option value="4">Quick Sort</option>
+            <option value="5">Marge Sort</option>
+            <option value="6">Bubble Sort</option>
+            <option value="7">Random sort</option>
+            <option value="8">Stalin Sort</option>
+          </select>
+        </div>
       </div>
-      <div id="sortMethods" class="sortMethods">
-        <button>Tim Sort</button>
-        <button>Insertion Sort</button>
-        <button>Selection sort</button>
-        <button>Quick Sort</button>
-        <button>Marge Sort</button>
-        <button>Bubble Sort</button>
-        <button>Random sort</button>
-        <button>Stalin Sort</button>
+      <div class="right">
+        <button id="startButton" class="startButton">Start sorting</button>
       </div>
-      <button id="startButton" class="startButton">Start sorting</button>
     </header>
     <canvas id="canvas"></canvas>
+    <script src="dropDown.js"></script>
     <script src="arrayFunctions.js"></script>
     <script src="bubbleSort.js"></script>
     <script src="insertionSort.js"></script>
