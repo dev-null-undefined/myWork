@@ -174,6 +174,7 @@ startButton.addEventListener("click", startSorting)
 speedSlider.onchange = speedSliderOnChange
 sizeSlider.onchange = sizeSliderOnChange
 function sizeSliderOnChange(event) {
+  generateArrayAndDraw()
   sizeSliderInfo.innerText = "Array size: " + event.target.value
 }
 function speedSliderOnChange(event) {
@@ -195,11 +196,13 @@ function startSorting() {
       clearInterval(sortingInterval)
       sortingInterval = null
       startButton.innerText = "Start sorting"
+      startButton.className = "startButton"
       generateButton.disabled = false
       sizeSlider.disabled = false
     } else {
       restartVariables("ALL")
       startButton.innerText = "Stop sorting"
+      startButton.className = "stopButton"
       generateButton.disabled = true
       sizeSlider.disabled = true
       sortingRecursion()
@@ -210,6 +213,7 @@ function startSorting() {
 }
 function doneSorting() {
   startButton.innerText = "Start sorting"
+  startButton.className = "startButton"
   generateButton.disabled = false
   sizeSlider.disabled = false
   sortingInterval = null
@@ -676,7 +680,7 @@ function drawQuickSort() {
       content.fillStyle = "#55b809"
     } else if (index === quickCurrent) {
       content.fillStyle = "#08c7d1"
-    } else if (quickCurrentPart && quickCurrentPart.contains(index) && index < quickSmaller) {
+    } else if (quickCurrentPart && quickCurrentPart.contains(index) && index <= quickSmaller) {
       content.fillStyle = "#fcd303"
     } else {
       content.fillStyle = "#ffffff"
