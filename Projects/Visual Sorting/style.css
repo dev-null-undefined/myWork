@@ -9,16 +9,16 @@ header {
   margin-bottom: 10vh;
   background-color: black;
 }
-header * {
-  display: inline-block;
-  height: 100%;
-}
-.sortMethods {
-  display: inline-block;
-  width: auto;
-}
-
 /* #region Slider settings */
+.sliderContainer {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+}
+.sliderContainer div {
+  color: white;
+  text-align: center;
+}
 .slider {
   -webkit-appearance: none;
   appearance: none;
@@ -28,6 +28,9 @@ header * {
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  height: auto;
+  vertical-align: top;
+  margin-top: 10px;
 }
 .slider:disabled::-webkit-slider-thumb {
   background: rgb(160, 35, 31);
@@ -53,6 +56,11 @@ header * {
 }
 /* #endregion*/
 /* #region Buttons */
+.sortMethods {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
 button {
   background-color: #4caf50; /* Green */
   border: none;
@@ -61,6 +69,8 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  text-align: center;
+  height: 100%;
 }
 button:disabled {
   background-color: rgb(160, 35, 31);

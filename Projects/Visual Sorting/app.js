@@ -1,4 +1,5 @@
 /* eslint-disable space-before-function-paren */
+
 class Part {
   constructor(a, b) {
     this.a = a
@@ -8,15 +9,23 @@ class Part {
   contains(c) {
     return c >= this.a && c <= this.b
   }
+
+  size() {
+    return this.a - this.b
+  }
 }
+
 let sortingInterval = null
 let arrayToSort = []
+let sortType = null
 
 const speedSlider = document.getElementById("speed")
 const sizeSlider = document.getElementById("arraySize")
 const generateButton = document.getElementById("generator")
 const sortMethodes = document.getElementById("sortMethods")
 const startButton = document.getElementById("startButton")
+const sizeSliderInfo = document.getElementById("arraySizeText")
+const speedSliderInfo = document.getElementById("speedText")
 const canvas = document.getElementById("canvas")
 
 const width = window.innerWidth * 0.6
@@ -39,6 +48,11 @@ let quickDone
 let quickCurrentPivot
 
 // Marge Sort
+let margeCurrentSize
+let margeCurrentPartA
+let margeCurrentPartB
+let margePartAPointer
+let margePartBPointer
 
 // Stalin Sort
 let stalinIndex
@@ -50,7 +64,22 @@ let randomSorting = false
 let selectionDoneIndex
 let selectionCurrentMinimumIndex
 
-let sortType = null
+// Tim Sort
+const timPartSize = 32
+let timParts
+let timIndex
+let timDone
+let timComparing
+let timCurrentPart
+let timPointerA
+let timPointerB
+let timDoneMarging
+
+// Insertion Sort
+let insertionIndex
+let insertionDone
+let insertionComparing
+
 // Chack box from buttons
 function markChosen(element) {
   element.className = "selectedSort"
@@ -59,7 +88,7 @@ function unMarkChosen(element) {
   element.className = element.className.replace("selectedSort", "")
 }
 function choseSortType(event) {
-  if (sortType == null) {
+  if (!sortType) {
     markChosen(event.target)
     sortType = event.target
   } else {
@@ -69,6 +98,10 @@ function choseSortType(event) {
   }
 }
 
+// Number Function
+function isPowerOfTwo(n) {
+  return (n & (n - 1)) === 0
+}
 // Array Functions
 function randomizePositions(array, timesToSwap = array.length) {
   for (let i = 0; i < array.length; i++) {
@@ -90,6 +123,9 @@ function swap(a, b, array) {
   const itemA = array[a]
   array[a] = array[b]
   array[b] = itemA
+}
+function move(indexA, indexB, array) {
+  return array.splice(indexB, 0, array.splice(indexA, 1)[0])
 }
 function generateArray(length) {
   const array = []
@@ -113,17 +149,26 @@ function generateArrayAndDraw(event) {
   draw()
 }
 
-// Adding event Listener
+// #region Adding event Listener
 Array.from(sortMethodes.getElementsByTagName("button")).forEach(element => {
   element.addEventListener("click", choseSortType)
 })
 generateButton.addEventListener("click", generateArrayAndDraw)
 startButton.addEventListener("click", startSorting)
+speedSlider.onchange = speedSliderOnChange
+sizeSlider.onchange = sizeSliderOnChange
+function sizeSliderOnChange(event) {
+  sizeSliderInfo.innerText = "Array size: " + event.target.value
+}
+function speedSliderOnChange(event) {
+  speedSliderInfo.innerText = "Speed: " + event.target.value
+}
+// #endregion
 
 function startSorting() {
   restartVariables("ALL")
-  if (sortType !== null) {
-    if (sortingInterval !== null) {
+  if (sortType) {
+    if (sortingInterval) {
       clearInterval(sortingInterval)
       sortingInterval = null
       startButton.innerText = "Start sorting"
@@ -144,17 +189,45 @@ function doneSorting() {
   generateButton.disabled = false
   sizeSlider.disabled = false
   sortingInterval = null
-  console.log("Done")
+  // console.log("Done")
 }
 
 function restartVariables(sortMethod) {
   switch (sortMethod) {
-    case "Marge Sort":
+    case "Insertion Sort":
+      // #region Insertion Sort
+      insertionIndex = null
+      insertionDone = null
+      insertionComparing = null
       break
+    // #endregion
+    case "Marge Sort":
+      // #region Marge Sort
+      margeCurrentPartA = null
+      margeCurrentPartB = null
+      margePartAPointer = null
+      margePartBPointer = null
+      break
+    // #endregion
+    case "Tim Sort":
+      // #region Tim Sort
+      timParts = null
+      timIndex = null
+      timDone = null
+      timComparing = null
+      timCurrentPart = null
+      timPointerA = null
+      timPointerB = null
+      timDoneMarging = null
+      break
+    // #endregion
     case "Stalin Sort":
+      // #region Stalin Sort
       stalinIndex = null
       break
+    // #endregion
     case "Quick Sort":
+      // #region Quick Sort
       quickParts = null
       quickCurrent = null
       quickCurrentPart = null
@@ -162,25 +235,36 @@ function restartVariables(sortMethod) {
       quickCurrentPivot = null
       quickSmaller = null
       break
+    // #endregion
     case "Bubble Sort":
+      // #region Bubble Sort
       bubleCurrent = null
       bubleLoop = null
       break
+    // #endregion
     case "Random sort":
+      // #region Random sort
       randomSorting = false
       break
+    // #endregion
     case "Selection sort":
+      // #region Selection sort
       selectionDoneIndex = null
       selectionCurrentMinimumIndex = null
       break
+    // #endregion
     default:
+      // #region Default
       restartVariables("Bubble Sort")
       restartVariables("Random sort")
       restartVariables("Quick Sort")
       restartVariables("Marge Sort")
       restartVariables("Selection sort")
       restartVariables("Stalin Sort")
+      restartVariables("Insertion Sort")
+      restartVariables("Tim Sort")
       break
+    // #endregion
   }
 }
 
@@ -189,14 +273,94 @@ function sortingRecursion() {
   switch (sortType.innerText) {
     case "Marge Sort":
       break
+    case "Insertion Sort":
+      // #region Insertion Sort
+      if (!insertionIndex) {
+        restartVariables("ALL")
+        insertionIndex = 1
+        insertionDone = 0
+        insertionComparing = 0
+      } else if (insertionDone === arrayToSort.length - 1) {
+        isDoneSorting = true
+      } else if (arrayToSort[insertionIndex] > arrayToSort[insertionComparing]) {
+        move(insertionIndex, insertionComparing + 1, arrayToSort)
+        insertionDone++
+        insertionIndex = insertionDone + 1
+        insertionComparing = insertionDone
+      } else if (insertionComparing === 0) {
+        move(insertionIndex, 0, arrayToSort)
+        insertionDone++
+        insertionIndex = insertionDone + 1
+        insertionComparing = insertionDone
+      } else {
+        insertionComparing--
+      }
+      drawInsertionSort()
+      break
+    // #endregion
+    case "Tim Sort":
+      // #region Tim Sort
+      if (!timParts) {
+        restartVariables("ALL")
+        timParts = []
+        let deviderIndex = 0
+        do {
+          timParts.push(new Part(deviderIndex, deviderIndex + timPartSize))
+          deviderIndex += timPartSize
+        } while (deviderIndex < arrayToSort.length)
+      } else if (timCurrentPart === null) {
+        timCurrentPart = 0
+      } else if (!isPowerOfTwo(timCurrentPart) || timCurrentPart <= 1 || timDoneMarging) {
+        const part = timParts[timCurrentPart]
+        if (!timIndex) {
+          timIndex = part.a + 1
+          timDone = part.a
+          timComparing = part.a
+        } else if (timDone === arrayToSort.length - 1 || timDone === part.b) {
+          if (timCurrentPart < timParts.length - 1) {
+            timCurrentPart++
+            timDoneMarging = false
+          } else {
+            isDoneSorting = true
+          }
+        } else if (arrayToSort[timIndex] > arrayToSort[timComparing]) {
+          move(timIndex, timComparing + 1, arrayToSort)
+          timDone++
+          timIndex = timDone + 1
+          timComparing = timDone
+        } else if (timComparing === part.a) {
+          move(timIndex, part.a, arrayToSort)
+          timDone++
+          timIndex = timDone + 1
+          timComparing = timDone
+        } else {
+          timComparing--
+        }
+      } else if (timPointerB === null) {
+        timPointerB = timPartSize
+        timPointerA = 0
+      } else {
+        if (timPointerA >= timCurrentPart * timPartSize || timPointerB >= timCurrentPart * timPartSize) {
+          timDoneMarging = true
+        } else if (arrayToSort[timPointerA] < arrayToSort[timPointerB]) {
+          timPointerA++
+        } else {
+          move(timPointerB, timPointerA, arrayToSort)
+          timPointerB++
+        }
+      }
+      drawTimSort()
+      // #endregion
+      break
     case "Quick Sort":
-      if (quickParts === null) {
+      // #region Quick sort
+      if (!quickParts) {
         restartVariables("ALL")
         quickParts = []
         quickDone = []
         quickParts.push(new Part(0, arrayToSort.length - 1))
       }
-      if (quickCurrentPart == null) {
+      if (!quickCurrentPart) {
         if (quickParts.length === 0) {
           isDoneSorting = true
           break
@@ -208,7 +372,7 @@ function sortingRecursion() {
           quickCurrentPivot = quickCurrentPart.a + Math.floor(Math.random() * (quickCurrentPart.b - quickCurrentPart.a))
         }
       } else {
-        if (quickCurrent === null) {
+        if (!quickCurrent) {
           quickCurrent = quickCurrentPart.a + 1
           swap(quickCurrentPivot, quickCurrentPart.a, arrayToSort)
           quickCurrentPivot = quickCurrentPart.a
@@ -241,9 +405,10 @@ function sortingRecursion() {
       }
       drawQuickSort()
       break
+    // #endregion
     case "Stalin Sort":
       // #region Stalin Sort
-      if (stalinIndex == null) {
+      if (!stalinIndex) {
         restartVariables("ALL")
         stalinIndex = 0
       }
@@ -260,7 +425,7 @@ function sortingRecursion() {
     // #endregion
     case "Selection sort":
       // #region Selection sort
-      if (selectionDoneIndex == null) {
+      if (!selectionDoneIndex) {
         restartVariables("ALL")
         selectionDoneIndex = 0
       }
@@ -275,14 +440,14 @@ function sortingRecursion() {
     // #endregion
     case "Bubble Sort":
       // #region Bubble Sort
-      if (bubleCurrent == null || bubleLoop == null) {
+      if (!bubleCurrent && !bubleLoop) {
         restartVariables("ALL")
         bubleLoop = 0
         bubleCurrent = 0
       }
       if (bubleCurrent + bubleLoop >= arrayToSort.length - 1) {
         if (bubleCurrent === 0) {
-          bubleCurrent = -10
+          bubleCurrent = -1
           bubleLoop++
           isDoneSorting = true
         } else {
@@ -313,12 +478,12 @@ function sortingRecursion() {
     // #endregion
   }
   if (isDoneSorting) {
-    if (sortingInterval !== null) {
+    if (sortingInterval) {
       clearInterval(sortingInterval)
     }
     doneSorting()
   } else {
-    if (sortingInterval !== null) {
+    if (sortingInterval) {
       clearInterval(sortingInterval)
     }
     sortingInterval = setInterval(sortingRecursion, speedSlider.max - speedSlider.value)
@@ -357,12 +522,10 @@ function drawBubleSort() {
   arrayToSort.forEach((element, index) => {
     if (index === bubleCurrent || index === bubleCurrent + 1) {
       content.fillStyle = "#5255eb"
+    } else if (index >= arrayToSort.length - bubleLoop) {
+      content.fillStyle = "#55b809"
     } else {
-      if (index >= arrayToSort.length - bubleLoop) {
-        content.fillStyle = "#55b809"
-      } else {
-        content.fillStyle = "#ffffff"
-      }
+      content.fillStyle = "#ffffff"
     }
     content.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, height * element)
   })
@@ -408,7 +571,7 @@ function drawQuickSort() {
       content.fillStyle = "#55b809"
     } else if (index === quickCurrent) {
       content.fillStyle = "#08c7d1"
-    } else if (quickCurrentPart !== null && quickCurrentPart.contains(index) && index < quickSmaller) {
+    } else if (quickCurrentPart && quickCurrentPart.contains(index) && index < quickSmaller) {
       content.fillStyle = "#fcd303"
     } else {
       content.fillStyle = "#ffffff"
@@ -416,7 +579,48 @@ function drawQuickSort() {
     content.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, height * element)
   })
   content.fillStyle = "#ff0000"
-  content.fillRect(0, height * arrayToSort[quickCurrentPivot], width, 2)
+  content.strokeStyle = "#FF0000"
+  content.setLineDash([5, 3])
+  content.beginPath()
+  content.moveTo(0, height * arrayToSort[quickCurrentPivot])
+  content.lineTo(width, height * arrayToSort[quickCurrentPivot])
+  content.stroke()
+  if (quickCurrentPart) {
+    content.fillRect(quickCurrentPart.a * sizeOfBlock, 0, 1, height)
+    content.fillRect((quickCurrentPart.b + 1) * sizeOfBlock - 1, 0, 1, height)
+  }
+}
+function drawTimSort() {
+  content.fillStyle = "#000"
+  content.fillRect(0, 0, width, height)
+  const sizeOfBlock = width / arrayToSort.length
+  arrayToSort.forEach((element, index) => {
+    if (index === timPointerA) {
+      content.fillStyle = "#ff0000"
+    } else if (index === timPointerB) {
+      content.fillStyle = "#c6d618"
+    } else {
+      content.fillStyle = "#FFF"
+    }
+    content.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, height * element)
+  })
+}
+function drawInsertionSort() {
+  content.fillStyle = "#000"
+  content.fillRect(0, 0, width, height)
+  const sizeOfBlock = width / arrayToSort.length
+  arrayToSort.forEach((element, index) => {
+    if (index === insertionIndex) {
+      content.fillStyle = "#0e66c9"
+    } else if (index === insertionComparing) {
+      content.fillStyle = "#c6d618"
+    } else if (index <= insertionDone) {
+      content.fillStyle = "#35d618"
+    } else {
+      content.fillStyle = "#FFF"
+    }
+    content.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, height * element)
+  })
 }
 // #endregion
 // #endregion
