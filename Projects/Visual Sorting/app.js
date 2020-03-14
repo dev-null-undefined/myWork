@@ -591,7 +591,7 @@ function sortingRecursion() {
     if (sortingInterval) {
       clearInterval(sortingInterval)
     }
-    sortingInterval = setInterval(sortingRecursion, speedSlider.max - speedSlider.value)
+    sortingInterval = setInterval(sortingRecursion, speedSlider.min + (speedSlider.max - speedSlider.value))
   }
 }
 
