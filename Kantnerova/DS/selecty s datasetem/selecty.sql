@@ -6,24 +6,11 @@ group by customers.id,customers.name
 order by customers.name
 -- 2. vypište jméno a zemi dodavatelů, kteří dodali výrobky za celkovou cenu (amount*price)  větší než 100 dolarů
 select developers.name, developers.country
-from (
-select order_details.id, sum(amount)*sum(price) as sumPrice
-    from orders
-        inner join order_details on order_details.order_id=orders.id
-        inner join products on products.id = order_details.product_id
-    group by order_details.id) as x
-    inner join order_details on order_details.id=x.id
-    inner join products on order_details.product_id=products.id
-    inner join developers on products.dev_id=developers.id
-group by developers.id,developers.name,developers.country
-having sum(x.sumPrice)>100;
-
-select developers.name, developers.country
 from orders
     inner join order_details on order_details.order_id=orders.id
     inner join products on products.id = order_details.product_id
     inner join developers on products.dev_id=developers.id
-group by order_details.id
+group by developers.id,developers.name,developers.country
 having sum(amount * price)>100
 -- 3. vypište nejlevnější výrobek, vypište jeho název a cenu
 select products.name, products.price
