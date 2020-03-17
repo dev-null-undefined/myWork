@@ -17,25 +17,25 @@ namespace Server
 
         static void Main(string[] args)
         {
-            Thread inQueueChackerThread = new Thread(inQueueChacker);
+            Thread inqueuechackerthread = new Thread(inQueueChacker);
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.Bind(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5555));
-            inQueueChackerThread.Start();
-            Client.fillCommands();
+            inqueuechackerthread.Start();
+            Client.initilizate();
             while (true)
             {
-                Console.WriteLine("Waiting for client");
+                Console.WriteLine("waiting for client");
                 socket.Listen(1);
                 if (clients.Count < numberOfClientsAtOnce)
                 {
                     Socket accept = socket.Accept();
-                    Console.WriteLine("Connected new Client");
+                    Console.WriteLine("connected new client");
                     clients.Add(new Client(accept));
                 }
                 else
                 {
                     Socket accept = socket.Accept();
-                    Console.WriteLine("New connection send to Queue");
+                    Console.WriteLine("new connection send to queue");
                     inQueue.Add(accept);
                 }
             }
