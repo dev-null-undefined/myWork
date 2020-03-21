@@ -10,7 +10,6 @@ window.onresize = windowResize || draw
 canvas.onmousedown = mouseDown
 document.onmouseup = mouseUp
 canvas.onmousemove = mouseMove
-canvas.oncontextmenu = onContext
 
 var cursorX
 var cursorY
