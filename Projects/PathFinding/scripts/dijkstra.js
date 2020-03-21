@@ -23,10 +23,10 @@ class dijkstra extends PathFind {
     this.visited.push(this.currentCell)
     const x = this.currentCell.x
     const y = this.currentCell.y
-    const dist = this.currentCell.dist
-    this.board.getNeighbor(x, y, true).forEach(element => {
+    const dist = this.currentCell.dist + 1
+    this.board.getNeighbor(x, y, false).forEach(element => {
       if (!this.visited.includes(element) && element.type !== Cell.cellTypes.Wall) {
-        element.dist = dist + element.distance(this.currentCell)
+        element.dist = dist
         element.prev = this.currentCell
       }
       if (element.type === Cell.cellTypes.Finish) {
