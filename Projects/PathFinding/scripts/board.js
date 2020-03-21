@@ -3,7 +3,10 @@ class Cell {
   constructor(x, y) {
     this.x = x
     this.y = y
+    this.dist = Infinity
+    this.distToFinish = Infinity
     this.type = Cell.cellTypes.Air
+    this.prev = null
   }
 
   draw(cnt, size) {
@@ -23,6 +26,11 @@ class Cell {
         return "#0FF"
     }
   }
+
+  distance(b) {
+    return Math.sqrt(Math.pow(this.x - b.x, 2) + Math.pow(this.y - b.y, 2))
+    // return Math.abs(this.x - b.x) + Math.abs(this.y - b.y)
+  }
 }
 Cell.cellTypes = {
   Wall: 0,
@@ -41,6 +49,37 @@ class Board {
         this.cells.push(new Cell(j, i))
       }
     }
+  }
+
+  getNeighbor(x, y, diagonal) {
+    const neibrs = []
+    if (diagonal) {
+      if (x < this.width - 1 && y > 0) {
+        neibrs.push(this.getCell(x + 1, y - 1))
+      }
+      if (x < this.width - 1 && y < this.height - 1) {
+        neibrs.push(this.getCell(x + 1, y + 1))
+      }
+      if (x > 0 && y > 0) {
+        neibrs.push(this.getCell(x - 1, y - 1))
+      }
+      if (x > 0 && y < this.height - 1) {
+        neibrs.push(this.getCell(x - 1, y + 1))
+      }
+    }
+    if (x < this.width - 1) {
+      neibrs.push(this.getCell(x + 1, y))
+    }
+    if (x > 0) {
+      neibrs.push(this.getCell(x - 1, y))
+    }
+    if (y > 0) {
+      neibrs.push(this.getCell(x, y - 1))
+    }
+    if (y < this.height - 1) {
+      neibrs.push(this.getCell(x, y + 1))
+    }
+    return neibrs
   }
 
   getCell(x, y) {

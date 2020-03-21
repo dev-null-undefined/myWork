@@ -11,6 +11,7 @@ window.onresize = windowResize && draw
 canvas.onmousedown = mouseDown
 document.onmouseup = mouseUp
 canvas.onmousemove = mouseMove
+canvas.oncontextmenu = onContext
 
 var cursorX
 var cursorY
@@ -18,6 +19,7 @@ let lastBoardX = null
 let lastBoardY = null
 let typeToChange = Cell.cellTypes.Wall
 let canvasMouseIsDown = false
+let pathFind
 
 function mouseMove(e) {
   cursorX = e.clientX
@@ -35,9 +37,35 @@ function keyDown(event) {
     case 17: // Controll key
       typeToChange = Cell.cellTypes.Air
       break
+    case 32: // Space
+      pathFind = new aStar(board)
+      pathFind.intervalStart(content, 75)
+      break
+    case 83: // S
+      pathFind.intervalStop()
+      break
+    case 82: // R
+      draw()
+      break
+    case 67: // C
+      if (pathFind != null) {
+        pathFind.intervalStop()
+      }
+      windowResize()
+      board = new Board(width, height, 50)
+      board.changeTypeCell(0, 0, Cell.cellTypes.Start)
+      board.changeTypeCell(board.width - 1, board.height - 1, Cell.cellTypes.Finish)
+      draw()
+    // case 70: // F
+    //   const x = cursorX - canvas.offsetLeft
+    //   const y = cursorY - canvas.offsetTop
+    //   board.changeTypeCell(Math.floor(x / board.dens), Math.floor(y / board.dens), Cell.cellTypes.Finish)
+    //   draw()
+    //   break
   }
 }
-function mouseDown(params) {
+function onContext(event) {}
+function mouseDown(event) {
   canvasMouseIsDown = true
   const x = cursorX - canvas.offsetLeft
   const y = cursorY - canvas.offsetTop
@@ -72,8 +100,8 @@ function moving(cell) {
   }
   content.fillStyle = cell.getFill()
   content.fillRect(
-    x - board.dens / 2,
-    y - board.dens / 2,
+    Math.min(x - board.dens / 2, board.width * board.dens),
+    Math.min(y - board.dens / 2, board.height * board.dens),
     Math.min(board.dens, board.width * board.dens - (x - board.dens / 2)),
     Math.min(board.dens, board.height * board.dens - (y - board.dens / 2))
   )
@@ -124,8 +152,9 @@ function windowResize() {
 
 function start() {
   windowResize()
-  board = new Board(width, height, 10)
-  board.changeTypeCell(9, 4, Cell.cellTypes.Start)
+  board = new Board(width, height, 50)
+  board.changeTypeCell(0, 0, Cell.cellTypes.Start)
+  board.changeTypeCell(board.width - 1, board.height - 1, Cell.cellTypes.Finish)
   draw()
 }
 
