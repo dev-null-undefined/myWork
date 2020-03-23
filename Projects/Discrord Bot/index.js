@@ -85,8 +85,8 @@ client.on("message", msg => {
           client.user.setPresence({
             status: "idle",
             game: {
-                name: '!linux help !run is REBOOTING',
-                type: "LISTENING"
+              name: "!linux help !run is REBOOTING",
+              type: "LISTENING"
             }
           });
           exec("virsh destroy debian10; virsh start debian10", myMethod);
@@ -97,24 +97,22 @@ client.on("message", msg => {
           break;
         case stop.test(msg.content):
           client.user.setPresence({
-            status: 'idle',
+            status: "idle",
             game: {
-                name: '!linux help !run is poweredOff',
-                type: "LISTENING"
+              name: "!linux help !run is poweredOff",
+              type: "LISTENING"
             }
           });
-
           exec("virsh destroy debian10", myMethod);
           break;
         case restore.test(msg.content):
           client.user.setPresence({
             status: "dnd",
             game: {
-                name: 'Restoring!',
-                type: "LISTENING"
+              name: "Restoring!",
+              type: "LISTENING"
             }
           });
-
           msg.reply("This can take up to 10 minutes please wait.");
           exec(
             "virsh destroy debian10; virsh undefine debian10 && rm -f /home/martin/debian10 &&  virt-clone --original debian10-clone --name debian10 --auto-clone && virsh start debian10",
@@ -125,11 +123,10 @@ client.on("message", msg => {
           client.user.setPresence({
             status: "idle",
             game: {
-                name: '!linux help !run is poweredOff',
-                type: "LISTENING"
+              name: "!linux help !run is poweredOff",
+              type: "LISTENING"
             }
           });
-
           exec("virsh shutdown debian10", myMethod);
           break;
         case status.test(msg.content):
@@ -167,8 +164,8 @@ function myMethodRestore(err, stdout, stderr) {
   client.user.setPresence({
     status: "idle",
     game: {
-        name: '!linux help !run is REBOOTING',
-        type: "LISTENING"
+      name: "!linux help !run is REBOOTING",
+      type: "LISTENING"
     }
   });
   replyThis("DONE");

@@ -11,12 +11,11 @@ const csharp = new RegExp("^!run c# ");
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setStatus('online');
+  client.user.setStatus("online");
   client.user.setPresence({
     game: {
-        name: '!run help or !linux help',
-        type: "LISTENING",
-        url: "https://www.twitch.tv/learningstudent"
+      name: "!run help or !linux help",
+      type: "LISTENING"
     }
   });
 });
@@ -110,7 +109,8 @@ client.on("message", msg => {
           text = text.substring(11, text.length - 3);
         } else {
           text = text.substring(8, text.length);
-        }w
+        }
+        w;
         msgText += "Running with C# :``` " + text + " ``` ";
         writeToFile(text);
         exec("mcs -out:execute.exe execute && mono execute.exe", myMethod);
@@ -122,7 +122,7 @@ client.on("message", msg => {
 });
 function replyThis(msgText) {
   if (msgText.length > 2000) {
-    writeTo("result.txt",msgText);
+    writeTo("result.txt", msgText);
     currentMsg.reply("Result is too BIG here is it in file.", {
       files: ["./result.txt"]
     });
