@@ -17,6 +17,12 @@ let typeToChange = Cell.cellTypes.Life;
 let canvasMouseIsDown = false;
 let game = null;
 
+let speed = { speed: 15 };
+let speedDif = null;
+let speedMin = 5;
+let speedMax = 250;
+let speedInterval = null;
+
 function mouseMove(e) {
   cursorX = e.clientX;
   cursorY = e.clientY;
@@ -36,7 +42,7 @@ function keyDown(event) {
     case 32: // Space
       if (game !== null) {
         if (!game.stopInterval()) {
-          game.startInterval(content, 75);
+          game.startInterval(content, speed);
         }
       }
       break;
@@ -45,7 +51,27 @@ function keyDown(event) {
       break;
     case 67: // C
       restart();
+      break;
+    case 38: // Up
+      speedDif = -1;
+      if (speedInterval === null) {
+        speedInterval = setInterval(updateSpeed, 5);
+      }
+      break;
+    case 40: // Down
+      speedDif = 1;
+      if (speedInterval === null) {
+        speedInterval = setInterval(updateSpeed, 5);
+      }
+      break;
+    case 72: // H
+      help();
+      break;
   }
+}
+
+function updateSpeed() {
+  speed.speed = Math.min(Math.max(speed.speed + speedDif, speedMin), speedMax);
 }
 function mouseDown(event) {
   canvasMouseIsDown = true;
@@ -85,12 +111,16 @@ function restart() {
   if (game != null) {
     game.stopInterval();
   }
-  start();
+  windowResize();
+  draw();
 }
 
 function start() {
-  windowResize();
-  draw();
+  restart();
+  help();
+}
+function help() {
+  alert("Space - start and stop\nClick - add\nCtrl + click - delete\nH - help (this)\nC - clear (restart)\nArrow up - speed+\nArrow down - speed-");
 }
 
 start();
