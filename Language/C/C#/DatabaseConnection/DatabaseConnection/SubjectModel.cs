@@ -15,6 +15,10 @@ namespace DatabaseConnection
         private string _school_class;
         private string _nick;
         private bool _suspend;
+
+        public SubjectModel()
+        {
+        }
         public SubjectModel(int ID,string first_name, string mid_name, string last_name, string email,string school_class,string nick, bool suspend)
         {
             _ID = ID;
@@ -27,26 +31,21 @@ namespace DatabaseConnection
             _suspend = suspend;
         }
 
-        public string Nick { get => _nick;  }
-        public string School_class { get => _school_class; }
-        public string Email { get => _email; }
-        public string Last_name { get => _last_name; }
-        public string Mid_name { get => _mid_name;  }
-        public string First_name { get => _first_name; }
-        public int ID { get => _ID; }
-        public override bool Equals(object obj)
-        {
-            return obj is SubjectModel model &&
-                   _ID == model._ID &&
-                   _first_name == model._first_name &&
-                   _mid_name == model._mid_name &&
-                   _last_name == model._last_name &&
-                   _email == model._email &&
-                   _school_class == model._school_class &&
-                   _nick == model._nick &&
-                   _suspend == model._suspend;
-        }
+        public int ID { get => _ID; set => _ID = value; }
+        public string First_name { get => _first_name; set => _first_name = value; }
+        public string Mid_name { get => _mid_name; set => _mid_name = value; }
+        public string Last_name { get => _last_name; set => _last_name = value; }
+        public string Email { get => _email; set => _email = value; }
+        public string School_class { get => _school_class; set => _school_class = value; }
+        public string Nick { get => _nick; set => _nick = value; }
+        public bool Suspend { get => _suspend; set => _suspend = value; }
 
+        /// <summary>
+        /// Basic to string for testing only.
+        /// </summary>
+        /// <returns>
+        /// String with all Properties and theyr value.
+        /// </returns>
         public override String ToString()
         {
             Type objType = this.GetType();

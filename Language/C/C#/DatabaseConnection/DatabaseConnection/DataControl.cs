@@ -8,76 +8,59 @@ namespace DatabaseConnection
     class DataControl
     {
         private List<SubjectModel> _records;
-        public List<SubjectModel> records
+        public List<SubjectModel> Records
         {
             get=>_records;
         }
+        /// <summary>
+        /// Constructor for DataControl with emptly Record
+        /// </summary>
         public DataControl()
         {
             _records = new List<SubjectModel>();
         }
-        public DataControl(SqlDataReader reader)
+        /// <summary>
+        /// Constructor for DataControl
+        /// </summary>
+        /// <param name="command">
+        /// Records from the command will be inserted using <see cref="InsertData(SqlCommand)"/>
+        /// </param>
+        public DataControl(SqlCommand command)
         {
             _records = new List<SubjectModel>();
-            this.insertData(reader);
+            this.InsertData(command);
         }
-        public int insertData(SqlDataReader reader)
+
+        /// <summary>
+        /// Insert data to localy stored records.
+        /// </summary>
+        /// <param name="command">
+        /// Command must be initializated with valid Connection and CommandText 
+        /// </param>
+        /// <returns>
+        /// Number of rows imported into local records
+        /// </returns>
+        public int InsertData(SqlCommand command)
         {
-            int numberOfRowsInserted = 0;
-            int ID;
-            string first_name, mid_name, last_name, email, school_class, nick;
-            bool suspend;
-            while (reader.Read())
+            using (SqlDataReader reader = command.ExecuteReader())
             {
-                ID = reader.GetInt32(0);
-                first_name = reader.GetString(1);
-                try
+                int numberOfRowsInserted = 0;
+                while (reader.Read())
                 {
-                    mid_name = reader.GetString(2);
+                    SubjectModel model = new SubjectModel();
+                    model.ID = reader.GetInt32(0);
+                    model.First_name = reader.GetString(1);
+                    model.Mid_name = (reader["mid_name"] == DBNull.Value) ? string.Empty : (String)reader["mid_name"];
+                    model.Last_name = reader.GetString(3);
+                    model.Email = (reader["email"] == DBNull.Value) ? string.Empty : (String)reader["email"];
+                    model.School_class = (reader["school_class"] == DBNull.Value) ? string.Empty : (String)reader["school_class"];
+                    model.Nick = (reader["nick"] == DBNull.Value) ? string.Empty : (String)reader["nick"];
+                    model.Suspend = reader.GetBoolean(7);
+                    _records.Add(model);
+                    numberOfRowsInserted -= -1;
                 }
-                catch (System.Data.SqlTypes.SqlNullValueException e)
-                {
-                    mid_name = null;
-                }
-                last_name = reader.GetString(3);
-                try
-                {
-                    email = reader.GetString(4);
-                }
-                catch (System.Data.SqlTypes.SqlNullValueException e)
-                {
-                    email = null;
-                }
-                try
-                {
-                    school_class = reader.GetString(5);
-                }
-                catch (System.Data.SqlTypes.SqlNullValueException e)
-                {
-                    school_class = null;
-                }
-                try
-                {
-                    nick = reader.GetString(6);
-                }
-                catch (System.Data.SqlTypes.SqlNullValueException e)
-                {
-                    nick = null;
-                }
-                suspend = reader.GetBoolean(7);
-                _records.Add(new SubjectModel(ID, first_name, mid_name, last_name, email, school_class, nick, suspend));
-                numberOfRowsInserted -=-1;
+                return numberOfRowsInserted;
             }
-            return numberOfRowsInserted;
-        }
-        public override string ToString()
-        {
-            string tostring = "{\n";
-            foreach (SubjectModel subject in _records)
-            {
-                tostring += subject.ToString() + "\n";
-            }
-            return tostring + "}";
         }
     }
 }

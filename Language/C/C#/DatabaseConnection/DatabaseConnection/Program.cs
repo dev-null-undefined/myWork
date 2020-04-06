@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace DatabaseConnection
 {
@@ -56,16 +57,17 @@ namespace DatabaseConnection
                         command.Connection = connection;
                         command.CommandText = "select * from sbj_subject";
                         // Version 1
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            DataControl dataCopy = new DataControl(reader);
-                            Console.WriteLine(dataCopy.ToString());
-                        }
+                        DataControl dataCopy = new DataControl(command);
+                        Console.WriteLine(dataCopy);
                         // Version 2
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataSet set = new DataSet("Subjects");
+                        DataTable set = new DataTable("Subject");
                         adapter.Fill(set);
-                        Console.WriteLine(set.GetXml());
+                        using (var writer = new StringWriter())
+                        {
+                            set.WriteXml(writer);
+                            Console.WriteLine(writer.ToString());
+                        }
                     }
                 }
                 catch (SqlException e)
