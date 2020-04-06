@@ -25,7 +25,7 @@ function changeGraph(startOfTheLine) {
   let line = Array.from(findLine(startOfTheLine).getElementsByTagName("p"));
   line.shift();
   line = line.map((element) => parseFloat(element.innerText));
-  createGraph(containerSvg, line, "°C");
+  createGraph(containerSvg, line, "°C", true);
 }
 function createGraph(container, values, afterText = "°C", colorFull = false) {
   container.innerHTML = "";
