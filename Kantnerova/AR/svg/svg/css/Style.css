@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+svg {
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin: auto;
+  stroke-dasharray: 400;
+}
+
+@keyframes draw {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 400;
+  }
+  30% {
+    opacity: 10;
+    stroke-dashoffset: 400;
+  }
+  60% {
+    stroke: black;
+  }
+  100% {
+    opacity: 10;
+    stroke: black;
+    stroke-dashoffset: 0;
+  }
+}
+
+#body1 {
+  opacity: 10;
+  stroke: white;
+  animation: draw 1s 1s 1 normal forwards;
+}
+
+#body2 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 2s 1 normal forwards;
+}
+
+#body3 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 3s 1 normal forwards;
+}
+
+#body4 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 4s 1 normal forwards;
+}
+
+#head1 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 5s 1 normal forwards;
+}
+
+#head2 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 6s 1 normal forwards;
+}
+#leg1 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 7s 1 normal forwards;
+}
+#leg2 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 8s 1 normal forwards;
+}
+#leg3 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 9s 1 normal forwards;
+}
+#leg4 {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 10s 1 normal forwards;
+}
+#oko {
+  stroke: white;
+  opacity: 10;
+  animation: draw 2s 11s 1 normal forwards;
+}
+#ocas {
+  stroke: white;
+  opacity: 10;
+  animation: draw 1s 12s 1 normal forwards;
+}
