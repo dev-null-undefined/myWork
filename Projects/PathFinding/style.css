@@ -3,5 +3,70 @@ body {
   background: rgb(96, 96, 96);
   background: linear-gradient(0deg, rgba(96, 96, 96, 1) 0%, rgba(46, 45, 64, 1) 34%, rgba(2, 0, 36, 1) 100%);
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
+canvas {
+  margin: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 20%;
+  left: calc(100% - 160px);
+  display: block;
+  color: white;
+  z-index: 900;
+}
+/* #region dropDown */
+.custom-select {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  display: inline-block;
+  font-family: Arial;
+}
+.custom-select select {
+  display: none;
+}
+.select-selected {
+  background-color: rgba(30, 143, 255, 0.342);
+}
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+.select-items {
+  position: absolute;
+  background-color: rgba(30, 143, 255, 0.342);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.select-hide {
+  display: none;
+}
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* #endregion */
