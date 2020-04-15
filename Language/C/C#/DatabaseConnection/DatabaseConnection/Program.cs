@@ -59,6 +59,9 @@ namespace DatabaseConnection
                         // Version 1
                         DataControl dataCopy = new DataControl(command);
                         Console.WriteLine(dataCopy);
+                        foreach(SubjectModel s in dataCopy.Records) {
+                            Console.WriteLine(s);
+                        }
                         // Version 2
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable set = new DataTable("Subject");
