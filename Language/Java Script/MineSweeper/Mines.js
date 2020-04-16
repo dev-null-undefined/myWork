@@ -15,12 +15,14 @@ var reset = false;
 var images = [];
 var audio;
 var winSound;
+let font;
 function saveValue(x, y, value) {
   this.xCoord = x;
   this.yCoord = y;
   this.value = value;
 }
 function preload() {
+  font = loadFont("font\\SFTransRobotics.ttf");
   images[0] = loadImage("images\\UnOpened.png");
   images[1] = loadImage("images\\Mine.jpg");
   images[2] = loadImage("images\\MineFound.jpg");
@@ -29,12 +31,13 @@ function preload() {
   winSound = new Audio("Sound\\Win.mp3");
 }
 function setup() {
-  canvas = createCanvas(1920, 1076);
-  startWithMoreArg(8, 20 * 5, 10 * 5);
-  //drawArr=mine;
+  canvas = createCanvas(window.innerWidth, window.innerHeight * 0.9);
+  startWithMoreArg(8, parseInt(width / 30), parseInt(height / 30));
   frameRate(5);
+  textSize(helpX * 0.8);
+  textFont(font);
+  textAlign(RIGHT, CENTER);
 }
-
 function start(seed, size) {
   saveDrawArr = [];
   minesCount = 0;
@@ -98,7 +101,7 @@ function startWithMoreArg(seed, sizeX, sizeY) {
 function win() {
   let saveMineCount = 0;
   let bool = true;
-  saveDrawArr.forEach(p => {
+  saveDrawArr.forEach((p) => {
     if (p != undefined) {
       if (mine[p.xCoord][p.yCoord] === 1) {
         saveMineCount++;
@@ -129,7 +132,7 @@ function lose() {
 
 function mineFound(x, y) {
   if (drawArr[x][y] === -3) {
-    saveDrawArr = saveDrawArr.filter(o => forEachFromSaveDrawArr(o, x, y));
+    saveDrawArr = saveDrawArr.filter((o) => forEachFromSaveDrawArr(o, x, y));
   } else {
     saveDrawArr.push(new saveValue(x, y, drawArr[x][y]));
     drawArr[x][y] = -3;
@@ -244,9 +247,9 @@ function drawGreyAgain(x, y) {
   }
 }
 
-document.addEventListener("click", function(evt) {
-  var clickX = evt.pageX - $("#Hra").offset().left;
-  var clickY = evt.pageY - $("#Hra").offset().top;
+document.addEventListener("click", function (evt) {
+  var clickX = evt.pageX - canvas.canvas.offsetLeft;
+  var clickY = evt.pageY - canvas.canvas.offsetTop;
   //console.log(evt.pageX+','+evt.pageY);
   if (clickX > 0 && clickY > 0 && clickX < canvas.width && clickY < canvas.height) {
     if (reset) {
@@ -272,9 +275,9 @@ document.addEventListener("click", function(evt) {
 
 document.addEventListener(
   "contextmenu",
-  function(ev) {
-    var clickX = ev.pageX - $("#Hra").offset().left;
-    var clickY = ev.pageY - $("#Hra").offset().top;
+  function (ev) {
+    var clickX = ev.pageX - canvas.canvas.offsetLeft;
+    var clickY = ev.pageY - canvas.canvas.offsetTop;
     if (clickX > 0 && clickY > 0 && clickX < canvas.width && clickY < canvas.height) {
       ev.preventDefault();
       clickX = Math.floor(clickX / helpX);
@@ -300,7 +303,7 @@ document.addEventListener(
 
 function draw() {
   if (!reset) {
-    saveDrawArr.forEach(ele => {
+    saveDrawArr.forEach((ele) => {
       drawArr[ele.xCoord][ele.yCoord] = -3;
     });
   }
@@ -341,12 +344,12 @@ function draw() {
     for (y = 0; y < mine[0].length; y++) {
       if (drawArr[x][y] === -2) {
         let amunt = getMinesNextTo(x, y);
-        text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+        drawCount(amunt, x * helpX, y * helpY, helpX, helpY);
         if (x < velikostX - 1) {
           if (drawArr[x + 1][y] === 0) {
             x += 1;
             amunt = getMinesNextTo(x, y);
-            if (amunt != 0) text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+            drawCount(amunt, x * helpX, y * helpY, helpX, helpY);
             x -= 1;
           }
         }
@@ -354,7 +357,7 @@ function draw() {
           if (drawArr[x - 1][y] === 0) {
             x -= 1;
             amunt = getMinesNextTo(x, y);
-            if (amunt != 0) text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+            drawCount(amunt, x * helpX, y * helpY, helpX, helpY);
             x += 1;
           }
         }
@@ -362,7 +365,7 @@ function draw() {
           if (drawArr[x][y + 1] === 0) {
             y += 1;
             amunt = getMinesNextTo(x, y);
-            if (amunt != 0) text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+            drawCount(amunt, x * helpX, y * helpY, helpX, helpY);
             y -= 1;
           }
         }
@@ -370,7 +373,7 @@ function draw() {
           if (drawArr[x][y - 1] === 0) {
             y -= 1;
             amunt = getMinesNextTo(x, y);
-            if (amunt != 0) text(amunt, x * helpX + helpX / 3.5, y * helpY + helpY / 5, (x + 1) * helpX, (y + 1) * helpY);
+            drawCount(amunt, x * helpX, y * helpY, helpX, helpY);
             y += 1;
           }
         }
@@ -378,7 +381,41 @@ function draw() {
     }
   }
 }
-
+function drawCount(count, a, b, c, d) {
+  noStroke();
+  switch (count) {
+    case 0:
+      return;
+    case 1:
+      fill(11, 3, 239);
+      break;
+    case 2:
+      fill(27, 111, 27);
+      break;
+    case 3:
+      fill(229, 65, 45);
+      break;
+    case 4:
+      fill(3, 0, 120);
+      break;
+    case 5:
+      fill(123, 31, 19);
+      break;
+    case 6:
+      fill(50, 51, 89);
+      break;
+    case 7:
+      fill(120, 120, 120);
+      break;
+    case 8:
+      fill(60, 60, 60);
+      break;
+    case 7:
+      fill(20, 20, 20);
+      break;
+  }
+  text(count, a + helpX * 0.1, b, c, d);
+}
 function getMinesNextTo(x, y) {
   var amunt = 0;
   if (x < velikostX - 1) {

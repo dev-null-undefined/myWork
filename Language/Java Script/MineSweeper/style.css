@@ -1,8 +1,22 @@
-html, body {
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #b9b9b9;
 }
-p{
-    margin: 0;
-    position: relative;
+p {
+  margin: 0;
+  position: relative;
+}
+.header {
+  margin: auto;
+  width: auto;
+  height: 5vh;
+  padding-top: 5vh;
+  font-weight: bolder;
+  font-size: 200%;
+  text-align: center;
+}
+canvas {
+  margin: auto;
+  display: block;
 }
