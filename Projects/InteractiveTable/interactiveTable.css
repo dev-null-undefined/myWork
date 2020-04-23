@@ -2,9 +2,20 @@
   width: calc(100%-20px);
   border: 1px solid black;
   border-radius: 10px;
-  max-height: 90vh;
   overflow: auto;
   padding: 10px;
+}
+.tableWrapper::-webkit-scrollbar {
+  width: 1em;
+}
+
+.tableWrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.75);
+  outline: 1px solid rgba(112, 128, 144, 0.75);
 }
 
 /* #region Head*/
@@ -18,14 +29,26 @@
 /* #endregion */
 
 /* #region Table */
+.tableWrapper .holder {
+  display: block;
+  max-height: 80vh;
+  overflow: auto;
+}
 .tableWrapper table {
   width: 100%;
   margin: auto;
   border-collapse: collapse;
-  border-bottom: 1px solid black;
 }
 .tableWrapper thead {
   border-bottom: 1px solid black;
+}
+.tableWrapper th {
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 110%;
+}
+.tableWrapper th span.active {
+  color: rgb(0, 89, 255);
 }
 .tableWrapper th {
   padding: 5px;
@@ -44,15 +67,23 @@
 
 .tableWrapper .arrow div {
   color: rgba(0, 0, 0, 0.5);
-  font-size: 50%;
+  font-size: 75%;
   display: block;
   width: fit-content;
+  padding-left: 5px;
+}
+.tableWrapper .arrow div:last-child {
+  margin-top: -5px;
+}
+.tableWrapper .arrow div.active {
+  color: rgb(0, 0, 0);
 }
 /* #endregion */
 
 /* #region Footer*/
 .tableFooter {
-  margin-top: 10px;
+  border-top: 1px solid black;
+  padding-top: 10px;
   height: 5vh;
 }
 
@@ -81,7 +112,13 @@
   color: #333 !important;
   border: 1px solid #979797;
   background-color: white;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #dcdcdc));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #fff),
+    color-stop(100%, #dcdcdc)
+  );
   background: -webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);
   background: -moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);
   background: -ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);
@@ -93,7 +130,13 @@
   color: white !important;
   border: 1px solid #111;
   background-color: #585858;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #585858),
+    color-stop(100%, #111)
+  );
   background: -webkit-linear-gradient(top, #585858 0%, #111 100%);
   background: -moz-linear-gradient(top, #585858 0%, #111 100%);
   background: -ms-linear-gradient(top, #585858 0%, #111 100%);
@@ -103,7 +146,13 @@
 .pageSelect a:active {
   outline: none;
   background-color: #2b2b2b;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b2b2b), color-stop(100%, #0c0c0c));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #2b2b2b),
+    color-stop(100%, #0c0c0c)
+  );
   background: -webkit-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
   background: -moz-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
   background: -ms-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
