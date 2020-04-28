@@ -9,8 +9,16 @@
 
 <body>
     <?php
+    ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 
-    $conn = mysqli_connect("127.0.0.1", "UnityUser", "BKunjm3uCqjdBQpL", "NeuralNetwork", "5456");
+    if (isset($_GET["dsHost"]) && isset($_GET["dsUser"]) && isset($_GET["dsDatabase"]) && isset($_GET["dsPort"]) && isset($_GET["dsPasswd"])) {
+        $conn = mysqli_connect($_GET["dsHost"], $_GET["dsUser"], $_GET["dsPasswd"],$_GET["dsDatabase"], $_GET["dsPort"]);
+    } else {
+        $conn = mysqli_connect("127.0.0.1", "UnityUser", "BKunjm3uCqjdBQpL", "NeuralNetwork", "5456");
+    }
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
     if (isset($_GET["Table"])) {
         $filterString = "";
@@ -23,7 +31,7 @@
                 if (substr($filterArray[$key], 0, 1) === ">" || substr($filterArray[$key], 0, 1) === "<" || substr($filterArray[$key], 0, 2) === "!=" || substr($filterArray[$key], 0, 1) === "=") {
                     $filterString .= $key . $filterArray[$key] . " AND ";
                 } else {
-                    $filterString .= $key . "=" . $filterArray[$key] . " AND ";
+                    $filterString .= $key . ' like "' . $filterArray[$key] . '" AND ';
                 }
             }
             $filterString = substr($filterString, 0, -4);
@@ -55,7 +63,11 @@
             $pageNumber = intval($_GET["pageNumber"]);
             $startFrom = $pageSize * $pageNumber;
         }
-        $sql = "select * from " . $_GET["Table"] . " " . $filterString . $orderBy . "limit " . $startFrom . "," . $pageSize . ";";
+        if (isset($_GET["dsJoins"])) {
+            $sql = "select * from " . $_GET["Table"] . " " . $_GET["dsJoins"] . " " . $filterString . $orderBy . "limit " . $startFrom . "," . $pageSize . ";";
+        } else {
+            $sql = "select * from " . $_GET["Table"] . " " . $filterString . $orderBy . "limit " . $startFrom . "," . $pageSize . ";";
+        }
         echo $sql;
     } else {
         exit();

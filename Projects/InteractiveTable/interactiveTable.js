@@ -3,9 +3,6 @@
  * Filtering is done using SQL select also sorting and paging
  */
 let settings = {
-  ajaxPage: "index.php",
-  tableId: "myTable",
-  slqTableInfoId: "info",
   pageSizeOptions: [10, 25, 50, 100, 250],
 };
 let currentFocus;
@@ -18,23 +15,35 @@ let urlParams = {
   orderByDesc: [],
   pageNumber: 0,
   pageSize: settings.pageSizeOptions[0],
-  sqlTable: "PlayerData",
 };
 let htmlElements = {};
 function createInteractiveTable(
   ajaxPage = "index.php",
   tableId = "myTable",
   slqTableInfoId = "info",
-  sqlTable = "PlayerData"
+  sqlTable = "PlayerData",
+  sqlHost = "127.0.0.1",
+  sqlUser = "root",
+  sqlPassword = "",
+  sqlDatabase = "",
+  sqlPort = "5456",
+  sqlJoins = ""
 ) {
   settings.ajaxPage = ajaxPage;
   settings.tableId = tableId;
   settings.slqTableInfoId = slqTableInfoId;
-  urlParams.sqlTable = sqlTable;
-  loadTable(settings.ajaxPage + rulesToUrl(urlParams));
+  settings.sqlTable = sqlTable;
+  settings.sqlHost=sqlHost;
+  settings.sqlUser=sqlUser;
+  settings.sqlDatabase=sqlDatabase;
+  settings.sqlPort=sqlPort;
+  settings.sqlJoins=sqlJoins;
+  settings.sqlPassword=sqlPassword;
+  loadTable(settings.ajaxPage, urlParams, settings);
 }
 
-function loadTable(url) {
+function loadTable(url, rule, setting) {
+  url += optionsToUrl(rule, setting);
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -45,7 +54,10 @@ function loadTable(url) {
   xhttp.send();
 }
 
-function rulesToUrl(rule) {
+function optionsToUrl(rule, setting) {
+  if (!rule || !setting) {
+    return "";
+  }
   let rulesString = "?";
   for (let i = 0; i < rule.filters.length; i++) {
     if (rule.filters[i].filter.length != "") {
@@ -63,9 +75,15 @@ function rulesToUrl(rule) {
   for (let i = 0; i < rule.orderByDesc.length; i++) {
     rulesString += "orderByDesc[]=" + encodeURI(rule.orderByDesc[i]) + "&";
   }
-  rulesString += "Table=" + encodeURI(rule.sqlTable) + "&";
-  rulesString += "pageNumber=" + rule.pageNumber + "&";
-  rulesString += "pageSize=" + rule.pageSize + "&";
+  rulesString += "Table=" + encodeURI(setting.sqlTable) + "&";
+  rulesString += "pageNumber=" + encodeURI(rule.pageNumber) + "&";
+  rulesString += "pageSize=" + encodeURI(rule.pageSize) + "&";
+  rulesString += "dsHost=" + encodeURI(setting.sqlHost) + "&";
+  rulesString += "dsUser=" + encodeURI(setting.sqlUser) + "&";
+  rulesString += "dsDatabase=" + encodeURI(setting.sqlDatabase) + "&";
+  rulesString += "dsPort=" + encodeURI(setting.sqlPort) + "&";
+  rulesString += "dsJoins=" + encodeURI(setting.sqlJoins) + "&";
+  rulesString += "dsPasswd=" + encodeURI(setting.sqlPassword) + "&";
   return rulesString.substring(0, rulesString.length - 1);
 }
 
@@ -90,7 +108,7 @@ function generateTable(response) {
   let tableInfo = response.getElementById(settings.slqTableInfoId);
   tableInfo = JSON.parse(tableInfo.innerHTML);
   let numberOfRows = tableInfo.count;
-  let numberOfPages = Math.floor(numberOfRows / urlParams.pageSize) - 1;
+  let numberOfPages = Math.ceil(numberOfRows / urlParams.pageSize) - 1;
   let tableWrapper = document.createElement("div");
   tableWrapper.className = "tableWrapper";
   let tableHead = document.createElement("div");
@@ -127,30 +145,30 @@ function generateTable(response) {
     let thSpan = document.createElement("span");
     thSpan.innerText = element.innerText;
     element.innerText = "";
-    thSpan.onclick = () => focusHead(thSpan);
-    if (currentFocus) {
-      if (currentFocus.colomn == element.innerText) {
-        thSpan.className = "active";
-        currentFocus.element = thSpan;
-      }
-    }
     let arrows = document.createElement("span");
     arrows.className = "arrow";
-    let arrowUp = document.createElement("div");
-    if (urlParams.orderBy.find((element) => element == thSpan.innerText)) {
+    let arrowUp = document.createElement("span");
+    if (urlParams.orderByDesc.some((element) => element == thSpan.innerText)) {
       arrowUp.className = "active";
     }
-    arrowUp.innerText = "▲";
+    arrowUp.innerText = "↑";
     arrows.appendChild(arrowUp);
-    let arrowDown = document.createElement("div");
-    if (urlParams.orderByDesc.find((element) => element == thSpan.innerText)) {
+    let arrowDown = document.createElement("span");
+    if (urlParams.orderBy.some((element) => element == thSpan.innerText)) {
       arrowDown.className = "active";
     }
-    arrowDown.innerText = "▼";
+    arrowDown.innerText = "↓";
     arrows.appendChild(arrowDown);
     element.appendChild(thSpan);
     element.appendChild(arrows);
     arrows.onclick = () => togleOrderBy(element);
+    thSpan.onclick = () => focusHead(thSpan);
+    if (currentFocus) {
+      if (currentFocus.colomn == thSpan.innerText) {
+        thSpan.className = "active";
+        currentFocus.element = thSpan;
+      }
+    }
   });
   let tableHolder = document.createElement("div");
   tableHolder.className = "holder";
@@ -191,8 +209,8 @@ function generateTable(response) {
       }
       pages.appendChild(page);
     }
-  } else if (urlParams.pageNumber > numberOfPages - 5) {
-    for (let i = 5; i > 0; i--) {
+  } else if (urlParams.pageNumber > numberOfPages - 4) {
+    for (let i = 4; i >= 0; i--) {
       page = document.createElement("a");
       page.innerText = numberOfPages - i + 1;
       if (numberOfPages - i == urlParams.pageNumber) {
@@ -221,7 +239,7 @@ function generateTable(response) {
     pages.appendChild(page);
     page = document.createElement("a");
     page.onclick = () => changePage(numberOfPages);
-    page.innerText = numberOfPages;
+    page.innerText = numberOfPages + 1;
     pages.appendChild(page);
   }
   pageSelect.appendChild(pages);
@@ -246,7 +264,7 @@ function filterInputChange(event) {
   if (currentFocus) {
     if (currentFocus.filter != event.target.value) {
       currentFocus.filter = event.target.value;
-      loadTable(settings.ajaxPage + rulesToUrl(urlParams));
+      loadTable(settings.ajaxPage, urlParams, settings);
     }
   }
 }
@@ -254,17 +272,17 @@ function onPageSizeChange() {
   if (urlParams.pageSize != pageSizer.value) {
     urlParams.pageSize = pageSizer.value;
     urlParams.pageNumber = 0;
-    loadTable(settings.ajaxPage + rulesToUrl(urlParams));
+    loadTable(settings.ajaxPage, urlParams, settings);
   }
 }
 function changePage(newPageNumber) {
   if (newPageNumber != urlParams.pageNumber) {
     urlParams.pageNumber = newPageNumber;
-    loadTable(settings.ajaxPage + rulesToUrl(urlParams));
+    loadTable(settings.ajaxPage, urlParams, settings);
   }
 }
 function focusHead(head) {
-  headText = head.innerText;
+  let headText = head.innerText;
   if (currentFocus) {
     if (currentFocus.colomn == headText) {
       return;
@@ -277,6 +295,7 @@ function focusHead(head) {
   let filter = urlParams.filters.find((element) => element.colomn == headText);
   if (filter) {
     htmlElements.search.value = filter.filter;
+    filter.element = head;
   } else {
     htmlElements.search.value = "";
     filter = { colomn: headText, filter: "", element: head };
@@ -287,26 +306,21 @@ function focusHead(head) {
 function togleOrderBy(thead) {
   let text = thead.childNodes[0].innerText;
   let arrows = thead.childNodes[1];
-  if (urlParams.orderBy.find((element) => element == text)) {
-    arrows.childNodes[0].className = "active";
-    arrows.childNodes[1].className = "";
+  if (urlParams.orderBy.some((element) => element == text)) {
     urlParams.orderByDesc.push(text);
     urlParams.orderBy = urlParams.orderBy.filter((element) => element != text);
-    loadTable(settings.ajaxPage + rulesToUrl(urlParams));
-  } else if (urlParams.orderByDesc.find((element) => element == text)) {
-    arrows.childNodes[0].className = "";
+    loadTable(settings.ajaxPage, urlParams, settings);
+  } else if (urlParams.orderByDesc.some((element) => element == text)) {
     urlParams.orderByDesc = urlParams.orderByDesc.filter(
       (element) => element != text
     );
-    loadTable(settings.ajaxPage + rulesToUrl(urlParams));
+    loadTable(settings.ajaxPage, urlParams, settings);
   } else {
-    arrows.childNodes[0].className = "";
-    arrows.childNodes[1].className = "active";
     urlParams.orderBy.push(text);
     urlParams.orderByDesc = urlParams.orderByDesc.filter(
       (element) => element != text
     );
-    loadTable(settings.ajaxPage + rulesToUrl(urlParams));
+    loadTable(settings.ajaxPage, urlParams, settings);
   }
 }
 /**
