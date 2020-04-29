@@ -33,12 +33,12 @@ function createInteractiveTable(
   settings.tableId = tableId;
   settings.slqTableInfoId = slqTableInfoId;
   settings.sqlTable = sqlTable;
-  settings.sqlHost=sqlHost;
-  settings.sqlUser=sqlUser;
-  settings.sqlDatabase=sqlDatabase;
-  settings.sqlPort=sqlPort;
-  settings.sqlJoins=sqlJoins;
-  settings.sqlPassword=sqlPassword;
+  settings.sqlHost = sqlHost;
+  settings.sqlUser = sqlUser;
+  settings.sqlDatabase = sqlDatabase;
+  settings.sqlPort = sqlPort;
+  settings.sqlJoins = sqlJoins;
+  settings.sqlPassword = sqlPassword;
   loadTable(settings.ajaxPage, urlParams, settings);
 }
 
@@ -61,12 +61,7 @@ function optionsToUrl(rule, setting) {
   let rulesString = "?";
   for (let i = 0; i < rule.filters.length; i++) {
     if (rule.filters[i].filter.length != "") {
-      rulesString +=
-        "filter[" +
-        encodeURI(rule.filters[i].colomn) +
-        "]=" +
-        encodeURI(rule.filters[i].filter) +
-        "&";
+      rulesString += "filter[" + encodeURI(rule.filters[i].colomn) + "]=" + encodeURI(rule.filters[i].filter) + "&";
     }
   }
   for (let i = 0; i < rule.orderBy.length; i++) {
@@ -86,11 +81,6 @@ function optionsToUrl(rule, setting) {
   rulesString += "dsPasswd=" + encodeURI(setting.sqlPassword) + "&";
   return rulesString.substring(0, rulesString.length - 1);
 }
-
-// ?filter[colomnName]=filterRule
-// ?OrderBy[]=colomnName&OrderBy[]=colomnName2
-// ?OrderByDesc[]=colomnName&OrderByDesc[]=colomnName2
-
 function removeOldTable() {
   let oldTable = Array.from(document.getElementsByClassName("tableWrapper"));
   oldTable.forEach((elm) => elm.parentNode.removeChild(elm));
@@ -311,15 +301,11 @@ function togleOrderBy(thead) {
     urlParams.orderBy = urlParams.orderBy.filter((element) => element != text);
     loadTable(settings.ajaxPage, urlParams, settings);
   } else if (urlParams.orderByDesc.some((element) => element == text)) {
-    urlParams.orderByDesc = urlParams.orderByDesc.filter(
-      (element) => element != text
-    );
+    urlParams.orderByDesc = urlParams.orderByDesc.filter((element) => element != text);
     loadTable(settings.ajaxPage, urlParams, settings);
   } else {
     urlParams.orderBy.push(text);
-    urlParams.orderByDesc = urlParams.orderByDesc.filter(
-      (element) => element != text
-    );
+    urlParams.orderByDesc = urlParams.orderByDesc.filter((element) => element != text);
     loadTable(settings.ajaxPage, urlParams, settings);
   }
 }
