@@ -82,10 +82,19 @@ body {
         margin-left: 5%;
         margin-right: 5%;*/
 }
+.row {
+  display: inline-block;
+  /* margin-top: 20px; */
+}
+.row:first-child {
+  margin-top: 20px;
+}
+.row .half-row:first-child {
+  margin-top: 10px;
+}
 .half-row {
   width: 50%;
   float: left;
-  height: 500px;
 }
 .half-row img {
   width: 100%;
@@ -95,7 +104,12 @@ body {
   margin: 5%;
   font-size: 17px;
 }
-.half-row h2,
+.half-row h2 {
+  color: #00223b;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+}
 .cards h3,
 .contact h3 {
   margin-top: 50px;
@@ -301,16 +315,15 @@ html {
   opacity: 1;
 }
 @media (max-width: 1500px) {
+  .content-table {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 1200px) {
   .card {
     width: calc(46% - 4px);
     margin-left: 3.6%;
-  }
-
-  .half-row img {
-    margin-top: 50px;
-  }
-  .content-table {
-    min-width: 400px;
   }
 }
 @media (max-width: 900px) {
@@ -334,10 +347,25 @@ html {
     width: calc(45% - 4px);
     margin-left: 3.2%;
   }
+  .contact-info {
+    display: block;
+  }
+  .cardc {
+    width: 90%;
+    margin: 0;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .half-row {
+    width: 100%;
+  }
 }
 @media (max-width: 700px) {
-  .half-row img {
-    height: 400px;
+  label.logo {
+    padding-left: 0;
+    display: flex;
+    width: 100%;
   }
   .btncheck {
     display: block;
@@ -365,16 +393,11 @@ html {
     color: teal;
   }
   .logo img {
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
   #checkmenu:checked ~ ul {
     left: 0;
-  }
-  .card {
-    grid-template-rows: 300px;
-  }
-  .card-image img {
-    height: 300px;
   }
 
   .card:hover {
@@ -382,10 +405,5 @@ html {
   }
   .contact-info {
     flex-direction: column;
-  }
-  .cardc {
-    width: 100%;
-    max-width: 300px;
-    margin: 10px 0;
   }
 }
