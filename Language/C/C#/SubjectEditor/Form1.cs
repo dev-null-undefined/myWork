@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SubjectEditor
@@ -32,11 +28,6 @@ namespace SubjectEditor
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void SyncButtonClick(object sender, EventArgs e)
         {
             Upload();
@@ -45,6 +36,7 @@ namespace SubjectEditor
         private void Download()
         {
             con.Open();
+            newIdShift = 0;
             SqlCommand c = new SqlCommand("SELECT * FROM "+settings.Get("table"), con);
             t.Clear();
             SqlDataAdapter a = new SqlDataAdapter(c);
@@ -132,6 +124,5 @@ namespace SubjectEditor
             con.Close();
             newIdShift++;
         }
-
     }
 }

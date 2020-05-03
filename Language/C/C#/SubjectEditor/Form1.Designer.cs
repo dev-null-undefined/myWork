@@ -262,7 +262,6 @@
             this.MinimumSize = new System.Drawing.Size(400, 400);
             this.Name = "SubjectEditor";
             this.Text = "Subject Editor";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
