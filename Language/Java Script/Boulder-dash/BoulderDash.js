@@ -55,7 +55,9 @@ class Board {
         for (let i = 0; i < 3; i++) {
           for (let j = 0; j < 3; j++) {
             let explCell = this.getCell(player.x + i - 1, player.y + j - 1);
-            explCell.drawExplosion(cnt, cnt.canvas.width / this.sizeX, cnt.canvas.height / this.sizeY, this.lostAnimation % 2);
+            if (explCell.type != Cell.cellTypes.Wall && explCell.type != Cell.cellTypes.Border) {
+              explCell.drawExplosion(cnt, cnt.canvas.width / this.sizeX, cnt.canvas.height / this.sizeY, this.lostAnimation % 2);
+            }
           }
         }
       }
@@ -79,11 +81,16 @@ class Board {
           }
         }
       }
-      this.cells.forEach((x) => (x.falling = false));
+      this.cells.forEach((x) => {
+        x.updated = false;
+      });
     }
   }
   gameover() {
-    this.lostAnimation = 60;
+    this.cells.forEach((x) => {
+      x.updated = true;
+    });
+    this.lostAnimation = 15;
   }
 }
 class Cell {
@@ -92,6 +99,7 @@ class Cell {
     this.y = y;
     this.type = type;
     this.falling = false;
+    this.updated = false;
   }
 
   static Explosion = [document.getElementById("Explosion-1"), document.getElementById("Explosion-2")];
@@ -122,28 +130,31 @@ class Cell {
     cnt.drawImage(Cell.Explosion[type], this.x * sizeX, this.y * sizeY, sizeX * 0.9, sizeY * 0.9);
   }
   update(b) {
+    if (this.updated) {
+      return;
+    }
+    this.updated = true;
     if (this.type.gravity) {
+      if (this.falling && b.getCell(this.x, this.y + 1).type == Cell.cellTypes.Player) {
+        b.gameover();
+      }
       if (b.getCell(this.x, this.y + 1).type == Cell.cellTypes.Air) {
         b.setCell(this.x, this.y, new Cell(this.x, this.y, Cell.cellTypes.Air));
         b.setCell(this.x, this.y + 1, this);
         this.falling = true;
         this.y++;
-        // this.update(b);
       } else if (b.getCell(this.x, this.y + 1).type.rounded) {
         if (b.getCell(this.x - 1, this.y).type == Cell.cellTypes.Air && b.getCell(this.x - 1, this.y + 1).type == Cell.cellTypes.Air) {
           b.setCell(this.x, this.y, new Cell(this.x, this.y, Cell.cellTypes.Air));
           b.setCell(this.x - 1, this.y, this);
           this.x--;
-          // this.update(b);
         } else if (b.getCell(this.x + 1, this.y).type == Cell.cellTypes.Air && b.getCell(this.x + 1, this.y + 1).type == Cell.cellTypes.Air) {
           b.setCell(this.x, this.y, new Cell(this.x, this.y, Cell.cellTypes.Air));
           b.setCell(this.x + 1, this.y, this);
           this.x++;
-          // this.update(b);
         }
-      }
-      if (this.type == Cell.cellTypes.Stone && this.falling && b.getCell(this.x, this.y + 1).type == Cell.cellTypes.Player) {
-        b.gameover();
+      } else {
+        this.falling = false;
       }
     }
   }
@@ -170,7 +181,7 @@ class Game {
   }
   update(b) {
     if (this.player.finished) {
-      this.nextLevel(this.player.points + Math.min(150 - this.player.mined, 0));
+      this.nextLevel(this.player.points + Math.floor(Math.min(150 - this.player.mined, 0) / 10));
     } else if (this.board.lost) {
       this.deathCounter++;
       this.divDeath.innerText = this.deathCounter.toString().padStart(3);
@@ -206,15 +217,26 @@ class Player extends Cell {
     this.points = 0;
     this.mined = 0;
     this.moveVect = moveVect;
-    this.updateNumber = 0;
     this.finished = false;
+    this.stonesCanBeMined = 1;
   }
   update(b) {
     if (this.updated) {
       return;
     }
     this.updated = true;
-    this.updateNumber = 0;
+
+    if (this.moveVect.delX != 0 || this.moveVect.delY != 0) {
+      let cellToMove = b.getCell(this.x + this.moveVect.delX, this.y + this.moveVect.delY);
+      if (cellToMove.type == Cell.cellTypes.Dirt) {
+        b.setCell(this.x + this.moveVect.delX, this.y + this.moveVect.delY, new Cell(this.x + this.moveVect.delX, this.y + this.moveVect.delY, Cell.cellTypes.Air));
+      } else if (this.stonesCanBeMined > 0) {
+        if (cellToMove.type == Cell.cellTypes.Stone) {
+          this.stonesCanBeMined--;
+          b.setCell(this.x + this.moveVect.delX, this.y + this.moveVect.delY, new Cell(this.x + this.moveVect.delX, this.y + this.moveVect.delY, Cell.cellTypes.Air));
+        }
+      }
+    }
     if (this.moveVect.x != 0 || this.moveVect.y != 0) {
       let cellToMove = b.getCell(this.x + this.moveVect.x, this.y + this.moveVect.y);
       switch (cellToMove.type) {
@@ -251,7 +273,7 @@ class Player extends Cell {
           }
           break;
         case Cell.cellTypes.Stone:
-          if (b.getCell(this.x + this.moveVect.x * 2, this.y + this.moveVect.y * 2).type == Cell.cellTypes.Air) {
+          if (b.getCell(this.x + this.moveVect.x * 2, this.y + this.moveVect.y).type == Cell.cellTypes.Air) {
             b.setCell(
               this.x + this.moveVect.x * 2,
               this.y + this.moveVect.y * 2,
@@ -283,8 +305,10 @@ const content = canvas.getContext("2d");
 let moveVect = {
   x: 0,
   y: 0,
+  delX: 0,
+  delY: 0,
 };
-
+let altDown = false;
 let game = new Game(35, 22, moveVect);
 window.onresize = () => setSizes(canvas, window.innerWidth, window.innerHeight);
 window.onkeydown = (e) => keyDown(e);
@@ -293,27 +317,56 @@ window.onkeyup = (e) => keyUp(e);
 function keyDown(event) {
   switch (event.which) {
     case 38:
-      moveVect.x = 0;
-      moveVect.y = -1;
+      if (altDown) {
+        moveVect.delX = 0;
+        moveVect.delY = -1;
+      } else {
+        moveVect.x = 0;
+        moveVect.y = -1;
+      }
       break;
     case 40:
-      moveVect.x = 0;
-      moveVect.y = 1;
+      if (altDown) {
+        moveVect.delX = 0;
+        moveVect.delY = 1;
+      } else {
+        moveVect.x = 0;
+        moveVect.y = 1;
+      }
       break;
     case 39:
-      moveVect.y = 0;
-      moveVect.x = 1;
+      if (altDown) {
+        moveVect.delX = 1;
+        moveVect.delY = 0;
+      } else {
+        moveVect.y = 0;
+        moveVect.x = 1;
+      }
       break;
     case 37:
-      moveVect.y = 0;
-      moveVect.x = -1;
+      if (altDown) {
+        moveVect.delX = -1;
+        moveVect.delY = 0;
+      } else {
+        moveVect.y = 0;
+        moveVect.x = -1;
+      }
       break;
     case 82:
       game.startLevel(game.level, 15);
+      break;
+    case 18:
+      altDown = true;
+      break;
   }
 }
 function keyUp(event) {
   switch (event.which) {
+    case 18:
+      moveVect.delX = 0;
+      moveVect.delY = 0;
+      altDown = false;
+      break;
     case 37:
     case 38:
     case 39:
@@ -329,16 +382,10 @@ function setSizes(c, x, y) {
   c.width = (yMax / game.board.sizeY) * game.board.sizeX * 0.7;
   c.height = yMax * 0.7;
 }
-let frame = 0;
 function updateAndDraw() {
-  if (frame > 20) {
-    frame = 0;
-    game.update();
-  } else {
-    frame++;
-  }
+  game.update();
   game.draw(content);
-  requestAnimationFrame(updateAndDraw);
+  setTimeout(updateAndDraw, 125);
 }
 setSizes(canvas, window.innerWidth, window.innerHeight);
 updateAndDraw();
@@ -364,3 +411,4 @@ function getCookie(cname) {
   }
   return "";
 }
+// Alt sipka vyzrat bez pohibu
