@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  background-color: black;
+}
+img {
+  display: none;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+}
+div {
+  width: 70%;
+  margin: auto;
+  color: azure;
+  font-size: 2vw;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+#Level {
+  color: gold;
+}
+
+#Points {
+  color: blue;
+}
+
+#Deaths {
+  color: red;
+}
