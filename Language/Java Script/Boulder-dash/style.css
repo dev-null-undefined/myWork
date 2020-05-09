@@ -13,10 +13,10 @@ canvas {
   margin: auto;
 }
 div {
-  width: 70%;
+  padding-top: 10px;
   margin: auto;
   color: azure;
-  font-size: 2vw;
+  font-size: 1.6vw;
   font-family: "Press Start 2P", cursive;
   text-align: center;
 }
@@ -25,9 +25,13 @@ div {
 }
 
 #Points {
-  color: blue;
+  color: rgb(0, 110, 255);
 }
 
 #Deaths {
   color: red;
+}
+
+#Remaining {
+  color: green;
 }
