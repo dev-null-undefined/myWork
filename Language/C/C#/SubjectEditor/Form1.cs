@@ -45,6 +45,8 @@ namespace SubjectEditor
             dataGridView1.DataSource = bs;
             Binding bID = new Binding("Text", bs, "id");
             bID.DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
+            bID.FormattingEnabled = false;
+
             Binding bFistName = new Binding("Text", bs, "first_name");
             bFistName.DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
             Binding bLastName = new Binding("Text", bs, "last_name");
@@ -64,7 +66,6 @@ namespace SubjectEditor
         private void Upload()
         {
             con.Open();
-            SqlCommand selectCmd = new SqlCommand("SELECT * FROM "+ settings.Get("table"), con);
             SqlCommand updateCmd = new SqlCommand("UPDATE "+settings.Get("table") + " SET id=@id, first_name=@firstName, mid_name=@midName , last_name=@lastName,email=@email , school_class=@schoolClass, nick=@nick, suspend=@suspend WHERE id=@updateID;", con);
             updateCmd.Parameters.Add("@firstName", SqlDbType.NVarChar, 50, "first_name");
             updateCmd.Parameters.Add("@midName", SqlDbType.NVarChar, 50, "mid_name");
@@ -117,7 +118,6 @@ namespace SubjectEditor
 
         private void dataGridView1_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
-            Console.WriteLine("Hi");
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT max(id)+1 from "+ settings.Get("table"), con);
             dataGridView1.Rows[e.Row.Index-1].Cells["id"].Value = Convert.ToInt32(cmd.ExecuteScalar())+ newIdShift;

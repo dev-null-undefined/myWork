@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 //var_dump($_GET['input']);
 $Fields = array();
-$conn =  new mysqli("jestrab.kolej.mff.cuni.cz", "martin", "Kos", "martin_skola");
+$conn =  new mysqli("jestrab.kolej.mff.cuni.cz", "martin", "JEjQp52n1C", "martin_skola");
 $select = "select * from Report join Senzor on Senzor.id=Report.Senzor_id;";
 $selectResoult = mysqli_query($conn, $select);
 $get_info = mysqli_fetch_assoc($selectResoult);
@@ -11,13 +11,13 @@ $get_info = mysqli_fetch_assoc($selectResoult);
 foreach (array_keys($get_info) as $columnName) {
   array_push($Fields, $columnName);
 }
-$FilterSetted=true;
+$FilterSetted = true;
 $selectResoult = mysqli_query($conn, $select);
-if(isset($_GET['input'])&&is_array($_GET['input'])){
-  $FilterFields=$_GET['input'];
-}else{
-  $FilterFields=array();
-  $FilterSetted=false;
+if (isset($_GET['input']) && is_array($_GET['input'])) {
+  $FilterFields = $_GET['input'];
+} else {
+  $FilterFields = array();
+  $FilterSetted = false;
 }
 if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
   echo '<div class="datagrid" id="datagrid">
@@ -69,13 +69,13 @@ if (isset($_GET['onlyData']) && $_GET['onlyData'] == "true") {
   <button onclick="toggleDropDown()" class="dropbtn">Filter</button>
   <div id="myDropdown" class="dropdown-content">
     <form action="index.php">';
-    foreach ($Fields as $fieldName) {
-      if (in_array($fieldName, $FilterFields)) {
-        printf('<label class="myInput"><input type="checkbox" name="input[]" value="%s" checked/>%s</label><br/>', $fieldName, $fieldName);
-      } else {
-        printf('<label class="myInput"><input type="checkbox" name="input[]" value="%s" />%s</label><br/>', $fieldName, $fieldName);
-      }
+  foreach ($Fields as $fieldName) {
+    if (in_array($fieldName, $FilterFields)) {
+      printf('<label class="myInput"><input type="checkbox" name="input[]" value="%s" checked/>%s</label><br/>', $fieldName, $fieldName);
+    } else {
+      printf('<label class="myInput"><input type="checkbox" name="input[]" value="%s" />%s</label><br/>', $fieldName, $fieldName);
     }
+  }
   echo ' <input type="submit" value="Submit" class="submit"/>
 </form>
 <button onclick="resetInputs()" class="submit">Reset Input</button> 
