@@ -252,16 +252,16 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(138, 368);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // KnihaUploadImage
             // 
             this.KnihaUploadImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KnihaUploadImage.Location = new System.Drawing.Point(3, 341);
+            this.KnihaUploadImage.Location = new System.Drawing.Point(3, 326);
             this.KnihaUploadImage.Name = "KnihaUploadImage";
-            this.KnihaUploadImage.Size = new System.Drawing.Size(132, 24);
+            this.KnihaUploadImage.Size = new System.Drawing.Size(132, 39);
             this.KnihaUploadImage.TabIndex = 0;
             this.KnihaUploadImage.Text = "Upload Image";
             this.KnihaUploadImage.UseVisualStyleBackColor = true;
@@ -272,7 +272,7 @@
             this.KnihaPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KnihaPictureBox.Location = new System.Drawing.Point(3, 3);
             this.KnihaPictureBox.Name = "KnihaPictureBox";
-            this.KnihaPictureBox.Size = new System.Drawing.Size(132, 332);
+            this.KnihaPictureBox.Size = new System.Drawing.Size(132, 317);
             this.KnihaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.KnihaPictureBox.TabIndex = 1;
             this.KnihaPictureBox.TabStop = false;

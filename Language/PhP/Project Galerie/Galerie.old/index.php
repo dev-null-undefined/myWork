@@ -15,9 +15,15 @@
 <body>
     <div id="menu" class="contextMenu">
         <ul class="menu-options">
-            <li class="menu-option"><a href="">Open Image</a></li>
-            <li class="menu-option"><a href="" target="_blank">Open Image in new tab</a></li>
-            <li class="menu-option"><a href="" download>Download</a></li>
+            <a href="">
+                <li class="menu-option">Open Image</li>
+            </a>
+            <a href="" target="_blank">
+                <li class="menu-option">Open Image in new tab</li>
+            </a>
+            <a href="" download>
+                <li class="menu-option">Download</li>
+            </a>
         </ul>
     </div>
 
@@ -56,27 +62,14 @@
                     <input type="submit" value="Submit" class="submit" />
                 </div>
             </form>
-            <ul class="menu">
-                <a href="index.php" class="selected">Public</a>
-                <?php
-                if (isset($_GET['session_id'])) {
-                    echo '<a href="../rodineFoto/index.php?session_id=' . $_GET['session_id'] . '">Rodina</a>';
-                } else {
-                    echo '<a href="../rodineFoto/index.php">Rodina</a>';
-                }
-                ?>
-                <label for="neco-label" class="hide-menu">
-                    <i class="fas fa-times"></i>
-                </label>
-
-            </ul>
         </nav>
     </div>
     <div class="container">
         <div class="gallery">
             <?php
-            function loading($loading){
-                if(!$loading){
+            function loading($loading)
+            {
+                if (!$loading) {
                     echo 'loading';
                 }
                 return true;
@@ -122,7 +115,7 @@
             $saveI = $i;
             //echo is_int($i);
             $alreadyIn = 0;
-            $loading=false;
+            $loading = false;
             $numberOfImages = 0;
             $currentImage = 0;
             foreach ($filesUnder as $file) {
@@ -176,18 +169,17 @@
                                 if (!file_exists($newFile)) {
                                     processimg($path, $newFile);
                                 }
-                                if(!$loading){
-                                    echo '<a oncontextmenu="imageContextMenu()" onclick=load("img-' . $currentImage . '")><img class="image" src="' . $newFile . '" alt="' . $file . '"></a>';
+                                if (!$loading) {
+                                    echo '<a oncontextmenu="imageContextMenu()" onclick=load(\'img-' . $currentImage . '\')><img class="image" src="' . $newFile . '" alt="' . $file . '"></a>';
                                     echo '<noscript><a href="' . '.' . '/' . $dir . '/' . $file . '" target="_blank"><img class="image" src="' . $newFile . '" alt="' . $file . '"></a></noscript>';
-    
+
                                     $buffer .= '<div id="pic-' . $currentImage . '" class="overlay">
                                         <img id="img-' . $currentImage . '" class="big-img" data-src="' . '.' . '/' . $dir . '/' . $file . '" alt="' . $file . '">
-                                        <a onclick="' . ($currentImage > 1 ? 'load("img-' . ($currentImage - 1) . '")' : 'closeX()') . '" class="prev" title="Prev">►►</a> 
-                                        <a onclick="' . ($currentImage < $numberOfImages - 1 ? 'load("img-' . ($currentImage + 1) . '")' : 'closeX()') . '" class="next" title="Next">►►</a> 
+                                        <a onclick="' . ($currentImage > 1 ? 'load(\'img-' . ($currentImage - 1) . '\')' : 'closeX()') . '" class="prev" title="Prev">►►</a> 
+                                        <a onclick="' . ($currentImage < $numberOfImages ? 'load(\'img-' . ($currentImage + 1) . '\')' : 'closeX()') . '" class="next" title="Next">►►</a> 
                                         <a onclick="closeX()" class="close" title="Close">×</a> 
                                         </div>';
                                 }
-                               
                             }
                         }
                     } else {
@@ -195,8 +187,8 @@
                             $currentImage++;
                             $buffer .= '<div id="pic-' . $currentImage . '" class="overlay">
                                 <img id="img-' . $currentImage . '" class="big-img" data-src="' . '.' . '/' . $dir . '/' . $file . '" alt="' . $file . '">
-                                <a onclick="' . ($currentImage > 1 ? 'load("img-' . ($currentImage - 1) . '")' : 'closeX()') . '" class="prev" title="Prev">►►</a> 
-                                <a onclick="' . ($currentImage < $numberOfImages - 1 ? 'load("img-' . ($currentImage + 1) . '")' : 'closeX()') . '" class="next" title="Next">►►</a> 
+                                <a onclick="' . ($currentImage > 1 ? 'load(\'img-' . ($currentImage - 1) . '\')' : 'closeX()') . '" class="prev" title="Prev">►►</a> 
+                                <a onclick="' . ($currentImage < $numberOfImages ? 'load(\'img-' . ($currentImage + 1) . '\')' : 'closeX()') . '" class="next" title="Next">►►</a> 
                                 <a onclick="closeX()" class="close" title="Close">×</a> 
                                 </div>';
                         }
@@ -205,7 +197,7 @@
 
                 }
             }
-            
+
             echo '<div id="gallery">' . $buffer . '</div>';
             ?>
         </div>
