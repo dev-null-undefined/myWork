@@ -68,11 +68,15 @@ function startSorting() {
     if (sortingInterval) {
       clearInterval(sortingInterval);
       sortingInterval = null;
+      stopOscilator();
       startButton.innerText = "Start sorting";
       startButton.className = "startButton";
       generateButton.disabled = false;
       sizeSlider.disabled = false;
     } else {
+      if (oscillator == undefined) {
+        startOscilator();
+      }
       restartVariables("ALL");
       startButton.innerText = "Stop sorting";
       startButton.className = "stopButton";
@@ -93,6 +97,7 @@ function doneSorting() {
 }
 
 function restartVariables(sortMethod) {
+  resumeOscilator();
   switch (sortMethod) {
     case "Insertion Sort":
       insertionSortReset();
@@ -169,12 +174,13 @@ function sortingRecursion() {
   }
   if (isDoneSorting) {
     if (sortingInterval) {
-      clearInterval(sortingInterval);
+      stopOscilator();
+      clearTimeout(sortingInterval);
     }
     doneSorting();
   } else {
     if (sortingInterval) {
-      clearInterval(sortingInterval);
+      clearTimeout(sortingInterval);
     }
     sortingInterval = setTimeout(sortingRecursion, (speedSlider.min + (speedSlider.max - speedSlider.value)) * 5);
   }
