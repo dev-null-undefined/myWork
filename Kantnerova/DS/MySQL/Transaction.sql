@@ -1,0 +1,13 @@
+BEGIN;
+
+DELETE FROM
+    UZIVATEL
+WHERE
+    id = 12;
+
+DELETE FROM
+    KOMENTAR
+WHERE
+    uzivatel_id = 12;
+
+COMMIT;

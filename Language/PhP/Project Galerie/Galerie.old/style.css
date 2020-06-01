@@ -64,10 +64,12 @@ input[type="submit"]:hover {
   margin-top: 40px;
   float: right;
 }
-.menu a {
+a {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
+}
+.menu a {
   padding: 20px 25px;
   transition: 0.3s;
   font-size: 19px;

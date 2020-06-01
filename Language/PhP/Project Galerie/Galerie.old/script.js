@@ -76,9 +76,9 @@ function mouseY(evt) {
 let menuVisible = false;
 let folderMenu = false;
 
-const toggleMenu = command => {
+const toggleMenu = (command) => {
   menu.style.display = command === "show" ? "block" : "none";
-  menuVisible =  command === "show" ?true:false;
+  menuVisible = command === "show" ? true : false;
 };
 
 const setPosition = ({ top, left }) => {
@@ -86,28 +86,28 @@ const setPosition = ({ top, left }) => {
   menu.style.top = `${top}px`;
   //toggleMenu("show");
 };
-window.addEventListener("click", e => {
+window.addEventListener("click", (e) => {
   if (menuVisible) toggleMenu("hide");
 });
-window.addEventListener("contextmenu", e => {
+window.addEventListener("contextmenu", (e) => {
   e.preventDefault();
   const origin = {
     left: mouseX(e),
-    top: mouseY(e)
+    top: mouseY(e),
   };
   if (folderMenu) {
     setPosition(origin);
     folderMenu = false;
-    let src=e.path[0].src;
-    src=src.replace("casheFiles/","");
-    src=src.replace(".small","");
-    document.getElementsByClassName("menu-option")[0].childNodes[0].href=src;
-    document.getElementsByClassName("menu-option")[1].childNodes[0].href=src;
-    document.getElementsByClassName("menu-option")[2].childNodes[0].href=src;
-  }else{
+    let src = e.path[0].src;
+    src = src.replace("casheFiles/", "");
+    src = src.replace(".small", "");
+    document.getElementsByClassName("menu-option")[0].parentElement.href = src;
+    document.getElementsByClassName("menu-option")[1].parentElement.href = src;
+    document.getElementsByClassName("menu-option")[2].parentElement.href = src;
+  } else {
     if (menuVisible) toggleMenu("hide");
   }
-  
+
   return false;
 });
 
