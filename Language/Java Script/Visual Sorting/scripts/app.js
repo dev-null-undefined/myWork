@@ -68,7 +68,9 @@ function startSorting() {
     if (sortingInterval) {
       clearInterval(sortingInterval);
       sortingInterval = null;
-      stopOscilator();
+      if (sortType.innerText != "Random sort") {
+        stopOscilator();
+      }
       startButton.innerText = "Start sorting";
       startButton.className = "startButton";
       generateButton.disabled = false;
