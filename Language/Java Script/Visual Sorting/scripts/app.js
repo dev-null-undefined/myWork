@@ -75,7 +75,7 @@ function startSorting() {
       sizeSlider.disabled = false;
     } else {
       if (oscillator == undefined) {
-        startOscilator();
+        createOscilator();
       }
       restartVariables("ALL");
       startButton.innerText = "Stop sorting";

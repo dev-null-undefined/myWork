@@ -3,11 +3,11 @@ let canvas;
 let cells = new Array();
 // let colms = 192;
 // let rows = 107;
-let colms = 190;
-let rows = 107;
+let colms = 19 * 5;
+let rows = 10 * 5;
 let sizeOfCell = 10;
 
-let justBuild = true;
+let justBuild = false;
 let stack = new Array();
 let currentCell;
 let numberToSolve;
@@ -37,7 +37,7 @@ class Cell {
     if (this.y < sizeY - 1) {
       neighbors.push(allCells[Cell.index(this.x, this.y + 1)]);
     }
-    neighbors = neighbors.filter(x => !x.visited);
+    neighbors = neighbors.filter((x) => !x.visited);
     if (neighbors.length > 0) {
       return neighbors[Math.floor(Math.random() * neighbors.length)];
     } else {
@@ -106,8 +106,8 @@ function setup() {
   currentCell.visited = true;
 }
 function restart() {
-  cells=new Array();
-  stack=new Array();
+  cells = new Array();
+  stack = new Array();
   for (let i = 0; i < colms; i++) {
     for (let j = 0; j < rows; j++) {
       cells.push(new Cell(i, j));
@@ -115,7 +115,7 @@ function restart() {
   }
   Cell.numberInLine = rows;
   numberToSolve = colms * rows - 1;
-  frameRate(1);
+  frameRate(30);
   currentCell = cells[0];
   currentCell.visited = true;
   numberToSolve = colms * rows - 1;
@@ -125,13 +125,13 @@ function draw() {
   background(0);
   if (justBuild) {
     build();
-    cells.forEach(x => x.draw(width / colms, height / rows));
+    cells.forEach((x) => x.draw(width / colms, height / rows));
     //stack.forEach(x => x.draw(width / colms, height / rows, true));
     //currentCell.draw(width / colms, height / rows, true);
     saveCanvas(canvas, "Bludistak", "jpg");
     noLoop();
   } else {
-    cells.forEach(x => x.draw(width / colms, height / rows));
+    cells.forEach((x) => x.draw(width / colms, height / rows));
     if (numberToSolve > 0) {
       let next = currentCell.getNeighbor(cells, colms, rows);
       if (next != null) {
