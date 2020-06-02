@@ -45,30 +45,7 @@ function map_range(value, low1, high1, low2, high2) {
   return low2 + ((high2 - low2) * (value - low1)) / (high1 - low1);
 }
 
-let maxF = 700;
-let minF = 100;
 function getValue(array, index) {
-  oscillator.frequency.value = map_range(array[index], 0, 1, minF, maxF);
+  changeFrequency(array[index]);
   return array[index];
-}
-function stopOscilator() {
-  gainOscillator.disconnect(oscillatorContext.destination);
-}
-function resumeOscilator() {
-  gainOscillator.connect(oscillatorContext.destination);
-}
-var oscillatorContext;
-let oscillator;
-var gainOscillator;
-function startOscilator() {
-  oscillatorContext = new AudioContext();
-  oscillatorContext.resume();
-  oscillator = oscillatorContext.createOscillator();
-  oscillator.type = "sine";
-  gainOscillator = oscillatorContext.createGain();
-  gainOscillator.gain.value = 0.15;
-  oscillator.connect(gainOscillator);
-  gainOscillator.connect(oscillatorContext.destination);
-  oscillator.start();
-  stopOscilator();
 }
