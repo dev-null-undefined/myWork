@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script>
+      document.getElementsByTagName("ul")[0].className = "list-group";
+      let pages = document.getElementsByTagName("a");
+      let lastFrame = undefined;
+      for (page of pages) {
+        if (!page.getAttribute("href").includes("/")) {
+          continue;
+        }
+        let iFrame = document.createElement("iFrame");
+        iFrame.style.display = "none";
+        iFrame.setAttribute("srca", page.getAttribute("href"));
+        page.parentNode.onclick = () => {
+          hideFrame();
+          showFrame(iFrame);
+        };
+        page.parentNode.className = "list-group-item";
+        page.parentNode.appendChild(iFrame);
+      }
+      function showFrame(frame) {
+        if (lastFrame != frame) {
+          frame.style.display = "block";
+          if (frame.getAttribute("src") != "") {
+            frame.setAttribute("src", frame.getAttribute("srca"));
+          }
+          lastFrame = frame;
+        } else {
+          lastFrame = undefined;
+        }
+      }
+      function hideFrame() {
+        if (lastFrame != undefined) {
+          lastFrame.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
