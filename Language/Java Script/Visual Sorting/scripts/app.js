@@ -32,7 +32,8 @@ canvas.width = width;
 canvas.height = height;
 
 const cnt = canvas.getContext("2d");
-
+cnt.font = "30px Arial";
+var timer = { start: null };
 // Chack box from buttons
 function generateArrayAndDraw(event) {
   arrayToSort = generateArray(sizeSlider.value);
@@ -62,7 +63,6 @@ function windowsResize() {
   draw();
 }
 // #endregion
-
 function startSorting() {
   if (sortType) {
     if (sortingInterval) {
@@ -76,6 +76,7 @@ function startSorting() {
       generateButton.disabled = false;
       sizeSlider.disabled = false;
     } else {
+      timer.start = performance.now();
       if (oscillator == undefined) {
         createOscilator();
       }
@@ -174,6 +175,23 @@ function sortingRecursion() {
       drawRandomSort(cnt);
       break;
   }
+  let milis = Math.floor((performance.now() - timer.start) / 10);
+  let secs = Math.floor(milis / 100);
+  let minutes = Math.floor(secs / 60);
+  cnt.fillStyle = "#FFF";
+  while (secs > 60) {
+    secs -= 60;
+  }
+  if (secs < 10) {
+    secs = "0" + secs;
+  }
+  while (milis > 100) {
+    milis -= 100;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  cnt.fillText(minutes + ":" + secs + "." + milis, 0, canvas.height);
   if (isDoneSorting) {
     if (sortingInterval) {
       stopOscilator();
