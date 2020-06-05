@@ -101,6 +101,7 @@ function doneSorting() {
 
 function restartVariables(sortMethod) {
   resumeOscilator();
+  timer.start = performance.now();
   switch (sortMethod) {
     case "Insertion Sort":
       insertionSortReset();
