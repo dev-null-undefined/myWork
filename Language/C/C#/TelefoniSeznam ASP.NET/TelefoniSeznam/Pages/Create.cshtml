@@ -1,0 +1,49 @@
+﻿@page
+@model Database_Galery.Pages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>c3b_kos3_seznam</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="c3b_kos3_seznam.Jmeno" class="control-label"></label>
+                <input asp-for="c3b_kos3_seznam.Jmeno" class="form-control" />
+                <span asp-validation-for="c3b_kos3_seznam.Jmeno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="c3b_kos3_seznam.Prijmeni" class="control-label"></label>
+                <input asp-for="c3b_kos3_seznam.Prijmeni" class="form-control" />
+                <span asp-validation-for="c3b_kos3_seznam.Prijmeni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="c3b_kos3_seznam.Datum_narozeni" class="control-label"></label>
+                <input asp-for="c3b_kos3_seznam.Datum_narozeni" class="form-control" />
+                <span asp-validation-for="c3b_kos3_seznam.Datum_narozeni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="c3b_kos3_seznam.Telefon" class="control-label"></label>
+                <input asp-for="c3b_kos3_seznam.Telefon" class="form-control" />
+                <span asp-validation-for="c3b_kos3_seznam.Telefon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
