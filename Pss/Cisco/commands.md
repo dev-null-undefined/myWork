@@ -85,12 +85,12 @@
 > ## Aktivace
 >
 > ```
-> # line vty 0 10
+> (config)# line vty 0 10
 > (config-line)# transport input ssh
 > (config-line)# login local
 > (config-line)# password <password>
 > (config-line)# exit
-> # line console 0
+> (config)# line console 0
 > (config-line)# logging synchronous
 > (config-line)# login local
 > ```
