@@ -6,9 +6,6 @@
   transition: top 0.5s ease-in-out;
   color: white;
 }
-/* input[type="file"]::-webkit-input-placeholder {
-  color: transparent;
-} */
 #canvas {
   position: fixed;
   left: 0;
