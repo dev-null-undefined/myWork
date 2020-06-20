@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet" />
     <style>
-      iframe {
-        width: 100%;
-        margin-left: 10px;
-        height: 250px;
-      }
       h1 {
         font-size: 37px;
+      }
+      body {
+        background-color: #001f3f;
       }
       table {
         margin-left: 10px;
       }
+      ul {
+        padding-inline-start: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+      li {
+        position: relative;
+        display: inline-block;
+        background-color: #001f3f;
+        width: 44%;
+        margin: 2.5%;
+        height: 450px;
+      }
+      .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: -webkit-transform 1s;
+        -moz-transition: -moz-transform 1s;
+        -o-transition: -o-transform 1s;
+        transition: transform 1s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        -webkit-perspective: 800px;
+        -moz-perspective: 800px;
+        -o-perspective: 800px;
+        perspective: 800px;
+      }
+      a {
+        position: absolute;
+        backface-visibility: hidden;
+        background-color: #0074d9;
+        text-decoration: none;
+        color: white;
+        display: block;
+        text-align: center;
+        line-height: 450px;
+        width: 100%;
+        font-family: "Krona One", sans-serif;
+      }
+      iframe {
+        position: absolute;
+        display: block;
+        backface-visibility: hidden;
+        background-color: #0074d9;
+        width: 100%;
+        height: 450px;
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        border: 1px solid black;
+      }
+      .flipped {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #001f3f;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0074d9;
+        border-radius: 3px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #004581;
+      }
     </style>
   </head>
-
   <body></body>
 </html>
