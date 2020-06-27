@@ -13,6 +13,15 @@ import java.util.LinkedList;
  * @author marti
  */
 public class Folder {
+    private static LinkedList<String> avaibleMods;
+    public static LinkedList<String> getMods(){
+        if(avaibleMods==null){
+            avaibleMods=new LinkedList<>();
+//            avaibleMods.add("html");
+            avaibleMods.add("text");
+        }
+        return avaibleMods;
+    }
     private final LinkedList<Folder> subFolders=new LinkedList<>();
     private final LinkedList<File> subFiles=new LinkedList<>();
     private final File dir;
