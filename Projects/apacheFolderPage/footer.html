@@ -2,37 +2,70 @@
 <html lang="en">
   <body>
     <script>
-      document.getElementsByTagName("ul")[0].className = "list-group";
       let pages = document.getElementsByTagName("a");
       let lastFrame = undefined;
+      let clicked = { a: false };
+      let body = document.getElementsByTagName("body")[0];
+      let header = document.createElement("div");
+      header.className = "header";
+      header.innerText = window.location.pathname;
+      body.prepend(header);
       for (page of pages) {
-        if (!page.getAttribute("href").includes("/")) {
-          continue;
-        }
+        let container = document.createElement("div");
+        container.className = "container";
+        let parent = page.parentNode;
+        parent.removeChild(page);
+        container.appendChild(page);
+        // if (page.getAttribute("href") == "/") {
+        //   parent.parentNode.removeChild(parent);
+        //   continue;
+        // }
         let iFrame = document.createElement("iFrame");
-        iFrame.style.display = "none";
         iFrame.setAttribute("srca", page.getAttribute("href"));
-        page.parentNode.onclick = () => {
-          hideFrame();
+        page.onclick = (e) => {
+          e.preventDefault();
           showFrame(iFrame);
         };
-        page.parentNode.className = "list-group-item";
-        page.parentNode.appendChild(iFrame);
+        let overlay = document.createElement("div");
+        overlay.className = "back-overlay";
+        overlay.innerText = "CLICK TO OPEN";
+        container.appendChild(iFrame);
+        container.appendChild(overlay);
+        parent.appendChild(container);
       }
       function showFrame(frame) {
-        if (lastFrame != frame) {
-          frame.style.display = "block";
-          if (frame.getAttribute("src") != "") {
-            frame.setAttribute("src", frame.getAttribute("srca"));
-          }
-          lastFrame = frame;
-        } else {
-          lastFrame = undefined;
+        frame.style.display = "block";
+        frame.parentNode.classList.add("flipped");
+        if (frame.getAttribute("src") == null) {
+          frame.setAttribute("src", frame.getAttribute("srca"));
         }
+        hideFrame();
+        frame.onload = () => {
+          frame.parentNode.getElementsByClassName("back-overlay")[0].onclick = () => {
+            let win;
+            if (frame.getAttribute("srca").charAt(0) == "/") {
+              win = window.open(window.location.origin + frame.getAttribute("srca"), "_blank");
+            } else {
+              win = window.open(window.location.origin + window.location.pathname + frame.getAttribute("srca"), "_blank");
+            }
+            win.focus();
+            hideFrame();
+          };
+          frame.parentNode.onmouseenter = () => {
+            frame.parentNode.getElementsByClassName("back-overlay")[0].style.display = "block";
+          };
+          frame.parentNode.onmouseleave = () => {
+            frame.parentNode.getElementsByClassName("back-overlay")[0].style.display = "none";
+          };
+        };
+        lastFrame = frame;
+        return true;
       }
       function hideFrame() {
         if (lastFrame != undefined) {
+          lastFrame.parentNode.classList.remove("flipped");
           lastFrame.style.display = "none";
+          // lastFrame.contentDocument.onclick = undefined;
         }
       }
     </script>

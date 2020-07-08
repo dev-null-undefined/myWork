@@ -7,3 +7,4 @@ Photoshop:PSD
 Music:WAV,MP3,3GA,AAC,M4A,OGA,AA
 Java:JAVA,CLASS,JAR
 Html:HTML,CSS,PHP
+Archives:ZIP,RAR,TAR
