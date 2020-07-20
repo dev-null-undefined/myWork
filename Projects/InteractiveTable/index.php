@@ -9,69 +9,101 @@
 
 <body>
     <?php
-    ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
-    if (isset($_GET["dsHost"]) && isset($_GET["dsUser"]) && isset($_GET["dsDatabase"]) && isset($_GET["dsPort"]) && isset($_GET["dsPasswd"])) {
-        $conn = mysqli_connect($_GET["dsHost"], $_GET["dsUser"], $_GET["dsPasswd"],$_GET["dsDatabase"], $_GET["dsPort"]);
-    } else {
-        $conn = mysqli_connect("127.0.0.1", "UnityUser", "BKunjm3uCqjdBQpL", "NeuralNetwork", "5456");
+    //* Parametrs
+    $dsHost = "127.0.0.1";
+    $dsUser = "UnityUser";
+    $dsPasswd = "BKunjm3uCqjdBQpL";
+    $dsDatabase = "NeuralNetwork";
+    $dsPort = "5456";
+    $table = "PlayerData";
+    $filter = [];
+    $orderBy = [];
+    $orderByDesc = [];
+    $startFrom = 0;
+    $pageSize = 10;
+    $pageNumber = 0;
+    $dsJoins = "";
+
+    if (isset($_REQUEST["dsHost"])) {
+        $dsHost = $_REQUEST["dsHost"];
     }
+    if (isset($_REQUEST["dsUser"])) {
+        $dsUser = $_REQUEST["dsUser"];
+    }
+    if (isset($_REQUEST["dsDatabase"])) {
+        $dsDatabase = $_REQUEST["dsDatabase"];
+    }
+    if (isset($_REQUEST["dsPort"])) {
+        $dsPort = $_REQUEST["dsPort"];
+    }
+    if (isset($_REQUEST["dsPasswd"])) {
+        $dsPasswd = $_REQUEST["dsPasswd"];
+    }
+    if (isset($_REQUEST["table"])) {
+        $table = $_REQUEST["table"];
+    }
+    if (isset($_REQUEST["filter"]) && is_array($_REQUEST["filter"])) {
+        $filter = $_REQUEST["filter"];
+    }
+    if (isset($_REQUEST["orderBy"]) && is_array($_REQUEST["orderBy"])) {
+        $orderBy = $_REQUEST["orderBy"];
+    }
+    if (isset($_REQUEST["orderByDesc"]) && is_array($_REQUEST["orderByDesc"])) {
+        $orderByDesc = $_REQUEST["orderByDesc"];
+    }
+    if (isset($_REQUEST["pageSize"])) {
+        $pageSize = intval($_REQUEST["pageSize"]);
+    }
+    if (isset($_REQUEST["pageNumber"])) {
+        $pageNumber = intval($_REQUEST["pageNumber"]);
+    }
+    $startFrom = $pageSize * $pageNumber;
+    if (isset($_REQUEST["dsJoins"])) {
+        $dsJoins = $_REQUEST["dsJoins"];
+    }
+
+    $conn = mysqli_connect($dsHost, $dsUser, $dsPasswd, $dsDatabase, $dsPort);
+
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    if (isset($_GET["Table"])) {
-        $filterString = "";
-        if (isset($_GET["filter"]) && is_array($_GET["filter"])) {
-            $filterArray = $_GET["filter"];
-            if (count($filterArray) > 0) {
-                $filterString = " where ";
-            }
-            foreach (array_keys($filterArray) as $key) {
-                if (substr($filterArray[$key], 0, 1) === ">" || substr($filterArray[$key], 0, 1) === "<" || substr($filterArray[$key], 0, 2) === "!=" || substr($filterArray[$key], 0, 1) === "=") {
-                    $filterString .= $key . $filterArray[$key] . " AND ";
-                } else {
-                    $filterString .= $key . ' like "' . $filterArray[$key] . '" AND ';
-                }
-            }
-            $filterString = substr($filterString, 0, -4);
-        }
-        $orderBy = "";
-        if (isset($_GET["orderBy"]) && is_array($_GET["orderBy"])) {
-            if (strlen($orderBy) == 0) {
-                $orderBy = " order by ";
-            }
-            foreach ($_GET["orderBy"] as $orderByVal) {
-                $orderBy .= $orderByVal . " asc,";
-            }
-        }
-        if (isset($_GET["orderByDesc"]) && is_array($_GET["orderByDesc"])) {
-            if (strlen($orderBy) == 0) {
-                $orderBy = " order by ";
-            }
-            foreach ($_GET["orderByDesc"] as $orderByVal) {
-                $orderBy .= $orderByVal . " desc,";
-            }
-        }
-        if (strlen($orderBy) != 0) {
-            $orderBy = substr($orderBy, 0, -1) . " ";
-        }
-        $startFrom = 0;
-        $pageSize = 10;
-        if (isset($_GET["pageSize"]) && isset($_GET["pageNumber"])) {
-            $pageSize = intval($_GET["pageSize"]);
-            $pageNumber = intval($_GET["pageNumber"]);
-            $startFrom = $pageSize * $pageNumber;
-        }
-        if (isset($_GET["dsJoins"])) {
-            $sql = "select * from " . $_GET["Table"] . " " . $_GET["dsJoins"] . " " . $filterString . $orderBy . "limit " . $startFrom . "," . $pageSize . ";";
-        } else {
-            $sql = "select * from " . $_GET["Table"] . " " . $filterString . $orderBy . "limit " . $startFrom . "," . $pageSize . ";";
-        }
-        echo $sql;
-    } else {
-        exit();
+    $filterString = "";
+    $filterArray = $filter;
+    if (count($filterArray) > 0) {
+        $filterString = " where ";
     }
+    foreach (array_keys($filterArray) as $key) {
+        if (substr($filterArray[$key], 0, 1) === ">" || substr($filterArray[$key], 0, 1) === "<" || substr($filterArray[$key], 0, 2) === "!=" || substr($filterArray[$key], 0, 1) === "=") {
+            $filterString .= $key . $filterArray[$key] . " AND ";
+        } else {
+            $filterString .= $key . ' like "' . $filterArray[$key] . '" AND ';
+        }
+    }
+    $filterString = substr($filterString, 0, -4);
+    $orderByString = "";
+    if (count($orderBy) > 0) {
+        $orderByString = " order by ";
+    }
+    foreach ($orderBy as $orderByVal) {
+        $orderByString .= $orderByVal . " asc,";
+    }
+    if (strlen($orderByString) == 0 && count($orderByDesc) > 0) {
+        $orderByString = " order by ";
+    }
+    foreach ($orderByDesc as $orderByVal) {
+        $orderByString .= $orderByVal . " desc,";
+    }
+    if (strlen($orderByString) != 0) {
+        $orderByString = substr($orderByString, 0, -1) . " ";
+    }
+    $sql = "select * from " . $table . " " . $dsJoins . " " . $filterString . $orderByString . "limit " . $startFrom . "," . $pageSize . ";";
+
+    echo $sql;
     $sqlresult = $conn->query($sql);
     $endLine = "\n";
     if ($sqlresult->num_rows > 0) {
@@ -102,10 +134,10 @@
         echo "0 rows";
     }
 
-    $sql = "select count(*) as ADEF from " . $_GET["Table"] . " " . $filterString . $orderBy . ";";
+    $sql = "select count(*) as DQQVOJNTKANZNFKAF from " . $table . " " . $filterString . $orderByString . ";";
     $sqlresult = $conn->query($sql);
     $row = $sqlresult->fetch_assoc();
-    echo '<div id="info" style="display: none;">{"count":' . $row["ADEF"] . '}</div>';
+    echo '<div id="info" style="display: none;">{"count":' . $row["DQQVOJNTKANZNFKAF"] . '}</div>';
     $conn->close();
     ?>
 </body>

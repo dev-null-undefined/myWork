@@ -14,7 +14,7 @@ let urlParams = {
   orderBy: [],
   orderByDesc: [],
   pageNumber: 0,
-  pageSize: settings.pageSizeOptions[0],
+  pageSize: settings.pageSizeOptions[2],
 };
 let htmlElements = {};
 function createInteractiveTable(
