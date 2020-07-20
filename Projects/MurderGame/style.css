@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-image: url("Background.jpg");
+  background-repeat: no-repeat;
+  background-color: #fcfcfa;
+}
+.wrapper {
+  width: 100%;
+}
+header {
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+}
+header h1 {
+  margin: auto;
+  font-size: 500%;
+  display: block;
+  width: fit-content;
+  font-family: "Creepster";
+  color: #ab0000;
+}
+
+header input {
+  display: block;
+  margin: auto;
+}
+main {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+li {
+  width: fit-content;
+  margin: auto;
+  font-size: 200%;
+  font-family: "Creepster";
+  color: #d3080b;
+}
+input[type="button"] {
+  font-family: "Creepster";
+  /* color: #d3080b; */
+  color: black;
+  font-size: 250%;
+  background-color: transparent;
+  border: solid black 2px;
+  border-radius: 10px;
+  margin: auto;
+  display: block;
+}

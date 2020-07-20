@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Murder Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="wrapper" id="preGame">
+      <header>
+        <h1>Players</h1>
+        <form id="registrar" onsubmit="return addName(event)">
+          <input type="text" name="name" placeholder="Name" />
+        </form>
+      </header>
+      <div class="main">
+        <ul id="list"></ul>
+      </div>
+      <input type="button" value="Play" onclick="startGame()" />
+    </div>
+    <div class="wrapper" id="game" style="display: none;">
+      <header>
+        <h1 id="name">Ahoj</h1>
+        <h1 id="toKill"></h1>
+        <input type="button" value="Show" id="buttonShow" onclick="show()" />
+        <input type="button" value="NEXT" id="buttonShow" onclick="nextPlayer()" />
+      </header>
+    </div>
+    <div class="wrapper" id="start" style="display: none;">
+      <header>
+        <h1 style="font-size: 400%;">LET THE HUNT BEGIN</h1>
+      </header>
+    </div>
+  </body>
+</html>
