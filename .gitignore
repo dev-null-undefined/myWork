@@ -330,3 +330,5 @@ ASALocalRun/
 .mfractor/
 **/Libaries/
 **/lib/
+/Language/JavaPC/NetBeans/FileTree/dist/
+/nbproject/private/
