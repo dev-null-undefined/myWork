@@ -4,6 +4,7 @@ function randomizePositions(array, timesToSwap = array.length) {
   for (let i = 0; i < array.length; i++) {
     swap(Math.floor(Math.random() * array.length), Math.floor(Math.random() * array.length), array);
   }
+  arrayToSortModifications += array.length;
   return array;
 }
 function isSorted(array) {
@@ -20,8 +21,10 @@ function swap(a, b, array) {
   const itemA = array[a];
   array[a] = array[b];
   array[b] = itemA;
+  arrayToSortModifications++;
 }
 function move(indexA, indexB, array) {
+  arrayToSortModifications++;
   return array.splice(indexB, 0, array.splice(indexA, 1)[0]);
 }
 function generateArray(length) {
@@ -34,7 +37,7 @@ function generateArray(length) {
 function minIndex(array) {
   let minimumIndex = 0;
   array.forEach((element, index) => {
-    if (element < array[minimumIndex]) {
+    if (element < getValue(array, minimumIndex)) {
       minimumIndex = index;
     }
   });
@@ -47,5 +50,6 @@ function map_range(value, low1, high1, low2, high2) {
 
 function getValue(array, index) {
   changeFrequency(array[index]);
+  arrayToSortAccess++;
   return array[index];
 }

@@ -17,6 +17,8 @@ class Part {
 
 let sortingInterval = null;
 let arrayToSort = [];
+let arrayToSortAccess = 0;
+let arrayToSortModifications = 0;
 
 const speedSlider = document.getElementById("speed");
 const sizeSlider = document.getElementById("arraySize");
@@ -33,7 +35,6 @@ canvas.height = height;
 
 const cnt = canvas.getContext("2d");
 cnt.font = "30px Arial";
-var timer = { start: null };
 // Chack box from buttons
 function generateArrayAndDraw(event) {
   arrayToSort = generateArray(sizeSlider.value);
@@ -76,7 +77,8 @@ function startSorting() {
       generateButton.disabled = false;
       sizeSlider.disabled = false;
     } else {
-      timer.start = performance.now();
+      arayToSortAccess = 0;
+      arrayToSortModifications = 0;
       if (oscillator == undefined) {
         createOscilator();
       }
@@ -101,7 +103,8 @@ function doneSorting() {
 
 function restartVariables(sortMethod) {
   resumeOscilator();
-  timer.start = performance.now();
+  arrayToSortAccess = 0;
+  arrayToSortModifications = 0;
   switch (sortMethod) {
     case "Insertion Sort":
       insertionSortReset();
@@ -176,23 +179,10 @@ function sortingRecursion() {
       drawRandomSort(cnt);
       break;
   }
-  let milis = Math.floor((performance.now() - timer.start) / 10);
-  let secs = Math.floor(milis / 100);
-  let minutes = Math.floor(secs / 60);
   cnt.fillStyle = "#FFF";
-  while (secs > 60) {
-    secs -= 60;
-  }
-  if (secs < 10) {
-    secs = "0" + secs;
-  }
-  while (milis > 100) {
-    milis -= 100;
-  }
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-  cnt.fillText(minutes + ":" + secs + "." + milis, 0, canvas.height);
+  cnt.font = "25px sans-serif";
+  cnt.fillText("Access:" + arrayToSortAccess * 2, 0, canvas.height);
+  cnt.fillText("Modify:" + arrayToSortModifications, 0, canvas.height - 25);
   if (isDoneSorting) {
     if (sortingInterval) {
       stopOscilator();
