@@ -33,7 +33,7 @@ canvas {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 .left {
@@ -201,7 +201,6 @@ button:focus {
 @media only screen and (min-width: 600px) {
   .grid {
     width: 70%;
-    margin-top: 50px;
     grid-template-areas: "left midle right" "left midle right";
     grid-template-columns: 20% 60% 20%;
     height: 100px;

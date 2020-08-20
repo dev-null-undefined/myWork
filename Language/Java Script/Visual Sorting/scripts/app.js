@@ -19,6 +19,7 @@ let sortingInterval = null;
 let arrayToSort = [];
 let arrayToSortAccess = 0;
 let arrayToSortModifications = 0;
+let isDoneSorting = false;
 
 const speedSlider = document.getElementById("speed");
 const sizeSlider = document.getElementById("arraySize");
@@ -94,14 +95,17 @@ function startSorting() {
   }
 }
 function doneSorting() {
+  sortCheckReset();
   startButton.innerText = "Start sorting";
   startButton.className = "startButton";
   generateButton.disabled = false;
   sizeSlider.disabled = false;
   sortingInterval = null;
+  isDoneSorting = false;
 }
 
 function restartVariables(sortMethod) {
+  isDoneSorting = false;
   resumeOscilator();
   arrayToSortAccess = 0;
   arrayToSortModifications = 0;
@@ -144,55 +148,65 @@ function restartVariables(sortMethod) {
 }
 
 function sortingRecursion() {
-  let isDoneSorting = false;
-  switch (sortType.innerText) {
-    case "Merge Sort":
-      isDoneSorting = margeSort();
-      drawMergeSort(cnt);
-      break;
-    case "Insertion Sort":
-      isDoneSorting = insertSort();
-      drawInsertionSort(cnt);
-      break;
-    case "Tim Sort":
-      isDoneSorting = timSort();
-      drawTimSort(cnt);
-      break;
-    case "Quick Sort":
-      isDoneSorting = quickSort();
-      drawQuickSort(cnt);
-      break;
-    case "Stalin Sort":
-      isDoneSorting = stalinSort();
-      drawStalinSort(cnt);
-      break;
-    case "Selection sort":
-      isDoneSorting = selectionSort();
-      drawSelectionSort(cnt);
-      break;
-    case "Bubble Sort":
-      isDoneSorting = bubbleSort();
-      drawBubbleSort(cnt);
-      break;
-    case "Random sort":
-      isDoneSorting = randomSort();
-      drawRandomSort(cnt);
-      break;
-  }
-  cnt.fillStyle = "#FFF";
-  cnt.font = "25px sans-serif";
-  cnt.fillText("Access:" + arrayToSortAccess * 2, 0, canvas.height);
-  cnt.fillText("Modify:" + arrayToSortModifications, 0, canvas.height - 25);
-  if (isDoneSorting) {
-    if (sortingInterval) {
-      stopOscilator();
-      clearTimeout(sortingInterval);
+  if (!isDoneSorting) {
+    switch (sortType.innerText) {
+      case "Merge Sort":
+        isDoneSorting = margeSort();
+        drawMergeSort(cnt);
+        break;
+      case "Insertion Sort":
+        isDoneSorting = insertSort();
+        drawInsertionSort(cnt);
+        break;
+      case "Tim Sort":
+        isDoneSorting = timSort();
+        drawTimSort(cnt);
+        break;
+      case "Quick Sort":
+        isDoneSorting = quickSort();
+        drawQuickSort(cnt);
+        break;
+      case "Stalin Sort":
+        isDoneSorting = stalinSort();
+        drawStalinSort(cnt);
+        break;
+      case "Selection sort":
+        isDoneSorting = selectionSort();
+        drawSelectionSort(cnt);
+        break;
+      case "Bubble Sort":
+        isDoneSorting = bubbleSort();
+        drawBubbleSort(cnt);
+        break;
+      case "Random sort":
+        isDoneSorting = randomSort();
+        drawRandomSort(cnt);
+        break;
     }
-    doneSorting();
+  }
+  if (isDoneSorting) {
+    if (sortCheck()) {
+      if (sortingInterval) {
+        stopOscilator();
+        clearTimeout(sortingInterval);
+      }
+      doneSorting();
+    } else {
+      drawSortCheck(cnt);
+      cnt.fillStyle = "#FFF";
+      cnt.font = "25px sans-serif";
+      cnt.fillText("Access:" + arrayToSortAccess * 2, 0, canvas.height);
+      cnt.fillText("Modify:" + arrayToSortModifications, 0, canvas.height - 25);
+      sortingInterval = setTimeout(sortingRecursion, (speedSlider.min + (speedSlider.max - speedSlider.value)) * 5);
+    }
   } else {
     if (sortingInterval) {
       clearTimeout(sortingInterval);
     }
+    cnt.fillStyle = "#FFF";
+    cnt.font = "25px sans-serif";
+    cnt.fillText("Access:" + arrayToSortAccess * 2, 0, canvas.height);
+    cnt.fillText("Modify:" + arrayToSortModifications, 0, canvas.height - 25);
     sortingInterval = setTimeout(sortingRecursion, (speedSlider.min + (speedSlider.max - speedSlider.value)) * 5);
   }
 }

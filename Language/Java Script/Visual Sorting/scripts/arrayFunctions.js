@@ -21,10 +21,14 @@ function swap(a, b, array) {
   const itemA = array[a];
   array[a] = array[b];
   array[b] = itemA;
-  arrayToSortModifications++;
+  if (a != b) {
+    arrayToSortModifications++;
+  }
 }
 function move(indexA, indexB, array) {
-  arrayToSortModifications++;
+  if (indexA != indexB) {
+    arrayToSortModifications++;
+  }
   return array.splice(indexB, 0, array.splice(indexA, 1)[0]);
 }
 function generateArray(length) {
