@@ -70,9 +70,7 @@ function startSorting() {
     if (sortingInterval) {
       clearInterval(sortingInterval);
       sortingInterval = null;
-      if (sortType.innerText != "Random sort") {
-        stopOscilator();
-      }
+      stopOscilator();
       startButton.innerText = "Start sorting";
       startButton.className = "startButton";
       generateButton.disabled = false;
@@ -95,6 +93,7 @@ function startSorting() {
   }
 }
 function doneSorting() {
+  stopOscilator();
   sortCheckReset();
   startButton.innerText = "Start sorting";
   startButton.className = "startButton";
@@ -186,10 +185,7 @@ function sortingRecursion() {
   }
   if (isDoneSorting) {
     if (sortCheck()) {
-      if (sortingInterval) {
-        stopOscilator();
-        clearTimeout(sortingInterval);
-      }
+      clearTimeout(sortingInterval);
       doneSorting();
     } else {
       drawSortCheck(cnt);

@@ -8,7 +8,10 @@ function randomSort() {
     randomSorting = true;
   }
   arrayToSort = randomizePositions(arrayToSort);
-  return isSorted(arrayToSort);
+  if (isSorted(arrayToSort)) {
+    resumeOscilator();
+    return true;
+  }
 }
 
 function drawRandomSort(cnt) {

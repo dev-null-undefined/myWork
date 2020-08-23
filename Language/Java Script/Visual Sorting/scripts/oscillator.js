@@ -1,6 +1,6 @@
 var oscillator;
 function stopOscilator() {
-  oscillator.gainOscillator.disconnect(oscillator.oscillatorContext.destination);
+  oscillator.gainOscillator.disconnect();
 }
 function resumeOscilator() {
   oscillator.gainOscillator.connect(oscillator.oscillatorContext.destination);
