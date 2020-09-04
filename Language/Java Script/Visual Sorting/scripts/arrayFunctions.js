@@ -1,4 +1,3 @@
-/* eslint-disable space-before-function-paren */
 // Array Functions
 function randomizePositions(array, timesToSwap = array.length) {
   for (let i = 0; i < array.length; i++) {
@@ -56,4 +55,24 @@ function getValue(array, index) {
   changeFrequency(array[index]);
   arrayToSortAccess++;
   return array[index];
+}
+
+function deleteOnIndex(index) {
+  arrayToSortModifications++;
+  arrayToSort.splice(index, 1);
+}
+
+class Part {
+  constructor(a, b) {
+    this.a = a;
+    this.b = b;
+  }
+
+  contains(c) {
+    return c >= this.a && c <= this.b;
+  }
+
+  size() {
+    return this.b - this.a;
+  }
 }

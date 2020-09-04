@@ -1,101 +1,83 @@
-/* eslint-disable space-before-function-paren */
 // Quick Sort
-let quickParts;
-let quickCurrent;
-let quickSmaller;
-let quickCurrentPart;
-let quickDone;
-let quickCurrentPivot;
-
-function quickSort(params) {
-  // #region Quick sort
-  if (!quickParts) {
-    restartVariables("ALL");
-    quickParts = [];
-    quickDone = [];
-    quickParts.push(new Part(0, arrayToSort.length - 1));
+class QuickSort extends Sort {
+  constructor() {
+    super();
+    this.parts = [];
+    this.done = [];
+    this.parts.push(new Part(0, arrayToSort.length - 1));
   }
-  if (!quickCurrentPart) {
-    if (quickParts.length === 0) {
-      return true;
-    }
-    quickCurrentPart = quickParts.pop();
-    if (quickCurrentPart.a === quickCurrentPart.b) {
-      return true;
-    } else {
-      quickCurrentPivot = quickCurrentPart.a + Math.floor(Math.random() * (quickCurrentPart.b - quickCurrentPart.a));
-    }
-  } else {
-    if (!quickCurrent) {
-      quickCurrent = quickCurrentPart.a + 1;
-      swap(quickCurrentPivot, quickCurrentPart.a, arrayToSort);
-      quickCurrentPivot = quickCurrentPart.a;
-      quickSmaller = quickCurrentPart.a;
-    } else {
-      if (quickCurrent > quickCurrentPart.b) {
-        swap(quickSmaller, quickCurrentPart.a, arrayToSort);
-        quickDone.push(quickSmaller);
-        // add some code
-        if (quickCurrentPart.a < quickSmaller - 1) {
-          quickParts.push(new Part(quickCurrentPart.a, quickSmaller - 1));
-        } else if (quickCurrentPart.a === quickSmaller - 1) {
-          quickDone.push(quickCurrentPart.a);
-        }
-        if (quickSmaller + 1 < quickCurrentPart.b) {
-          quickParts.push(new Part(quickSmaller + 1, quickCurrentPart.b));
-        } else if (quickSmaller + 1 === quickCurrentPart.b) {
-          quickDone.push(quickCurrentPart.b);
-        }
-        quickCurrentPart = null;
-        quickCurrent = null;
+  step() {
+    if (!this.currentPart) {
+      if (this.parts.length === 0) {
+        return true;
+      }
+      this.currentPart = this.parts.pop();
+      if (this.currentPart.a === this.currentPart.b) {
+        return true;
       } else {
-        if (getValue(arrayToSort, quickCurrent) < arrayToSort[quickCurrentPivot]) {
-          swap(++quickSmaller, quickCurrent++, arrayToSort);
+        this.currentPivot = this.currentPart.a + Math.floor(Math.random() * (this.currentPart.b - this.currentPart.a));
+      }
+    } else {
+      if (!this.current) {
+        this.current = this.currentPart.a + 1;
+        swap(this.currentPivot, this.currentPart.a, arrayToSort);
+        this.currentPivot = this.currentPart.a;
+        this.smaller = this.currentPart.a;
+      } else {
+        if (this.current > this.currentPart.b) {
+          swap(this.smaller, this.currentPart.a, arrayToSort);
+          this.done.push(this.smaller);
+          // add some code
+          if (this.currentPart.a < this.smaller - 1) {
+            this.parts.push(new Part(this.currentPart.a, this.smaller - 1));
+          } else if (this.currentPart.a === this.smaller - 1) {
+            this.done.push(this.currentPart.a);
+          }
+          if (this.smaller + 1 < this.currentPart.b) {
+            this.parts.push(new Part(this.smaller + 1, this.currentPart.b));
+          } else if (this.smaller + 1 === this.currentPart.b) {
+            this.done.push(this.currentPart.b);
+          }
+          this.currentPart = null;
+          this.current = null;
         } else {
-          quickCurrent++;
+          if (getValue(arrayToSort, this.current) < arrayToSort[this.currentPivot]) {
+            swap(++this.smaller, this.current++, arrayToSort);
+          } else {
+            this.current++;
+          }
         }
       }
     }
   }
-  return false;
-}
-
-function drawQuickSort(cnt) {
-  cnt.fillStyle = "#000";
-  cnt.fillRect(0, 0, cnt.canvas.width, cnt.canvas.height);
-  const sizeOfBlock = cnt.canvas.width / arrayToSort.length;
-  arrayToSort.forEach((element, index) => {
-    if (quickCurrentPivot === index) {
-      cnt.fillStyle = "#ff0000";
-    } else if (quickDone.indexOf(index) >= 0) {
-      cnt.fillStyle = "#55b809";
-    } else if (index === quickCurrent) {
-      cnt.fillStyle = "#08c7d1";
-    } else if (quickCurrentPart && quickCurrentPart.contains(index) && index <= quickSmaller) {
-      cnt.fillStyle = "#fcd303";
-    } else {
-      cnt.fillStyle = "#ffffff";
+  draw(cnt) {
+    cnt.fillStyle = "#000";
+    cnt.fillRect(0, 0, cnt.canvas.width, cnt.canvas.height);
+    const sizeOfBlock = cnt.canvas.width / arrayToSort.length;
+    arrayToSort.forEach((element, index) => {
+      if (this.currentPivot === index) {
+        cnt.fillStyle = "#ff0000";
+      } else if (this.done.indexOf(index) >= 0) {
+        cnt.fillStyle = "#55b809";
+      } else if (index === this.current) {
+        cnt.fillStyle = "#08c7d1";
+      } else if (this.currentPart && this.currentPart.contains(index) && index <= this.smaller) {
+        cnt.fillStyle = "#fcd303";
+      } else {
+        cnt.fillStyle = "#ffffff";
+      }
+      cnt.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, cnt.canvas.height * element);
+    });
+    cnt.fillStyle = "#ff0000";
+    cnt.strokeStyle = "#FF0000";
+    cnt.setLineDash([5, 3]);
+    cnt.beginPath();
+    cnt.moveTo(0, cnt.canvas.height * arrayToSort[this.currentPivot]);
+    cnt.lineTo(cnt.canvas.width, cnt.canvas.height * arrayToSort[this.currentPivot]);
+    cnt.stroke();
+    if (this.currentPart) {
+      cnt.fillRect(this.currentPart.a * sizeOfBlock, 0, 1, cnt.canvas.height);
+      cnt.fillRect((this.currentPart.b + 1) * sizeOfBlock - 1, 0, 1, cnt.canvas.height);
     }
-    cnt.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, cnt.canvas.height * element);
-  });
-  cnt.fillStyle = "#ff0000";
-  cnt.strokeStyle = "#FF0000";
-  cnt.setLineDash([5, 3]);
-  cnt.beginPath();
-  cnt.moveTo(0, cnt.canvas.height * arrayToSort[quickCurrentPivot]);
-  cnt.lineTo(cnt.canvas.width, cnt.canvas.height * arrayToSort[quickCurrentPivot]);
-  cnt.stroke();
-  if (quickCurrentPart) {
-    cnt.fillRect(quickCurrentPart.a * sizeOfBlock, 0, 1, cnt.canvas.height);
-    cnt.fillRect((quickCurrentPart.b + 1) * sizeOfBlock - 1, 0, 1, cnt.canvas.height);
   }
-}
-
-function quickSortReset() {
-  quickParts = null;
-  quickCurrent = null;
-  quickCurrentPart = null;
-  quickDone = null;
-  quickCurrentPivot = null;
-  quickSmaller = null;
 }

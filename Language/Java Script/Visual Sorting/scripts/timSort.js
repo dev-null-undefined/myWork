@@ -1,131 +1,115 @@
-/* eslint-disable space-before-function-paren */
 // Tim Sort
-const timPartSize = 32;
-let timParts;
-let timIndex;
-let timDone;
-let timComparing;
-let timCurrentPart;
-let timPointerA;
-let timPointerB;
-let timDoneInserting;
-let timNumberOfMarges;
-let timMargesMultiplier;
-
-function timSort() {
-  if (!timParts) {
-    restartVariables("ALL");
-    timNumberOfMarges = 0;
-    timParts = [];
+class TimSort extends Sort {
+  constructor() {
+    super();
+    this.numberOfMarges = 0;
+    this.parts = [];
+    this.margeMultiplier = 2;
     let deviderIndex = 0;
-    timMargesMultiplier = 2;
     do {
-      timParts.push(new Part(deviderIndex, deviderIndex + timPartSize));
-      deviderIndex += timPartSize;
+      this.parts.push(new Part(deviderIndex, deviderIndex + TimSort.timPartSize()));
+      deviderIndex += TimSort.timPartSize();
     } while (deviderIndex < arrayToSort.length);
-  } else if (timCurrentPart === null) {
-    timCurrentPart = 0;
-  } else if (!timDoneInserting) {
-    // Inserting part of Tim sort
-    const part = timParts[timCurrentPart];
-    if (!timIndex) {
-      timIndex = part.a + 1;
-      timDone = part.a;
-      timComparing = part.a;
-    } else if (timDone === arrayToSort.length - 1 || timDone === part.b) {
-      if (timCurrentPart < timParts.length - 1) {
-        timCurrentPart++;
-      } else {
-        timDoneInserting = true;
-      }
-    } else if (arrayToSort[timIndex] > getValue(arrayToSort, timComparing)) {
-      move(timIndex, timComparing + 1, arrayToSort);
-      timDone++;
-      timIndex = timDone + 1;
-      timComparing = timDone;
-    } else if (timComparing === part.a) {
-      move(timIndex, part.a, arrayToSort);
-      timDone++;
-      timIndex = timDone + 1;
-      timComparing = timDone;
-    } else {
-      timComparing--;
-    }
-  } else if (timPointerB === null) {
-    // Marge part of the Tim sort
-    timPointerB = (timNumberOfMarges + timMargesMultiplier / 2) * timPartSize;
-    timPointerA = timNumberOfMarges * timPartSize;
-  } else {
-    if (
-      timPointerA >= (timNumberOfMarges + timMargesMultiplier) * timPartSize ||
-      timPointerB >= (timNumberOfMarges + timMargesMultiplier) * timPartSize ||
-      timPointerB >= arrayToSort.length ||
-      timPointerA >= arrayToSort.length
-    ) {
-      if (timPointerB >= arrayToSort.length || timPointerA >= arrayToSort.length) {
-        if (timMargesMultiplier * timPartSize < arrayToSort.length) {
-          timMargesMultiplier *= 2;
-          timNumberOfMarges = 0;
-          timPointerB = null;
+    this.currentPart = null;
+    this.pointerB = null;
+    this.pointerA = null;
+    this.numberOfMarges = 0;
+    this.margesMultiplier = 2;
+  }
+  static timPartSize() {
+    return 32;
+  }
+  step() {
+    if (this.currentPart === null) {
+      this.currentPart = 0;
+    } else if (!this.doneInserting) {
+      // Inserting part of Tim sort
+      const part = this.parts[this.currentPart];
+      if (!this.index) {
+        this.index = part.a + 1;
+        this.done = part.a;
+        this.comparing = part.a;
+      } else if (this.done === arrayToSort.length - 1 || this.done === part.b) {
+        if (this.currentPart < this.parts.length - 1) {
+          this.currentPart++;
         } else {
-          return true;
+          this.doneInserting = true;
         }
+      } else if (arrayToSort[this.index] > getValue(arrayToSort, this.comparing)) {
+        move(this.index, this.comparing + 1, arrayToSort);
+        this.done++;
+        this.index = this.done + 1;
+        this.comparing = this.done;
+      } else if (this.comparing === part.a) {
+        move(this.index, part.a, arrayToSort);
+        this.done++;
+        this.index = this.done + 1;
+        this.comparing = this.done;
       } else {
-        timNumberOfMarges += timMargesMultiplier;
-        timPointerB = null;
+        this.comparing--;
       }
-    } else if (arrayToSort[timPointerA] < getValue(arrayToSort, timPointerB)) {
-      timPointerA++;
+    } else if (this.pointerB === null) {
+      // Marge part of the Tim sort
+      this.pointerB = (this.numberOfMarges + this.margesMultiplier / 2) * TimSort.timPartSize();
+      this.pointerA = this.numberOfMarges * TimSort.timPartSize();
     } else {
-      move(timPointerB, timPointerA, arrayToSort);
-      timPointerB++;
+      if (
+        this.pointerA >= (this.numberOfMarges + this.margesMultiplier) * TimSort.timPartSize() ||
+        this.pointerB >= (this.numberOfMarges + this.margesMultiplier) * TimSort.timPartSize() ||
+        this.pointerB >= arrayToSort.length ||
+        this.pointerA >= arrayToSort.length
+      ) {
+        if (this.pointerB >= arrayToSort.length || this.pointerA >= arrayToSort.length) {
+          if (this.margesMultiplier * TimSort.timPartSize() < arrayToSort.length) {
+            this.margesMultiplier *= 2;
+            this.numberOfMarges = 0;
+            this.pointerB = null;
+          } else {
+            return true;
+          }
+        } else {
+          this.numberOfMarges += this.margesMultiplier;
+          this.pointerB = null;
+        }
+      } else if (arrayToSort[this.pointerA] < getValue(arrayToSort, this.pointerB)) {
+        this.pointerA++;
+      } else {
+        move(this.pointerB, this.pointerA, arrayToSort);
+        this.pointerB++;
+      }
     }
   }
-}
-
-function drawTimSort(cnt) {
-  cnt.fillStyle = "#000";
-  cnt.fillRect(0, 0, cnt.canvas.width, cnt.canvas.height);
-  const sizeOfBlock = cnt.canvas.width / arrayToSort.length;
-  arrayToSort.forEach((element, index) => {
-    if (timDoneInserting) {
-      if (index === timPointerA) {
-        cnt.fillStyle = "#ff0000";
-      } else if (index === timPointerB) {
+  draw(cnt) {
+    cnt.fillStyle = "#000";
+    cnt.fillRect(0, 0, cnt.canvas.width, cnt.canvas.height);
+    const sizeOfBlock = cnt.canvas.width / arrayToSort.length;
+    arrayToSort.forEach((element, index) => {
+      if (this.doneInserting) {
+        if (index === this.pointerA) {
+          cnt.fillStyle = "#ff0000";
+        } else if (index === this.pointerA) {
+          cnt.fillStyle = "#c6d618";
+        } else {
+          cnt.fillStyle = "#FFF";
+        }
+      } else if (index === this.index) {
+        cnt.fillStyle = "#0e66c9";
+      } else if (index === this.comparing) {
         cnt.fillStyle = "#c6d618";
+      } else if (index <= this.done && index >= this.currentPart * TimSort.timPartSize()) {
+        cnt.fillStyle = "#35d618";
       } else {
         cnt.fillStyle = "#FFF";
       }
-    } else if (index === timIndex) {
-      cnt.fillStyle = "#0e66c9";
-    } else if (index === timComparing) {
-      cnt.fillStyle = "#c6d618";
-    } else if (index <= timDone && index >= timCurrentPart * timPartSize) {
-      cnt.fillStyle = "#35d618";
-    } else {
-      cnt.fillStyle = "#FFF";
+      cnt.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, cnt.canvas.height * element);
+    });
+    cnt.fillStyle = "#ff0000";
+    if (!this.doneInserting && this.currentPart !== null) {
+      cnt.fillRect(this.parts[this.currentPart].a * sizeOfBlock, 0, 2, cnt.canvas.height);
+      cnt.fillRect((this.parts[this.currentPart].b + 1) * sizeOfBlock - 1, 0, 2, cnt.canvas.height);
+    } else if (this.doneInserting) {
+      cnt.fillRect(this.numberOfMarges * TimSort.timPartSize() * sizeOfBlock, 0, 2, cnt.canvas.height);
+      cnt.fillRect((this.numberOfMarges + this.margeMultiplier) * TimSort.timPartSize() * sizeOfBlock - 1, 0, 2, cnt.canvas.height);
     }
-    cnt.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, cnt.canvas.height * element);
-  });
-  cnt.fillStyle = "#ff0000";
-  if (!timDoneInserting && timCurrentPart !== null) {
-    cnt.fillRect(timParts[timCurrentPart].a * sizeOfBlock, 0, 2, cnt.canvas.height);
-    cnt.fillRect((timParts[timCurrentPart].b + 1) * sizeOfBlock - 1, 0, 2, cnt.canvas.height);
-  } else if (timDoneInserting) {
-    cnt.fillRect(timNumberOfMarges * timPartSize * sizeOfBlock, 0, 2, cnt.canvas.height);
-    cnt.fillRect((timNumberOfMarges + timMargesMultiplier) * timPartSize * sizeOfBlock - 1, 0, 2, cnt.canvas.height);
   }
-}
-
-function timSortReset() {
-  timParts = null;
-  timIndex = null;
-  timDone = null;
-  timComparing = null;
-  timCurrentPart = null;
-  timPointerA = null;
-  timPointerB = null;
-  timDoneInserting = null;
-  timNumberOfMarges = null;
-  timMargesMultiplier = null;
 }

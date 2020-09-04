@@ -1,25 +1,11 @@
-/* eslint-disable space-before-function-paren */
+let sortingTimeout = null;
+let isDoneSorting = false;
+let sortMethod = null;
+let sortIndex = null;
 
-class Part {
-  constructor(a, b) {
-    this.a = a;
-    this.b = b;
-  }
-
-  contains(c) {
-    return c >= this.a && c <= this.b;
-  }
-
-  size() {
-    return this.b - this.a;
-  }
-}
-
-let sortingInterval = null;
 let arrayToSort = [];
 let arrayToSortAccess = 0;
 let arrayToSortModifications = 0;
-let isDoneSorting = false;
 
 const speedSlider = document.getElementById("speed");
 const sizeSlider = document.getElementById("arraySize");
@@ -27,8 +13,8 @@ const generateButton = document.getElementById("generator");
 const startButton = document.getElementById("startButton");
 const sizeSliderInfo = document.getElementById("arraySizeText");
 const speedSliderInfo = document.getElementById("speedText");
-const canvas = document.getElementById("canvas");
 
+const canvas = document.getElementById("canvas");
 let width = window.innerWidth * 0.8;
 let height = window.innerHeight - 250;
 canvas.width = width;
@@ -36,7 +22,7 @@ canvas.height = height;
 
 const cnt = canvas.getContext("2d");
 cnt.font = "30px Arial";
-// Chack box from buttons
+
 function generateArrayAndDraw(event) {
   arrayToSort = generateArray(sizeSlider.value);
   draw();
@@ -44,7 +30,7 @@ function generateArrayAndDraw(event) {
 
 // #region Adding event Listener
 generateButton.addEventListener("click", generateArrayAndDraw);
-startButton.addEventListener("click", startSorting);
+startButton.addEventListener("click", switchSorting);
 speedSlider.onchange = speedSliderOnChange;
 sizeSlider.onchange = sizeSliderOnChange;
 speedSlider.oninput = speedSliderOnChange;
@@ -65,23 +51,27 @@ function windowsResize() {
   draw();
 }
 // #endregion
-function startSorting() {
-  if (sortType) {
-    if (sortingInterval) {
-      clearInterval(sortingInterval);
-      sortingInterval = null;
+
+function switchSorting() {
+  if (sortMethod) {
+    if (sortingTimeout) {
+      clearTimeout(sortingTimeout);
+      sortingTimeout = null;
       stopOscilator();
       startButton.innerText = "Start sorting";
       startButton.className = "startButton";
       generateButton.disabled = false;
       sizeSlider.disabled = false;
     } else {
-      arayToSortAccess = 0;
+      arrayToSortAccess = 0;
       arrayToSortModifications = 0;
       if (oscillator == undefined) {
         createOscilator();
       }
-      restartVariables("ALL");
+      isDoneSorting = false;
+      if (sortIndex != "7") {
+        resumeOscilator();
+      }
       startButton.innerText = "Stop sorting";
       startButton.className = "stopButton";
       generateButton.disabled = true;
@@ -92,121 +82,69 @@ function startSorting() {
     alert("!CHOSE SORT METHODE!");
   }
 }
-function doneSorting() {
-  stopOscilator();
-  sortCheckReset();
-  startButton.innerText = "Start sorting";
-  startButton.className = "startButton";
-  generateButton.disabled = false;
-  sizeSlider.disabled = false;
-  sortingInterval = null;
-  isDoneSorting = false;
-}
-
-function restartVariables(sortMethod) {
-  isDoneSorting = false;
-  resumeOscilator();
-  arrayToSortAccess = 0;
-  arrayToSortModifications = 0;
-  switch (sortMethod) {
-    case "Insertion Sort":
-      insertionSortReset();
-      break;
-    case "Merge Sort":
-      mergeSortReset();
-      break;
-    case "Tim Sort":
-      timSortReset();
-      break;
-    case "Stalin Sort":
-      stalinSortReset();
-      break;
-    case "Quick Sort":
-      quickSortReset();
-      break;
-    case "Bubble Sort":
-      bubbleSortReset();
-      break;
-    case "Random sort":
-      randomSortReset();
-      break;
-    case "Selection sort":
-      selectionSortReset();
-      break;
-    default:
-      restartVariables("Insertion Sort");
-      restartVariables("Merge Sort");
-      restartVariables("Tim Sort");
-      restartVariables("Stalin Sort");
-      restartVariables("Quick Sort");
-      restartVariables("Bubble Sort");
-      restartVariables("Random sort");
-      restartVariables("Selection sort");
-      break;
-  }
-}
 
 function sortingRecursion() {
   if (!isDoneSorting) {
-    switch (sortType.innerText) {
-      case "Merge Sort":
-        isDoneSorting = margeSort();
-        drawMergeSort(cnt);
-        break;
-      case "Insertion Sort":
-        isDoneSorting = insertSort();
-        drawInsertionSort(cnt);
-        break;
-      case "Tim Sort":
-        isDoneSorting = timSort();
-        drawTimSort(cnt);
-        break;
-      case "Quick Sort":
-        isDoneSorting = quickSort();
-        drawQuickSort(cnt);
-        break;
-      case "Stalin Sort":
-        isDoneSorting = stalinSort();
-        drawStalinSort(cnt);
-        break;
-      case "Selection sort":
-        isDoneSorting = selectionSort();
-        drawSelectionSort(cnt);
-        break;
-      case "Bubble Sort":
-        isDoneSorting = bubbleSort();
-        drawBubbleSort(cnt);
-        break;
-      case "Random sort":
-        isDoneSorting = randomSort();
-        drawRandomSort(cnt);
-        break;
-    }
-  }
-  if (isDoneSorting) {
-    if (sortCheck()) {
-      clearTimeout(sortingInterval);
-      doneSorting();
-    } else {
-      drawSortCheck(cnt);
-      cnt.fillStyle = "#FFF";
-      cnt.font = "25px sans-serif";
-      cnt.fillText("Access:" + arrayToSortAccess * 2, 0, canvas.height);
-      cnt.fillText("Modify:" + arrayToSortModifications, 0, canvas.height - 25);
-      sortingInterval = setTimeout(sortingRecursion, (speedSlider.min + (speedSlider.max - speedSlider.value)) * 5);
+    let sortStep = sortMethod.step();
+    if (sortStep) {
+      sortMethod = new SortChecking();
+      isDoneSorting = true;
     }
   } else {
-    if (sortingInterval) {
-      clearTimeout(sortingInterval);
+    if (sortMethod.step()) {
+      updateSortMethod(sortIndex);
+      switchSorting();
+      return;
     }
-    cnt.fillStyle = "#FFF";
-    cnt.font = "25px sans-serif";
-    cnt.fillText("Access:" + arrayToSortAccess * 2, 0, canvas.height);
-    cnt.fillText("Modify:" + arrayToSortModifications, 0, canvas.height - 25);
-    sortingInterval = setTimeout(sortingRecursion, (speedSlider.min + (speedSlider.max - speedSlider.value)) * 5);
   }
+  sortMethod.draw(cnt);
+  cnt.fillStyle = "#FFF";
+  cnt.font = "25px sans-serif";
+  cnt.fillText("Access:" + arrayToSortAccess * 2, 0, canvas.height);
+  cnt.fillText("Modify:" + arrayToSortModifications, 0, canvas.height - 25);
+  sortingTimeout = setTimeout(sortingRecursion, (speedSlider.min + (speedSlider.max - speedSlider.value)) * 5);
 }
-
+function updateSortMethod(value) {
+  arrayToSortAccess = 0;
+  arrayToSortModifications = 0;
+  isDoneSorting = false;
+  if (sortIndex == "7" && value != "7" && sortingTimeout) {
+    resumeOscilator();
+  }
+  switch (value) {
+    case "1":
+      sortMethod = new TimSort();
+      break;
+    case "2":
+      sortMethod = new InsertionSort();
+      break;
+    case "3":
+      sortMethod = new SelectionSort();
+      break;
+    case "4":
+      sortMethod = new QuickSort();
+      break;
+    case "5":
+      sortMethod = new MergeSort();
+      break;
+    case "6":
+      sortMethod = new BubbleSort();
+      break;
+    case "7":
+      if (oscillator) {
+        stopOscilator();
+      }
+      sortMethod = new RandomSort();
+      break;
+    case "8":
+      sortMethod = new StalinSort();
+      break;
+    default:
+      alert("Something went wrong pls report this to admin@debianserver.cz error-1:" + value);
+      break;
+  }
+  sortIndex = value;
+}
 function draw() {
   cnt.fillStyle = "#000";
   cnt.fillRect(0, 0, width, height);
