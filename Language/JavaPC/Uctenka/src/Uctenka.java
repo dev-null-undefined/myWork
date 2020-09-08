@@ -60,14 +60,7 @@ public class Uctenka implements java.io.Serializable {
 	}
 
 	public void pridejPolozku(Polozka pridej) {
-		this.cenna = -1;
-		this.dan -= 1;
-		Integer value = this.polozky.get(pridej);
-		if (value != null) {
-			this.polozky.replace(pridej, value + 1);
-		} else {
-			this.polozky.put(pridej, 1);
-		}
+		this.pridejPolozku(pridej, 1);
 	}
 
 	public void pridejPolozku(Polozka pridej, int pocet) {
@@ -88,12 +81,16 @@ public class Uctenka implements java.io.Serializable {
 	 * @param EAN
 	 * @return bool hodnotu zda polozka byla nalezena a pridana
 	 */
-	public boolean pridejPolozku(int EAN) {
+	public boolean pridejPolozku(int EAN, int pocet) {
 		if (Polozka.vsechnyPolozky.get(EAN) != null) {
-			this.pridejPolozku(Polozka.vsechnyPolozky.get(EAN));
+			this.pridejPolozku(Polozka.vsechnyPolozky.get(EAN), pocet);
 			return true;
 		}
 		return false;
+	}
+
+	public boolean pridejPolozku(int EAN) {
+		return this.pridejPolozku(EAN, 1);
 	}
 
 	public boolean odeberPolozku(Polozka odeber) {

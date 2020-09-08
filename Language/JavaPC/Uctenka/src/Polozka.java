@@ -5,6 +5,27 @@ public class Polozka implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -7779894655452379879L;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + EAN;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Polozka other = (Polozka) obj;
+		if (EAN != other.EAN)
+			return false;
+		return true;
+	}
+
 	public static final Hashtable<Integer,Polozka> vsechnyPolozky=new Hashtable<Integer,Polozka>();
 
 	@Override

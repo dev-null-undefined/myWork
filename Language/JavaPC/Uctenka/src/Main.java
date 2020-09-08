@@ -14,12 +14,14 @@ public class Main {
 		uctenka.pridejPolozku(jablko, 2);
 		uctenka.pridejPolozku(hruska);
 		uctenka.pridejPolozku(pomeranc);
+		uctenka.pridejPolozku(1215131);
 		uctenka.pridejPolozku(jablko);
-		uctenka.pridejPolozku(125125);
 		uctenka.ulozUctenku("C:\\Users\\marti\\Downloads\\file");
 		uctenka = Uctenka.nactiUctenku("C:\\Users\\marti\\Downloads\\file");
 		System.out.println(uctenka);
-
+		System.out.println(Polozka.vsechnyPolozky.size());
+		System.out.println(uctenka.pridejPolozku(1215131,4));
+		System.out.println(uctenka);
 	}
 
 }
