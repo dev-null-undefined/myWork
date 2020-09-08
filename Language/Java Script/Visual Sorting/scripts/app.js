@@ -37,6 +37,9 @@ speedSlider.oninput = speedSliderOnChange;
 sizeSlider.oninput = sizeSliderOnChange;
 function sizeSliderOnChange(event) {
   generateArrayAndDraw();
+  if (sortIndex) {
+    updateSortMethod(sortIndex);
+  }
   sizeSliderInfo.innerText = "Array size: " + event.target.value;
 }
 function speedSliderOnChange(event) {
