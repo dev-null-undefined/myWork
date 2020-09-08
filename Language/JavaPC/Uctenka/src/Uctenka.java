@@ -59,10 +59,6 @@ public class Uctenka implements java.io.Serializable {
 		this.datumVydani = LocalDateTime.now();
 	}
 
-	public void pridejPolozku(Polozka pridej) {
-		this.pridejPolozku(pridej, 1);
-	}
-
 	public void pridejPolozku(Polozka pridej, int pocet) {
 		this.cenna = -1;
 		this.dan -= 1;
@@ -72,6 +68,10 @@ public class Uctenka implements java.io.Serializable {
 		} else {
 			this.polozky.put(pridej, pocet);
 		}
+	}
+
+	public void pridejPolozku(Polozka pridej) {
+		this.pridejPolozku(pridej, 1);
 	}
 
 	/**
@@ -93,12 +93,6 @@ public class Uctenka implements java.io.Serializable {
 		return this.pridejPolozku(EAN, 1);
 	}
 
-	public boolean odeberPolozku(Polozka odeber) {
-		this.cenna = -1;
-		this.dan -= 1;
-		return this.polozky.remove(odeber) != null;
-	}
-
 	public boolean odeberPolozku(Polozka odeber, int pocetKusu) {
 		this.cenna = -1;
 		this.dan -= 1;
@@ -112,6 +106,24 @@ public class Uctenka implements java.io.Serializable {
 			return true;
 		}
 		return false;
+	}
+
+	public boolean odeberPolozku(Polozka odeber) {
+		this.cenna = -1;
+		this.dan -= 1;
+		return this.odeberPolozku(odeber, 1);
+	}
+
+	public boolean odeberPolozku(int EAN, int pocet) {
+		if (Polozka.vsechnyPolozky.get(EAN) != null) {
+			this.odeberPolozku(Polozka.vsechnyPolozky.get(EAN), pocet);
+			return true;
+		}
+		return false;
+	}
+
+	public boolean odeberPolozku(int EAN) {
+		return this.odeberPolozku(EAN, 1);
 	}
 
 	private void countCennaCelkem() {
