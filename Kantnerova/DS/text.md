@@ -91,3 +91,23 @@ Nevytvari se methody     tvori se jedno radkove prikazy
                 ALL-splnuji vsechny
                 ANY-splnuje alespon jedna
                 EXIST-existuje nejaky
+
+# Maturitni otazky
+
+1.  **Relacni** databazove systemy - popis,terminologie
+    - jsou zalozene na relacich coz jsou vztahy mezi konkretnimi objekty ulozenymi v entitach
+    - **Entita**:
+      - trida obejktu stejneho typu
+      - objeckt v entite je konkretni objekt, objekty jsou popsany svymi vlastnosti (atributy), ktere zaroven definuji danou entitu.
+2.  **Relace** jsou urceny
+    - kardinalitou -> `cetnost ve vstahu (1:1,1:N,M:N)`
+    - parcialitou -> `povinost ve vstahu (muze,musi)`
+    - stupěn -> `pocet entit ve vstahu (1-self reference,2-binarni vstah,3 a vice-N arni vstah)`
+    - **Logicke** konceptiualni schema
+      - ---o< druh muze mit vice zvirat
+      - `DRUH`||---o<`Zvire`
+      - ||--- Zvire musi patrit do jednoho druhu
+      - hodi se pro konzultaci se zakaznikem
+    - **Relacni** schema
+      - prepis logickeho schematu tak aby byl realizovatelne technicky
+      - vazba je znazornena pomoci klicu (primarniho a ciziho) coz jsou specialni atributy

@@ -1,6 +1,12 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - ImageToASSCIArt",
+            "request": "launch",
+            "mainClass": "imagetoassci.art.ImageToASSCIArt"
+        },
+        {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach",

@@ -1,168 +1,311 @@
-Priority,Custom field (Business Function),Status,Custom field (Actual delivery date),Summary,Custom field (Market),Created
-3 Medium,Other,Closed,14/May/20 12:00 AM,New document template for OZ in Triton,Czech Republic,13/May/20 12:21 PM
-3 Medium,Admin,Change Delivered,14/May/20 12:00 AM,Selected CIS cards switching for CISREPORT,Czech Republic,13/May/20 11:05 AM
-3 Medium,Admin,Closed,06/May/20 12:00 AM,Uploado of new documentation for field agent - agreement CZ_032,Czech Republic,29/Apr/20 1:42 PM
-3 Medium,CSC,Closed,23/Mar/20 12:00 AM,In Triton 2 new subcategories Extra splátkové prázdniny will be created,Czech Republic,23/Mar/20 7:05 AM
-3 Medium,Marketing,Closed,14/May/20 12:00 AM,CZ - Insurance for free,Czech Republic,20/Mar/20 12:59 PM
-3 Medium,Marketing,Closed,06/Apr/20 12:00 AM,CZ - payment Freeze,Czech Republic,20/Mar/20 12:46 PM
-3 Medium,Collection Strategy,Closed,19/Mar/20 12:00 AM,"Into SASPO add note ""SMS na klienty = platba na účet""",Czech Republic,18/Mar/20 9:16 AM
-3 Medium,CSC,Closed,23/Apr/20 12:00 AM,Change DIP process via CSC,Czech Republic,16/Mar/20 2:33 PM
-3 Medium,CSC,Closed,11/Mar/20 12:00 AM,New subcategory Žádost o změnu splácení- mimořádné opatření in Triton,Czech Republic,11/Mar/20 3:05 PM
-3 Medium,Credit Risk,Closed,16/Apr/20 12:00 AM,Replication of pymt status of MT loan,Czech Republic,27/Feb/20 3:29 PM
-3 Medium,Collection,Closed,05/Mar/20 12:00 AM,Workflow CDR change in SASPO,Czech Republic,27/Feb/20 3:33 PM
-3 Medium,Collection,Closed,05/Mar/20 12:00 AM,Change of SMS worklfow in CDR SASPO,Czech Republic,27/Feb/20 3:35 PM
-3 Medium,Marketing,Closed,27/Feb/20 12:00 AM,add new Affiliate partner to systems,Czech Republic,27/Feb/20 9:46 AM
-3 Medium,CSC,Closed,11/Mar/20 12:00 AM,In Triton 2 new subcategories named Nepovolená kombinace will be created.,Czech Republic,25/Feb/20 1:07 PM
-3 Medium,Admin,Closed,22/Jan/20 12:00 AM,Uploading of new document for field Agent - Triton,Czech Republic,22/Jan/20 8:15 AM
-3 Medium,CSC,Closed,16/Jan/20 12:00 AM,Opravy releasů 2019_22 a 23,Czech Republic,14/Jan/20 8:48 AM
-3 Medium,Marketing,Closed,18/Dec/19 12:00 AM,increase age for customers for 18-80,Czech Republic,09/Dec/19 3:18 PM
-3 Medium,Credit Risk,Closed,20/Feb/20 12:00 AM,Create SSIS package to alter data in ADM tables that we already use in current solution,Czech Republic,04/Dec/19 10:40 AM
-2 High,Marketing,Closed,05/Dec/19 12:00 AM,CNB report - change of the content,Czech Republic,02/Dec/19 1:56 PM
-3 Medium,Credit Risk,Closed,06/Feb/20 12:00 AM,CIS - Cancelled product,Czech Republic,07/Nov/19 10:32 AM
-1 Critical,Marketing,Closed,09/Mar/20 12:00 AM,Project R,Czech Republic,07/Nov/19 9:40 AM
-3 Medium,Credit Risk,Closed,13/Feb/20 12:00 AM,scoring - product cache,Czech Republic,06/Nov/19 10:52 AM
-3 Medium,Marketing,Closed,10/Dec/19 12:00 AM,process update: GDS check,Czech Republic,24/Oct/19 10:03 AM
-3 Medium,Marketing,Closed,16/Jan/20 12:00 AM,API Update Affilitate partner VOLSOR,Czech Republic,24/Oct/19 9:58 AM
-3 Medium,Credit Risk,Closed,31/Oct/19 12:00 AM,error correction: surname of the client in addresses,Czech Republic,27/Sep/19 8:44 AM
-3 Medium,Admin,Closed,19/Sep/19 12:00 AM,Modifying of web.config - missing keys,Czech Republic,20/Sep/19 11:31 AM
-3 Medium,Credit Risk,Closed,17/Oct/19 12:00 AM,Black List - výmaz Adresy + RČ,Czech Republic,19/Sep/19 8:25 AM
-3 Medium,Marketing,Closed,17/Oct/19 12:00 AM,START upgrade - oprava CIS,Czech Republic,19/Sep/19 8:20 AM
-3 Medium,Finance,Closed,16/Sep/19 12:00 AM,Convert pro Českou poštu (text file),Czech Republic,19/Sep/19 8:18 AM
-3 Medium,HR,Closed,15/Oct/19 12:00 AM,CSV data add (Moodle),Czech Republic,02/Sep/19 3:47 PM
-3 Medium,SSP,Closed,05/Sep/19 12:00 AM,Navigator - change CWOS status ,Czech Republic,23/Aug/19 8:22 AM
-3 Medium,SSP,Closed,03/Oct/19 12:00 AM,"E-report – displaying correct information about customers (16 miss, marketing consent)",Czech Republic,23/Aug/19 8:20 AM
-3 Medium,Admin,Closed,03/Oct/19 12:00 AM,CIS - automatic data filling of on-line applications,Czech Republic,23/Aug/19 8:18 AM
-3 Medium,CSC,Closed,02/Oct/19 12:00 AM,Triton change - payment holidays,Czech Republic,23/Aug/19 8:16 AM
-3 Medium,CSC,Closed,05/Dec/19 12:00 AM,Oprava v Triton - editace,Czech Republic,23/Aug/19 8:14 AM
-3 Medium,CSC,Closed,06/Jan/20 12:00 AM,Triton update - campaigns,Czech Republic,23/Aug/19 8:12 AM
-3 Medium,IT,Closed,22/Aug/19 12:00 AM,Connection via Mobile Agent on external CC - switch off music,Czech Republic,21/Aug/19 8:59 AM
-3 Medium,CSC,Closed,10/Oct/19 12:00 AM,HDB - k jednomu adresnímu bodu je přiřazeno více než 1 BRM,Czech Republic,13/Aug/19 1:15 PM
-3 Medium,IT,Closed,03/Oct/19 12:00 AM,2019_GDPR_Pentest_CZ_prelaunch,Czech Republic,09/Aug/19 11:22 AM
-3 Medium,Credit Risk,Closed,20/Feb/20 12:00 AM,Set up of Dialer for predictive mode for CCU to reduce attempts of calls,Czech Republic,06/Aug/19 11:00 AM
-3 Medium,Credit Risk,Closed,03/Oct/19 12:00 AM,CIS - cancelation of lower income scoring penalty,Czech Republic,06/Aug/19 10:47 AM
-3 Medium,CSC,Closed,20/Jan/20 12:00 AM,Add new fields to support measuring Right Party Contact process,Czech Republic,06/Aug/19 10:42 AM
-3 Medium,SSP,Closed,17/Dec/19 12:00 AM,LMS – Notifikace typu Contact Change,Czech Republic,06/Aug/19 10:38 AM
-3 Medium,Collection Strategy,Closed,19/Sep/19 12:00 AM,Saspo - Historization of reminder fields /Historizace polí v upomínkách ze Saspo,Czech Republic,06/Aug/19 9:38 AM
-3 Medium,CSC,Closed,22/Aug/19 12:00 AM,CDR  - Routing inbound calls modification (working hours + prompt),Czech Republic,24/Jul/19 9:13 AM
-3 Medium,Marketing,Closed,08/Oct/19 12:00 AM,Implementation of the discount products to current portfolio,Czech Republic,17/Jul/19 2:45 PM
-3 Medium,CSC,Closed,18/Jul/19 12:00 AM,Fixing of bug from INC0434428-update addresses,Czech Republic,16/Jul/19 10:09 AM
-3 Medium,CSC,Closed,24/Jul/19 12:00 AM,IPFD - New campaign (Creditea) - Cisco UCCE,Czech Republic,15/Jul/19 12:24 PM
-3 Medium,SSP,Closed,04/Dec/19 12:00 AM,UNO - Operator has the option to fill in a web application with the applicant and submit a full scored Lead to the field,Czech Republic,10/Jul/19 3:22 PM
-3 Medium,Credit Risk,Closed,30/Jan/20 12:00 AM,ADM adjustment and CIS load extension part two -> Abandoned Offers scorings inclu,Czech Republic,02/Jul/19 12:46 PM
-3 Medium,Marketing,Closed,14/Aug/19 12:00 AM,Product change - START proposition,Czech Republic,28/Jun/19 3:04 PM
-2 High,SSP,Closed,29/Jan/20 12:00 AM,Úprava roční provizní listiny pro obchodní zástupce/annual commission sheet amendment,Czech Republic,28/Jun/19 2:41 PM
-3 Medium,CSC,Closed,30/Jul/19 12:00 AM,New categories and subcategories of cases in Triton CRM,Czech Republic,27/Jun/19 9:41 AM
-3 Medium,Marketing,Closed,08/Oct/19 12:00 AM,New product Insurance for free / Nový produkt Pojištění zdarma,Czech Republic,26/Jun/19 6:19 PM
-3 Medium,Marketing,Closed,13/Mar/20 12:00 AM,SEMI-DIGI – API connection with Google Analytics,Czech Republic,26/Jun/19 6:17 PM
-3 Medium,Credit Risk,Closed,20/Jan/20 12:00 AM,CIS application: new business rule for loan agreement up to 50k CZK /změna byznys pravidel pro půjčky na 50tis Kč,Czech Republic,26/Jun/19 6:15 PM
-3 Medium,Credit Risk,Closed,05/Sep/19 12:00 AM,CIS application: Assigning a scoring to a loan agreement /Přiřazení skoringu ke smlouvě ,Czech Republic,26/Jun/19 6:08 PM
-3 Medium,Credit Risk,Closed,18/Oct/19 12:00 AM,CIS application: Grouping of scoring /Grupování skoringů,Czech Republic,26/Jun/19 6:06 PM
-2 High,Credit Risk,Closed,08/Oct/19 12:00 AM,Unification of employment status,Czech Republic,26/Jun/19 6:04 PM
-3 Medium,Credit Risk,Closed,03/Oct/19 12:00 AM,Data load to CIS application (direct dependency to Agent penalties]	,Czech Republic,26/Jun/19 3:46 PM
-2 High,Finance,Closed,11/Jul/19 12:00 AM,Money transfer overpayment -  fix regulatory issue,Czech Republic,26/Jun/19 3:38 PM
-3 Medium,CSC,Closed,04/Jul/19 12:00 AM,Fixing of bug from INC0434428 ,Czech Republic,26/Jun/19 10:42 AM
-2 High,Collection Strategy,Closed,03/Jul/19 12:00 AM,Debt Sales,Czech Republic,26/Jun/19 10:29 AM
-3 Medium,Marketing,Closed,25/Jun/19 12:00 AM,Flexi,Czech Republic,25/Jun/19 1:23 PM
-3 Medium,Credit Risk,Closed,17/Jun/19 12:00 AM,Data load to CIS application (direct dependecy to Agent penalities],Czech Republic,17/Jun/19 8:48 PM
-3 Medium,SSP,Closed,17/Jun/19 12:00 AM,Digital assist via CSC,Czech Republic,17/Jun/19 8:42 PM
-3 Medium,Admin,Closed,21/Jun/19 12:00 AM,There is need to upload new document in Triton see attachement. The document  concerns to Aggent Support.,Czech Republic,14/Jun/19 2:37 PM
-3 Medium,IT Security,Closed,04/Oct/19 12:00 AM,Cockpit security issue #2,Czech Republic,13/Jun/19 3:45 PM
-3 Medium,IT Security,Closed,13/Aug/19 12:00 AM,Cockpit security issue #1,Czech Republic,13/Jun/19 3:40 PM
-3 Medium,IT,Closed,13/Jun/19 12:00 AM,Cockpit security,Czech Republic,13/Jun/19 8:03 AM
-3 Medium,Finance,Closed,13/Jun/19 12:00 AM,create report from triton,Czech Republic,12/Jun/19 12:01 PM
-2 High,Loss Prevention,Closed,22/Jul/19 12:00 AM,Add Elixir database to internal systems used for agent recruitment,Czech Republic,10/Apr/18 1:26 PM
-3 Medium,Marketing,Closed,08/Oct/19 12:00 AM,Flexi,Czech Republic,21/Sep/18 8:32 AM
-3 Medium,Finance,Closed,19/Sep/19 12:00 AM,Napojení TPS na tabulku Effective Date,Czech Republic,25/Oct/18 3:31 PM
-3 Medium,SSP,Closed,03/Oct/19 12:00 AM,Agent commission sheet: CIS - detailed penalty list,Czech Republic,01/Feb/19 2:30 PM
-2 High,IT,Closed,01/Jul/19 12:00 AM,Error during the downloading data in Navigator,Czech Republic,06/Mar/19 4:38 PM
-3 Medium,CSC,Closed,16/May/19 12:00 AM,Release_2019_12_SMS+ToolTip Fix,Czech Republic,12/Jun/19 4:02 AM
-2 High,Other,Change Delivered,05/May/20 12:00 AM,IPF Digi - Prodigy,Czech Republic,12/Jun/19 3:52 AM
-3 Medium,Credit Risk,Closed,05/Feb/20 12:00 AM,Online data check from MVCR stolen/lost id cards,Czech Republic,07/Jun/19 11:48 AM
-3 Medium,CSC,Closed,06/Jun/19 12:00 AM,Campaigns for external Callcenter - Cisco,Czech Republic,05/Jun/19 7:34 AM
-3 Medium,IT,Closed,03/Jul/19 12:00 AM,Automatic generating reports for UK,Czech Republic,04/Jun/19 1:24 PM
-3 Medium,CSC,Closed,06/Jun/19 12:00 AM,Inbound routing calls - IVR bypass,Czech Republic,04/Jun/19 9:38 AM
-3 Medium,Finance,Closed,30/May/19 12:00 AM,SDP reports on SSRS,Czech Republic,29/May/19 2:03 PM
-3 Medium,IT,Closed,27/May/19 12:00 AM,SMS Parser - rollback,Czech Republic,23/May/19 2:59 PM
-3 Medium,Marketing,Closed,16/May/19 12:00 AM,NOLB DB - LM not processing contacts,Czech Republic,23/May/19 2:53 PM
-3 Medium,IT,Closed,23/May/19 12:00 AM,Fix blue files after BCP plan,Czech Republic,22/May/19 2:25 PM
-3 Medium,IT,Closed,02/Aug/19 12:00 AM,Cockpit - loaded data disappear in offline mode,Czech Republic,22/May/19 10:41 AM
-3 Medium,IT,Closed,27/May/19 12:00 AM,Impossible to see scorings from agent in Cockpit,Czech Republic,16/May/19 10:03 AM
-3 Medium,MI,Closed,03/Jul/19 12:00 AM,Automatizace reportů in reporting services,Czech Republic,09/May/19 2:52 PM
-3 Medium,Admin,Closed,30/May/19 12:00 AM,Změna oddělení/pozice a e-mailu v šablonách dopisů na Pohledávky OZ / TRITON,Czech Republic,09/May/19 10:50 AM
-1 Critical,Credit Risk,Closed,06/Jun/19 12:00 AM,"Removing  of  Credit Bureau consents from all applications; law effective  date 24.4.",Czech Republic,24/Apr/19 2:48 PM
-2 High,SSP,Closed,25/Apr/19 12:00 AM,Triton Agent Archivation  - Change the period,Czech Republic,02/Apr/19 8:53 AM
-2 High,CSC,Closed,03/Apr/19 12:00 AM,A produkty - Triton (FAST MT),Czech Republic,02/Apr/19 8:13 AM
-3 Medium,Other,Closed,29/Mar/19 12:00 AM,Insurance Fáze II - Vinkulace,Czech Republic,26/Mar/19 9:39 AM
-3 Medium,IT,Closed,25/Apr/19 12:00 AM,New field in CIS Rate klienta,Czech Republic,25/Mar/19 8:38 AM
-3 Medium,Marketing,Change Delivered,11/Jul/19 12:00 AM,insurance phase II,Czech Republic,24/Mar/19 3:13 PM
-3 Medium,SSP,Closed,27/Mar/19 12:00 AM,O2 SMS conector,Czech Republic,24/Mar/19 3:00 PM
-2 High,Credit Risk,Closed,25/Apr/19 12:00 AM,ADM adjustment and CIS load extansion to allow process of CIS: customer documentation checks ,Czech Republic,21/Mar/19 12:27 PM
-3 Medium,Marketing,Closed,02/Aug/19 12:00 AM,Change in filtering of MT letters,Czech Republic,14/Mar/19 3:39 PM
-2 High,IT,Closed,21/Mar/19 12:00 AM,Not possible to find client before scoring in Fenixweb,Czech Republic,06/Mar/19 4:31 PM
-3 Medium,Admin,Closed,28/Feb/19 12:00 AM,Úprava archivace - oživení OZ s nárokem na provizi,Czech Republic,27/Feb/19 3:11 PM
-2 High,Admin,Closed,28/Feb/19 12:00 AM,TRITON - Release_2019_08 - Smlouva o zapujcce,Czech Republic,27/Feb/19 1:06 PM
-3 Medium,CSC,Closed,28/Feb/19 12:00 AM,TRITON - NLMS WQ CHR II,Czech Republic,27/Feb/19 12:30 PM
-2 High,IT,Closed,27/Mar/19 12:00 AM,ADS SQL server for analytical purpose will upgrade to SQL 2016 std,Czech Republic,18/Feb/19 4:15 PM
-3 Medium,SSP,Closed,15/Feb/19 12:00 AM,insurance CR of Cockpit product view,Czech Republic,15/Feb/19 2:03 PM
-3 Medium,SSP,Closed,14/Feb/19 12:00 AM,available appl. Cockpit to Huawei Nova 3,Czech Republic,14/Feb/19 1:42 PM
-3 Medium,Marketing,Closed,02/Apr/19 12:00 AM,Create  products A - A2 - A 20% discount,Czech Republic,11/Feb/19 5:44 PM
-1 Critical,SSP,Closed,06/Mar/19 12:00 AM,Switch off sending SMS from Cockpit: Google operator change the rules,Czech Republic,11/Feb/19 5:36 PM
-4 Low,CSC,Closed,07/Feb/19 12:00 AM,Callcenter servers - patch install (WIN+UCCE),Czech Republic,07/Feb/19 1:25 PM
-3 Medium,Other,Closed,05/Feb/19 12:00 AM,aa23,Czech Republic,05/Feb/19 1:27 PM
-2 High,CSC,Closed,12/Feb/19 12:00 AM,Insurance - požadavky na CRM Triton,Czech Republic,30/Jan/19 1:55 PM
-3 Medium,Loss Prevention,Closed,30/Jan/19 12:00 AM,"U obdržených leadů sledování produktu, kterého se to týká",Czech Republic,30/Jan/19 1:33 PM
-3 Medium,IT,Closed,07/Feb/19 12:00 AM,New layer in Axapta,Czech Republic,30/Jan/19 12:54 PM
-2 High,Admin,Closed,31/Jan/19 12:00 AM,Dodatek číslo 1. ke smlouvě o zpracování osobních údajů_pojištění,Czech Republic,29/Jan/19 1:59 PM
-3 Medium,CSC,Closed,11/Jul/19 12:00 AM,Triton – Stížnosti/Žádosti -  změna kategorií,Czech Republic,29/Jan/19 9:50 AM
-3 Medium,L&D,Closed,19/Mar/19 12:00 AM,Moodle _ CSV data repair ,Czech Republic,29/Jan/19 8:32 AM
-3 Medium,SSP,Closed,31/Jan/19 12:00 AM,change validation for number of RES leads,Czech Republic,25/Jan/19 10:28 AM
-3 Medium,IT,Closed,24/Jan/19 12:00 AM,CIS ending escalation by old files/items,Czech Republic,24/Jan/19 2:54 PM
-3 Medium,Loss Prevention,Closed,24/Jan/19 12:00 AM,TRITON - BlackList - hromadný insert vybraných lidí callcentrem na blacklist,Czech Republic,23/Jan/19 9:45 AM
-2 High,CSC,Closed,17/Jan/19 12:00 AM, Kontakty WEB_CZ chybí zdroj affilates,Czech Republic,17/Jan/19 11:10 AM
-3 Medium,SSP,Closed,30/May/19 12:00 AM,loans provided by an acquisition specialist on an external site,Czech Republic,15/Jan/19 5:03 PM
-3 Medium,Marketing,Closed,20/Mar/19 12:00 AM,Changes in CIS application & E- reports,Czech Republic,15/Jan/19 4:33 PM
-3 Medium,Admin,Closed,21/Feb/19 12:00 AM,Změna nastavení fitrů registrace v modulu Registrace OZ Triton,Czech Republic,14/Jan/19 2:56 PM
-2 High,Finance,Closed,18/Apr/19 12:00 AM,NCC - project change,Czech Republic,14/Jan/19 9:41 AM
-3 Medium,Admin,Closed,24/Jan/19 12:00 AM,Nahrání šablon dopisů k typu pohledávky prodloužení registrace,Czech Republic,04/Jan/19 12:48 PM
-3 Medium,IT,Closed,17/Jan/19 12:00 AM,Escalation in CIS will be longer,Czech Republic,04/Jan/19 10:25 AM
-3 Medium,Credit Risk,Closed,17/Jan/19 12:00 AM,Add Kosovo into country list in CIS,Czech Republic,03/Jan/19 1:01 PM
-3 Medium,Admin,Closed,08/Feb/19 12:00 AM,Změna čísla bankovního účtu registrace u ČNB,Czech Republic,17/Dec/18 12:28 PM
-3 Medium,IT,Closed,17/Jan/19 12:00 AM,Scoring - more than 5 digits in field Other Income,Czech Republic,11/Dec/18 2:58 PM
-3 Medium,SSP,Closed,07/Feb/19 12:00 AM,Registration account  number  controls,Czech Republic,10/Dec/18 3:41 PM
-3 Medium,SSP,Closed,09/Apr/19 12:00 AM,Geomarketing,Czech Republic,10/Dec/18 11:19 AM
-3 Medium,IT,Closed,11/Jul/19 12:00 AM,Date lake for CZE,Czech Republic,06/Dec/18 3:51 PM
-2 High,Marketing,Closed,12/Mar/19 12:00 AM,project digital assist,Czech Republic,06/Dec/18 3:43 PM
-2 High,Marketing,Closed,13/Feb/19 12:00 AM,new product insurance,Czech Republic,08/Nov/18 8:01 PM
-3 Medium,Marketing,Closed,10/Jan/19 12:00 AM,info about product on lead,Czech Republic,07/Nov/18 3:28 PM
-3 Medium,Finance,Closed,07/Feb/19 12:00 AM,Párování vrácené platby úpravou SS - přidání 6666 před week_id,Czech Republic,05/Nov/18 12:03 PM
-3 Medium,IT,Closed,17/Jan/19 12:00 AM,Add a progress bar to the signing process in application Cockpit,Czech Republic,10/Oct/18 10:23 AM
-3 Medium,Credit Risk,Closed,17/Jan/19 12:00 AM,CIS eskalation,Czech Republic,15/Aug/18 10:21 AM
-2 High,Credit Risk,Closed,17/Jan/19 12:00 AM,CIS - changes in control rules,Czech Republic,13/Aug/18 1:50 PM
-4 Low,CSC,Closed,19/Mar/19 12:00 AM,Pair verified contacts between Triton & Saspo,Czech Republic,19/Jun/18 2:11 PM
-3 Medium,CSC,Closed,19/Mar/19 12:00 AM,CSC Ability to create duplicate campaigns and create (plus edit) call results ,Czech Republic,19/Jun/18 12:05 PM
-2 High,SSP,Closed,03/Jun/19 12:00 AM,MyProvi - DROP 2.5 (BRM tablets issue),Czech Republic,27/Apr/18 9:32 AM
-2 High,Marketing,Closed,05/Mar/19 12:00 AM,"Pay in time and get 4th month free (we „cash back"" one month - 1 monthly instalment/ 4 weekly installments)",Czech Republic,12/Apr/18 9:38 AM
-3 Medium,IT,Closed,11/Apr/19 12:00 AM,"Extend KS Program functionality to display any approved holiday, absence, business trip in MS Outlook",Czech Republic,14/Mar/18 9:36 AM
-2 High,SSP,Change Delivered,06/Jun/19 12:00 AM,Changes in CIS application driven by CZE Licensing,Czech Republic,14/Mar/18 8:36 AM
-3 Medium,SSP,Closed,21/Jun/19 12:00 AM,"Receiving FREUD extract on Monday morning reflecting changes proceed on Saturday, Sunday",Czech Republic,13/Mar/18 6:22 PM
-3 Medium,IT,Closed,24/Mar/19 12:00 AM,Creating documentation in CZ Market ,Czech Republic,09/Mar/18 11:03 AM
-2 High,Marketing,Closed,18/Jan/19 12:00 AM,Insurance,Czech Republic,09/Jan/18 9:00 AM
-1 Critical,Finance,Closed,08/May/19 12:00 AM,Set up of Data Box for comms with state authorities ,Czech Republic,08/Jan/18 3:58 PM
-4 Low,SSP,Closed,18/Jan/19 12:00 AM,Implemenation of new intranet used in Poland,Czech Republic,08/Jan/18 12:52 PM
-2 High,SSP,Closed,02/May/19 12:00 AM,closed lead status update in Cockpit and Fénix Web,Czech Republic,18/Dec/17 9:36 AM
-1 Critical,CSC,Closed,17/Jan/19 12:00 AM,Data Access Limitation In Triton for External CSC,Czech Republic,15/Dec/17 8:34 AM
-2 High,Marketing,Closed,02/Aug/19 12:00 AM,Create  new campaing as a  duplicity  of existing campaign: Retence  with access data limitation,Czech Republic,14/Dec/17 3:39 PM
-3 Medium,Operational,Closed,19/Mar/19 12:00 AM,Agent´s plans and targets ,Czech Republic,24/Nov/17 1:35 PM
-1 Critical,SSP,Closed,06/Jun/19 12:00 AM,LM - system & process review to verify the LM is working as business need,Czech Republic,01/Nov/17 2:48 PM
-3 Medium,SSP,Closed,08/Feb/19 12:00 AM, Data on bound OZ from the CNB website in excel,Czech Republic,12/Oct/17 10:30 AM
-2 High,SSP,Closed,11/Oct/19 12:00 AM,MyProvi - Drop 2.5 (EET inc. - no connectivity),Czech Republic,04/Oct/17 9:09 AM
-2 High,Credit Risk,Closed,18/Jan/19 12:00 AM,Adjustment of allowed identification cards ( TFS 7736 ),Czech Republic,08/Aug/17 1:28 PM
-2 High,Credit Risk,Closed,19/Mar/19 12:00 AM,Include to Reserve system field Balance vs. Highest_Balance in last 26weeks ,Czech Republic,08/Aug/17 1:09 PM
-3 Medium,Marketing,Closed,19/Mar/19 12:00 AM,Availability of information from Coll List in Cockpit ( TFS 7604 ),Czech Republic,08/Aug/17 11:43 AM
-4 Low,Admin,Closed,25/Mar/19 12:00 AM,Admin portal - delivery of the calendar,Czech Republic,08/Aug/17 10:29 AM
-4 Low,Loss Prevention,Closed,17/Apr/19 12:00 AM,Job for regular import to Triton blacklist,Czech Republic,08/Aug/17 10:20 AM
-3 Medium,CSC,Closed,11/Apr/19 12:00 AM,SASPO - nonexisting numbers - NX_REQ0025549 (TFS Change 7093),Czech Republic,21/Jul/17 3:59 PM
-3 Medium,SSP,Closed,12/Apr/19 12:00 AM,LM SMS Scoring Orchestration Workflow (TFS 5472),Czech Republic,21/Jul/17 3:22 PM
-3 Medium,CSC,Closed,29/Apr/19 12:00 AM,Contacts to CVP department - email notifications (TFS 5378),Czech Republic,21/Jul/17 3:17 PM
-3 Medium,CSC,Closed,19/Mar/19 12:00 AM,Triton HDB,Czech Republic,20/Jul/17 2:05 PM
-3 Medium,Loss Prevention,Closed,27/Mar/19 12:00 AM,CVP and CCU Customers Report ,Czech Republic,27/Jun/17 5:26 PM
+Priority,Issue key,Issue id,Custom field (Business Function),Status,Custom field (Actual delivery date),Summary,Custom field (Market),Created
+2 High,MCH-7176,178025,IT,Closed,09/09/2020 00:00,MobileIron Web@Work - Apple UIWebView Depreciation,Czech Republic,02/09/2020 09:51
+3 Medium,MCH-6754,169740,Marketing,Closed,07/09/2020 00:00,HCD CZ Introduce new aquisition product (10+1),Czech Republic,02/06/2020 14:47
+3 Medium,MCH-7107,176506,Credit Risk,Closed,27/08/2020 00:00,Add fields to view for Credit risk,Czech Republic,13/08/2020 13:35
+3 Medium,MCH-6932,173370,Credit Risk,Closed,23/08/2020 00:00,Add CUSTOMER REQUEST and Risky Sector rejection codes from the CustomerCare group to eligible codes,Czech Republic,09/07/2020 13:21
+3 Medium,MCH-6588,167624,Other,Change Delivered,13/08/2020 00:00,Moratorium and Double insurance Change,Czech Republic,06/05/2020 11:53
+1 Critical,MCH-7036,174940,Credit Risk,Closed,07/08/2020 00:00,Write-off cache update CZ - JULY 2020,Czech Republic,27/07/2020 06:08
+3 Medium,MCH-5942,156894,IT,Closed,30/06/2020 00:00,cz-automation-MySales,Czech Republic,07/02/2020 08:06
+3 Medium,MCH-6226,160403,SSP,Closed,10/06/2020 00:00,marketing consents propagation,Czech Republic,16/03/2020 14:48
+3 Medium,MCH-180,84246,SSP,Change Delivered,05/06/2020 00:00,MyProvi Program,Czech Republic,23/06/2017 11:39
+3 Medium,MCH-6616,168181,Admin,Closed,14/05/2020 00:00,Selected CIS cards switching for CISREPORT,Czech Republic,13/05/2020 11:05
+3 Medium,MCH-6618,168195,Other,Closed,14/05/2020 00:00,New document template for OZ in Triton,Czech Republic,13/05/2020 12:21
+3 Medium,MCH-6268,160788,Marketing,Closed,14/05/2020 00:00,CZ - Insurance for free,Czech Republic,20/03/2020 12:59
+3 Medium,MCH-6565,167046,Admin,Closed,06/05/2020 00:00,Uploado of new documentation for field agent - agreement CZ_032,Czech Republic,29/04/2020 13:42
+2 High,MCH-4258,131605,Other,Change Delivered,05/05/2020 00:00,IPF Digi - Prodigy,Czech Republic,12/06/2019 03:52
+3 Medium,MCH-6225,160400,CSC,Closed,23/04/2020 00:00,Change DIP process via CSC,Czech Republic,16/03/2020 14:33
+3 Medium,MCH-6140,158988,Credit Risk,Closed,16/04/2020 00:00,Replication of pymt status of MT loan,Czech Republic,27/02/2020 15:29
+3 Medium,MCH-6267,160786,Marketing,Closed,06/04/2020 00:00,CZ - payment Freeze,Czech Republic,20/03/2020 12:46
+3 Medium,MCH-6282,160845,CSC,Closed,23/03/2020 00:00,In Triton 2 new subcategories Extra splátkové prázdniny will be created,Czech Republic,23/03/2020 07:05
+3 Medium,MCH-6233,160558,Collection Strategy,Closed,19/03/2020 00:00,"Into SASPO add note ""SMS na klienty = platba na účet""",Czech Republic,18/03/2020 09:16
+3 Medium,MCH-4406,133393,Marketing,Closed,13/03/2020 00:00,SEMI-DIGI – API connection with Google Analytics,Czech Republic,26/06/2019 18:17
+3 Medium,MCH-6062,158827,CSC,Closed,11/03/2020 00:00,In Triton 2 new subcategories named Nepovolená kombinace will be created.,Czech Republic,25/02/2020 13:07
+3 Medium,MCH-6201,160000,CSC,Closed,11/03/2020 00:00,New subcategory Žádost o změnu splácení- mimořádné opatření in Triton,Czech Republic,11/03/2020 15:05
+1 Critical,MCH-5337,148993,Marketing,Closed,09/03/2020 00:00,Project R,Czech Republic,07/11/2019 09:40
+3 Medium,MCH-6139,158989,Collection,Closed,05/03/2020 00:00,Workflow CDR change in SASPO,Czech Republic,27/02/2020 15:33
+3 Medium,MCH-6138,158991,Collection,Closed,05/03/2020 00:00,Change of SMS worklfow in CDR SASPO,Czech Republic,27/02/2020 15:35
+3 Medium,MCH-6077,158937,Marketing,Closed,27/02/2020 00:00,add new Affiliate partner to systems,Czech Republic,27/02/2020 09:46
+3 Medium,MCH-5482,151671,Credit Risk,Closed,20/02/2020 00:00,Create SSIS package to alter data in ADM tables that we already use in current solution,Czech Republic,04/12/2019 10:40
+3 Medium,MCH-4736,138518,Credit Risk,Closed,20/02/2020 00:00,Set up of Dialer for predictive mode for CCU to reduce attempts of calls,Czech Republic,06/08/2019 11:00
+3 Medium,MCH-5330,148880,Credit Risk,Closed,13/02/2020 00:00,scoring - product cache,Czech Republic,06/11/2019 10:52
+3 Medium,MCH-5339,149002,Credit Risk,Closed,06/02/2020 00:00,CIS - Cancelled product,Czech Republic,07/11/2019 10:32
+3 Medium,MCH-4242,130817,Credit Risk,Closed,05/02/2020 00:00,Online data check from MVCR stolen/lost id cards,Czech Republic,07/06/2019 11:48
+3 Medium,MCH-4449,134069,Credit Risk,Closed,30/01/2020 00:00,ADM adjustment and CIS load extension part two -> Abandoned Offers scorings inclu,Czech Republic,02/07/2019 12:46
+2 High,MCH-4422,133636,SSP,Closed,29/01/2020 00:00,Úprava roční provizní listiny pro obchodní zástupce/annual commission sheet amendment,Czech Republic,28/06/2019 14:41
+3 Medium,MCH-5800,155553,Admin,Closed,22/01/2020 00:00,Uploading of new document for field Agent - Triton,Czech Republic,22/01/2020 08:15
+3 Medium,MCH-4405,133392,Credit Risk,Closed,20/01/2020 00:00,CIS application: new business rule for loan agreement up to 50k CZK /změna byznys pravidel pro půjčky na 50tis Kč,Czech Republic,26/06/2019 18:15
+3 Medium,MCH-4734,138514,CSC,Closed,20/01/2020 00:00,Add new fields to support measuring Right Party Contact process,Czech Republic,06/08/2019 10:42
+3 Medium,MCH-5269,147816,Marketing,Closed,16/01/2020 00:00,API Update Affilitate partner VOLSOR,Czech Republic,24/10/2019 09:58
+3 Medium,MCH-5693,154756,CSC,Closed,16/01/2020 00:00,Opravy releasů 2019_22 a 23,Czech Republic,14/01/2020 08:48
+3 Medium,MCH-4863,140997,CSC,Closed,06/01/2020 00:00,Triton update - campaigns,Czech Republic,23/08/2019 08:12
+3 Medium,MCH-5526,152185,Marketing,Closed,18/12/2019 00:00,increase age for customers for 18-80,Czech Republic,09/12/2019 15:18
+3 Medium,MCH-4733,138513,SSP,Closed,17/12/2019 00:00,LMS – Notifikace typu Contact Change,Czech Republic,06/08/2019 10:38
+3 Medium,MCH-5271,147819,Marketing,Closed,10/12/2019 00:00,process update: GDS check,Czech Republic,24/10/2019 10:03
+2 High,MCH-5471,151345,Marketing,Closed,05/12/2019 00:00,CNB report - change of the content,Czech Republic,02/12/2019 13:56
+3 Medium,MCH-4864,140998,CSC,Closed,05/12/2019 00:00,Oprava v Triton - editace,Czech Republic,23/08/2019 08:14
+3 Medium,MCH-4539,135055,SSP,Closed,04/12/2019 00:00,UNO - Operator has the option to fill in a web application with the applicant and submit a full scored Lead to the field,Czech Republic,10/07/2019 15:22
+3 Medium,MCH-5147,145402,Credit Risk,Closed,31/10/2019 00:00,error correction: surname of the client in addresses,Czech Republic,27/09/2019 08:44
+3 Medium,MCH-4401,133388,Credit Risk,Closed,18/10/2019 00:00,CIS application: Grouping of scoring /Grupování skoringů,Czech Republic,26/06/2019 18:06
+3 Medium,MCH-5038,144620,Credit Risk,Closed,17/10/2019 00:00,Black List - výmaz Adresy + RČ,Czech Republic,19/09/2019 08:25
+3 Medium,MCH-5037,144617,Marketing,Closed,17/10/2019 00:00,START upgrade - oprava CIS,Czech Republic,19/09/2019 08:20
+3 Medium,MCH-4937,142405,HR,Closed,15/10/2019 00:00,CSV data add (Moodle),Czech Republic,02/09/2019 15:47
+2 High,MCH-619,89436,SSP,Closed,11/10/2019 00:00,MyProvi - Drop 2.5 (EET inc. - no connectivity),Czech Republic,04/10/2017 09:09
+3 Medium,MCH-4784,139447,CSC,Closed,10/10/2019 00:00,HDB - k jednomu adresnímu bodu je přiřazeno více než 1 BRM,Czech Republic,13/08/2019 13:15
+3 Medium,MCH-716,90780,CSC,IT Test,08/10/2019 00:00,Insolvency mode in SASPO CZ,Czech Republic,08/11/2017 11:57
+3 Medium,MCH-4264,105628,Marketing,Closed,08/10/2019 00:00,Flexi,Czech Republic,21/09/2018 08:32
+3 Medium,MCH-4407,133395,Marketing,Closed,08/10/2019 00:00,New product Insurance for free / Nový produkt Pojištění zdarma,Czech Republic,26/06/2019 18:19
+3 Medium,MCH-4570,136321,Marketing,Closed,08/10/2019 00:00,Implementation of the discount products to current portfolio,Czech Republic,17/07/2019 14:45
+2 High,MCH-4400,133387,Credit Risk,Closed,08/10/2019 00:00,Unification of employment status,Czech Republic,26/06/2019 18:04
+3 Medium,MCH-4289,131793,IT Security,Closed,04/10/2019 00:00,Cockpit security issue #2,Czech Republic,13/06/2019 15:45
+3 Medium,MCH-4766,139157,IT,Closed,03/10/2019 00:00,2019_GDPR_Pentest_CZ_prelaunch,Czech Republic,09/08/2019 11:22
+3 Medium,MCH-4866,141000,Admin,Closed,03/10/2019 00:00,CIS - automatic data filling of on-line applications,Czech Republic,23/08/2019 08:18
+3 Medium,MCH-4735,138515,Credit Risk,Closed,03/10/2019 00:00,CIS - cancelation of lower income scoring penalty,Czech Republic,06/08/2019 10:47
+3 Medium,MCH-4261,116302,SSP,Closed,03/10/2019 00:00,Agent commission sheet: CIS - detailed penalty list,Czech Republic,01/02/2019 14:30
+3 Medium,MCH-4393,133345,Credit Risk,Closed,03/10/2019 00:00,"Data load to CIS application (direct dependency to Agent penalties]	",Czech Republic,26/06/2019 15:46
+3 Medium,MCH-4867,141001,SSP,Closed,03/10/2019 00:00,"E-report – displaying correct information about customers (16 miss, marketing consent)",Czech Republic,23/08/2019 08:20
+3 Medium,MCH-4865,140999,CSC,Closed,02/10/2019 00:00,Triton change - payment holidays,Czech Republic,23/08/2019 08:16
+3 Medium,MCH-5048,144777,Admin,Closed,20/09/2019 00:00,Modifying of web.config - missing keys,Czech Republic,20/09/2019 11:31
+3 Medium,MCH-5036,144616,Finance,Closed,19/09/2019 00:00,Convert pro Českou poštu (text file),Czech Republic,19/09/2019 08:18
+3 Medium,MCH-4262,108308,Finance,Closed,19/09/2019 00:00,Napojení TPS na tabulku Effective Date,Czech Republic,25/10/2018 15:31
+3 Medium,MCH-4732,138499,Collection Strategy,Closed,19/09/2019 00:00,Saspo - Historization of reminder fields /Historizace polí v upomínkách ze Saspo,Czech Republic,06/08/2019 09:38
+3 Medium,MCH-4402,133389,Credit Risk,Closed,05/09/2019 00:00,CIS application: Assigning a scoring to a loan agreement /Přiřazení skoringu ke smlouvě ,Czech Republic,26/06/2019 18:08
+3 Medium,MCH-4868,141002,SSP,Closed,05/09/2019 00:00,Navigator - change CWOS status ,Czech Republic,23/08/2019 08:22
+3 Medium,MCH-4824,140567,IT,Closed,22/08/2019 00:00,Connection via Mobile Agent on external CC - switch off music,Czech Republic,21/08/2019 08:59
+3 Medium,MCH-4600,136806,CSC,Closed,22/08/2019 00:00,CDR  - Routing inbound calls modification (working hours + prompt),Czech Republic,24/07/2019 09:13
+3 Medium,MCH-4423,133638,Marketing,Closed,14/08/2019 00:00,Product change - START proposition,Czech Republic,28/06/2019 15:04
+3 Medium,MCH-4288,131791,IT Security,Closed,13/08/2019 00:00,Cockpit security issue #1,Czech Republic,13/06/2019 15:40
+3 Medium,MCH-4398,133384,Other,Closed,08/08/2019 00:00,PROBE  new sell exctract,Czech Republic,26/06/2019 17:57
+2 High,MCH-843,92167,Marketing,Closed,02/08/2019 00:00,Create  new campaing as a  duplicity  of existing campaign: Retence  with access data limitation,Czech Republic,14/12/2017 15:39
+3 Medium,MCH-3881,126266,IT,Closed,02/08/2019 00:00,Cockpit - loaded data disappear in offline mode,Czech Republic,22/05/2019 10:41
+3 Medium,MCH-3458,119619,Marketing,Closed,02/08/2019 00:00,Change in filtering of MT letters,Czech Republic,14/03/2019 15:39
+3 Medium,MCH-4538,135053,MI,On Hold,01/08/2019 00:00,Prescription and allocation of payments according to amortized statements,Czech Republic,10/07/2019 15:15
+3 Medium,MCH-4413,133423,CSC,Closed,30/07/2019 00:00,New categories and subcategories of cases in Triton CRM,Czech Republic,27/06/2019 09:41
+3 Medium,MCH-4554,135513,CSC,Closed,24/07/2019 00:00,IPFD - New campaign (Creditea) - Cisco UCCE,Czech Republic,15/07/2019 12:24
+2 High,MCH-4265,97822,Loss Prevention,Closed,22/07/2019 00:00,Add Elixir database to internal systems used for agent recruitment,Czech Republic,10/04/2018 13:26
+3 Medium,MCH-4560,135618,CSC,Closed,18/07/2019 00:00,Fixing of bug from INC0434428-update addresses,Czech Republic,16/07/2019 10:09
+3 Medium,MCH-2776,111547,IT,Closed,11/07/2019 00:00,Date lake for CZE,Czech Republic,06/12/2018 15:51
+3 Medium,MCH-3100,115999,CSC,Closed,11/07/2019 00:00,Triton – Stížnosti/Žádosti -  změna kategorií,Czech Republic,29/01/2019 09:50
+2 High,MCH-4392,133328,Finance,Closed,11/07/2019 00:00,Money transfer overpayment -  fix regulatory issue,Czech Republic,26/06/2019 15:38
+3 Medium,MCH-3518,120429,Marketing,Change Delivered,11/07/2019 00:00,insurance phase II,Czech Republic,24/03/2019 15:13
+3 Medium,MCH-4388,133095,CSC,Closed,04/07/2019 00:00,Fixing of bug from INC0434428 ,Czech Republic,26/06/2019 10:42
+2 High,MCH-4387,133094,Collection Strategy,Closed,03/07/2019 00:00,Debt Sales,Czech Republic,26/06/2019 10:29
+3 Medium,MCH-4199,129959,IT,Closed,03/07/2019 00:00,Automatic generating reports for UK,Czech Republic,04/06/2019 13:24
+3 Medium,MCH-3770,124346,MI,Closed,03/07/2019 00:00,Automatizace reportů in reporting services,Czech Republic,09/05/2019 14:52
+2 High,MCH-4260,118978,IT,Closed,01/07/2019 00:00,Error during the downloading data in Navigator,Czech Republic,06/03/2019 16:38
+3 Medium,MCH-4376,133003,Marketing,Closed,25/06/2019 00:00,Flexi,Czech Republic,25/06/2019 13:23
+3 Medium,MCH-1105,96224,SSP,Closed,21/06/2019 00:00,"Receiving FREUD extract on Monday morning reflecting changes proceed on Saturday, Sunday",Czech Republic,13/03/2018 18:22
+3 Medium,MCH-4294,132022,Admin,Closed,21/06/2019 00:00,There is need to upload new document in Triton see attachement. The document  concerns to Aggent Support.,Czech Republic,14/06/2019 14:37
+3 Medium,MCH-4302,132128,SSP,Closed,17/06/2019 00:00,Digital assist via CSC,Czech Republic,17/06/2019 20:42
+3 Medium,MCH-4303,132129,Credit Risk,Closed,17/06/2019 00:00,Data load to CIS application (direct dependecy to Agent penalities],Czech Republic,17/06/2019 20:48
+3 Medium,MCH-4259,131606,CSC,Closed,16/06/2019 00:00,Release_2019_12_SMS+ToolTip Fix,Czech Republic,12/06/2019 04:02
+3 Medium,MCH-4282,131710,IT,Closed,13/06/2019 00:00,Cockpit security,Czech Republic,13/06/2019 08:03
+3 Medium,MCH-4272,131658,Finance,Closed,13/06/2019 00:00,create report from triton,Czech Republic,12/06/2019 12:01
+2 High,MCH-1107,96240,SSP,Change Delivered,06/06/2019 00:00,Changes in CIS application driven by CZE Licensing,Czech Republic,14/03/2018 08:36
+1 Critical,MCH-3720,123316,Credit Risk,Closed,06/06/2019 00:00,Removing  of  Credit Bureau consents from all applications; law effective  date 24.4.,Czech Republic,24/04/2019 14:48
+3 Medium,MCH-4201,130386,CSC,Closed,06/06/2019 00:00,Campaigns for external Callcenter - Cisco,Czech Republic,05/06/2019 07:34
+3 Medium,MCH-4195,129914,CSC,Closed,06/06/2019 00:00,Inbound routing calls - IVR bypass,Czech Republic,04/06/2019 09:38
+1 Critical,MCH-704,90482,SSP,Closed,06/06/2019 00:00,LM - system & process review to verify the LM is working as business need,Czech Republic,01/11/2017 14:48
+2 High,MCH-1245,98755,SSP,Closed,03/06/2019 00:00,MyProvi - DROP 2.5 (BRM tablets issue),Czech Republic,27/04/2018 09:32
+3 Medium,MCH-3037,114887,SSP,Closed,30/05/2019 00:00,loans provided by an acquisition specialist on an external site,Czech Republic,15/01/2019 17:03
+3 Medium,MCH-3768,124287,Admin,Closed,30/05/2019 00:00,Změna oddělení/pozice a e-mailu v šablonách dopisů na Pohledávky OZ / TRITON,Czech Republic,09/05/2019 10:50
+3 Medium,MCH-3977,128989,Finance,Closed,30/05/2019 00:00,SDP reports on SSRS,Czech Republic,29/05/2019 14:03
+3 Medium,MCH-3800,124976,IT,Closed,27/05/2019 00:00,Impossible to see scorings from agent in Cockpit,Czech Republic,16/05/2019 10:03
+3 Medium,MCH-3896,126473,IT,Closed,27/05/2019 00:00,SMS Parser - rollback,Czech Republic,23/05/2019 14:59
+3 Medium,MCH-3894,126470,Marketing,Closed,23/05/2019 00:00,NOLB DB - LM not processing contacts,Czech Republic,23/05/2019 14:53
+3 Medium,MCH-3885,126299,IT,Closed,23/05/2019 00:00,Fix blue files after BCP plan,Czech Republic,22/05/2019 14:25
+1 Critical,MCH-891,92790,Finance,Closed,08/05/2019 00:00,Set up of Data Box for comms with state authorities ,Czech Republic,08/01/2018 15:58
+2 High,MCH-846,92281,SSP,Closed,02/05/2019 00:00,closed lead status update in Cockpit and Fénix Web,Czech Republic,18/12/2017 09:36
+3 Medium,MCH-355,85488,CSC,Closed,29/04/2019 00:00,Contacts to CVP department - email notifications (TFS 5378),Czech Republic,21/07/2017 15:17
+2 High,MCH-3509,120257,Credit Risk,Closed,25/04/2019 00:00,ADM adjustment and CIS load extansion to allow process of CIS: customer documentation checks ,Czech Republic,21/03/2019 12:27
+2 High,MCH-3586,121259,SSP,Closed,25/04/2019 00:00,Triton Agent Archivation  - Change the period,Czech Republic,02/04/2019 08:53
+3 Medium,MCH-3521,120462,IT,Closed,25/04/2019 00:00,New field in CIS Rate klienta,Czech Republic,25/03/2019 08:38
+2 High,MCH-3020,114764,Finance,Closed,18/04/2019 00:00,NCC - project change,Czech Republic,14/01/2019 09:41
+4 Low,MCH-484,86533,Loss Prevention,Closed,17/04/2019 00:00,Job for regular import to Triton blacklist,Czech Republic,08/08/2017 10:20
+3 Medium,MCH-356,85489,SSP,Closed,12/04/2019 00:00,LM SMS Scoring Orchestration Workflow (TFS 5472),Czech Republic,21/07/2017 15:22
+3 Medium,MCH-1108,96248,IT,Closed,11/04/2019 00:00,"Extend KS Program functionality to display any approved holiday, absence, business trip in MS Outlook",Czech Republic,14/03/2018 09:36
+3 Medium,MCH-361,85495,CSC,Closed,11/04/2019 00:00,SASPO - nonexisting numbers - NX_REQ0025549 (TFS Change 7093),Czech Republic,21/07/2017 15:59
+3 Medium,MCH-2806,111658,SSP,Closed,09/04/2019 00:00,Geomarketing,Czech Republic,10/12/2018 11:19
+2 High,MCH-3585,121256,CSC,Closed,03/04/2019 00:00,A produkty - Triton (FAST MT),Czech Republic,02/04/2019 08:13
+3 Medium,MCH-3226,117141,Marketing,Closed,02/04/2019 00:00,Create  products A - A2 - A 20% discount,Czech Republic,11/02/2019 17:44
+3 Medium,MCH-3534,120630,Other,Closed,29/03/2019 00:00,Insurance Fáze II - Vinkulace,Czech Republic,26/03/2019 09:39
+2 High,MCH-3256,117686,IT,Closed,27/03/2019 00:00,ADS SQL server for analytical purpose will upgrade to SQL 2016 std,Czech Republic,18/02/2019 16:15
+3 Medium,MCH-236,84391,Loss Prevention,Closed,27/03/2019 00:00,CVP and CCU Customers Report ,Czech Republic,27/06/2017 17:26
+3 Medium,MCH-3517,120428,SSP,Closed,27/03/2019 00:00,O2 SMS conector,Czech Republic,24/03/2019 15:00
+4 Low,MCH-487,86536,Admin,Closed,25/03/2019 00:00,Admin portal - delivery of the calendar,Czech Republic,08/08/2017 10:29
+3 Medium,MCH-1089,95967,IT,Closed,24/03/2019 00:00,Creating documentation in CZ Market ,Czech Republic,09/03/2018 11:03
+2 High,MCH-3395,118977,IT,Closed,21/03/2019 00:00,Not possible to find client before scoring in Fenixweb,Czech Republic,06/03/2019 16:31
+3 Medium,MCH-3036,114884,Marketing,Closed,20/03/2019 00:00,Changes in CIS application & E- reports,Czech Republic,15/01/2019 16:33
+3 Medium,MCH-794,91388,Operational,Closed,19/03/2019 00:00,Agent´s plans and targets ,Czech Republic,24/11/2017 13:35
+4 Low,MCH-1619,101216,CSC,Closed,19/03/2019 00:00,Pair verified contacts between Triton & Saspo,Czech Republic,19/06/2018 14:11
+3 Medium,MCH-1617,101203,CSC,Closed,19/03/2019 00:00,CSC Ability to create duplicate campaigns and create (plus edit) call results ,Czech Republic,19/06/2018 12:05
+3 Medium,MCH-3098,115991,L&D,Closed,19/03/2019 00:00,Moodle _ CSV data repair ,Czech Republic,29/01/2019 08:32
+3 Medium,MCH-489,86550,Marketing,Closed,19/03/2019 00:00,Availability of information from Coll List in Cockpit ( TFS 7604 ),Czech Republic,08/08/2017 11:43
+2 High,MCH-492,86561,Credit Risk,Closed,19/03/2019 00:00,Include to Reserve system field Balance vs. Highest_Balance in last 26weeks ,Czech Republic,08/08/2017 13:09
+3 Medium,MCH-352,85385,CSC,Closed,19/03/2019 00:00,Triton HDB,Czech Republic,20/07/2017 14:05
+2 High,MCH-2775,111546,Marketing,Closed,12/03/2019 00:00,project digital assist,Czech Republic,06/12/2018 15:43
+1 Critical,MCH-3225,117140,SSP,Closed,06/03/2019 00:00,Switch off sending SMS from Cockpit: Google operator change the rules,Czech Republic,11/02/2019 17:36
+2 High,MCH-1186,97991,Marketing,Closed,05/03/2019 00:00,"Pay in time and get 4th month free (we „cash back"" one month - 1 monthly instalment/ 4 weekly installments)",Czech Republic,12/04/2018 09:38
+3 Medium,MCH-3326,118373,CSC,Closed,28/02/2019 00:00,TRITON - NLMS WQ CHR II,Czech Republic,27/02/2019 12:30
+2 High,MCH-3335,118383,Admin,Closed,28/02/2019 00:00,TRITON - Release_2019_08 - Smlouva o zapujcce,Czech Republic,27/02/2019 13:06
+3 Medium,MCH-3341,118404,Admin,Closed,28/02/2019 00:00,Úprava archivace - oživení OZ s nárokem na provizi,Czech Republic,27/02/2019 15:11
+3 Medium,MCH-3025,114792,Admin,Closed,21/02/2019 00:00,Změna nastavení fitrů registrace v modulu Registrace OZ Triton,Czech Republic,14/01/2019 14:56
+3 Medium,MCH-3249,117596,SSP,Closed,15/02/2019 00:00,insurance CR of Cockpit product view,Czech Republic,15/02/2019 14:03
+3 Medium,MCH-3244,117369,SSP,Closed,14/02/2019 00:00,available appl. Cockpit to Huawei Nova 3,Czech Republic,14/02/2019 13:42
+2 High,MCH-2572,109523,Marketing,Closed,13/02/2019 00:00,new product insurance,Czech Republic,08/11/2018 20:01
+2 High,MCH-3119,116104,CSC,Closed,12/02/2019 00:00,Insurance - požadavky na CRM Triton,Czech Republic,30/01/2019 13:55
+3 Medium,MCH-652,89764,SSP,Closed,08/02/2019 00:00, Data on bound OZ from the CNB website in excel,Czech Republic,12/10/2017 10:30
+3 Medium,MCH-2845,112257,Admin,Closed,08/02/2019 00:00,Změna čísla bankovního účtu registrace u ČNB,Czech Republic,17/12/2018 12:28
+4 Low,MCH-3209,116858,CSC,Closed,07/02/2019 00:00,Callcenter servers - patch install (WIN+UCCE),Czech Republic,07/02/2019 13:25
+3 Medium,MCH-2815,111712,SSP,Closed,07/02/2019 00:00,Registration account  number  controls,Czech Republic,10/12/2018 15:41
+3 Medium,MCH-2510,109167,Finance,Closed,07/02/2019 00:00,Párování vrácené platby úpravou SS - přidání 6666 před week_id,Czech Republic,05/11/2018 12:03
+3 Medium,MCH-3116,116098,IT,Closed,07/02/2019 00:00,New layer in Axapta,Czech Republic,30/01/2019 12:54
+3 Medium,MCH-3191,116674,Other,Closed,05/02/2019 00:00,aa23,Czech Republic,05/02/2019 13:27
+3 Medium,MCH-3088,115897,SSP,Closed,31/01/2019 00:00,change validation for number of RES leads,Czech Republic,25/01/2019 10:28
+2 High,MCH-3104,116044,Admin,Closed,31/01/2019 00:00,Dodatek číslo 1. ke smlouvě o zpracování osobních údajů_pojištění,Czech Republic,29/01/2019 13:59
+3 Medium,MCH-3117,116102,Loss Prevention,Closed,30/01/2019 00:00,"U obdržených leadů sledování produktu, kterého se to týká",Czech Republic,30/01/2019 13:33
+3 Medium,MCH-3084,115867,IT,Closed,24/01/2019 00:00,CIS ending escalation by old files/items,Czech Republic,24/01/2019 14:54
+3 Medium,MCH-3079,115623,Loss Prevention,Closed,24/01/2019 00:00,TRITON - BlackList - hromadný insert vybraných lidí callcentrem na blacklist,Czech Republic,23/01/2019 09:45
+3 Medium,MCH-2946,113547,Admin,Closed,24/01/2019 00:00,Nahrání šablon dopisů k typu pohledávky prodloužení registrace,Czech Republic,04/01/2019 12:48
+4 Low,MCH-886,92778,SSP,Closed,18/01/2019 00:00,Implemenation of new intranet used in Poland,Czech Republic,08/01/2018 12:52
+2 High,MCH-893,92809,Marketing,Closed,18/01/2019 00:00,Insurance,Czech Republic,09/01/2018 09:00
+2 High,MCH-493,86563,Credit Risk,Closed,18/01/2019 00:00,Adjustment of allowed identification cards ( TFS 7736 ),Czech Republic,08/08/2017 13:28
+2 High,MCH-2072,103497,Credit Risk,Closed,17/01/2019 00:00,CIS - changes in control rules,Czech Republic,13/08/2018 13:50
+1 Critical,MCH-844,92232,CSC,Closed,17/01/2019 00:00,Data Access Limitation In Triton for External CSC,Czech Republic,15/12/2017 08:34
+3 Medium,MCH-2358,107267,IT,Closed,17/01/2019 00:00,Add a progress bar to the signing process in application Cockpit,Czech Republic,10/10/2018 10:23
+3 Medium,MCH-2819,112019,IT,Closed,17/01/2019 00:00,Scoring - more than 5 digits in field Other Income,Czech Republic,11/12/2018 14:58
+3 Medium,MCH-2929,113483,Credit Risk,Closed,17/01/2019 00:00,Add Kosovo into country list in CIS,Czech Republic,03/01/2019 13:01
+2 High,MCH-3050,115052,CSC,Closed,17/01/2019 00:00, Kontakty WEB_CZ chybí zdroj affilates,Czech Republic,17/01/2019 11:10
+3 Medium,MCH-2944,113528,IT,Closed,17/01/2019 00:00,Escalation in CIS will be longer,Czech Republic,04/01/2019 10:25
+3 Medium,MCH-2077,103589,Credit Risk,Closed,17/01/2019 00:00,CIS eskalation,Czech Republic,15/08/2018 10:21
+3 Medium,MCH-2548,109404,Marketing,Closed,10/01/2019 00:00,info about product on lead,Czech Republic,07/11/2018 15:28
+1 Critical,MCH-513,86746,Legal,Closed,17/12/2018 00:00,CZE Licence,Czech Republic,11/08/2017 09:22
+1 Critical,MCH-2390,107621,SSP,Closed,26/11/2018 00:00,Provi Direct - Decommission ,Czech Republic,12/10/2018 15:26
+2 High,MCH-2493,108709,Admin,Closed,26/11/2018 00:00,Nahrání dokumentu CZ718-02 Dohoda o odborné zkoušce,Czech Republic,30/10/2018 15:21
+2 High,MCH-2524,109266,Admin,Closed,26/11/2018 00:00,Nahrání dokumentu Pokyny společnosti PF pro obchodní zástupce_akviziční specialista (CZ 836),Czech Republic,06/11/2018 14:54
+3 Medium,MCH-697,90401,CSC,Closed,26/11/2018 00:00,propagation change MKT message - Triton,Czech Republic,31/10/2017 08:53
+1 Critical,MCH-1500,100106,CSC,Closed,26/11/2018 00:00,Contact source displayed in Triton campaigns,Czech Republic,23/05/2018 07:55
+1 Critical,MCH-1753,101664,Legal,Closed,26/11/2018 00:00,GDPR Day1,Czech Republic,26/06/2018 13:38
+2 High,MCH-2479,108429,Collection,Closed,19/11/2018 00:00,Saspo update,Czech Republic,26/10/2018 16:21
+3 Medium,MCH-2419,107825,SSP,Closed,19/11/2018 00:00,new e_report,Czech Republic,17/10/2018 07:18
+3 Medium,MCH-740,90987,Marketing,Closed,16/11/2018 00:00,CHANGE IN FENIXWEB - INFORMATION SMS,Czech Republic,14/11/2017 15:57
+2 High,MCH-488,86538,SSP,Closed,16/11/2018 00:00,Triton access for Business Leaders ( TFS 7596 ),Czech Republic,08/08/2017 10:51
+3 Medium,MCH-353,85486,SSP,Closed,16/11/2018 00:00,Navigator_Audit (TFS 4503),Czech Republic,21/07/2017 15:02
+3 Medium,MCH-2547,109391,IT,Closed,15/11/2018 00:00,New layer in Axapta,Czech Republic,07/11/2018 14:31
+3 Medium,MCH-2282,106710,Admin,Closed,30/10/2018 00:00,Úprava filtru pro registrace OZ u ČNB  v Tritonu – modul Registrace OZ,Czech Republic,03/10/2018 10:46
+3 Medium,MCH-2234,106512,SSP,Closed,29/10/2018 00:00,Agent Registration - filter change  in  Triton,Czech Republic,01/10/2018 12:03
+2 High,MCH-2396,107688,Admin,Closed,15/10/2018 00:00,R_NCC_CUSTOMER_TAB_ADD_COMMISSION  ,Czech Republic,15/10/2018 11:51
+3 Medium,MCH-2149,104565,HR,Closed,11/10/2018 00:00,LMS,Czech Republic,05/09/2018 16:58
+2 High,MCH-1103,96221,Marketing,Closed,11/10/2018 00:00,We need to migrate triggered email from Cheetah to Mailon.,Czech Republic,13/03/2018 16:36
+1 Critical,MCH-238,84408,SSP,Closed,10/10/2018 00:00,Provi Direct,Czech Republic,28/06/2017 09:40
+3 Medium,MCH-2345,107118,IT,Closed,09/10/2018 00:00,test,Czech Republic,09/10/2018 08:19
+3 Medium,MCH-1999,102881,SSP,Closed,09/10/2018 00:00,Add scorning info & Regata info to AgentCockpit&Fénixweb,Czech Republic,27/07/2018 11:24
+2 High,MCH-2213,105894,CSC,Closed,27/09/2018 00:00,Registrace bezhotovostní zápůjčky_START_Triton ,Czech Republic,24/09/2018 12:48
+2 High,MCH-2132,104284,Admin,Closed,20/09/2018 00:00,Místo role R_BANK_ACCOUNT_OZ budou dvě nové s oddělenými právy pro vkládání a změnu bankovního účtu u OZ.,Czech Republic,31/08/2018 10:13
+3 Medium,MCH-2051,103131,Marketing,Closed,11/09/2018 00:00,New product Q3/2018,Czech Republic,02/08/2018 19:01
+3 Medium,MCH-2119,104143,SSP,Closed,10/09/2018 00:00,New documentation for specialists,Czech Republic,30/08/2018 09:08
+3 Medium,MCH-2121,104151,Credit Risk,Closed,04/09/2018 00:00,expansion ADM table of new fields,Czech Republic,30/08/2018 10:36
+3 Medium,MCH-2066,103324,CSC,Closed,03/09/2018 00:00,Collections inbound - working hours + prompt,Czech Republic,09/08/2018 13:28
+1 Critical,MCH-409,86039,Legal,Closed,31/08/2018 00:00,SVK Closure,Czech Republic,28/07/2017 10:28
+3 Medium,MCH-2097,103849,SSP,Closed,30/08/2018 00:00,Triton - nahrání dokumentace,Czech Republic,22/08/2018 10:23
+3 Medium,MCH-2104,103913,Marketing,Closed,30/08/2018 00:00,Změna délky proměné ((OZVariable)),Czech Republic,23/08/2018 15:39
+3 Medium,MCH-2111,104066,IT,Closed,28/08/2018 00:00,Automatic opening file with number +420,Czech Republic,28/08/2018 16:29
+3 Medium,MCH-231,84376,SSP,Closed,23/08/2018 00:00, Electronic book of journeys,Czech Republic,27/06/2017 13:59
+3 Medium,MCH-2095,103847,IT,Closed,22/08/2018 00:00,emailDateTime attribute add to netlem,Czech Republic,22/08/2018 09:44
+3 Medium,MCH-496,86623,Marketing,Closed,21/08/2018 00:00,Introducing a new Lead provider,Czech Republic,09/08/2017 13:08
+3 Medium,MCH-2071,103481,CSC,Closed,16/08/2018 00:00,CR on affiliate import to CSC,Czech Republic,13/08/2018 13:20
+2 High,MCH-1610,101163,HR,Closed,16/08/2018 00:00,evidention of agents presonal data ,Czech Republic,18/06/2018 14:20
+2 High,MCH-349,85263,Legal,Closed,16/08/2018 00:00,EET - NCC,Czech Republic,19/07/2017 14:38
+3 Medium,MCH-583,87941,CSC,Closed,16/08/2018 00:00,Create new priority in Triton,Czech Republic,13/09/2017 09:43
+3 Medium,MCH-425,86071,CSC,Closed,03/08/2018 00:00,Change of web campagne,Czech Republic,28/07/2017 15:15
+2 High,MCH-1187,97996,Marketing,Closed,01/08/2018 00:00,Pricing test sensitivity,Czech Republic,12/04/2018 09:59
+3 Medium,MCH-1422,99666,Admin,Closed,01/08/2018 00:00,Corruption of Agreements after WO,Czech Republic,11/05/2018 14:07
+2 High,MCH-1588,100931,Marketing,Closed,01/08/2018 00:00,Customize customer selection options into group SMS campaigns - GDPR compliance,Czech Republic,12/06/2018 13:01
+2 High,MCH-359,85493,Finance,Closed,27/07/2018 00:00,NPP - Linkage of KB bank account for loan payment (TFS 6969),Czech Republic,21/07/2017 15:50
+3 Medium,MCH-1919,102681,Credit Risk,Closed,27/07/2018 00:00,"Add ""Days Past Due"" calculation to FOCUS",Czech Republic,24/07/2018 08:38
+3 Medium,MCH-1896,102554,SSP,Closed,25/07/2018 00:00,fw transfery to xls,Czech Republic,20/07/2018 08:43
+3 Medium,MCH-304,84890,Admin,Closed,19/07/2018 00:00,Earlier Import OZ into the Triton,Czech Republic,11/07/2017 14:19
+3 Medium,MCH-1573,100692,CSC,Closed,19/07/2018 00:00,Cisco finesse - gadget - zachycení zásahu OP,Czech Republic,05/06/2018 15:38
+2 High,MCH-1009,94721,L&D,Closed,18/07/2018 00:00,Set up automated data upload for the upgraded LMS (Moodle). ,Czech Republic,12/02/2018 15:35
+3 Medium,MCH-1843,102194,SSP,Closed,11/07/2018 00:00,nove smlouvy s OZ,Czech Republic,10/07/2018 15:40
+2 High,MCH-1611,101164,Legal,Closed,04/07/2018 00:00,agent cancelation,Czech Republic,18/06/2018 14:32
+3 Medium,MCH-698,90403,Marketing,Closed,04/07/2018 00:00,Promo BNPL (Buy now pay later),Czech Republic,31/10/2017 09:00
+3 Medium,MCH-248,84435,Credit Risk,Closed,04/07/2018 00:00,Scoring parameters modification for NC,Czech Republic,28/06/2017 10:16
+1 Critical,MCH-350,85264,Legal,Closed,25/06/2018 00:00,GDPR Day0,Czech Republic,19/07/2017 14:44
+2 High,MCH-1618,101215,Legal,Closed,21/06/2018 00:00,navigator - info about withdrawn consent - change of text,Czech Republic,19/06/2018 13:58
+2 High,MCH-1607,101158,Legal,Closed,21/06/2018 00:00,Triton lists for new GDPR process ,Czech Republic,18/06/2018 13:35
+1 Critical,MCH-928,93349,Product,Closed,20/06/2018 00:00, Promo Product with Deferred First Payment - SASPO,Czech Republic,19/01/2018 08:58
+3 Medium,MCH-1609,101162,Legal,Closed,18/06/2018 00:00,Show campagne source for CSC,Czech Republic,18/06/2018 14:14
+2 High,MCH-1608,101159,Marketing,Closed,18/06/2018 00:00,activity ImportScoring,Czech Republic,18/06/2018 13:49
+3 Medium,MCH-1104,96223,Marketing,Closed,14/06/2018 00:00,Display names of product components in Agent Cockpit tool  (Table  of Charges) to be  in line with Loan agreement  form valid from 31.1.2018 ,Czech Republic,13/03/2018 17:27
+2 High,MCH-853,92335,SSP,Closed,14/06/2018 00:00,Adding new subcategory to Triton,Czech Republic,19/12/2017 11:39
+2 High,MCH-1550,100541,Credit Risk,Closed,14/06/2018 00:00,switch off inforcoring,Czech Republic,01/06/2018 09:10
+3 Medium,MCH-1593,101020,Marketing,Closed,14/06/2018 00:00,Permition to business to technical user,Czech Republic,13/06/2018 15:41
+3 Medium,MCH-466,86451,Admin,Closed,14/06/2018 00:00,Report change,Czech Republic,07/08/2017 11:11
+3 Medium,MCH-1244,98668,Marketing,Closed,06/06/2018 00:00,MT letters automatization,Czech Republic,26/04/2018 12:46
+3 Medium,MCH-1423,99667,Other,Closed,23/05/2018 00:00,Increase of free space for database (branch N1003),Czech Republic,11/05/2018 14:11
+3 Medium,MCH-1414,99633,Legal,Closed,17/05/2018 00:00,new agent contract driven by licence,Czech Republic,10/05/2018 17:20
+3 Medium,MCH-1455,99862,Collection,Closed,17/05/2018 00:00,send letters to customers,Czech Republic,16/05/2018 11:55
+1 Critical,MCH-1034,95087,Finance,Closed,17/05/2018 00:00,Contra transaction in SASPO - amortization statement,Czech Republic,20/02/2018 12:53
+3 Medium,MCH-592,88252,CSC,Closed,17/05/2018 00:00,DIP Stage 1 Problem Technical – sending data from web form to call centre,Czech Republic,22/09/2017 14:48
+2 High,MCH-486,86535,Credit Risk,Closed,15/05/2018 00:00,CIS application - optimization,Czech Republic,08/08/2017 10:25
+2 High,MCH-591,88251,Admin,Closed,04/05/2018 00:00,Make fee in FOCUS Admin fee (straight line) to be non rebatable,Czech Republic,22/09/2017 13:55
+3 Medium,MCH-1364,99166,Credit Risk,Closed,03/05/2018 00:00,CB monthly batch optimization ,Czech Republic,03/05/2018 11:05
+4 Low,MCH-767,91047,CSC,Closed,27/04/2018 00:00,Triton - import of new categories ( TFS 7676 ),Czech Republic,15/11/2017 12:26
+4 Low,MCH-483,86530,CSC,Closed,27/04/2018 00:00,"Updates of wallboardes for Service, Sales and Digital department",Czech Republic,08/08/2017 10:16
+2 High,MCH-1214,98254,Collection Strategy,Closed,19/04/2018 00:00,Insolvenci sale,Czech Republic,18/04/2018 15:12
+1 Critical,MCH-1194,98059,Collection Strategy,Closed,19/04/2018 00:00,Insolvency Sales _  one  off sale of debts driven by Insolvency,Czech Republic,13/04/2018 12:01
+2 High,MCH-475,86508,CSC,Closed,17/04/2018 00:00,Receipt printing from Saspo ( TFS 7254 ),Czech Republic,08/08/2017 08:46
+4 Low,MCH-478,86512,CSC,Closed,17/04/2018 00:00,Request for information change of returned mail ( TFS 7256 ),Czech Republic,08/08/2017 09:29
+3 Medium,MCH-357,85490,CSC,Closed,17/04/2018 00:00,Triton – disabling of sending text messages notifications (TFS 5775),Czech Republic,21/07/2017 15:27
+3 Medium,MCH-360,85494,SSP,Closed,16/04/2018 00:00,Fénixweb - turning off customers selling (TFS Change 6992),Czech Republic,21/07/2017 15:56
+1 Critical,MCH-873,92627,Product,Closed,16/04/2018 00:00,Saspo - product changes 2018/01,Czech Republic,03/01/2018 08:51
+3 Medium,MCH-735,90950,Admin,Closed,14/04/2018 00:00,Agent registration at CNB,Czech Republic,13/11/2017 14:02
+3 Medium,MCH-707,90558,Marketing,Closed,14/04/2018 00:00,Allocation order change,Czech Republic,02/11/2017 15:05
+3 Medium,MCH-892,92808,MI,Closed,13/04/2018 00:00,New Data Platform,Czech Republic,09/01/2018 08:59
+3 Medium,MCH-1109,96263,IT,Closed,22/03/2018 00:00,"Creation default.aspx, config file for FenixWeb ",Czech Republic,14/03/2018 11:53
+3 Medium,MCH-1126,96853,Credit Risk,Closed,22/03/2018 00:00,CB - online update automatization,Czech Republic,21/03/2018 15:51
+3 Medium,MCH-184,84252,SSP,Closed,20/03/2018 00:00,MyTeam Drop2,Czech Republic,23/06/2017 11:50
+1 Critical,MCH-706,90557,Marketing,Closed,05/03/2018 00:00,Rebates optimalization,Czech Republic,02/11/2017 15:03
+3 Medium,MCH-578,87801,Marketing,Closed,28/02/2018 00:00,Amortized listing - minor repairs,Czech Republic,08/09/2017 13:34
+2 High,MCH-814,91688,Marketing,Closed,14/02/2018 00:00,New product Q1/2018,Czech Republic,03/12/2017 18:41
+3 Medium,MCH-885,92772,SSP,Closed,08/02/2018 00:00,for SPP create SQT Portal,Czech Republic,08/01/2018 11:31
+3 Medium,MCH-179,84240,SSP,Closed,04/02/2018 00:00,MyCollection Drop2,Czech Republic,23/06/2017 10:24
+3 Medium,MCH-908,93194,HR,Closed,31/01/2018 00:00,BAU DM Mobile Agent Evaluation - status reset & report,Romania,16/01/2018 09:52
+3 Medium,MCH-544,87225,Operational,Closed,17/01/2018 00:00, Access to the FenixWeb - next day after entering to the Focus,Czech Republic,24/08/2017 10:12
+4 Low,MCH-467,86457,SSP,Closed,17/01/2018 00:00,Disabling of sending email notifications from FenixWeb (TFS 8035),Czech Republic,07/08/2017 14:42
+3 Medium,MCH-250,84464,Finance,Closed,19/12/2017 00:00,NPP in TPS ,Czech Republic,28/06/2017 11:09
+2 High,MCH-485,86534,CSC,Closed,05/12/2017 00:00,Leads from Triton to be written to FW aswell ( TFS 7258 ),Czech Republic,08/08/2017 10:21
+3 Medium,MCH-468,86458,Marketing,Closed,05/12/2017 00:00,"Interest rate (Cockpit, Fenix web) (TFS 8040)",Czech Republic,07/08/2017 14:54
+3 Medium,MCH-358,85491,Marketing,Closed,05/12/2017 00:00,filtering paid-up customers leads from CC (TFS 5780),Czech Republic,21/07/2017 15:30
+2 High,MCH-112,83943,Marketing,Closed,22/11/2017 00:00,Product changes 2017Q2,Czech Republic,15/06/2017 11:32
+3 Medium,MCH-630,89520,Operational,Closed,20/11/2017 00:00,Leads at night hours ,Czech Republic,05/10/2017 14:46
+4 Low,MCH-480,86519,CSC,Closed,20/11/2017 00:00,Consolidated report for service department,Czech Republic,08/08/2017 09:56
+4 Low,MCH-481,86525,CSC,Closed,20/11/2017 00:00,Finesse - League table,Czech Republic,08/08/2017 10:04
+4 Low,MCH-490,86553,CSC,Closed,15/11/2017 00:00,Triton - import of new categories ( TFS 7676 ),Czech Republic,08/08/2017 12:08
+3 Medium,MCH-647,89648,Admin,Closed,09/11/2017 00:00,Entering a new addition to the Triton,Czech Republic,10/10/2017 13:09
+4 Low,MCH-470,86461,SSP,Closed,07/11/2017 00:00,Adding phone number into phone number column (TFS 8113),Czech Republic,07/08/2017 15:15
+2 High,MCH-491,86558,Marketing,Closed,03/11/2017 00:00,Lead Management - Call Prioritisation Based on Propensity ton buy ( TFS 7743 ),Czech Republic,08/08/2017 12:50
+3 Medium,MCH-543,87175,Credit Risk,Closed,31/10/2017 00:00,Automate the generation of monthly principle,Czech Republic,23/08/2017 13:07
+3 Medium,MCH-275,84589,SSP,Closed,31/10/2017 00:00,"Triton: received dismissal evidence, cancellation term counter, change of reporting settings",Czech Republic,30/06/2017 15:19
+2 High,MCH-373,85568,Credit Risk,Closed,30/10/2017 00:00,Change of Online Credit Bureau call (inquiry),Czech Republic,24/07/2017 15:41
+3 Medium,MCH-391,85973,Marketing,Closed,30/10/2017 00:00,We require a campaign to be change from XS Web Requests to Web Requests for one of our affiliates VOLSOR,Czech Republic,27/07/2017 09:54
+3 Medium,MCH-537,87122,CSC,Closed,24/10/2017 00:00,Adding Zip Code to Customer Card in Triton ( TASK0043632 ) ,Czech Republic,22/08/2017 12:48
+3 Medium,MCH-514,86809,CSC,Closed,24/10/2017 00:00,Creating new campaign - WEB_PILOT_CZ,Czech Republic,14/08/2017 11:47
+2 High,MCH-472,86469,Finance,Closed,24/10/2017 00:00,change in automatic marking of payments with label 'Zuctovani záporných uroku' in SASPO (TFS 8163),Czech Republic,07/08/2017 15:48
+1 Critical,MCH-618,89435,SSP,Closed,10/10/2017 00:00,MyProvi - Drop 2.5,Czech Republic,04/10/2017 09:06
+1 Critical,MCH-617,89434,SSP,Closed,10/10/2017 00:00,MyProvi - Drop 2.5,Czech Republic,04/10/2017 09:02
+1 Critical,MCH-616,89433,SSP,Closed,04/10/2017 00:00,MyProvi - Drop 2.5,Czech Republic,04/10/2017 09:01
+2 High,MCH-469,86459,SSP,Closed,02/10/2017 00:00,Summary screen before sending scoring (TFS 8078),Czech Republic,07/08/2017 15:01
+3 Medium,MCH-471,86462,SSP,Closed,20/09/2017 00:00,call history database of mobile network operator O2 (TFS 8135),Czech Republic,07/08/2017 15:33
+4 Low,MCH-473,86470,SSP,Closed,20/09/2017 00:00,Change of interface for deputization in Fenixweb (TFS 8167),Czech Republic,07/08/2017 15:54
+3 Medium,MCH-559,87523,CSC,Closed,01/09/2017 00:00,adding Media type in CZ Triton,Czech Republic,31/08/2017 15:40
+2 High,MCH-482,86526,Collection Strategy,Closed,24/08/2017 00:00,Job time change for Table_CCP ( TFS 7257 ),Czech Republic,08/08/2017 10:04
+3 Medium,MCH-522,86952,IT,Closed,23/08/2017 00:00,Internet access from servers DEVCZ-WSAPPCZ & DEVCZ-BIZTALK ( SNOW TASK0043329 ),Czech Republic,17/08/2017 11:51
+3 Medium,MCH-524,86955,IT,Closed,23/08/2017 00:00,Creating Accesses for testing Cockpit App,Czech Republic,17/08/2017 12:22
+3 Medium,MCH-523,86954,IT,Closed,23/08/2017 00:00,"Creating of test environment DEVCZ, TST2 & STG",Czech Republic,17/08/2017 12:01
+4 Low,MCH-477,86511,Credit Risk,Closed,21/08/2017 00:00,Unify Agent Id,Czech Republic,08/08/2017 09:14
+3 Medium,MCH-260,84550,Collection,Closed,04/08/2017 00:00,Pairing of Agents Payments ,Czech Republic,29/06/2017 15:12
+3 Medium,MCH-240,84422,IT,Closed,31/07/2017 00:00,Insolvency Redesign,Czech Republic,28/06/2017 09:51
+3 Medium,MCH-220,84333,SSP,Closed,30/06/2017 00:00,Filtering in Agent's Agreements,Czech Republic,26/06/2017 13:57
+3 Medium,MCH-144,84052,SSP,Closed,30/06/2017 00:00,Type of agent cancelation in Triton,Czech Republic,19/06/2017 15:21
+3 Medium,MCH-198,84283,CSC,Closed,28/06/2017 00:00,Campaign customization in SASPO,Czech Republic,23/06/2017 16:37
