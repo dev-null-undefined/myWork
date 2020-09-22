@@ -4,13 +4,12 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		Konstruktor postava = new Konstruktor("", 0, 0, 0);
 		postava.setHp(2);
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Zadej jméno postavy: ");
+		System.out.print("Zadej jmï¿½no postavy: ");
 		postava.setJmeno(sc.nextLine());
 
 		System.out.print("Zadej inteligenci postavy: ");
@@ -23,11 +22,11 @@ public class Main {
 			}
 		}
 
-		System.out.print("Zadej sílu postavy: ");
+		System.out.print("Zadej sï¿½lu postavy: ");
 		postava.setSila(sc.nextInt());
 		for (; postava.getInteligence() + postava.getSila() > 10;) {
 			if (postava.b == false) {
-				System.out.print("Zadej znova sílu postavy: ");
+				System.out.print("Zadej znova sï¿½lu postavy: ");
 				postava.setSila(sc.nextInt());
 			}
 		}
@@ -35,16 +34,16 @@ public class Main {
 
 		Konstruktor bandita = new Konstruktor("bandita Fred", 1, 2, 1);
 		Konstruktor pavouk = new Konstruktor("pavouk Tonda", 1, 3, 2);
-		Konstruktor skolnik = new Konstruktor("školník Pepa", 1, 6, 1);
-		Konstruktor prisera = new Konstruktor("Pøíšera", 1, 5, 4);
+		Konstruktor skolnik = new Konstruktor("ï¿½kolnï¿½k Pepa", 1, 6, 1);
+		Konstruktor prisera = new Konstruktor("Pï¿½ï¿½era", 1, 5, 4);
 		int win = 0;
 		int hp = 2;
 		for (int v = 0; postava.getHp() != 0 && win != 4;) {
-			System.out.println("1.) Jít do lesa");
-			System.out.println("2.) Jít do jeskynì");
-			System.out.println("3.) Jít do školy");
-			System.out.println("4.) Jít do Voidu");
-			System.out.println("5.) Zobrazit aktuální statistiky své postavy");
+			System.out.println("1.) Jï¿½t do lesa");
+			System.out.println("2.) Jï¿½t do jeskynï¿½");
+			System.out.println("3.) Jï¿½t do ï¿½koly");
+			System.out.println("4.) Jï¿½t do Voidu");
+			System.out.println("5.) Zobrazit aktuï¿½lnï¿½ statistiky svï¿½ postavy");
 
 			v = sc.nextInt();
 			switch (v) {
@@ -59,7 +58,7 @@ public class Main {
 
 						break;
 					} else {
-						System.out.println("Porazil tì bandita");
+						System.out.println("Porazil tï¿½ bandita");
 
 						hp--;
 						postava.setHp(hp);
@@ -69,7 +68,7 @@ public class Main {
 
 					}
 				} else {
-					System.out.println("Bandita je už mrtvej, jdi jinam");
+					System.out.println("Bandita je uï¿½ mrtvej, jdi jinam");
 					System.out.println();
 
 					break;
@@ -86,7 +85,7 @@ public class Main {
 						System.out.println();
 						break;
 					} else {
-						System.out.println("Porazil tì pavouk");
+						System.out.println("Porazil tï¿½ pavouk");
 
 						hp--;
 						postava.setHp(hp);
@@ -95,22 +94,22 @@ public class Main {
 						break;
 					}
 				} else {
-					System.out.println("Pavouk je už mrtvej, jdi jinam");
+					System.out.println("Pavouk je uï¿½ mrtvej, jdi jinam");
 					System.out.println();
 					break;
 				}
 			}
 			case 3: {
 				if (skolnik.getHp() != 0) {
-					System.out.println("Narazil jsi na školníka. " + pavouk.Stats());
+					System.out.println("Narazil jsi na ï¿½kolnï¿½ka. " + pavouk.Stats());
 					if (postava.getSila() + postava.getInteligence() > skolnik.getSila() + skolnik.getInteligence()) {
-						System.out.println("Porazil jsi školníka");
+						System.out.println("Porazil jsi ï¿½kolnï¿½ka");
 						skolnik.setHp(0);
 						win++;
 						System.out.println();
 						break;
 					} else {
-						System.out.println("Porazil tì školník");
+						System.out.println("Porazil tï¿½ ï¿½kolnï¿½k");
 
 						hp--;
 						postava.setHp(hp);
@@ -119,22 +118,22 @@ public class Main {
 						break;
 					}
 				} else {
-					System.out.println("Školník je už mrtvej, jdi jinam");
+					System.out.println("ï¿½kolnï¿½k je uï¿½ mrtvej, jdi jinam");
 					System.out.println();
 					break;
 				}
 			}
 			case 4: {
 				if (prisera.getHp() != 0) {
-					System.out.println("Narazil jsi na pøíšeru. " + prisera.Stats());
+					System.out.println("Narazil jsi na pï¿½ï¿½eru. " + prisera.Stats());
 					if (postava.getSila() + postava.getInteligence() > prisera.getSila() + prisera.getInteligence()) {
-						System.out.println("Porazil jsi pøíšeru");
+						System.out.println("Porazil jsi pï¿½ï¿½eru");
 						prisera.setHp(0);
 						win++;
 						System.out.println();
 						break;
 					} else {
-						System.out.println("Porazila tì pøíšera");
+						System.out.println("Porazila tï¿½ pï¿½ï¿½era");
 
 						hp--;
 						postava.setHp(hp);
@@ -143,7 +142,7 @@ public class Main {
 						break;
 					}
 				} else {
-					System.out.println("Pøíšera je už mrtvá, jdi jinam");
+					System.out.println("Pï¿½ï¿½era je uï¿½ mrtvï¿½, jdi jinam");
 					System.out.println();
 					break;
 				}
@@ -157,10 +156,10 @@ public class Main {
 
 		}
 		if (win == 4) {
-			System.out.println("!!!     Vyhrál jsi     !!!");
+			System.out.println("!!!     Vyhrï¿½l jsi     !!!");
 
 		} else {
-			System.out.println("!!!     Umøel jsi     !!!");
+			System.out.println("!!!     Umï¿½el jsi     !!!");
 		}
 
 	}

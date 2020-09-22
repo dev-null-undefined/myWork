@@ -1,9 +1,8 @@
-import java.util.*; 
+import java.util.*;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println(":"+longestSubStringWihtoutRepeating("abcabcbb"));
 	}
 	public static int longestSubStringWihtoutRepeating(String inputString) {

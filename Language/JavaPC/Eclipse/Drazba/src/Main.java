@@ -14,7 +14,6 @@ public class Main {
 			System.out.println(data.GetSerazene());
 			System.out.println(data.Hledej("ASuper rychle auto 2").toString());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

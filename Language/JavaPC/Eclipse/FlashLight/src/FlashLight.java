@@ -10,7 +10,6 @@ import javax.swing.JFrame;
 public class FlashLight {
 	public static int bright;
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		JFrame frame = new JFrame();
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		frame.setUndecorated(true);
@@ -26,7 +25,6 @@ public class FlashLight {
             	try {
 					setBrightness(FlashLight.bright);
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
             }
@@ -63,9 +61,9 @@ public class FlashLight {
 	public static int getBrightness() throws IOException{
 		String currnetBright="powershell.exe (Get-Ciminstance -Namespace root/WMI -ClassName WmiMonitorBrightness).CurrentBrightness";
 		Process powerShellProcess = Runtime.getRuntime().exec(currnetBright);
-		
+
 		powerShellProcess.getOutputStream().close();
-		
+
 		String out="";
 		String line;
 		BufferedReader stderr = new BufferedReader(new InputStreamReader(powerShellProcess.getInputStream()));

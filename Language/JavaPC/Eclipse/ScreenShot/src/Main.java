@@ -14,10 +14,11 @@ public class Main {
 		File f;
 		for(int i=0;(f=new File(String.format("Image_capture_%05d.bmp", i))).exists();i++) {
 		}
-		
+
 		Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
 		BufferedImage capture = new Robot().createScreenCapture(screenRect);
 		ImageIO.write(capture, "bmp", f);
+		System.out.println("capture = " + f.getAbsolutePath());
 
 	}
 

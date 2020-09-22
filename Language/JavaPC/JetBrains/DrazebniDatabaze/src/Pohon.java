@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public enum Pohon {
+public enum Pohon {
+	DIESEL,BENZIN,LPG,ELEKTRO;
 }

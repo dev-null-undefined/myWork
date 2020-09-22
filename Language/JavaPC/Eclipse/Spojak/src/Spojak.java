@@ -15,7 +15,7 @@ public class Spojak <T> implements Iterable<Element>{
 	public void setPrvniElement(Element<T> prvniElement) {
 		this.prvniElement = prvniElement;
 	}
-	
+
 	public void addFirst(T value) {
 		prvniElement=new Element<T>(value, prvniElement);
 	}
@@ -25,7 +25,6 @@ public class Spojak <T> implements Iterable<Element>{
 
 	@Override
 	public Iterator<Element> iterator() {
-		// TODO Auto-generated method stub
 		return new ListIterator(prvniElement);
 	}
 }

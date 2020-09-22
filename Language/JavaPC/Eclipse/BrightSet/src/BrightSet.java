@@ -10,7 +10,6 @@ import javax.swing.JFrame;
 public class BrightSet {
 	public static int bright;
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		setBrightness(getBrightness()+Integer.valueOf(args[0]));
 	}
 
@@ -44,9 +43,9 @@ public class BrightSet {
 	public static int getBrightness() throws IOException{
 		String currnetBright="powershell.exe (Get-Ciminstance -Namespace root/WMI -ClassName WmiMonitorBrightness).CurrentBrightness";
 		Process powerShellProcess = Runtime.getRuntime().exec(currnetBright);
-		
+
 		powerShellProcess.getOutputStream().close();
-		
+
 		String out="";
 		String line;
 		BufferedReader stderr = new BufferedReader(new InputStreamReader(powerShellProcess.getInputStream()));

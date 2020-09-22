@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../17.5.2018">
+      <sourceFolder url="file://$MODULE_DIR$/../17.5.2018/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../Arena">
+      <sourceFolder url="file://$MODULE_DIR$/../Arena/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../AutoClicker">
+      <sourceFolder url="file://$MODULE_DIR$/../AutoClicker/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../BlackList">
+      <sourceFolder url="file://$MODULE_DIR$/../BlackList/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../Ciselna rada">
+      <sourceFolder url="file://$MODULE_DIR$/../Ciselna rada/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../CmdServer">
+      <sourceFolder url="file://$MODULE_DIR$/../CmdServer/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../DVD logo">
+      <sourceFolder url="file://$MODULE_DIR$/../DVD logo/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../DropPlayer">
+      <sourceFolder url="file://$MODULE_DIR$/../DropPlayer/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../FIleSorterByDataType">
+      <sourceFolder url="file://$MODULE_DIR$/../FIleSorterByDataType/build/classes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../FIleSorterByDataType/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../FileChooser">
+      <sourceFolder url="file://$MODULE_DIR$/../FileChooser/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../FileTree">
+      <sourceFolder url="file://$MODULE_DIR$/../FileTree/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ImageToASSCI art">
+      <sourceFolder url="file://$MODULE_DIR$/../ImageToASSCI art/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../InvisibleFolder">
+      <sourceFolder url="file://$MODULE_DIR$/../InvisibleFolder/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../LogFinder">
+      <sourceFolder url="file://$MODULE_DIR$/../LogFinder/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../LogFinderUsingJavaFx">
+      <sourceFolder url="file://$MODULE_DIR$/../LogFinderUsingJavaFx/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../LolLoggiN">
+      <sourceFolder url="file://$MODULE_DIR$/../LolLoggiN/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../MazeSolverNetBeans">
+      <sourceFolder url="file://$MODULE_DIR$/../MazeSolverNetBeans/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../Mouse">
+      <sourceFolder url="file://$MODULE_DIR$/../Mouse/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../ProjectEuler 1">
+      <sourceFolder url="file://$MODULE_DIR$/../ProjectEuler 1/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../Ridka matice">
+      <sourceFolder url="file://$MODULE_DIR$/../Ridka matice/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../SchoolSortingThread">
+      <sourceFolder url="file://$MODULE_DIR$/../SchoolSortingThread/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../SimpleFileUsge">
+      <sourceFolder url="file://$MODULE_DIR$/../SimpleFileUsge/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../TestB">
+      <sourceFolder url="file://$MODULE_DIR$/../TestB/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../TextTospeach">
+      <sourceFolder url="file://$MODULE_DIR$/../TextTospeach/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../Tram depot">
+      <sourceFolder url="file://$MODULE_DIR$/../Tram depot/src" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../Ucty">
+      <sourceFolder url="file://$MODULE_DIR$/../Ucty/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
