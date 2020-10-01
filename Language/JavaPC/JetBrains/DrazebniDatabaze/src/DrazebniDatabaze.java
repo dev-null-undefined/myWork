@@ -49,6 +49,7 @@ public class DrazebniDatabaze {
 	}
 
 	public Auto Hledej(String nazev) {
+
 		for (Auto auto : auta) {
 			if (auto.nazev().equals(nazev)) {
 				return auto;

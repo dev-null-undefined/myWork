@@ -6,7 +6,7 @@ class SortChecking extends Sort {
   }
   step() {
     getValue(arrayToSort, this.checkIndex);
-    this.checkIndex++;
+    this.checkIndex += 2;
     return this.checkIndex === arrayToSort.length;
   }
   draw(cnt) {

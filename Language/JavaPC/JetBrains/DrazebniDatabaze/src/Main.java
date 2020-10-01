@@ -1,56 +1,79 @@
-import java.util.*;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import java.awt.event.KeyEvent;
 
 public class Main {
 
+	protected static final int KeyCode = 0;
+
 	public static void main(String[] args) {
-		try {
-			Auto a=new Auto("Super rychle auto",110.5f,Pohon.BENZIN,2, new Date(92,Calendar.FEBRUARY,2));
-			Auto b=new Auto("ASuper rychle auto",115.5f,Pohon.BENZIN,2, new Date(92,Calendar.FEBRUARY,4));
-//			Auto c=new Auto("ZSuper rychle auto",112.5f,Pohon.BENZIN,2, new Date(92, Calendar.FEBRUARY,1));
-			Auto c=new Auto("ZSuper outak",112.5f,Pohon.BENZIN,2, new Date(92, Calendar.FEBRUARY,3));
-			DrazebniDatabaze data=new DrazebniDatabaze();
-			data.Pridej(a);
-			data.Pridej(b);
-			data.Pridej(c);
-//			System.out.println(data.GetSerazene());
-//			System.out.println(data.Hledej("ASuper rychle auto").toString());
-			data.ZacniDrazbu("ZSuper outak");
-			data.ZacniDrazbu("ZSuper outak");
-			data.ZacniDrazbu("ZSuper outak");
-			System.out.println("data.getFrontaDrazeb() = " + data.getFrontaDrazeb());
-			System.out.println("data.getAktualniDrazba().toString() = " + data.getAktualniDrazba().toString());
-			data.getAktualniDrazba().Prihod(new Nabidka(new Uzivatel("Martin",1),115.2f));
-			System.out.println("data.getAktualniDrazba().toString() = " + data.getAktualniDrazba().toString());
-			data.getAktualniDrazba().Prihod(new Nabidka(new Uzivatel("Martin",1),115.3f));
-			System.out.println("data.getAktualniDrazba().toString() = " + data.getAktualniDrazba().toString());
-			System.out.println("data.getAktualniDrazba().NejvysiNabidka() = " + data.getAktualniDrazba().NejvysiNabidka());
-//			Queue<Integer> queue = new ArrayDeque<>();
-//			queue.add(1);
-//			queue.add(10);
-//			queue.add(12);
-//			queue.add(15);
-//			System.out.println("queue = " + queue);
-//			for (Integer integer : queue) {
-//				System.out.println(integer);
+
+		JFrame frame = new JFrame();
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(400, 400);
+		frame.setFocusable(true);
+
+		JPanel panel = new JPanel();
+		JLabel up = new JLabel();
+		JLabel down = new JLabel();
+		JLabel right = new JLabel();
+		JLabel left = new JLabel();
+
+
+		panel.add(up);
+		frame.add(panel);
+		down.setText("down:0");
+		left.setText("left: 0");
+		up.setText("up: 0");
+		right.setText("right: 0");
+		frame.addKeyListener(new KeyListener() {
+
+			int UpCount = 0;
+
+
+			// This can be deleted
+//			public void keyPressed1(KeyEvent e) {
+//				switch (e.getKeyCode()) {
+//					case KeyEvent.VK_UP:
+//						up.setText("Up: " + Integer.toString(++UpCount));
+//						break;
+//				}
 //			}
-//			for (int i = 0; i < 4; i++) {
-//				System.out.println("queue = " + queue.element());
+//			public void keyReleased1(KeyEvent e) {
+//
 //			}
-//			Stack<Integer> queue = new Stack<>();
-//			queue.add(1);
-//			queue.add(10);
-//			queue.add(12);
-//			queue.add(15);
-//			System.out.println("queue = " + queue);
-//			for (Integer integer : queue) {
-//				System.out.println(integer);
+//			public void keyTyped1(KeyEvent e) {
+//
 //			}
-//			for (int i = 0; i < 4; i++) {
-//				System.out.println("queue = " + queue.peek());
-//			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				switch (e.getKeyCode()) {
+					case KeyEvent.VK_UP:
+						up.setText("Up: " + Integer.toString(++UpCount));
+						break;
+				}
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+		});
 	}
+
+
 
 }

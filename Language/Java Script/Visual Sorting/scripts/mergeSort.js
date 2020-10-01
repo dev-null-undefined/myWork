@@ -40,7 +40,7 @@ class MergeSort extends Sort {
       } else {
         return true;
       }
-    } else if (getValue(arrayToSort, this.partAPointer) < getValue(arrayToSort, this.partBPointer)) {
+    } else if (getValue(arrayToSort, this.partAPointer, false) < getValue(arrayToSort, this.partBPointer)) {
       this.partAPointer++;
     } else {
       move(this.partBPointer, this.partAPointer, arrayToSort);

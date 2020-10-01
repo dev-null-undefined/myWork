@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "myWholeWork",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "discord.js": "^12.3.1",
+    "domino": "^2.1.6",
+    "request": "^2.88.2",
+    "text-to-speech-js": "^1.1.10"
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",

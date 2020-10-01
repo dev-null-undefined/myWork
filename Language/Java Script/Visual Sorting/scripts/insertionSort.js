@@ -10,7 +10,7 @@ class InsertionSort extends Sort {
     if (this.done === arrayToSort.length - 1) {
       return true;
     }
-    if (getValue(arrayToSort, this.index) > getValue(arrayToSort, this.comparing)) {
+    if (getValue(arrayToSort, this.index, false) > getValue(arrayToSort, this.comparing)) {
       move(this.index, this.comparing + 1, arrayToSort);
       this.done++;
       this.index = this.done + 1;

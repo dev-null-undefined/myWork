@@ -35,7 +35,7 @@ class TimSort extends Sort {
         } else {
           this.doneInserting = true;
         }
-      } else if (arrayToSort[this.index] > getValue(arrayToSort, this.comparing)) {
+      } else if (getValue(arrayToSort, this.index, false) > getValue(arrayToSort, this.comparing)) {
         move(this.index, this.comparing + 1, arrayToSort);
         this.done++;
         this.index = this.done + 1;
@@ -71,7 +71,7 @@ class TimSort extends Sort {
           this.numberOfMarges += this.margesMultiplier;
           this.pointerB = null;
         }
-      } else if (arrayToSort[this.pointerA] < getValue(arrayToSort, this.pointerB)) {
+      } else if (getValue(arrayToSort, this.pointerA, false) < getValue(arrayToSort, this.pointerB)) {
         this.pointerA++;
       } else {
         move(this.pointerB, this.pointerA, arrayToSort);

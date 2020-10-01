@@ -5,7 +5,7 @@ class StalinSort extends Sort {
     this.index = 0;
   }
   step() {
-    if (getValue(arrayToSort, this.index) <= arrayToSort[this.index + 1]) {
+    if (getValue(arrayToSort, this.index, false) <= getValue(arrayToSort, this.index + 1)) {
       this.index++;
     } else {
       deleteOnIndex(this.index + 1);

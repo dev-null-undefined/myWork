@@ -15,8 +15,8 @@ client.on("ready", () => {
   client.user.setPresence({
     game: {
       name: "!run help or !linux help",
-      type: "LISTENING"
-    }
+      type: "LISTENING",
+    },
   });
 });
 
@@ -24,22 +24,22 @@ const { exec } = require("child_process");
 let currentMsg;
 
 function writeToFile(params) {
-  fs.writeFile("execute", params, err => {
+  fs.writeFile("execute", params, (err) => {
     if (err) throw err;
   });
 }
 function writeTo(fileName, text) {
-  fs.writeFile(fileName, text, err => {
+  fs.writeFile(fileName, text, (err) => {
     if (err) throw err;
   });
 }
-client.on("message", msg => {
+client.on("message", (msg) => {
   if (msg.content == "!run help") {
     msg.reply("```!run bash/python/php/js/java/c# {Code that can be inside 3 ` }```");
     return;
   }
   if (bash.test(msg.content) || php.test(msg.content) || python.test(msg.content) || js.test(msg.content) || java.test(msg.content) || csharp.test(msg.content)) {
-    if (msg.member != null && msg.member.roles.find(r => r.name === "Admin" || r.name === "Owner" || r.name === "Linux Bot User")) {
+    if (msg.member != null && msg.member.roles.find((r) => r.name === "Admin" || r.name === "Owner" || r.name === "Linux Bot User")) {
       currentMsg = msg;
       msgText = "";
       //BASH
@@ -124,7 +124,7 @@ function replyThis(msgText) {
   if (msgText.length > 2000) {
     writeTo("result.txt", msgText);
     currentMsg.reply("Result is too BIG here is it in file.", {
-      files: ["./result.txt"]
+      files: ["./result.txt"],
     });
   } else {
     currentMsg.reply(msgText);

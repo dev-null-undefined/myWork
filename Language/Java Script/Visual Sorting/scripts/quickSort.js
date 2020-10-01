@@ -41,7 +41,7 @@ class QuickSort extends Sort {
           this.currentPart = null;
           this.current = null;
         } else {
-          if (getValue(arrayToSort, this.current) < arrayToSort[this.currentPivot]) {
+          if (getValue(arrayToSort, this.current, false) < getValue(arrayToSort, this.currentPivot)) {
             swap(++this.smaller, this.current++, arrayToSort);
           } else {
             this.current++;

@@ -56,6 +56,11 @@ function getValue(array, index) {
   arrayToSortAccess++;
   return array[index];
 }
+function getValue(array, index, audio = true) {
+  if (audio) changeFrequency(array[index]);
+  arrayToSortAccess++;
+  return array[index];
+}
 
 function deleteOnIndex(index) {
   arrayToSortModifications++;
