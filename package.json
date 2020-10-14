@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "dialog-node": "^0.2.1",
     "discord.js": "^12.3.1",
     "domino": "^2.1.6",
     "request": "^2.88.2",

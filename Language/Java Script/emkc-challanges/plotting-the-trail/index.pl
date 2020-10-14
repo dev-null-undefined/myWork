@@ -1,0 +1,1 @@
+$_=pop;print s/R//g- s/L//g,",",s/U//g- s/D//g

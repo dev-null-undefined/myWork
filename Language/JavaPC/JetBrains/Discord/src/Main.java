@@ -1,18 +1,12 @@
-import java.util.Scanner;
-
 public class Main {
-	public static void main(String[] args) {
-		StringInside a=new StringInside(new String("hello"));
-		setFive(a);
-		System.out.println(a.s);
-	}
-	public static void setFive(StringInside b){
-		b.s="How are you doing";
-	}
-}
-class StringInside{
-	public String s;
-	public StringInside(String s){
-		this.s=s;
-	}
+    public static void main(String[] a) {
+        int p = 96;
+        for (var b : a[0].toCharArray()) {
+            p++;
+            if (b != '>') {
+                System.out.print((char) (b == '.' ? p : p - 32));
+                p = 96;
+            }
+        }
+    }
 }
