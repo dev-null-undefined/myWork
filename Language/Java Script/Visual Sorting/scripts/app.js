@@ -58,6 +58,7 @@ function windowsResize() {
 function switchSorting() {
   if (sortMethod) {
     if (sortingTimeout) {
+      // Stop
       clearTimeout(sortingTimeout);
       sortingTimeout = null;
       stopOscilator();
@@ -66,8 +67,9 @@ function switchSorting() {
       generateButton.disabled = false;
       sizeSlider.disabled = false;
     } else {
-      arrayToSortAccess = 0;
-      arrayToSortModifications = 0;
+      // Start
+      // arrayToSortAccess = 0;
+      // arrayToSortModifications = 0;
       if (oscillator == undefined) {
         createOscilator();
       }
@@ -82,7 +84,7 @@ function switchSorting() {
       sortingRecursion();
     }
   } else {
-    alert("!CHOSE SORT METHODE!");
+    alert("Chose the Sort method");
   }
 }
 
@@ -105,7 +107,10 @@ function sortingRecursion() {
   cnt.font = "25px sans-serif";
   cnt.fillText("Access:" + arrayToSortAccess * 2, 0, canvas.height);
   cnt.fillText("Modify:" + arrayToSortModifications, 0, canvas.height - 25);
-  sortingTimeout = setTimeout(sortingRecursion, (speedSlider.min + (speedSlider.max - speedSlider.value)) * 5);
+  sortingTimeout = setTimeout(
+    sortingRecursion,
+    (speedSlider.min + (speedSlider.max - speedSlider.value)) * 5
+  );
 }
 function updateSortMethod(value) {
   arrayToSortAccess = 0;
@@ -143,7 +148,10 @@ function updateSortMethod(value) {
       sortMethod = new StalinSort();
       break;
     default:
-      alert("Something went wrong pls report this to admin@debianserver.cz error-1:" + value);
+      alert(
+        "Something went wrong pls report this to admin@debianserver.cz error-1:" +
+          value
+      );
       break;
   }
   sortIndex = value;
@@ -154,7 +162,12 @@ function draw() {
   const sizeOfBlock = width / arrayToSort.length;
   arrayToSort.forEach((element, index) => {
     cnt.fillStyle = "#FFF";
-    cnt.fillRect(index * sizeOfBlock + sizeOfBlock * 0.025, 0, sizeOfBlock * 0.95, height * element);
+    cnt.fillRect(
+      index * sizeOfBlock + sizeOfBlock * 0.025,
+      0,
+      sizeOfBlock * 0.95,
+      height * element
+    );
   });
 }
 
