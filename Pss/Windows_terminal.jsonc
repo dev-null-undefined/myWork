@@ -7,7 +7,8 @@
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
 
-  "defaultProfile": "{b4531162-4f3d-5e58-b989-0a668ec441b8}",
+  // "defaultProfile": "{b4531162-4f3d-5e58-b989-0a668ec441b8}",
+  "defaultProfile": "{b5931162-4f3d-5e58-b989-0a668ec441b8}",
 
   // You can add more global application settings here.
   // To learn more about global settings, visit https://aka.ms/terminal-global-settings
@@ -24,14 +25,23 @@
   // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
   "profiles": {
     "defaults": {
-      "useAcrylic": true,
-      "acrylicOpacity": 0.7,
-      "background": "#000",
+      "useAcrylic": false,
+      // "acrylicOpacity": 0,
+      "background": "#292828",
       // "colorScheme": "Tango Dark"
-      "colorScheme": "Campbell"
+      // "colorScheme": "Campbell"
+      "colorScheme": "idk"
       // Put settings here that you want to apply to all profiles.
     },
     "list": [
+      {
+        "guid": "{b5931162-4f3d-5e58-b989-0a668ec441b8}",
+        "hidden": false,
+        "fontFace": "MesloLGS NF",
+        "name": "Debian",
+        "commandline": "wsl.exe -d Debian",
+        "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\debian-512.png"
+      },
       {
         // Make changes here to the powershell.exe profile.
         "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -55,10 +65,19 @@
         "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\cloud.png"
       },
       {
-        "guid": "{b4531162-4f3d-5a58-b989-0a668ec441b8}",
+        "guid": "{b4531162-4f3d-5a58-b986-0a668ec441b8}",
         "hidden": false,
         "name": "Server Home IP",
+        "fontFace": "MesloLGS NF",
         "commandline": "ssh -i C:\\Users\\marti\\OneDrive\\Documents\\OpenSSH_key root@86.49.112.142",
+        "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\cloud.png"
+      },
+      {
+        "guid": "{b4531162-4f3d-5a58-b989-0a668ec441b8}",
+        "hidden": false,
+        "name": "Server Home Martin",
+        "fontFace": "MesloLGS NF",
+        "commandline": "ssh -i C:\\Users\\marti\\OneDrive\\Documents\\OpenSSH_key martin@debianserver.cz",
         "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\cloud.png"
       },
       {
@@ -110,32 +129,53 @@
         "commandline": "ssh -p 10023 -y -i C:\\Users\\marti\\OneDrive\\Documents\\OpenSSH_key root@127.0.0.1",
         "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\cloud.png"
       },
-      {
-        "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
-        "hidden": false,
-        "name": "Kali",
-        "commandline": "wsl.exe -d kali-linux",
-        "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\os_kali.png"
-      },
-      {
-        "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-        "hidden": false,
-        "name": "Debian",
-        "source": "Windows.Terminal.Wsl",
-        "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\debian-512.png"
-      },
+      // {
+      //   "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
+      //   "hidden": false,
+      //   "name": "Kali",
+      //   "commandline": "wsl.exe -d kali-linux",
+      //   "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\os_kali.png"
+      // },
       {
         "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
         "hidden": false,
         "name": "Azure Cloud Shell",
         "source": "Windows.Terminal.Azure"
+      },
+      {
+          "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+          "hidden": false,
+          "name": "Debian",
+          "source": "Windows.Terminal.Wsl"
       }
     ]
   },
 
   // Add custom color schemes to this array.
   // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
-  "schemes": [],
+  "schemes": [
+    {
+      "name": "idk",
+      "black": "#000000",
+      "red": "#ff0606",
+      "green": "#2ce014",
+      "yellow": "#f2f61e",
+      "blue": "#0979f8",
+      "purple": "#560088",
+      "cyan": "#0e717c",
+      "white": "#efefef",
+      "brightBlack": "#424242",
+      "brightRed": "#ff0000",
+      "brightGreen": "#14e61e",
+      "brightYellow": "#eeff00",
+      "brightBlue": "#54a4f3",
+      "brightPurple": "#aa4dbc",
+      "brightCyan": "#26bbd1",
+      "brightWhite": "#d9d9d9",
+      "background": "#232322",
+      "foreground": "#e5e5e5"
+  }
+  ],
 
   // Add custom actions and keybindings to this array.
   // To unbind a key combination from your defaults.json, set the command to "unbound".
