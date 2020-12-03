@@ -1,7 +1,7 @@
 # 1. redo last command but as root
 sudo !!
 # 2. open an editor to run a command
-ctrl+x+e
+ctrl+x ctrl+e
 # 3. create a super fast ram disk
 mkdir -p /mnt/ram
 mount -t tmpfs tmpfs /mnt/ram -o size=8192M
