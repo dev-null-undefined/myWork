@@ -1,4 +1,4 @@
-# Mody
+# Mods
 
 > ```
 > > enable
@@ -6,7 +6,7 @@
 > (config)#
 > ```
 
-# Oznaceni
+# Labeling
 
 > ### Banner
 >
@@ -52,7 +52,7 @@
 > (config)# service password-encryption
 > ```
 
-# Ulozeni
+# Saving
 
 > ```
 > # copy running-config startup-config
@@ -60,7 +60,7 @@
 
 # SSH
 
-> ## Pred
+> ## Before
 >
 > > ### Host name
 > >
@@ -82,7 +82,7 @@
 > >
 > > 1024
 >
-> ## Aktivace
+> ## Activation
 >
 > ```
 > (config)# line vty 0 10
@@ -101,13 +101,13 @@
 > (config)# username <userName> password <password>
 > ```
 >
-> ## Overeni
+> ## Verifying
 >
 > ```
 > # sh ip ssh
 > ```
 >
-> Vysledek by mel byt neco jako
+> Resoult should be something like
 >
 > ```
 > SSH Enabled - version 1.99
@@ -124,9 +124,23 @@
 >
 > ## Interafaces
 >
-> > no shutdown
+> no shutdown
+>
+> > ### Info
 > >
-> > ### Vyber
+> > > #### Status of all interfaces
+> > >
+> > > ```
+> > > #show interfaces status
+> > > ```
+> > >
+> > > #### Shows only trunk interfaces
+> > >
+> > > ```
+> > > #show interfaces trunk
+> > > ```
+> >
+> > ### Chosing
 > >
 > > - Specificky `(config)# int f0/1`
 > > - Range `(config)# int r f0/1-24` (`interaface range f0/1-24`)
@@ -136,7 +150,7 @@
 > > - host (PC) `(config-if)# switchport mode access`
 > > - switch/router `(config-if)# switchport mode trunk`
 > >
-> > ### Set Vlan
+> > ### Set VLAN
 > >
 > > pouze pro HOST port mode
 > > `(config-if)# switchport access vlan <vlan-ID>`
@@ -147,7 +161,15 @@
 >
 > > no shutdown
 > >
-> > ### Vyber
+> > ### Info
+> >
+> > > #### IP address of interfaces
+> > >
+> > > ```
+> > > #show ip interface brief
+> > > ```
+> >
+> > ### Chosing
 > >
 > > - Specificky `(config)# int g0/0/0`
 > > - Range `(config)# int r g0/0/0-1` (`interaface range g0/0/0-1`)
@@ -164,7 +186,7 @@
 > >
 > > `(config-subif)# encapsulation dot1Q <vlan-ID>`
 > >
-> > ### Ip address
+> > ### IP address
 > >
 > > `(config-if)# ip address <address> <subnet>`
 > >
@@ -172,7 +194,7 @@
 > >
 > > `(config)# ip route <network>/<prefix> <routeTo>`
 
-# VLANY
+# VLANs
 
 > ## Create
 >
@@ -192,16 +214,14 @@
 > (config)# name <vlan-nam>
 > ```
 >
-> ## Ip adresa
+> ## IP adresa
 >
 > ```
 > (config)# interface vlan <vlan-ID>
 > (config-if)# ip address <address> <mask>
 > ```
 
-# CMD
-
-> ## Zjisteni mac addressy
+> # Getting mac address
 >
 > ```
 > arp -a <ip-adressa>
