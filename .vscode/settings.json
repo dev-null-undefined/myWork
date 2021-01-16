@@ -5,6 +5,5 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "liveServer.settings.port": 5454,
-  "python.pythonPath": "C:\\Users\\marti\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe"
+  "liveServer.settings.port": 5454
 }
