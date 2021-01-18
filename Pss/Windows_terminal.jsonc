@@ -27,7 +27,7 @@
     "defaults": {
       "useAcrylic": false,
       // "acrylicOpacity": 0,
-      "background": "#292828",
+      "background": "#202020",
       // "colorScheme": "Tango Dark"
       // "colorScheme": "Campbell"
       "colorScheme": "idk"
@@ -70,6 +70,14 @@
         "name": "Server Home IP",
         "fontFace": "MesloLGS NF",
         "commandline": "ssh -i C:\\Users\\marti\\OneDrive\\Documents\\OpenSSH_key root@86.49.112.142",
+        "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\cloud.png"
+      },
+      {
+        "guid": "{b4531162-4f3d-5a58-b986-0a468ec441b8}",
+        "hidden": false,
+        "name": "Server Home IP :8022",
+        "fontFace": "MesloLGS NF",
+        "commandline": "ssh -i C:\\Users\\marti\\OneDrive\\Documents\\OpenSSH_key root@86.49.112.142 -p 8022",
         "icon": "C:\\Users\\marti\\OneDrive\\Obrázky\\cloud.png"
       },
       {
