@@ -1,3 +1,5 @@
+const filled = false;
+const timeout = 1000;
 window.onload = function () {
   var file = document.getElementById("thefile");
   var audio = document.getElementById("audio");
@@ -37,11 +39,11 @@ window.onload = function () {
 
     let timeOutId = 0;
 
-    timeOutId = setTimeout(hideControl, 5000);
+    timeOutId = setTimeout(hideControl, timeout);
     window.onmousemove = () => {
       showControl();
       clearTimeout(timeOutId);
-      timeOutId = setTimeout(hideControl, 5000);
+      timeOutId = setTimeout(hideControl, timeout);
     };
     function hideControl() {
       document.getElementById("audio").style.bottom = "-65px";
@@ -61,20 +63,21 @@ window.onload = function () {
 
       ctx.fillStyle = "#000";
       ctx.fillRect(0, 0, WIDTH, HEIGHT);
+      if (filled) {
+        for (var i = 0; i < bufferLength; i++) {
+          barHeight = (dataArray[i] / 255) * HEIGHT;
 
-      // for (var i = 0; i < bufferLength; i++) {
-      //   barHeight = (dataArray[i] / 255) * HEIGHT;
+          var r = dataArray[i] + 25 * (i / bufferLength);
+          var g = 250 * (i / bufferLength);
+          var b = 50;
 
-      //   var r = dataArray[i] + 25 * (i / bufferLength);
-      //   var g = 250 * (i / bufferLength);
-      //   var b = 50;
+          ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+          ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
 
-      //   ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
-      //   ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
-
-      //   x += barWidth + 1;
-      // }
-      // x = 0;
+          x += barWidth + 1;
+        }
+        x = 0;
+      }
       let points = [];
       dataArray.forEach((element) => {
         points.push({ y: HEIGHT - (element / 255) * HEIGHT, x: x });
@@ -82,7 +85,7 @@ window.onload = function () {
       });
       let pointsToDraw = chaikinsAlgo(points, 4);
       ctx.strokeStyle = "#FFF";
-      lastPoint = pointsToDraw[0];
+      let lastPoint = pointsToDraw[0];
       for (let i = 1, lenght = pointsToDraw.length; i < lenght; i++) {
         ctx.beginPath();
         ctx.moveTo(lastPoint.x, lastPoint.y);
@@ -103,8 +106,14 @@ window.onload = function () {
         let newPoints = [];
         let lastPoint = points[0];
         for (let i = 1, lenght = points.length; i < lenght; i++) {
-          newPoints.push({ x: (1 - size) * lastPoint.x + size * points[i].x, y: (1 - size) * lastPoint.y + size * points[i].y });
-          newPoints.push({ x: size * lastPoint.x + (1 - size) * points[i].x, y: size * lastPoint.y + (1 - size) * points[i].y });
+          newPoints.push({
+            x: (1 - size) * lastPoint.x + size * points[i].x,
+            y: (1 - size) * lastPoint.y + size * points[i].y,
+          });
+          newPoints.push({
+            x: size * lastPoint.x + (1 - size) * points[i].x,
+            y: size * lastPoint.y + (1 - size) * points[i].y,
+          });
           lastPoint = points[i];
         }
         return chaikinsAlgo(newPoints, quality - 1);

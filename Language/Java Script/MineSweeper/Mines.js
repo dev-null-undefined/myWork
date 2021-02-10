@@ -1,5 +1,4 @@
 "use strict";
-//Comments
 var mine = [];
 var drawArr = [];
 var saveDrawArr = [];
@@ -160,30 +159,34 @@ function drawGrey(o, p) {
     }
     beenTo.push(zeroLine);
   }
-  drawGreyAgain(o, p, beenTo);
+  drawGreyAgain(o, p);
 }
 
 var beenTo;
 
 function drawGreyAgain(x, y) {
-  if (drawArr[x][y] === -2) {
-  } else {
+  if (drawArr[x][y] != -2) {
     drawArr[x][y] = mine[x][y];
   }
   beenTo[x][y] = 1;
-  // console.log(beenTo + "," + x + "x" + "," + y + "y");
   if (x < velikostX - 1) {
     if (beenTo[x + 1][y] === 0) {
-      if (mine[x + 1][y] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y] != -1)) {
-        drawGreyAgain(x + 1, y, beenTo);
+      if (
+        mine[x + 1][y] === 0 &&
+        (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y] != -1)
+      ) {
+        drawGreyAgain(x + 1, y);
       } else {
         drawArr[x][y] = -2;
       }
     }
     if (y > 0) {
       if (beenTo[x + 1][y - 1] === 0) {
-        if (mine[x + 1][y - 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y - 1] != -1)) {
-          drawGreyAgain(x + 1, y - 1, beenTo);
+        if (
+          mine[x + 1][y - 1] === 0 &&
+          (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y - 1] != -1)
+        ) {
+          drawGreyAgain(x + 1, y - 1);
         } else {
           drawArr[x][y] = -2;
         }
@@ -191,8 +194,11 @@ function drawGreyAgain(x, y) {
     }
     if (y < velikostY) {
       if (beenTo[x + 1][y + 1] === 0) {
-        if (mine[x + 1][y + 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y + 1] != -1)) {
-          drawGreyAgain(x + 1, y + 1, beenTo);
+        if (
+          mine[x + 1][y + 1] === 0 &&
+          (getMinesNextTo(x, y) < 1 || drawArr[x + 1][y + 1] != -1)
+        ) {
+          drawGreyAgain(x + 1, y + 1);
         } else {
           drawArr[x][y] = -2;
         }
@@ -202,16 +208,22 @@ function drawGreyAgain(x, y) {
 
   if (x > 0) {
     if (beenTo[x - 1][y] === 0) {
-      if (mine[x - 1][y] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y] != -1)) {
-        drawGreyAgain(x - 1, y, beenTo);
+      if (
+        mine[x - 1][y] === 0 &&
+        (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y] != -1)
+      ) {
+        drawGreyAgain(x - 1, y);
       } else {
         drawArr[x][y] = -2;
       }
     }
     if (y > 0) {
       if (beenTo[x - 1][y - 1] === 0) {
-        if (mine[x - 1][y - 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y - 1] != -1)) {
-          drawGreyAgain(x - 1, y - 1, beenTo);
+        if (
+          mine[x - 1][y - 1] === 0 &&
+          (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y - 1] != -1)
+        ) {
+          drawGreyAgain(x - 1, y - 1);
         } else {
           drawArr[x][y] = -2;
         }
@@ -219,8 +231,11 @@ function drawGreyAgain(x, y) {
     }
     if (y < velikostY) {
       if (beenTo[x - 1][y + 1] === 0) {
-        if (mine[x - 1][y + 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y + 1] != -1)) {
-          drawGreyAgain(x - 1, y + 1, beenTo);
+        if (
+          mine[x - 1][y + 1] === 0 &&
+          (getMinesNextTo(x, y) < 1 || drawArr[x - 1][y + 1] != -1)
+        ) {
+          drawGreyAgain(x - 1, y + 1);
         } else {
           drawArr[x][y] = -2;
         }
@@ -229,8 +244,11 @@ function drawGreyAgain(x, y) {
   }
   if (y < velikostY) {
     if (beenTo[x][y + 1] === 0) {
-      if (mine[x][y + 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x][y + 1] != -1)) {
-        drawGreyAgain(x, y + 1, beenTo);
+      if (
+        mine[x][y + 1] === 0 &&
+        (getMinesNextTo(x, y) < 1 || drawArr[x][y + 1] != -1)
+      ) {
+        drawGreyAgain(x, y + 1);
       } else {
         drawArr[x][y] = -2;
       }
@@ -238,8 +256,11 @@ function drawGreyAgain(x, y) {
   }
   if (y > 0) {
     if (beenTo[x][y - 1] === 0) {
-      if (mine[x][y - 1] === 0 && (getMinesNextTo(x, y) < 1 || drawArr[x][y - 1] != -1)) {
-        drawGreyAgain(x, y - 1, beenTo);
+      if (
+        mine[x][y - 1] === 0 &&
+        (getMinesNextTo(x, y) < 1 || drawArr[x][y - 1] != -1)
+      ) {
+        drawGreyAgain(x, y - 1);
       } else {
         drawArr[x][y] = -2;
       }
@@ -250,24 +271,27 @@ function drawGreyAgain(x, y) {
 document.addEventListener("click", function (evt) {
   var clickX = evt.pageX - canvas.canvas.offsetLeft;
   var clickY = evt.pageY - canvas.canvas.offsetTop;
-  //console.log(evt.pageX+','+evt.pageY);
-  if (clickX > 0 && clickY > 0 && clickX < canvas.width && clickY < canvas.height) {
+  if (
+    clickX > 0 &&
+    clickY > 0 &&
+    clickX < canvas.width &&
+    clickY < canvas.height
+  ) {
     if (reset) {
       startWithMoreArg(seedSeeds, velikostX, velikostY);
       reset = false;
     } else {
       clickX = Math.floor(clickX / helpX);
       clickY = Math.floor(clickY / helpY);
-      //console.log("Left click x=" + clickX + ", y=" + clickY + ", drawArr value= " + drawArr[clickX][clickY] + ", mine valuer= " + mine[clickX][clickY]);
-      //drawArr[x][y] = mine[x][y];
-      if (mine[clickX][clickY] === 1) {
-        //start(seedSeeds, velikost);
-        mine[clickX][clickY] = 2;
-        lose();
-        console.log("prohra");
-        reset = true;
-      } else {
-        drawGrey(clickX, clickY);
+      if (drawArr[clickX][clickY] != -3) {
+        if (mine[clickX][clickY] === 1) {
+          mine[clickX][clickY] = 2;
+          lose();
+          console.log("prohra");
+          reset = true;
+        } else {
+          drawGrey(clickX, clickY);
+        }
       }
     }
   }
@@ -278,7 +302,12 @@ document.addEventListener(
   function (ev) {
     var clickX = ev.pageX - canvas.canvas.offsetLeft;
     var clickY = ev.pageY - canvas.canvas.offsetTop;
-    if (clickX > 0 && clickY > 0 && clickX < canvas.width && clickY < canvas.height) {
+    if (
+      clickX > 0 &&
+      clickY > 0 &&
+      clickX < canvas.width &&
+      clickY < canvas.height
+    ) {
       ev.preventDefault();
       clickX = Math.floor(clickX / helpX);
       clickY = Math.floor(clickY / helpY);
@@ -287,7 +316,6 @@ document.addEventListener(
         reset = false;
       } else {
         if (drawArr[clickX][clickY] === -1 || drawArr[clickX][clickY] === -3) {
-          //console.log("right click x=" + clickX + ", y=" + clickY + ", drawArr value= " + drawArr[clickX][clickY] + ", mine valuer= " + mine[clickX][clickY]);
           mineFound(clickX, clickY);
           if (win()) {
             reset = true;
